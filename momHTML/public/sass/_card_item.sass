@@ -1,0 +1,107 @@
+// 메인 컨텐츠 카드형식
+.masonry
+	.item
+		overflow: hidden
+		float: left
+		width: 287px
+		margin: 0 4px 8px
+		border-radius: 10px
+		background-color: $white
+		box-shadow: 2px 2px 4px #b1b0b0
+		text-align: center
+
+		> a
+			display: block
+
+		.box
+			padding: 20px
+
+			&.full_line_top
+				border-top: 1px solid #dedede
+
+			
+		.title
+			display: block
+			+font-size(20px)
+
+		.location
+			display: block
+			margin-top: 10px
+			+font-size(11px)
+			color: #bbb
+			font-family: "돋움", "Dotum"
+
+		.letter
+			margin-top: 8px
+			font-family: "돋움", "Dotum"
+			+font-size(12px)
+			line-height: 1.7
+			text-align: left
+			color: #666
+
+			// &::before
+			// 	content: ""
+			// 	display: block
+			// 	width: 40px
+			// 	margin: 16px auto 0
+			// 	padding-top: 12px
+			// 	border-top: 1px solid #dbdbdb
+
+		.reviewer
+			position: relative
+			color: #666
+			font-family: "돋움", "Dotum"
+			+font-size(12px)
+			text-align: left
+
+			.nickname
+				display: block
+				margin-right: 75px
+				+font-size(12px)
+				@extend %ellipsis
+			.date
+				position: absolute
+				top: 21px
+				right: 20px
+				+font-size(11px)
+
+		.info_wrap
+			position: relative
+			padding-bottom: 21px
+
+			.review_count
+				position: absolute
+				bottom: 3px
+				right: 0
+
+		
+
+		.review_count
+			+font-size(12px)
+			font-weight: bold
+			color: $point-color
+			font-family: "돋움", "Dotum"
+			.icon
+				display: inline-block
+				width: 15px
+				height: 15px
+				margin-right: 6px
+				background: url(/public/img/sprite_bg.png) no-repeat -290px 0
+
+		.best_review
+			padding-top: 8px
+			border-top: 1px solid #ddd
+			text-align: left
+
+			p
+				color: #666
+
+
+.result .item 
+	a
+		border-top: 6px solid #333
+		&:hover
+			border-top: 6px solid $point-color
+
+.rating_star_wrap .score
+	color: #888
