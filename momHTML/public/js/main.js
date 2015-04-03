@@ -16,7 +16,9 @@
 
 	$('.my_review_list .button_more_review').click(function(e){
 		e.preventDefault();
-		$('.my_review_list .toggle_content').hide();
+		//$('.button_more_review.active').removeClass('active');
+		//$('.my_review_list .toggle_content').hide();
+		$(this).toggleClass('active');
 		$(this).parent().next('.toggle_content').toggle();
 	});
 
@@ -45,6 +47,31 @@
 	$('#member_pw').click(function(){
 		$('.password_modify').toggle();
 	})
+
+	// 헬프 오버레이
+	var $win, doc_H, $overlayer, $overlayer, margin_box;
+
+	initSetting(function() {
+		$win.on('resize', setHeight);
+	});
+
+	function initSetting(fn) {
+		$win = $(window);
+		setHeight();
+		fn ? fn() : null;
+	}
+
+	function setHeight() {
+		doc_H = $win.height();
+
+		if (!$overlayer) { $overlayer = $('#intro_layer'); }
+		overlayer_H = $overlayer.height();
+
+		margin_box = ( doc_H - overlayer_H ) / 2;
+		$overlayer.css('margin-top', margin_box);
+
+		$('.dim_layer').css('height', doc_H);
+	}
 	
 
 })(window);

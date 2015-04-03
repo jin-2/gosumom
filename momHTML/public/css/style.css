@@ -402,6 +402,7 @@ input[type="text"], input[type="password"] {
 }
 .masonry .item .reviewer .nickname {
   display: block;
+  height: 14px;
   margin-right: 75px;
   font-size: 12px;
   font-size: 1.2rem;
@@ -2296,6 +2297,9 @@ body .main .content_layer {
   width: 1003px;
   overflow: hidden;
 }
+.intro_layer .inner h1 img {
+  max-width: 100%;
+}
 .intro_layer .visual {
   float: left;
 }
@@ -2349,7 +2353,44 @@ body .main .content_layer {
   font-size: 1.2rem;
 }
 .intro_layer .dcheck em {
+  margin-top: 2px;
+}
+
+.intro_layer.small {
+  max-width: 465px;
+  margin: 0 auto;
+}
+.intro_layer.small .inner {
+  width: 96%;
+  padding: 0 2%;
+}
+.intro_layer.small .main {
   margin-top: 0;
+}
+.intro_layer.small .facebook_login {
+  margin-bottom: 20px;
+}
+.intro_layer.small .intro_login {
+  width: 100%;
+}
+.intro_layer.small button, .intro_layer.small input[type="text"], .intro_layer.small input[type="password"] {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+.intro_layer.small a, .intro_layer.small label {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.dim_layer {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
 }
 
 .page_motive {
