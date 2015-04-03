@@ -1,0 +1,62 @@
+.dcheck {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+.dcheck input {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  border: 0 none;
+}
+.dcheck label {
+  display: inline-block;
+  height: 17px;
+  padding: 2px 15px 3px 0;
+  font-size: 14px;
+}
+.dcheck em {
+  display: inline-block;
+  float: left;
+  margin: 1px 4px 0 0;
+  width: 13px;
+  height: 13px;
+  background: url(http://tendencydev.kr/gosumom/public/img/form.png) no-repeat 0 0;
+}
+.dcheck.checked {
+  color: #88714c;
+}
+.dcheck.checked label em {
+  background-position: 0 -50px;
+}
+
+.dradio {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+}
+.dradio input {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  border: 0 none;
+}
+.dradio label {
+  display: inline-block;
+  height: 18px;
+  padding: 2px 15px 3px 0;
+  font-size: 14px;
+}
+.dradio label span {
+  display: inline-block;
+  float: left;
+  margin: 0 8px 0 0;
+  width: 16px;
+  height: 16px;
+  background: url(http://tendencydev.kr/gosumom/public/img/form.png) no-repeat -22px 0;
+}
+.dradio.checked label span {
+  background-position: -22px -50px;
+}
+
+/*# sourceMappingURL=design_form.css.map */

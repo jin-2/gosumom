@@ -80,7 +80,11 @@
  *  common layout  & main (start)
  */
 .container
-	padding-top: 84px
+	overflow: hidden
+	padding-top: 0
+	@media all and (min-width: 800px)
+		padding-top: 84px
+
 body
 	background-image: none
 	background-color: #e1e1e1
@@ -551,38 +555,7 @@ body
 
 
 
-// 모바일 header
-.tab_bar
 
-	.header
-		position: relative
-		height: 50px
-		background-color: $base-color
-		
-		h1
-			width: 130px
-			margin: 0 auto
-			line-height: 0
-			padding-top: 14px
-
-			img
-				max-width: 100%
-
-	.button_menu, .button_search
-		display: block
-		position: absolute
-		top: 0
-		width: 50px
-		height: 50px
-		background-color: transparent
-		color: #fff
-		text-align: center
-
-	.button_menu
-		left: 0
-
-	.button_search
-		right: 0
 
 // 로그인
 .login_wrap

@@ -1,0 +1,86 @@
+.dashboard
+	background: url(http://tendencydev.kr/gosumom/public/img/dashboard_bg.png) repeat-x 0 0
+	text-align: center
+
+	.wrapper
+		position: relative
+		height: 58px
+
+	.button
+		position: absolute
+		top: -56px
+		right: 30px
+		width: 60px
+		height: 56px
+		text-indent: -9999px
+		@extend %is-img
+		background-position: 0 -200px
+
+		@media all and (min-width: $page-main-width) // 데스크탑
+			right: 0
+
+		&.active
+			background-position: -100px -200px
+
+			&+ul
+				display: none
+	ul
+		position: relative
+		@extend %cf
+		display: block
+		vertical-align: top
+
+		@media all and (min-width: 1160px)
+			position: static
+			display: inline-block
+			width: auto
+
+	li
+		position: absolute
+		top: 0
+		left: 0
+		float: left
+		display: none
+		width: 100%
+		margin-left: 30px
+		padding-top: 14px
+		font-family: "nanum barun gothic"
+		+font-size(14px)
+		font-weight: bold
+		color: #04858c
+
+		&:first-child
+			display: block
+
+		@media all and (min-width: 1160px) // 데스크탑
+			position: static
+			width: auto
+			display: block
+			
+		&:first-child
+			margin-left: 0
+
+		.number
+			margin-left: 9px
+			color: $white
+			text-shadow: 2px 2px #35b0b7
+
+		.icon
+			display: inline-block
+			width: 40px
+			height: 30px
+			margin-right: 8px
+			@extend %is-img
+			vertical-align: middle
+
+			&.mom
+				background-position: -70px -80px
+
+			&.review
+				background-position: -142px -82px
+
+			&.view
+				background-position: -230px -80px
+
+			&.center
+				background-position: 8px -81px

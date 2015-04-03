@@ -9,11 +9,10 @@
  * http://www.codrops.com
  */
 (function() {
-
-	var bodyEl = document.body,
-		content = document.querySelector( '.content-wrap' ),
-		openbtn = document.getElementById( 'open-button' ),
-		closebtn = document.getElementById( 'close-button' ),
+	var $bodyEl = $('body'),
+		$content = $('.container'),
+		$openbtn = $('#button_menu, #button_searching'),
+		$closebtn = $('.close-button'),
 		isOpen = false;
 
 	function init() {
@@ -21,15 +20,16 @@
 	}
 
 	function initEvents() {
-		openbtn.addEventListener( 'click', toggleMenu );
-		if( closebtn ) {
-			closebtn.addEventListener( 'click', toggleMenu );
+		$openbtn.on( 'click', toggleMenu );
+		if( $closebtn ) {
+			$closebtn.on( 'click', toggleMenu );
 		}
 
 		// close the menu element if the target it´s not the menu element or one of its descendants..
-		content.addEventListener( 'click', function(ev) {
+		$content.on( 'click', function(ev) {
 			var target = ev.target;
-			if( isOpen && target !== openbtn ) {
+			//console.log(target);
+			if( isOpen && target == $openbtn ) {
 				toggleMenu();
 			}
 		} );
@@ -37,10 +37,20 @@
 
 	function toggleMenu() {
 		if( isOpen ) {
-			classie.remove( bodyEl, 'show-menu' );
+			$bodyEl.removeClass('show_menu');
 		}
 		else {
-			classie.add( bodyEl, 'show-menu' );
+			$bodyEl.addClass('show_menu');
+		}
+		isOpen = !isOpen;
+	}
+
+	function toggleSearch() {
+		if( isOpen ) {
+			$bodyEl.removeClass('show_search');
+		}
+		else {
+			$bodyEl.addClass('show_search');
 		}
 		isOpen = !isOpen;
 	}

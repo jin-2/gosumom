@@ -1,0 +1,88 @@
+// 검정색 버튼
+.button 
+	box-sizing: border-box
+	padding: 0 30px
+	height: 40px
+	//line-height: 40px
+	background-color: #333
+	color: #fff
+	font-weight: bold
+	font-size: 14px
+	vertical-align: top
+
+	// 검정색 라인 버튼
+	&.line
+		border: 2px solid #333
+		background-color: #fff
+		color: #333
+
+	// large 버튼
+	&.large
+		height: 50px
+		//line-height: 50px
+		+font-size(16px)
+
+	// 민트 버튼
+	&.mint
+		background-color: #18bcc5
+
+	// 버튼 width 100%
+	&.full
+		width: 100%
+		text-align: center
+
+	// 버튼안에 화살표
+	&.arrow
+		padding: 0 50px
+
+		&:after
+			content: "\f105"
+			margin-left: 9px
+			font-family: FontAwesome
+
+	// 버튼안에 화살표가 사이드에 
+	&.side
+		width: 230px
+		padding: 0 9px 0 18px
+		text-align: left
+
+		&:after
+			float: right
+
+
+// 소셜 버튼
+.button_social
+	box-sizing: border-box
+	width: 140px
+	height: 34px
+	border: 1px solid #ccc
+	background-color: #f1f1f1
+	+font-size(11px)
+	line-height: 34px
+	font-family: "돋움", "Dotum"
+
+	&.facebook
+		background-color: #3b569d
+		border-color: #3b569d
+		color: #fff
+
+	span
+		display: inline-block
+		width: 17px
+		height: 17px
+		margin-right: 9px
+		background-image: url(http://tendencydev.kr/gosumom/public/img/sprite_bg.png)
+		background-repeat: no-repeat
+		vertical-align: top
+		//border: 1px solid red
+
+	&.like span
+		margin-top: 6px
+		background-position: -450px 0
+
+	&.facebook span
+		margin-top: 8px
+		background-position: -440px -50px
+
+	& + &
+		margin-left: 12px

@@ -520,7 +520,13 @@ input[type="text"], input[type="password"] {
 /*  common layout  & main (start)
  */
 .container {
-  padding-top: 84px;
+  overflow: hidden;
+  padding-top: 0;
+}
+@media all and (min-width: 800px) {
+  .container {
+    padding-top: 84px;
+  }
 }
 
 body {
@@ -555,11 +561,11 @@ body .main .content_layer {
 }
 
 .small_view {
-  display: none;
+  display: block;
 }
 
 .large_view {
-  display: block;
+  display: none;
 }
 
 @media all and (min-width: 800px) {
@@ -716,6 +722,63 @@ body .main .content_layer {
 
 .button_review_write {
   margin-left: 3px;
+}
+
+.tab_bar .header {
+  position: relative;
+  height: 50px;
+  background-color: #333;
+}
+.tab_bar .header h1 {
+  width: 130px;
+  margin: 0 auto;
+  line-height: 0;
+  padding-top: 9px;
+}
+.tab_bar .header h1 img {
+  max-width: 100%;
+}
+.tab_bar .button_menu, .tab_bar .button_search {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+}
+.tab_bar .button_menu {
+  left: 0;
+}
+.tab_bar .button_search {
+  right: 0;
+}
+
+.left_off_canvas_menu, .right_off_canvas_menu {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+  width: 300px;
+  height: 100%;
+  padding: 2.5em 1.5em 0;
+  transform: translate3d(-400px, 0, 0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.right-off-canvas-menu {
+  background: blue;
+}
+
+.show_menu .left_off_canvas_menu, .show_menu .right_off_canvas_menu {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 @media all and (min-width: 800px) {
@@ -1437,37 +1500,6 @@ body .main .content_layer {
 }
 .phone_check .button.confirm {
   width: 229px;
-}
-
-.tab_bar .header {
-  position: relative;
-  height: 50px;
-  background-color: #333;
-}
-.tab_bar .header h1 {
-  width: 130px;
-  margin: 0 auto;
-  line-height: 0;
-  padding-top: 14px;
-}
-.tab_bar .header h1 img {
-  max-width: 100%;
-}
-.tab_bar .button_menu, .tab_bar .button_search {
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  color: #fff;
-  text-align: center;
-}
-.tab_bar .button_menu {
-  left: 0;
-}
-.tab_bar .button_search {
-  right: 0;
 }
 
 @media all and (min-width: 800px) {

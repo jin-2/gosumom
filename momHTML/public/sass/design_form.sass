@@ -1,0 +1,65 @@
+//colors
+$color_shadow_approx: #88714c
+$color_storm_dust_approx: #666666
+
+//urls
+$url_0: url(http://tendencydev.kr/gosumom/public/img/form.png)
+
+.dcheck
+	overflow: hidden
+	position: relative
+	display: inline-block
+
+	input
+		position: absolute
+		opacity: 0
+		filter: alpha(opacity = 0)
+		border: 0 none
+
+	label
+		display: inline-block
+		height: 17px
+		padding: 2px 15px 3px 0
+		font-size: 14px
+
+	em
+		display: inline-block
+		float: left
+		margin: 1px 4px 0 0
+		width: 13px
+		height: 13px
+		background: $url_0 no-repeat 0 0
+
+	&.checked
+		color: $color_shadow_approx
+		
+		label em
+			background-position: 0 -50px
+
+.dradio
+	display: inline-block
+	position: relative
+	height: 22px
+
+	input
+		position: absolute
+		opacity: 0
+		filter: alpha(opacity = 0)
+		border: 0 none
+	label
+		display: inline-block
+		height: 18px
+		padding: 2px 15px 3px 0
+		font-size: 14px
+
+		span
+			display: inline-block
+			float: left
+			margin: 0 8px 0 0
+			width: 16px
+			height: 16px
+			background: $url_0 no-repeat -22px 0
+	
+	&.checked
+		label span
+			background-position: -22px -50px
