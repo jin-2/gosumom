@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: _base.sass.
        Load path: C:/wamp/www/gosumom/momHTML/public/sass
-        on line 72 of sass/style.sass
+        on line 72 of sass/style_bak.sass
 
 67:  *
 68:  *
@@ -16,7 +16,7 @@ Error: File to import not found or unreadable: _base.sass.
 77: $color_shadow_approx: #88714c
 
 Backtrace:
-sass/style.sass:72
+sass/style_bak.sass:72
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/import_node.rb:66:in `rescue in import'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/import_node.rb:45:in `import'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -59,4 +59,4 @@ c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: _base.sass.\A        Load path: C:/wamp/www/gosumom/momHTML/public/sass\A         on line 72 of sass/style.sass\A \A 67:  *\A 68:  *\A 69:  */\A 70: \A 71: // 메인 카드 아이템 \A 72: @import \"_base.sass\"\A 73: // 메인 카드 아이템 \A 74: @import \"_card_item.sass\"\A 75: \A 76: //colors\A 77: $color_shadow_approx: #88714c"; }
+  content: "Error: File to import not found or unreadable: _base.sass.\A        Load path: C:/wamp/www/gosumom/momHTML/public/sass\A         on line 72 of sass/style_bak.sass\A \A 67:  *\A 68:  *\A 69:  */\A 70: \A 71: // 메인 카드 아이템 \A 72: @import \"_base.sass\"\A 73: // 메인 카드 아이템 \A 74: @import \"_card_item.sass\"\A 75: \A 76: //colors\A 77: $color_shadow_approx: #88714c"; }

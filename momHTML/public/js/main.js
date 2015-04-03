@@ -14,6 +14,16 @@
 		}
 	});
 
+	$('.my_review_list .button_more_review').click(function(e){
+		e.preventDefault();
+		$('.my_review_list .toggle_content').hide();
+		$(this).parent().next('.toggle_content').toggle();
+	});
+
+	// 커뮤니티 메뉴 중비중 
+	$('.gnb .community').click(function(){
+		alert('곧 만나요~');
+	});
 
 	// custom select
 	$('.select_custom .select_insert, .search_input .search_button').click(function(e){
