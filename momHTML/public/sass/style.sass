@@ -69,75 +69,12 @@
  */
 
 // 메인 카드 아이템 
-@import "_base.sass"
+@import "base"
 // 메인 카드 아이템 
-@import "_card_item.sass"
+@import "card_item"
+// 디자인 체크박스, 라디오 박스
+@import "design_form"
 
-//colors
-$color_shadow_approx: #88714c
-$color_storm_dust_approx: #666666
-
-//urls
-$url_0: url(http://tendencydev.kr/gosumom/public/img/form.png)
-
-.dcheck
-	overflow: hidden
-	position: relative
-	display: inline-block
-
-	input
-		position: absolute
-		opacity: 0
-		filter: alpha(opacity = 0)
-		border: 0 none
-
-	label
-		display: inline-block
-		height: 17px
-		padding: 2px 15px 3px 0
-		font-size: 14px
-
-	em
-		display: inline-block
-		float: left
-		margin: 1px 4px 0 0
-		width: 13px
-		height: 13px
-		background: $url_0 no-repeat 0 0
-
-	&.checked
-		color: $color_shadow_approx
-		
-		label em
-			background-position: 0 -50px
-
-.dradio
-	display: inline-block
-	position: relative
-	height: 22px
-
-	input
-		position: absolute
-		opacity: 0
-		filter: alpha(opacity = 0)
-		border: 0 none
-	label
-		display: inline-block
-		height: 18px
-		padding: 2px 15px 3px 0
-		font-size: 14px
-
-		span
-			display: inline-block
-			float: left
-			margin: 0 8px 0 0
-			width: 16px
-			height: 16px
-			background: $url_0 no-repeat -22px 0
-	
-	&.checked
-		label span
-			background-position: -22px -50px
 
 /*
  *  common layout  & main (start)
@@ -169,18 +106,9 @@ body
 	.main &
 		max-width: $page-main-width
 
-.small_view
-	display: none
-.large_view
-	display: block
-//@media all and only screen and (min-width: 800px) 
-@media all and (min-width: 800px) // desktop view
-	.small_view
-		display: none
-	.large_view
-		display: block
 
-@import "_header_large.sass"
+
+@import "header"
 
 // 3. 검색영역 메인 서브 공통
 @media all and (min-width: 800px)
@@ -255,142 +183,11 @@ body
 		font-family: FontAwesome
 
 // 4. custom select
-.select_custom
-	z-index: 100
-	position: relative
-	display: inline-block
-	width: 100%
-	background-color: $white
-	
-
-	.select_insert
-		box-sizing: border-box
-		position: relative
-		display: block
-		height: 50px
-		border: 1px solid #d5d5d5
-		line-height: 50px
-		color: #767676
-		+font-size(16px)
-		
-		// 리뷰쓰기 셀렉트 박스
-		.searching_in &
-			height: 40px
-			border-color: #5a5a5a
-			line-height: 40px
-			+font-size(14px)
-
-			strong
-				padding-right: 0
-
-		.searching_wrap &
-			border-width: 2px
-
-		strong
-			padding-left: 7px
-			padding-right: 70px
-		
-		.arrow
-			position: absolute
-			top: -1px
-			right: 0
-			display: inline-block
-			width: 44px
-			border-left: 1px solid #d5d5d5
-			+font-size(11px)
-			text-align: center
-			color: #767676
-
-			.searching_in &
-				width: 38px
-				border-color: #5a5a5a
-
-			.searching_wrap &
-				border-width: 2px
-				top: -2px
+@import "design_select"
 
 
-	.select_option
-		display: none
-		position: absolute
-		top: 50px
-		right: 0
-		box-sizing: border-box
-		overflow-y: auto
-		width: 100%
-		max-height: (33px * 7)
-		border: 1px solid #d5d5d5
-		border-top: 0
-		background-color: #fff
-
-		.searching_in &
-			top: 40px
-
-		.searching_wrap & .select_option
-			border-width: 2px
-
-		a
-			display: block
-			height: 33px
-			padding: 0 15px
-			line-height: 33px
-			@extend %ellipsis
-
-			&:hover
-				background-color: $point-color
-				color: #fff
-
-// 5. button style
-// 검정색 버튼
-.button 
-	box-sizing: border-box
-	padding: 0 30px
-	height: 40px
-	//line-height: 40px
-	background-color: #333
-	color: #fff
-	font-weight: bold
-	font-size: 14px
-	vertical-align: top
-
-	// 검정색 라인 버튼
-	&.line
-		border: 2px solid #333
-		background-color: #fff
-		color: #333
-
-	// large 버튼
-	&.large
-		height: 50px
-		//line-height: 50px
-		+font-size(16px)
-
-	// 민트 버튼
-	&.mint
-		background-color: #18bcc5
-
-	// 버튼 width 100%
-	&.full
-		width: 100%
-		text-align: center
-
-	// 버튼안에 화살표
-	&.arrow
-		padding: 0 50px
-
-		&:after
-			content: "\f105"
-			margin-left: 9px
-			font-family: FontAwesome
-
-	// 버튼안에 화살표가 사이드에 
-	&.side
-		width: 230px
-		padding: 0 9px 0 18px
-		text-align: left
-
-		&:after
-			float: right
+/* 5. button style */ 
+@import 'button'
 
 // 7. footer
 .footer
@@ -424,92 +221,7 @@ body
 		+font-size(14px)
 
 // 8. 대쉬보드 데스크탑과 모바일
-.dashboard
-	background: url(http://tendencydev.kr/gosumom/public/img/dashboard_bg.png) repeat-x 0 0
-	text-align: center
-
-	.wrapper
-		position: relative
-		height: 58px
-
-	.button
-		position: absolute
-		top: -56px
-		right: 30px
-		width: 60px
-		height: 56px
-		text-indent: -9999px
-		@extend %is-img
-		background-position: 0 -200px
-
-		@media all and (min-width: $page-main-width) // 데스크탑
-			right: 0
-
-		&.active
-			background-position: -100px -200px
-
-			&+ul
-				display: none
-	ul
-		position: relative
-		@extend %cf
-		display: block
-		vertical-align: top
-
-		@media all and (min-width: 1160px)
-			position: static
-			display: inline-block
-			width: auto
-
-	li
-		position: absolute
-		top: 0
-		left: 0
-		float: left
-		display: none
-		width: 100%
-		margin-left: 30px
-		padding-top: 14px
-		font-family: "nanum barun gothic"
-		+font-size(14px)
-		font-weight: bold
-		color: #04858c
-
-		&:first-child
-			display: block
-
-		@media all and (min-width: 1160px) // 데스크탑
-			position: static
-			width: auto
-			display: block
-			
-		&:first-child
-			margin-left: 0
-
-		.number
-			margin-left: 9px
-			color: $white
-			text-shadow: 2px 2px #35b0b7
-
-		.icon
-			display: inline-block
-			width: 40px
-			height: 30px
-			margin-right: 8px
-			@extend %is-img
-			vertical-align: middle
-
-			&.mom
-				background-position: -70px -80px
-
-			&.review
-				background-position: -142px -82px
-
-			&.view
-				background-position: -230px -80px
-
-			&.center
-				background-position: 8px -81px
+@import "dashboard"
 
 // 6. main 컨텐츠
 .content_wrap
@@ -801,50 +513,9 @@ body
 	margin: 0 auto
 	padding-top: 50px
 
-
 // 팝업 스타일
-.popup_wrap
-	width: 700px
+@import "popup"
 
-	.inner
-		position: relative
-
-	.popup_close
-		position: absolute
-		top: 20px
-		right: 20px
-		padding: 10px
-		width: 50px
-		height: 50px
-		@extend %is-img
-		background-position: -316px -86px
-		//background-size: 19px 19px
-		text-indent: -9999px
-
-
-	.head
-		padding: 33px 30px 30px 40px
-		background-color: $base-color
-		border-bottom: 6px solid $point-color
-		color: $white
-
-		h3
-			+font-size(24px)
-
-	.body
-		padding: 70px 90px
-		background-color: $white
-
-		&.phone_check
-			padding: 20px 90px 50px
-
-		input[type="text"]
-			width: 100%
-			height: 50px
-			font-size: 18px
-
-		.note
-			line-height: 2
 
 .phone_check
 	.guide
@@ -1390,42 +1061,7 @@ body
 		font-family: "돋움", "Dotum"
 
 
-// 소셜 버튼
-.button_social
-	box-sizing: border-box
-	width: 140px
-	height: 34px
-	border: 1px solid #ccc
-	background-color: #f1f1f1
-	+font-size(11px)
-	line-height: 34px
-	font-family: "돋움", "Dotum"
 
-	&.facebook
-		background-color: #3b569d
-		border-color: #3b569d
-		color: #fff
-
-	span
-		display: inline-block
-		width: 17px
-		height: 17px
-		margin-right: 9px
-		background-image: url(http://tendencydev.kr/gosumom/public/img/sprite_bg.png)
-		background-repeat: no-repeat
-		vertical-align: top
-		//border: 1px solid red
-
-	&.like span
-		margin-top: 6px
-		background-position: -450px 0
-
-	&.facebook span
-		margin-top: 8px
-		background-position: -440px -50px
-
-	& + &
-		margin-left: 12px
 
 .my_review_list
 	dl
