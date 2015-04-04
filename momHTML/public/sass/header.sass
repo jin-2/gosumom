@@ -1,14 +1,14 @@
 .small_view
-	display: block
-.large_view
 	display: none
+.large_view
+	display: block
 
 //@media all and only screen and (min-width: 800px) 
-@media all and (min-width: 800px) // desktop view
-	.small_view
-		display: none
-	.large_view
-		display: block
+//@media all and (min-width: 800px) // desktop view
+//	.small_view
+//		display: none
+//	.large_view
+//		display: block
 
 
 // 2. 데스크탑 헤더 스타일
@@ -168,7 +168,7 @@
 
 // 모바일 header
 .tab_bar
-
+	display: none
 	.header
 		position: relative
 		height: 50px
@@ -200,6 +200,7 @@
 		right: 0
 
 .left_off_canvas_menu, .right_off_canvas_menu
+	display: none
 	background: #fff
 	position: absolute
 	top: 0

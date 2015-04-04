@@ -104,11 +104,15 @@ body
 	text-align: center
 
 .wrapper
+	//max-width: $page-width
 	max-width: $page-width
 	margin: 0 auto
 
 	.main &
 		max-width: $page-main-width
+
+		@media all and (max-width: 960px) 
+			width: 960px
 
 
 
@@ -132,7 +136,7 @@ body
 		//top: 100px
 		width: 100%
 		border-bottom: 1px solid #cbcbcb
-		box-shadow: 0 4px 4px #cbcbcb
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1)
 		background: $white
 
 		.main &
@@ -140,7 +144,8 @@ body
 			top: 0
 
 		.wrapper
-			max-width: 999px
+			//max-width: 999px
+			width: 999px
 			padding: 25px 30px 24px
 			
 			@media all and (min-width: $page-main-width)
@@ -1382,7 +1387,7 @@ $url_0: url(./image/btn_paging.gif)
 
 .intro_layer
 	max-width: 1003px
-	margin: 0 auto
+	//margin: 0 auto
 
 	.inner
 		width: 1003px
@@ -1431,6 +1436,13 @@ $url_0: url(./image/btn_paging.gif)
 		margin-top: 11px
 		font-family: "돋움", "Dotum"
 		color: #fff
+
+		.password_find
+			color: #fff
+			font-size: 12px
+			vertical-align: top
+			line-height: 1.5
+			float: right
 
 	.dcheck label em
 		background-position: -50px 0
