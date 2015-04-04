@@ -1415,7 +1415,7 @@ body .main .content_layer {
 }
 
 .btn_wrap {
-  margin-top: 30px;
+  padding-top: 30px;
   text-align: center;
 }
 .btn_wrap .button + .button {
@@ -1507,6 +1507,7 @@ body .main .content_layer {
   .login_wrap {
     width: 400px;
     margin: 0 auto;
+    padding-top: 50px;
   }
 }
 .login_wrap .title {
@@ -1893,13 +1894,51 @@ body .main .content_layer {
   display: none;
 }
 .review_content .review_detail {
+  overflow: hidden;
   padding-bottom: 25px;
 }
-.review_content .review_detail .section {
-  border-bottom: 1px dashed #d8d8d8;
+.review_content .review_detail .btn_wrap {
+  clear: both;
 }
-.review_content .review_detail .section:first-child {
+.review_content .review_detail .section {
+  position: relative;
+  padding-left: 2%;
+  padding-right: 2%;
+  float: left;
+  width: 46%;
   border-top: 1px dashed #d8d8d8;
+}
+.review_content .review_detail .section:nth-child(odd)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -15px;
+  height: 33px;
+  border-right: 1px solid #d8d8d8;
+}
+.review_content .review_detail .section .item_star, .review_content .review_detail .section .detail {
+  float: none;
+  width: 100%;
+}
+.review_content .review_detail .section .item_star {
+  text-align: left;
+}
+.review_content .review_detail .section .rating_star {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+.review_content .review_detail .section .item_name {
+  margin-right: 13px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #555;
+}
+.review_content .review_detail .section .detail {
+  overflow: hidden;
+  margin-top: 5px;
+  height: 54px;
 }
 .review_content .active + .toggle_content {
   display: block;
@@ -2292,6 +2331,7 @@ body .main .content_layer {
 
 .intro_layer {
   max-width: 1003px;
+  margin: 0 auto;
 }
 .intro_layer .inner {
   width: 1003px;
@@ -2391,6 +2431,10 @@ body .main .content_layer {
   height: 100%;
   background: black;
   opacity: 0.5;
+}
+.dim_layer.wide {
+  min-height: 954px;
+  background: black url(http://tendencydev.kr/gosumom/public/img/overlay_bg.png) no-repeat center 0;
 }
 
 .page_motive {

@@ -49,7 +49,7 @@
 	})
 
 	// 헬프 오버레이
-	var $win, doc_H, $overlayer, $overlayer, margin_box;
+	var $win, doc_H, $overlayer, margin_box, $visual;
 
 	initSetting(function() {
 		$win.on('resize', setHeight);
@@ -66,11 +66,14 @@
 
 		if (!$overlayer) { $overlayer = $('#intro_layer'); }
 		overlayer_H = $overlayer.height();
+		console.log(overlayer_H)
 
-		margin_box = ( doc_H - overlayer_H ) / 2;
-		$overlayer.css('margin-top', margin_box);
-
-		$('.dim_layer').css('height', doc_H);
+		if(overlayer_H < doc_H){
+			margin_box = ( doc_H - overlayer_H ) / 2;
+			$overlayer.css('margin-top', margin_box);
+			
+			$('.dim_layer').css('height', doc_H);
+		}
 	}
 	
 

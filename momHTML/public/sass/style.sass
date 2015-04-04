@@ -507,7 +507,7 @@ body
 
 // btn area
 .btn_wrap
-	margin-top: 30px
+	padding-top: 30px
 	text-align: center
 
 	.button + .button
@@ -562,6 +562,7 @@ body
 	@media all and (min-width: 800px) // desktop view
 		width: 400px
 		margin: 0 auto
+		padding-top: 50px
 
 	.title
 		margin-bottom: 30px
@@ -936,13 +937,58 @@ body
 
 	.review_detail
 		//display: none
+		overflow: hidden
 		padding-bottom: 25px
 
+		.btn_wrap
+			clear: both
+		
 		.section
-			border-bottom: 1px dashed #d8d8d8
-
-		.section:first-child
+			position: relative
+			padding-left: 2%
+			padding-right: 2%
+			float: left
+			width: 46%
 			border-top: 1px dashed #d8d8d8
+
+			&:nth-child(odd)::after
+				content: ''
+				position: absolute
+				top: 50%
+				right: 0
+				margin-top: -15px
+				height: 33px
+				border-right: 1px solid #d8d8d8
+
+			.review_detail
+
+
+			.item_star, .detail
+				float: none
+				width: 100%
+
+			.item_star
+				text-align: left
+
+			.rating_star
+				display: inline-block
+				vertical-align: middle
+				margin: 0
+
+			.item_name
+				margin-right: 13px
+				font-weight: bold
+				vertical-align: middle
+				color: #555
+
+			.detail
+				overflow: hidden
+				margin-top: 5px
+				height: 54px
+
+
+
+
 
 	.active + .toggle_content
 		display: block
@@ -1336,6 +1382,7 @@ $url_0: url(./image/btn_paging.gif)
 
 .intro_layer
 	max-width: 1003px
+	margin: 0 auto
 
 	.inner
 		width: 1003px
@@ -1433,6 +1480,11 @@ $url_0: url(./image/btn_paging.gif)
 	height: 100%
 	background: black
 	opacity: 0.5
+
+	&.wide
+		min-height: 954px
+		background: black url(http://tendencydev.kr/gosumom/public/img/overlay_bg.png) no-repeat center 0
+		//opacity: 1
 
 
 
