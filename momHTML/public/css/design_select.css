@@ -1,3 +1,70 @@
+/*
+Error: Undefined variable: "$white".
+        on line 6 of sass/design_select.sass
 
+1: .select_custom
+2: 	z-index: 100
+3: 	position: relative
+4: 	display: inline-block
+5: 	width: 100%
+6: 	background-color: $white
+7: 	
+8: 
+9: 	.select_insert
+10: 		box-sizing: border-box
+11: 		position: relative
 
-/*# sourceMappingURL=design_select.css.map */
+Backtrace:
+sass/design_select.sass:6
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `call'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$white\".\A         on line 6 of sass/design_select.sass\A \A 1: .select_custom\A 2: 	z-index: 100\A 3: 	position: relative\A 4: 	display: inline-block\A 5: 	width: 100%\A 6: 	background-color: $white\A 7: 	\A 8: \A 9: 	.select_insert\A 10: 		box-sizing: border-box\A 11: 		position: relative"; }
