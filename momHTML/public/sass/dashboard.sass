@@ -25,9 +25,12 @@
 			&+ul
 				display: none
 	ul
-		position: relative
+		//position: relative
+		position: static
 		@extend %cf
-		display: block
+		//display: block
+		display: inline-block
+		width: auto
 		vertical-align: top
 
 		@media all and (min-width: 1160px)
@@ -36,12 +39,15 @@
 			width: auto
 
 	li
-		position: absolute
+		//position: absolute
+		position: static
 		top: 0
 		left: 0
 		float: left
-		display: none
-		width: 100%
+		//display: none
+		display: block
+		//width: 100%
+		width: auto
 		margin-left: 30px
 		padding-top: 14px
 		font-family: "nanum barun gothic"
@@ -50,7 +56,7 @@
 		color: #04858c
 
 		&:first-child
-			display: block
+			//display: block
 
 		@media all and (min-width: 1160px) // 데스크탑
 			position: static

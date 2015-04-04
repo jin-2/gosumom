@@ -401,9 +401,13 @@ body
 		&.bg_mypage
 			background-position: 0 -300px
 
-		// 마이페이지 비쥬얼
+		// 리뷰쓰기 비쥬얼
 		&.bg_write
 			background-position: -180px -300px
+
+		// 이용약관, 개인정보보호정책 비쥬얼
+		&.bg_etc
+			background-position: 0 -470px
 
 	.title
 		+font-size(28px)
@@ -1343,6 +1347,7 @@ $url_0: url(./image/btn_paging.gif)
 
 	a, strong
 		display: inline-block
+		margin: 2px
 		width: 33px
 		height: 33px
 		border: 1px solid $color_gallery_approx
@@ -1466,8 +1471,8 @@ $url_0: url(./image/btn_paging.gif)
 	margin: 0 auto
 	//+font-size(16px)
 	.inner
-		width: 96%
-		padding: 0 2%
+		width: 94%
+		padding: 0 3%
 
 	.main
 		margin-top: 0
@@ -1479,10 +1484,11 @@ $url_0: url(./image/btn_paging.gif)
 		width: 100%
 
 	button, input[type="text"], input[type="password"]
-		+font-size(18px)
+		+font-size(16px)
+		height: 45px
 
 	a, label
-		+font-size(16px)
+		+font-size(15px)
 
 .dim_layer
 	z-index: -1
@@ -1569,6 +1575,142 @@ $url_0: url(./image/btn_paging.gif)
 
 	img
 		width: 70px
+
+
+// 개인정보보호정책, 이용약관
+.text_list
+	line-height: 1.5
+
+	.item_title
+		margin-top: 31px
+		+font-size(20px)
+	
+	.arrow
+		margin-top: 10px
+		margin-left: 2px
+		font-weight: bold
+		padding-left: 12px
+		text-indent: -12px
+
+	.arrow::before
+		content: "\f0da"
+		margin-right: 7px
+		font-family: FontAwesome
+		color: #18bcc5
+
+	ul.dot 
+		margin-left: 14px
+		
+		> li
+			margin-top: 13px
+			padding-left: 10px
+			list-style: square
+			list-style-position: inside
+			text-indent: -10px
+		
+		ul
+			margin-left: 30px
+
+			li
+				margin-top: 1px
+
+	.bar
+		display: block
+		margin-top: 10px
+		&::before
+			content: ''
+			display: inline-block
+			width: 6px
+			margin-right: 10px
+			border-top: 2px solid #333
+			vertical-align: middle
+
+
+.clause_top
+	margin: 31px 0
+
+.table_of_contents
+	overflow: hidden
+	background-color: #4d4d4d
+	padding: 30px 60px
+
+	div
+		float: left
+		width: 55%
+
+		&:first-child
+			width: 45%
+
+	a
+		display: block
+		margin-bottom: 5px
+		color: #fff
+
+		&::before
+			content: ''
+			display: inline-block
+			width: 8px
+			margin-right: 10px
+			border-top: 3px solid #fff
+			vertical-align: middle
+
+// 나의 리뷰 쓰기 - 정보 등록 정책
+.register_rule
+	.noti_text
+		margin-top: 10px
+		font-weight: bold
+		+font-size(12px)
+		text-align: center
+
+		a
+			margin-right: 5px
+
+		&::after
+			content: "\f0d7"
+			font-family: FontAwesome
+			color: #18bcc5
+
+		&.active 
+			&::after
+				content: "\f0d8"
+
+	dl
+		display: none
+		margin-top: 30px
+		+font-size(11px)
+		color: #666
+		font-family: "돋움", "Dotum"
+	
+	.noti_text.active + dl
+		display: block
+
+	dt 
+		strong
+			+font-size(12px)
+			font-family: 'nanum gothic'
+
+		&:before
+			content: ''
+			display: inline-block
+			margin-right: 4px
+			width: 6px
+			height: 9px
+			@extend %is-img
+			background-position: -450px -420px
+
+	dd
+		margin-top: 4px
+		padding: 15px 10px 11px
+		border: 1px solid #d5d5d5
+
+		ul
+			overflow: hidden
+
+		li
+			margin-bottom: 4px
+			float: left
+			width: 50%
+
 
 
 

@@ -14,6 +14,19 @@
 		}
 	});
 
+	$('.register_rule .noti_text').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+	});
+
+	$('.review_content .button_more_review').click(function(e){
+		e.preventDefault();
+		var condition = $(this).parent().hasClass('blind')
+		if( !condition ){
+			$(this).toggleClass('active');
+		}
+	});
+
 	$('.my_review_list .button_more_review').click(function(e){
 		e.preventDefault();
 		//$('.button_more_review.active').removeClass('active');
@@ -48,33 +61,29 @@
 		$('.password_modify').toggle();
 	})
 
-	// // 헬프 오버레이
-	// var $win, doc_H, $overlayer, margin_box, $visual;
+	// 모바일 헬프 오버레이
+	var $win, doc_H, $overlayer, margin_box;
 
-	// initSetting(function() {
-	// 	$win.on('resize', setHeight);
-	// });
+	initSetting(function() {
+		$win.on('resize', setHeight);
+	});
 
-	// function initSetting(fn) {
-	// 	$win = $(window);
-	// 	setHeight();
-	// 	fn ? fn() : null;
-	// }
+	function initSetting(fn) {
+		$win = $(window);
+		setHeight();
+		fn ? fn() : null;
+	}
 
-	// function setHeight() {
-	// 	doc_H = $win.height();
+	function setHeight() {
+		doc_H = $win.height();
 
-	// 	if (!$overlayer) { $overlayer = $('#intro_layer'); }
-	// 	overlayer_H = $overlayer.height();
-	// 	console.log(overlayer_H)
+		if (!$overlayer) { $overlayer = $('#intro_layer.small'); }
+		overlayer_H = $overlayer.height();
 
-	// 	if(overlayer_H < doc_H){
-	// 		margin_box = ( doc_H - overlayer_H ) / 2;
-	// 		$overlayer.css('margin-top', margin_box);
-			
-	// 		$('.dim_layer').css('height', doc_H);
-	// 	}
-	// }
+		margin_box = ( doc_H - overlayer_H ) / 2;
+
+		$overlayer.css('margin-top', margin_box);
+	}
 	
 
 })(window);

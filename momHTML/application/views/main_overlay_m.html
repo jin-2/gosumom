@@ -77,6 +77,30 @@
 			// 	})
 			// });
 		});
+
+		// 헬프 오버레이
+		var $win, doc_H, $overlayer, margin_box, $visual;
+
+		initSetting(function() {
+			$win.on('resize', setHeight);
+		});
+
+		function initSetting(fn) {
+			$win = $(window);
+			setHeight();
+			fn ? fn() : null;
+		}
+
+		function setHeight() {
+			doc_H = $win.height();
+
+			if (!$overlayer) { $overlayer = $('#intro_layer.small'); }
+			overlayer_H = $overlayer.height();
+
+			margin_box = ( doc_H - overlayer_H ) / 2;
+
+			$overlayer.css('margin-top', margin_box);
+		}
 	</script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
