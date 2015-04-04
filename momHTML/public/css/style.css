@@ -1759,13 +1759,13 @@ body .main .content_layer {
   margin-right: 53px;
   padding: 18px 0 16px;
   width: 405px;
-  min-height: 65px;
+  height: 102px;
   background: url(http://tendencydev.kr/gosumom/public/img/bg_dash_line.png) repeat-x 0 100%;
 }
 .item_star_point dt {
   width: 250px;
-  padding-top: 13px;
   padding-left: 79px;
+  height: 42px;
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 800;
@@ -1812,7 +1812,7 @@ body .main .content_layer {
 }
 .item_star_point .star_wrap {
   position: absolute;
-  top: 35px;
+  top: 21px;
   right: 0;
 }
 
