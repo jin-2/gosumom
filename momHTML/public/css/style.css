@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd {
   margin: 0;
   padding: 0; }
 
-.top_bar .user_thumb, .top_bar .user_menu_wrap .icon, .dashboard .button, .dashboard li .icon, .rating_star, .rating_star .inner, .contents_body .visual, .data_form .photo, .popup_wrap .popup_close, .register_rule dt:before {
+.top_bar .user_thumb, .top_bar .user_menu_wrap .icon, .footer li.facebook a, .dashboard .button, .dashboard li .icon, .rating_star, .rating_star .inner, .contents_body .visual, .data_form .photo, .popup_wrap .popup_close, .register_rule dt:before {
   background: url(http://tendencydev.kr/gosumom/public/img/sprite_bg.png) no-repeat 0 0; }
 
 .masonry .item .reviewer .nickname, .select_custom .select_option a {
@@ -844,6 +844,19 @@ body .main .content_layer {
   color: inherit;
   vertical-align: top;
   font-weight: 800; }
+.footer li.facebook {
+  border-left: 0;
+  padding-left: 0; }
+.footer li.facebook a {
+  display: inline-block;
+  width: 57px;
+  height: 57px;
+  background-position: -500px -400px; }
+.footer li.facebook a span {
+  display: block;
+  text-indent: -9999px; }
+.footer li.facebook a:hover {
+  background-position: -569px -400px; }
 .footer .copyright {
   margin-top: 14px;
   font-family: helvetica;
@@ -1874,7 +1887,6 @@ body .main .content_layer {
   font-family: FontAwesome; }
 
 .intro_layer {
-  display: none;
   max-width: 1003px; }
 .intro_layer .inner {
   width: 1003px;

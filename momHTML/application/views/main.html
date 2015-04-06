@@ -129,7 +129,7 @@
 						</ul>
 					</div>
 
-					<a href="#" class="button_review_write"><img src="/momHTML/public/img/btn_review_write.png" alt="리뷰쓰기"></a>
+					<a href="#" class="button_review_write button_phone_check"><img src="/momHTML/public/img/btn_review_write.png" alt="리뷰쓰기"></a>
 				</div><!-- //.user_wrap -->
 			</div>
 		</header>
@@ -660,6 +660,7 @@
 						<li><a href="#">이용약관</a></li>
 						<li><a href="#">개인정보 취급방침</a></li>
 						<li><a href="mailto:customer@gosumom.com">고객센터 customer@gosumom.com</a></li>
+						<li class="facebook"><a href="#"><span>페이스북</span></a></li>
 					</ul>
 					<p class="copyright">© 2015 GOSUMOM. All Rights Reserved</p>
 				</div>
@@ -668,6 +669,42 @@
 
 	</div><!-- //.container -->
 
+	<!-- 핸드폰 인증 레이어 팝업 -->
+	<div id="popup_phone_check" class="popup_wrap" style="display: block;">
+		<div class="inner">
+			<button type="button" class="popup_close">닫기</button>
+			<div class="head">
+				<h3>믿음가는 리뷰를 위한 단 한 번의 인증!</h3>
+			</div>
+			<div class="body phone_check">
+				<form action="#">
+					<fieldset>
+						<legend class="hidden">닉네임 입력 양식</legend>
+						<p class="guide">
+							부정을 방지하고 당사자가 직접 리뷰를 작성하는 원칙에 의하여 <br/>
+							계정당 1회 SMS 인증을 실시합니다.
+						</p>
+
+						<label for="phone_check" class="label_text">휴대폰 번호 입력</label>
+						<input type="text" name="phone_check" id="phone_check" maxlength="3" class="phone" title="핸드폰 처음 3자리 입력"> <span class="bar"></span>
+						<input type="text" name="phone_check" id="phone_check2" maxlength="4" class="phone" title="핸드폰 중간 4자리 입력"> <span class="bar"></span>
+						<input type="text" name="phone_check" id="phone_check3" maxlength="4" class="phone" title="핸드폰 마지막 4자리 입력">
+						<button type="button" class="button line large send">인증번호 받기</button>
+
+						<label for="confirm" class="label_text">인증번호 입력</label>
+						<input type="text" name="confirm" id="confirm">
+						<p class="note">유효성 검사 결과</p>
+
+						<div class="btn_wrap">
+							<button type="submit" class="button arrow large confirm">인증하기</button>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 핸드폰 인증 레이어 팝업 -->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/momHTML/public/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
@@ -691,9 +728,17 @@
 		});
 
 		// 닉네임 입력 팝업
-		$('.button_review_write').click(function(){
+		/*$('.button_review_write').click(function(){
 			$('#popup_nickname').bPopup({
 				closeClass: 'popup_close'
+			});
+		});*/
+
+		// 핸드폰 인증 팝업
+		$('.button_phone_check').click(function(){
+			$('#popup_phone_check').bPopup({
+				closeClass: 'popup_close'
+				, positionStyle: 'fixed'
 			});
 		});
 	</script>

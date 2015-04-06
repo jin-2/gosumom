@@ -222,6 +222,24 @@ body
 		vertical-align: top
 		font-weight: 800
 
+	li.facebook
+		border-left: 0
+		padding-left: 0
+
+		a
+			display: inline-block
+			width: 57px
+			height: 57px
+			@extend %is-img
+			background-position: -500px -400px
+
+			span
+				display: block
+				text-indent: -9999px
+		
+			&:hover
+				background-position: -569px -400px
+
 	.copyright
 		margin-top: 14px
 		font-family: helvetica
@@ -1387,7 +1405,7 @@ $url_0: url(./image/btn_paging.gif)
 		font-family: FontAwesome
 
 .intro_layer
-	display: none
+	//display: none
 	max-width: 1003px
 	//margin: 0 auto
 
