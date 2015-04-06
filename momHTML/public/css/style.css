@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd {
   padding: 0; }
 
 .top_bar .user_thumb, .top_bar .user_menu_wrap .icon, .footer li.facebook a, .dashboard .button, .dashboard li .icon, .rating_star, .rating_star .inner, .contents_body .visual, .data_form .photo, .popup_wrap .popup_close, .register_rule dt:before {
-  background: url(http://tendencydev.kr/gosumom/public/img/sprite_bg.png) no-repeat 0 0; }
+  background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat 0 0; }
 
 .masonry .item .reviewer .nickname, .select_custom .select_option a {
   overflow: hidden;
@@ -279,7 +279,7 @@ input[type="text"], input[type="password"] {
   font-size: 1.2rem;
   font-family: "돋움", "Dotum";
   color: #555;
-  background: url(/public/img/bul_dot.gif) no-repeat 0 5px; }
+  background: url(http://gosumom.com/public/img/bul_dot.gif) no-repeat 0 5px; }
 .list_info li:first-child {
   margin-top: 0; }
 
@@ -354,7 +354,7 @@ input[type="text"], input[type="password"] {
   width: 15px;
   height: 15px;
   margin-right: 6px;
-  background: url(/public/img/sprite_bg.png) no-repeat -290px 0; }
+  background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -290px 0; }
 .masonry .item .best_review {
   padding-top: 8px;
   border-top: 1px solid #ddd;
@@ -369,6 +369,23 @@ input[type="text"], input[type="password"] {
 
 .rating_star_wrap .score {
   color: #888; }
+
+.masonry .item.pink {
+  background-color: #f5d9d5; }
+.masonry .item.pink .title {
+  color: #805751; }
+.masonry .item.pink .best_review p {
+  color: #805751; }
+.masonry .item.pink .rating_star {
+  background-position: 0 -180px; }
+.masonry .item.pink .review_count {
+  color: #333; }
+.masonry .item.pink .icon {
+  background-position: -290px -30px; }
+.masonry .item.pink .location {
+  color: #333; }
+.masonry .item .reviewer {
+  background-color: #fff; }
 
 .dcheck {
   overflow: hidden;
@@ -435,7 +452,7 @@ body {
   color: #333; }
 @media all and (min-width: 800px) {
   body {
-    background: #e1e1e1 url(http://tendencydev.kr/gosumom/public/img/body_bg.gif) repeat 0 0; } }
+    background: #e1e1e1 url(http://gosumom.com/public/img/body_bg.gif) repeat 0 0; } }
 body .main .content_layer {
   z-index: 10; }
 
@@ -858,7 +875,7 @@ body .main .content_layer {
 .footer li.facebook a:hover {
   background-position: -569px -400px; }
 .footer .copyright {
-  margin-top: 14px;
+  margin-top: -20px;
   font-family: helvetica;
   font-size: 14px;
   font-size: 1.4rem; }
@@ -1425,7 +1442,7 @@ body .main .content_layer {
   padding: 18px 0 16px;
   width: 405px;
   height: 102px;
-  background: url(http://tendencydev.kr/gosumom/public/img/bg_dash_line.png) repeat-x 0 100%; }
+  background: url(http://gosumom.com/public/img/bg_dash_line.png) repeat-x 0 100%; }
 .item_star_point dt {
   width: 250px;
   padding-left: 79px;
@@ -1448,7 +1465,7 @@ body .main .content_layer {
   display: block;
   width: 65px;
   height: 65px;
-  background: url(http://tendencydev.kr/gosumom/public/img/sprite_bg.png) no-repeat -500px 0; }
+  background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -500px 0; }
 .item_star_point .item2 .icon {
   background-position: -500px -80px; }
 .item_star_point .item3 .icon {
@@ -1518,7 +1535,7 @@ body .main .content_layer {
   padding: 15px;
   width: 36px;
   height: 18px;
-  background: url(http://tendencydev.kr/gosumom/public/img/sprite_bg.png) no-repeat -526px -314px;
+  background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -526px -314px;
   text-indent: -9999px; }
 
 .button_more_review.active {
@@ -1632,7 +1649,7 @@ body .main .content_layer {
 
 .blind .detail {
   height: 65px;
-  background: url(http://tendencydev.kr/gosumom/public/img/review_hidden.gif) no-repeat 0 0;
+  background: url(http://gosumom.com/public/img/review_hidden.gif) no-repeat 0 0;
   text-align: center; }
 
 .no_result_wrap {
@@ -1727,7 +1744,7 @@ body .main .content_layer {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(http://tendencydev.kr/gosumom/public/img/sprite_bg.png) no-repeat -380px -420px;
+  background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -380px -420px;
   vertical-align: middle; }
 
 .add_question {
@@ -1748,7 +1765,7 @@ body .main .content_layer {
   font-size: 1.6rem; }
 .school_term dt .question {
   padding-left: 12px;
-  background: url(http://tendencydev.kr/gosumom/public/img/bul_dot_gray.png) no-repeat 0 6px; }
+  background: url(http://gosumom.com/public/img/bul_dot_gray.png) no-repeat 0 6px; }
 .school_term dd {
   padding: 25px 20px;
   border-bottom: 1px solid #ddd;
@@ -1764,7 +1781,7 @@ body .main .content_layer {
   padding-left: 12px;
   font-size: 20px;
   font-weight: bold;
-  background: url(http://tendencydev.kr/gosumom/public/img/bul_dot_gray.png) no-repeat 0 8px; }
+  background: url(http://gosumom.com/public/img/bul_dot_gray.png) no-repeat 0 8px; }
 .nickname_input dd {
   margin-top: 10px;
   padding: 10px 20px;
@@ -1973,10 +1990,10 @@ body .main .content_layer {
   opacity: 0.5; }
 .dim_layer.wide {
   min-height: 954px;
-  background: black url(http://tendencydev.kr/gosumom/public/img/overlay_bg.png) no-repeat center 0; }
+  background: black url(http://gosumom.com/public/img/overlay_bg.png) no-repeat center 0; }
 
 .page_motive {
-  background: url(http://tendencydev.kr/gosumom/public/img/motive_bg.jpg) no-repeat center 0; }
+  background: url(http://gosumom.com/public/img/motive_bg.jpg) no-repeat center 0; }
 .page_motive .wrapper {
   margin-bottom: 0; }
 
@@ -1993,7 +2010,7 @@ body .main .content_layer {
 
 .motive_reason {
   padding: 70px 0 72px;
-  background: url(http://tendencydev.kr/gosumom/public/img/motive_bg_pattern1.gif) repeat 0 0;
+  background: url(http://gosumom.com/public/img/motive_bg_pattern1.gif) repeat 0 0;
   text-align: center; }
 .motive_reason .reason_text {
   margin-top: 30px;
@@ -2004,7 +2021,7 @@ body .main .content_layer {
 
 .motive_ideas {
   padding: 70px 0 140px;
-  background: url(http://tendencydev.kr/gosumom/public/img/motive_bg_pattern2.gif) repeat 0 0; }
+  background: url(http://gosumom.com/public/img/motive_bg_pattern2.gif) repeat 0 0; }
 .motive_ideas .idea {
   overflow: hidden; }
 .motive_ideas .idea:first-child {

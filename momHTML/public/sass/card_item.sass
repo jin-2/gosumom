@@ -87,7 +87,7 @@
 				width: 15px
 				height: 15px
 				margin-right: 6px
-				background: url(/public/img/sprite_bg.png) no-repeat -290px 0
+				background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -290px 0
 
 		.best_review
 			padding-top: 8px
@@ -97,7 +97,6 @@
 			p
 				color: #666
 
-
 .result .item 
 	a
 		border-top: 6px solid #333
@@ -106,3 +105,36 @@
 
 .rating_star_wrap .score
 	color: #888
+
+$item_pink: #805751
+
+.masonry
+	.item
+		// 핑크색 박스
+		&.pink 
+			background-color: #f5d9d5
+			
+			.title
+				color: $item_pink
+
+			.best_review
+				p
+					color: $item_pink
+
+			.rating_star
+				background-position: 0 -180px
+
+			.review_count
+				color: #333
+
+			.icon
+				background-position: -290px -30px
+
+			.location
+				color: #333
+
+		.reviewer
+			background-color: #fff
+
+		
+
