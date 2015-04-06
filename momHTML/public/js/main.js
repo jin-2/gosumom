@@ -19,13 +19,13 @@
 		$(this).toggleClass('active');
 	});
 
-	$('.review_content .button_more_review').click(function(e){
-		e.preventDefault();
-		var condition = $(this).parent().hasClass('blind')
-		if( !condition ){
-			$(this).toggleClass('active');
-		}
-	});
+	// $('.review_content .button_more_review').click(function(e){
+	// 	e.preventDefault();
+	// 	var condition = $(this).parent().hasClass('blind')
+	// 	if( !condition ){
+	// 		$(this).toggleClass('active');
+	// 	}
+	// });
 
 	$('.my_review_list .button_more_review').click(function(e){
 		e.preventDefault();
