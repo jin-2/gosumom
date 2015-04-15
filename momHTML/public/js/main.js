@@ -10,7 +10,11 @@
 		e.preventDefault();
 		var condition = $(this).parent().hasClass('blind')
 		if( !condition ){
-			$(this).toggleClass('active');
+			if( !$(this).hasClass('active') ){
+				$(this).addClass('active').text('닫기')
+			}else{
+				$(this).removeClass('active').text('자세히보기');
+			}
 		}
 	});
 
@@ -19,20 +23,31 @@
 		$(this).toggleClass('active');
 	});
 
-	// $('.review_content .button_more_review').click(function(e){
-	// 	e.preventDefault();
-	// 	var condition = $(this).parent().hasClass('blind')
-	// 	if( !condition ){
-	// 		$(this).toggleClass('active');
-	// 	}
-	// });
+	// 핸드폰 인증 팝업
+	$('.button_phone_check').click(function(){
+		if (screen.width <= 800) {
+			$('#popup_phone_check').bPopup({
+				closeClass: 'popup_close',
+				follow: [false, false],
+				position: ['auto', 200]
+			});
+		} else {
+			$('#popup_phone_check').bPopup({
+				closeClass: 'popup_close',
+				positionStyle: 'fixed'
+			});
+		}
+	})
 
 	$('.my_review_list .button_more_review').click(function(e){
 		e.preventDefault();
-		//$('.button_more_review.active').removeClass('active');
-		//$('.my_review_list .toggle_content').hide();
-		$(this).toggleClass('active');
-		$(this).parent().next('.toggle_content').toggle();
+		if( !$(this).hasClass('active') ){
+				$(this).addClass('active').text('닫기');
+				$(this).parent().next('.toggle_content').show();
+			}else{
+				$(this).removeClass('active').text('자세히보기');
+				$(this).parent().next('.toggle_content').hide();
+			}
 	});
 
 	// 커뮤니티 메뉴 중비중 

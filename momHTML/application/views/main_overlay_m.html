@@ -27,7 +27,7 @@
 				<h1>
 					<img src="/momHTML/public/img/intro_text.png" alt="익명기반 솔직담백 어린이집 리뷰 - 엄마들의 작은 공유가 세상을 바꿉니다.">
 				</h1>
-				<form action="#">
+				<!-- <form action="#">
 					<fieldset class="intro_login">
 						<legend>로그인</legend>
 						<div class="facebook_login">
@@ -38,12 +38,35 @@
 						<input type="password" name="use_pw" id="use_pw" placeholder="비밀번호를 입력해 주세요.">
 						<button type="button" class="button_full">로그인하기</button>
 						<div class="login_info">
-							<!-- <input type="checkbox" name="id_save" id="id_save"> <label for="id_save">아이디 저장하기</label> -->
+							<input type="checkbox" name="id_save" id="id_save"> <label for="id_save">아이디 저장하기</label>
 							<span class="dcheck" id="">
 								<input type="checkbox" id="id_save" name="id_save" value="">
 								<label for="id_save"><em></em>아이디 저장하기</label>
 							</span>
 						</div>
+					</fieldset>
+				</form> -->
+				<form action="http://gosumom.com/front/main/login/email" id="loginform" method="post">
+					<fieldset class="intro_login">
+						<legend>로그인</legend>
+						<input type="text" name="email" id="email" placeholder="이메일 주소를 입력해주세요." class="required" value="puritysj2@naver.com">
+						<input type="password" name="passwd" id="passwd" placeholder="비밀번호를 입력해 주세요." class="required">
+						<button type="submit" class="button_full">로그인하기</button>
+						<div class="login_info">
+							<!-- <input type="checkbox" name="id_save" id="id_save"> <label for="id_save">아이디 저장하기</label> -->
+							<span class="dcheck" id="">
+								<input type="checkbox" id="id_save" name="id_save" value="" checked>
+								<label for="id_save"><em></em>아이디 저장하기</label>
+							</span>
+							<a href="mailto:help@gosumom.com" class="password_find">비밀번호찾기</a>
+						</div>
+						<div class="text_or">or</div>
+						<div class="facebook_login">
+							<button type="button" class="button_full blue" onclick="login_sns_fb();">페이스북으로 바로 시작하기</button>
+							<a href="http://gosumom.com/front/main/signup">회원가입하기</a>
+						</div>
+						
+
 					</fieldset>
 				</form>
 			</div>

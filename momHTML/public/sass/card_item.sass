@@ -6,7 +6,7 @@
 		width: 287px
 		margin: 0 4px 8px
 		border-radius: 10px
-		background-color: $white
+		background-color: #fff
 		box-shadow: 2px 2px 4px #b1b0b0
 		text-align: center
 
@@ -32,6 +32,7 @@
 			font-family: "돋움", "Dotum"
 
 		.letter
+			overflow: hidden
 			margin-top: 8px
 			font-family: "돋움", "Dotum"
 			+font-size(12px)
@@ -106,20 +107,60 @@
 .rating_star_wrap .score
 	color: #888
 
-$item_pink: #805751
+$item_pink: #660469
+$item_pink_bg: #c961cc
+$item_pink_border: #b35ab5
+
+$item_purple: #fff
+$item_purple_bg: #9c92eb
+$item_purple_border: #8c83d3
+
+$item_yellow: #644c00
+$item_yellow_bg: #ffdb6b
+$item_yellow_border: #f2d066
+
+$item_blue: #fff
+$item_blue_bg: #8fa1ef
+$item_blue_border: #8091d7
 
 .masonry
 	.item
+		.reviewer
+			background-color: #fff
+
 		// 핑크색 박스
 		&.pink 
-			background-color: #f5d9d5
+			background-color: $item_pink_bg
+			color: $item_pink
 			
-			.title
-				color: $item_pink
+			.title, .letter, .list_info li, .location
+				color: #fff
+
+			.rating_star
+				background-position: 0 -180px
+
+			.review_count
+				color: #333
+
+			.icon
+				background-position: -290px -30px
 
 			.best_review
-				p
-					color: $item_pink
+				border-top-color: #fff
+
+			.box.full_line_top
+				border-top-color: $item_pink_border
+
+			.rating_star_wrap .score
+				color: #333
+		
+		// 보라색 박스
+		&.purple
+			background-color: $item_purple_bg
+			color: $item_purple
+			
+			.title, .letter, .list_info li
+				color: $item_purple
 
 			.rating_star
 				background-position: 0 -180px
@@ -133,8 +174,73 @@ $item_pink: #805751
 			.location
 				color: #333
 
-		.reviewer
-			background-color: #fff
+			.best_review
+				border-top-color: #fff
+
+			.box.full_line_top
+				border-top-color: $item_purple_border
+
+			.rating_star_wrap .score
+				color: #333
+
+		// 갈색 박스
+		&.yellow
+			background-color: $item_yellow_bg
+			color: $item_yellow
+			
+			.title, .letter, .list_info li
+				color: $item_yellow
+
+			.rating_star
+				background-position: 0 -180px
+
+			.review_count
+				color: #333
+
+			.icon
+				background-position: -290px -30px
+
+			.location
+				color: #333
+
+			.best_review
+				border-top-color: #fff
+
+			.box.full_line_top
+				border-top-color: $item_yellow_border
+
+			.rating_star_wrap .score
+				color: #333
+
+		// 회색 박스
+		&.blue
+			background-color: $item_blue_bg
+			color: $item_blue
+			
+			.title, .letter, .list_info li
+				color: $item_blue
+
+			.rating_star
+				background-position: 0 -180px
+
+			.review_count
+				color: #333
+
+			.icon
+				background-position: -290px -30px
+
+			.location
+				color: #333
+
+			.best_review
+				border-top-color: #fff
+
+			.box.full_line_top
+				border-top-color: $item_blue_border
+
+			.rating_star_wrap .score
+				color: #333
+
 
 		
 

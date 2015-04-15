@@ -78,9 +78,9 @@
  */
 .container
 	overflow: hidden
-	padding-top: 84px
-	@media all and (min-width: 800px)
-		//padding-top: 84px
+	padding-top: 0
+	@media all and (min-width:1000px) // for wide
+		padding-top: 84px
 
 body
 	background-image: none
@@ -102,11 +102,13 @@ body
 
 .wrapper
 	//max-width: $page-width
-	max-width: $page-width
+	width: $page-width
 	margin: 0 auto
 
 	.main &
 		max-width: $page-main-width
+		min-width: $page-width
+		width: auto
 
 		@media all and (max-width: 960px) 
 			width: 960px
@@ -140,9 +142,10 @@ body
 		position: relative
 		top: 0
 
-	.wrapper
+	.wrapper, .main & .wrapper
 		//max-width: 999px
-		width: 999px
+		width: 950px
+		min-width: 950px
 		padding: 25px 0 24px
 		//padding: 25px 30px 24px
 		
@@ -256,10 +259,10 @@ body
 	.wrapper
 		//margin-top: 199px
 		margin-bottom: 100px
-		padding: 0 1rem
+		padding: 0
 
-		@media all and (min-width: 800px) // desktop view
-			padding: 0
+		@media all and (max-width: 999px) // small view
+			//padding: 0 2rem
 
 		.main & 
 			//margin-top: 50px
@@ -283,6 +286,9 @@ body
 
 		.best_review &
 			display: none
+
+		.pink &, .purple &, .brown &, .gray &
+			border-top-color: #fff
 
 	.score
 		float: left
@@ -737,9 +743,16 @@ body
 		input[type="text"]
 			margin-top: 7px
 			width: 100%
-			height: 35px
+			height: 50px
 			font-family: "돋움", "Dotum"
 			+font-size(12px)
+			color: #666
+
+		textarea
+			margin-top: 7px
+			font-family: "돋움", "Dotum"
+			+font-size(12px)
+			line-height: 1.4
 
 		.rating
 			display: inline-block
@@ -766,7 +779,7 @@ body
 			top: 0
 			left: -84px
 			width: 999px
-			height: 137px
+			height: 162px
 			background-color: #f5f5f5
 
 		.list
@@ -774,6 +787,8 @@ body
 
 	.btn_wrap
 		margin-top: 38px
+		button
+			width: 150px
 
 // 어린이집 상세
 .all_star_point
@@ -939,16 +954,18 @@ body
 .button_more_review
 	box-sizing: content-box
 	position: absolute
-	top: 15px
-	right: 0
-	padding: 15px
-	width: 36px
-	height: 18px
-	background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -526px -314px
-	text-indent: -9999px
+	top: 30px
+	right: 10px
+	padding-bottom: 25px
+	width: 55px
+	background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -529px -311px
+	color: #8f8f8f
+	+font-size(11px)
+	font-family: "돋움", "Dotum"
+	font-weight: normal
 
 .button_more_review.active
-	background-position: -584px -314px
+	background-position: -589px -311px
 
 // 리뷰 리스트
 .review_list_wrap
@@ -1007,7 +1024,7 @@ body
 			.detail
 				overflow: hidden
 				margin-top: 5px
-				height: 54px
+				height: 90px
 
 
 
@@ -1051,6 +1068,7 @@ body
 	
 
 		.text
+			overflow: hidden
 			margin-bottom: 12px
 			+font-size(14px)
 			font-weight: 700
@@ -1063,7 +1081,9 @@ body
 			margin-right: 8px
 			width: 31px
 			height: 31px
-			background-color: #bebdbd
+			@extend %is-img
+			//background-color: #bebdbd
+			background-position: -430px -180px
 			border-radius: 50%
 
 			img
@@ -1406,11 +1426,12 @@ $url_0: url(./image/btn_paging.gif)
 
 .intro_layer
 	//display: none
-	max-width: 1003px
+	max-width: 1000px
 	//margin: 0 auto
 
 	.inner
-		width: 1003px
+		width: 1000px
+		padding-top: 150px
 		overflow: hidden
 
 		h1
@@ -1420,17 +1441,47 @@ $url_0: url(./image/btn_paging.gif)
 	.visual
 		float: left
 
+	.bottom_bg
+		clear: both
+		padding-top: 120px
+		text-align: center
+
+		img.shadow
+			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5)
+
 	.main
 		float: right
-		margin-top: 100px
+		padding-top: 10px
 
-		button, input[type="text"], input[type="password"], a.button_full
+		button, input[type="text"], input[type="email"], input[type="password"], a.button_full
 			display: block
 			width: 100%
-			height: 43px
-			margin-top: 7px
+			height: 50px
+			margin-top: 10px
 			border-radius: 5px
 			+font-size(14px)
+
+		.text_or
+			padding: 12px 0
+			+font-size(16px)
+			text-align: center
+			color: #fff
+
+	.already_signup
+		padding-top: 25px
+		text-align: center
+		color: #fff
+		+font-size(18px)
+
+		span
+			vertical-align: middle
+
+		.note_green
+			margin-left: 5px
+			padding-bottom: 1px
+			font-weight: bold
+			border-bottom: 2px solid #0999a1
+			//vertical-align: middle
 
 	.intro_login
 		width: 260px
@@ -1477,15 +1528,15 @@ $url_0: url(./image/btn_paging.gif)
 		+font-size(12px)
 
 	.dcheck em
-		margin-top: 2px
+		//margin-top: 2px
 		
 .intro_layer.small
 	max-width: 465px
 	margin: 0 auto
 	//+font-size(16px)
 	.inner
-		width: 94%
-		padding: 0 3%
+		width: 90%
+		padding: 0 5%
 
 	.main
 		margin-top: 0
@@ -1502,6 +1553,13 @@ $url_0: url(./image/btn_paging.gif)
 
 	a, label
 		+font-size(15px)
+
+	.text_or
+		padding: 6px 0
+
+	h1
+		img
+			max-width: 65%
 
 .dim_layer
 	z-index: -1
@@ -1549,6 +1607,7 @@ $url_0: url(./image/btn_paging.gif)
 		margin-top: 30px
 		color: #555
 		line-height: 1.6
+		+font-size(14px)
 
 	.keyword
 		margin-top: 70px

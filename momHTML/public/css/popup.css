@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$base-color".
-        on line 22 of sass/popup.sass
+        on line 25 of sass/popup.sass
 
-17: 		text-indent: -9999px
-18: 
-19: 
-20: 	.head
-21: 		padding: 33px 30px 30px 40px
-22: 		background-color: $base-color
-23: 		border-bottom: 6px solid $point-color
-24: 		color: $white
-25: 
-26: 		h3
-27: 			+font-size(24px)
+20: 		text-indent: -9999px
+21: 
+22: 
+23: 	.head
+24: 		padding: 33px 30px 30px 40px
+25: 		background-color: $base-color
+26: 		border-bottom: 6px solid $point-color
+27: 		color: $white
+28: 		// @media all and (max-width: 500px)
+29: 		// 	padding: 15px 50px 15px 10px
+30: 
 
 Backtrace:
-sass/popup.sass:22
+sass/popup.sass:25
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
@@ -78,4 +78,4 @@ c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$base-color\".\A         on line 22 of sass/popup.sass\A \A 17: 		text-indent: -9999px\A 18: \A 19: \A 20: 	.head\A 21: 		padding: 33px 30px 30px 40px\A 22: 		background-color: $base-color\A 23: 		border-bottom: 6px solid $point-color\A 24: 		color: $white\A 25: \A 26: 		h3\A 27: 			+font-size(24px)"; }
+  content: "Error: Undefined variable: \"$base-color\".\A         on line 25 of sass/popup.sass\A \A 20: 		text-indent: -9999px\A 21: \A 22: \A 23: 	.head\A 24: 		padding: 33px 30px 30px 40px\A 25: 		background-color: $base-color\A 26: 		border-bottom: 6px solid $point-color\A 27: 		color: $white\A 28: 		// @media all and (max-width: 500px)\A 29: 		// 	padding: 15px 50px 15px 10px\A 30: "; }
