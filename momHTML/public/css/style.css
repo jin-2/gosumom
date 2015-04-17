@@ -679,6 +679,7 @@ body .main .content_layer {
 .wrapper {
   width: 999px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .main .wrapper {
   max-width: 1500px;
@@ -776,14 +777,16 @@ body .main .content_layer {
     padding-right: 10px;
   }
 }
+.top_bar .user_wrap > a {
+  margin: 0 5px;
+}
 .top_bar .user_wrap .explain_text {
   position: absolute;
   top: 47px;
-  left: 0;
+  left: -4px;
   display: block;
-  width: 44px;
+  width: 53px;
   color: #fff;
-  font-family: PTsans;
   font-size: 11px;
   font-size: 1.1rem;
   text-align: center;
@@ -1580,7 +1583,7 @@ body .main .content_layer {
 .input_file_wrap input[type="file"] {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   opacity: 0;
   height: 40px;
 }
@@ -1699,6 +1702,12 @@ body .main .content_layer {
   .login_wrap input[type="text"], .login_wrap input[type="password"] {
     width: 100%;
   }
+}
+.login_wrap input[type="button"] {
+  border: 0;
+}
+.login_wrap input[type="button"]:focus {
+  outline: none;
 }
 .login_wrap .facebook_login {
   margin-bottom: 22px;
@@ -2574,6 +2583,9 @@ body .main .content_layer {
   font-weight: bold;
   border-bottom: 2px solid #0999a1;
 }
+.intro_layer .already_signup .note_green:hover {
+  color: #0999a1;
+}
 .intro_layer .intro_login {
   width: 260px;
   margin-top: 30px;
@@ -2671,6 +2683,14 @@ body .main .content_layer {
 }
 .page_motive .wrapper {
   margin-bottom: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media all and (min-width: 1000px) {
+  .page_motive .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .motive_intro {
@@ -2700,6 +2720,9 @@ body .main .content_layer {
 }
 .motive_reason .keyword {
   margin-top: 70px;
+}
+.motive_reason .keyword img {
+  max-width: 100%;
 }
 
 .motive_ideas {

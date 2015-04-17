@@ -104,6 +104,7 @@ body
 	//max-width: $page-width
 	width: $page-width
 	margin: 0 auto
+	box-sizing: border-box
 
 	.main &
 		max-width: $page-main-width
@@ -532,7 +533,7 @@ body
 	input[type="file"]
 		position: absolute
 		top: 0
-		left: 0
+		right: 0
 		opacity: 0
 		height: 40px
 
@@ -611,6 +612,11 @@ body
 		@media all and (min-width: 800px) // desktop view
 			width: 100%
 
+	input[type="button"]
+		border: 0
+
+	input[type="button"]:focus
+		outline: none
 
 	.facebook_login
 		margin-bottom: 22px
@@ -1483,6 +1489,9 @@ $url_0: url(./image/btn_paging.gif)
 			border-bottom: 2px solid #0999a1
 			//vertical-align: middle
 
+			&:hover
+				color: #0999a1
+
 	.intro_login
 		width: 260px
 		margin-top: 30px
@@ -1585,6 +1594,13 @@ $url_0: url(./image/btn_paging.gif)
 
 	.wrapper
 		margin-bottom: 0
+		padding:
+			left: 25px
+			right: 25px
+		@media all and (min-width:1000px) // for wide
+			padding:
+				left: 0
+				right: 0
 
 .motive_intro
 	padding-top: 443px
@@ -1611,6 +1627,8 @@ $url_0: url(./image/btn_paging.gif)
 
 	.keyword
 		margin-top: 70px
+		img
+			max-width: 100%
 
 .motive_ideas
 	padding: 70px 0 140px
