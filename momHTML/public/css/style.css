@@ -1191,8 +1191,6 @@ body .main .content_layer {
 
 .footer {
   z-index: 30;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background-color: #333332;
   padding: 23px 0 17px;
@@ -1200,6 +1198,10 @@ body .main .content_layer {
   text-align: center;
   font-size: 16px;
   font-size: 1.6rem;
+}
+.main .footer {
+  position: fixed;
+  bottom: 0;
 }
 .footer ul {
   display: inline-block;

@@ -203,8 +203,6 @@ body
 // 7. footer
 .footer
 	z-index: 30
-	position: fixed
-	bottom: 0
 	width: 100%
 	background-color: $layout-color
 	padding: 23px 0 17px
@@ -212,8 +210,9 @@ body
 	text-align: center
 	+font-size(16px)
 
-	.wrapper
-
+	.main &
+		position: fixed
+		bottom: 0
 
 	ul
 		@extend %cf
