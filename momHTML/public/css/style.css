@@ -1200,8 +1200,13 @@ body .main .content_layer {
   font-size: 1.6rem;
 }
 .main .footer {
-  position: fixed;
-  bottom: 0;
+  position: static;
+}
+@media all and (min-width: 1000px) {
+  .main .footer {
+    position: fixed;
+    bottom: 0;
+  }
 }
 .footer ul {
   display: inline-block;
@@ -2551,7 +2556,11 @@ body .main .content_layer {
   padding-top: 120px;
   text-align: center;
 }
-.intro_layer .bottom_bg img.shadow {
+.intro_layer .bottom_bg .img_area {
+  margin: 0 auto;
+  width: 900px;
+  height: 884px;
+  background: url(http://gosumom.com/public/img/intro_bottom_2.png) no-repeat 0 0;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
 }
 .intro_layer .main {

@@ -211,8 +211,11 @@ body
 	+font-size(16px)
 
 	.main &
-		position: fixed
-		bottom: 0
+		position: static
+		
+		@media all and (min-width:1000px) // for wide
+			position: fixed
+			bottom: 0
 
 	ul
 		@extend %cf
@@ -1458,7 +1461,11 @@ $url_0: url(./image/btn_paging.gif)
 		padding-top: 120px
 		text-align: center
 
-		img.shadow
+		.img_area
+			margin: 0 auto
+			width: 900px
+			height: 884px
+			background: url(http://gosumom.com/public/img/intro_bottom_2.png) no-repeat 0 0
 			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5)
 
 	.main
