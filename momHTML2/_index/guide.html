@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Gosumom 퍼블리싱 가이드</title>
+<script type="text/javascript" src="common/jquery1.7.1.min.js"></script>
+<script type="text/javascript" src="common/shCore.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<link href="./common/style.css" rel="stylesheet" type="text/css">
+<link href="/momHTML/public/css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body id="publising_libray">
+<div id="_header">
+	<h1>[Gosumom] 퍼블리싱 가이드</h1>
+	<div id="_nav">
+		<h2 class="blind">메뉴</h2>
+		<ul id="_gnb">
+			<li><a href="./index.html">Pagelist</a></li>
+			<li><a href="./info.html">Info</a></li>
+			<li class="active"><a href="./guide.html">Guide</a></li>
+		</ul>
+	</div>
+</div>
+<div id="_container">
+	<h3 class="blind">Publishing Guide</h3>
+	<div id="_contents">
+		<ul id="_snb">
+			<li><a href="#_title">Title</a></li>
+			<li><a href="#_button">Button</a></li>
+			<li><a href="#_selectbox">selectbox</a></li>
+			<li><a href="#_tab">Tab</a></li>
+			<li><a href="#_list">List</a></li>
+			<li><a href="#_board">Board</a></li>
+		</ul>
+		<div class="clear"></div>
+		<!-- contents -->
+		<div id="contents">
+			<div class="contents" style="margin:0 auto; width:1144px">
+				<!-- title -->
+				<h4 id="_title">Title</h4>
+
+				
+
+				<!-- //title -->
+
+				<!-- button -->
+				<h4 id="_button">button</h4>
+				
+					<button type="button" class="button">button</button>
+					<button type="button" class="button line">button</button>
+					<button type="button" class="button line large">button</button>
+					<button type="button" class="button large">button</button>
+					<button type="button" class="button mint">button</button>
+					<hr>
+					<button type="button" class="button full">button</button>
+					<hr>
+					<button type="button" class="button line large full">button</button>
+					<hr>
+					<button type="button" class="button arrow">고수맘 시작하기</button>
+					<button type="button" class="button arrow large">고수맘 시작하기</button>
+					<button type="button" class="button arrow large side">고수맘 시작하기</button>
+
+				<!-- //button -->
+
+				<!-- list -->
+				<h4 id="_list">List</h4>
+
+				
+
+				<!-- //list -->
+
+				<!-- box -->
+				<h4 id="_selectbox">selectbox</h4>
+
+					<div class="select_custom">
+						<strong class="hidden">시/도 선택</strong>
+						<a href="#" class="select_insert active">
+							<strong>전체</strong>
+							<span class="arrow"><i class="fa fa-chevron-down"></i></span>
+						</a>
+						<div class="select_option" style="display: none;">
+							<ul>
+								<li><a href="#">서울에는 유치원이 많겠지 몇개나 있을 까? 세어보자 세어</a></li>
+								<li><a href="#">경기</a></li>
+								<li><a href="#">강원도</a></li>
+								<li><a href="#">서울</a></li>
+								<li><a href="#">경기</a></li>
+								<li><a href="#">강원도</a></li>
+								<li><a href="#">서울</a></li>
+								<li><a href="#">경기</a></li>
+								<li><a href="#">강원도</a></li>
+							</ul>
+						</div>
+					</div>
+
+                <!-- //box -->
+
+				<!-- board -->
+				<h4 id="_board">Board</h4>
+
+				
+				<!-- //board -->
+
+
+			</div>
+		</div>
+		<!-- //contents -->
+	</div>
+</div>
+<div id="_footer">
+	
+</div>
+<div id="_top"><a href="#"><img src="./common/image/top.gif" alt="TOP"></a></div>
+<script src="/public/js/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var url = window.location.hash.split("#")[1];
+	$("#_aside li a").each(function(){
+		linksrc = $(this).attr("href").split("#")[1];
+		if(url == linksrc){
+			$(this).parent("li").addClass("active");
+			$("#iframe_libray").attr("src" , "/html/libray/" + linksrc);
+		}
+	});
+	$("#_aside li a").bind("click", function(){
+		linksrc = $(this).attr("href").split("#")[1];
+		if(!linksrc == ""){
+			$("#_aside li").removeClass("active");
+			$(this).parent("li").addClass("active");
+			$("#iframe_libray").attr("src" , "/html/libray/" + linksrc);
+		}
+	});
+	
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		if(scrollTop >= 285)
+			$("#_snb").stop().css({"position":"fixed", "right":"40px", "top":"20px"});
+		else   
+			$("#_snb").stop().css({"position":"static", "right":"", "top":""});
+	});
+});
+</script>
+</body>
+</html>
