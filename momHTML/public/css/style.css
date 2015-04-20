@@ -1190,8 +1190,12 @@ body .main .content_layer {
 }
 
 .footer {
+  z-index: 30;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #333332;
-  padding: 38px 0 35px;
+  padding: 23px 0 17px;
   color: #666;
   text-align: center;
   font-size: 16px;
@@ -1599,6 +1603,7 @@ body .main .content_layer {
 #fit-width .masonry {
   margin: 0 auto;
   padding-top: 50px;
+  padding-bottom: 80px;
 }
 
 .popup_wrap {

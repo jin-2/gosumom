@@ -202,12 +202,18 @@ body
 
 // 7. footer
 .footer
+	z-index: 30
+	position: fixed
+	bottom: 0
+	width: 100%
 	background-color: $layout-color
-	padding: 38px 0 35px
+	padding: 23px 0 17px
 	color: #666
 	text-align: center
-	
 	+font-size(16px)
+
+	.wrapper
+
 
 	ul
 		@extend %cf
@@ -548,6 +554,7 @@ body
 #fit-width .masonry
 	margin: 0 auto
 	padding-top: 50px
+	padding-bottom: 80px
 
 // 팝업 스타일
 @import "popup"
