@@ -1,4 +1,8 @@
 //(function(global){
+// 페이지 하단 js 실행
+$(document).ready(initPageCommon);
+
+// 공통 js
 (function(window, document, undefined) {
 
 	// toogle box
