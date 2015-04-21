@@ -1,9 +1,19 @@
 //(function(global){
-// 페이지 하단 js 실행
-$(document).ready(initPageCommon);
-
 // 공통 js
 (function(window, document, undefined) {
+
+	// gnb
+	$('.gnb li')
+		.mouseenter(function(){
+			$(this).find('.snb').stop().slideDown(400);
+		})
+		.mouseleave(function(){
+			$(this).find('.snb').hide();
+		})
+
+	// 메인 
+	if( $('#main_visual_slider') ) $('#main_visual_slider').bxSlider();
+	if( $('#main_review_slider') ) $('#main_review_slider').bxSlider();
 
 	// toogle box
 	$('.togglebox .toggle_btn').click(function(e){

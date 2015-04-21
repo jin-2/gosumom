@@ -18,6 +18,99 @@
 // page 단위 css
 // @import "page"
 
-/*
- *  common layout  & main (start) 
- */
+/* base */
+html
+	font-size: 10px
+	overflow-y: visible
+
+ul, ol, li
+	list-style: none
+
+img
+	vertical-align: top
+
+h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd
+	@extend %box-reset
+
+fieldset
+	border: 0
+
+button
+	overflow: visible
+	border: 0
+	background-color: none
+
+a
+	color: $base-font-color
+	text-decoration: none
+	&:hover
+		color: #000
+		text-decoration: underline
+
+input[type="text"], input[type="search"], input[type="password"], input[type="email"]
+	box-sizing: border-box
+	width: 100%
+	height: 50px
+	padding: 0 15px
+	//line-height: 40px
+	border: 1px solid #d5d5d5
+	+font-size(14px)
+
+textarea
+	box-sizing: border-box
+	width: 100%
+	padding: 10px 15px
+	border: 1px solid #d5d5d5
+	+font-size(14px)
+
+.hidden, legend
+	@extend %acc-hidden
+
+.row
+	@extend %cf
+
+// placeholder polyfill
+.-placeholder
+	color: #cecdcd
+	font-family: $dotum
+	+font-size(12px)
+	line-height: 21px
+::placeholder,
+::-moz-placeholder,
+::-webkit-placeholder
+	color: #cecdcd
+
+// base list style
+.list_info
+			
+	li
+		margin-top: 11px
+		padding-left: 12px
+		list-style: none
+		text-align: left
+		+font-size(12px)
+		font-family: "돋움", "Dotum"
+		color: #555
+		background: url(http://gosumom.com/public/img/bul_dot.gif) no-repeat 0 5px
+
+		&:first-child
+			margin-top: 0
+
+//
+ * --------------------------------
+ * layout
+ * --------------------------------
+
+body
+	background-color: $bg-color
+	font-family: $nanumG, $dotum, sans-serif
+	+font-size(14px)
+	color: $base-font-color
+
+.wrapper
+	width: $page-width
+	margin: 0 auto
+
+
+
+
