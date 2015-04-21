@@ -1,0 +1,69 @@
+//
+ * --------------------------------
+ * footer
+ * --------------------------------
+
+.footer
+	z-index: 30
+	width: 100%
+	background-color: #fff
+	padding: 17px 0
+	border-top: 1px solid #E8E8E8
+	color: #b2b2b2
+	text-align: center
+	+font-size(12px)
+
+	.main &
+		position: static
+		
+		@media all and (min-width:1200px)
+			position: fixed
+			bottom: 0
+
+	ul
+		@extend %cf
+		display: inline-block
+
+	li
+		float: left
+
+		&::before
+			content: ""
+			display: inline-block
+			margin: 0 16px 0 13px
+			height: 8px
+			border-left: 1px solid #CECECE
+
+		&:first-child::before
+			display: none
+			border-left: 0
+
+	a
+		color: inherit
+		vertical-align: top
+
+		&:hover
+			color: darken(#b2b2b2, 30%)
+
+	li.facebook
+		border-left: 0
+		padding-left: 0
+
+		a
+			display: inline-block
+			width: 57px
+			height: 57px
+			@extend %is-img
+			background-position: -500px -400px
+
+			span
+				display: block
+				text-indent: -9999px
+		
+			&:hover
+				background-position: -569px -400px
+
+	.copyright
+		margin-top: 10px
+		font-family: helvetica
+		+font-size(10px)

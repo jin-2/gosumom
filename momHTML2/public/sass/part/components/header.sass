@@ -1,0 +1,170 @@
+//
+ * --------------------------------
+ * header
+ * --------------------------------
+
+// 최상단
+.top_bar
+	background-color: #D2D2D2
+	color: #fff
+	+font-size(11px)
+
+	.main & 
+		background-color: $main-point-color
+		color: #ededed
+
+	.wrapper
+		height: 26px
+		@extend %cf
+		line-height: 26px
+
+	.text
+		display: inline-block
+		font-weight: normal
+
+		> span::before
+			content: "/"
+			display: inline-block
+			padding:
+				left: 10px
+				right: 9px
+		span
+			font-family: $open
+			font-weight: 700
+	
+	.user_wrap
+		float: right
+		font-family: $dotum
+
+		a
+			float: left
+			padding:
+				right: 13px
+				left: 10px
+			color: #fff
+
+			.main &
+				color: #fefefe
+
+		span
+			float: left
+
+		.facebook
+			position: relative
+			margin:
+				top: 3px
+				left: 11px
+			padding: 0
+			width: 20px
+			height: 20px
+			background-color: #BBBBBB
+			border-radius: 50%
+			@extend %pie
+
+			.main & 
+				background-color: #C81021
+
+// header layout
+.header
+	border-bottom: 1px solid #E5E5E5
+	background-color: #fff
+
+	.wrapper
+		position: relative
+		height: 69px
+
+	.logo
+		float: left
+		margin:
+			right: 56px
+			top: 19px
+
+	.button_note_write, .button_review_write
+		float: right
+
+// gnb
+.gnb_wrap
+	position: absolute
+	left: 243px
+.gnb
+	@extend %cf
+	margin:
+		top: 12px
+		right: 59px
+
+	> li
+		float: left
+		padding: 17px 11px 18px
+		color: #333
+
+		> a
+			display: block
+			//margin-bottom: 18px
+			text-decoration: none
+
+			&:hover
+				color: #fff
+
+		&:hover, &:focus
+			background-color: $main-point-color
+
+		&:hover > a
+			color: #fff
+		
+		//&:hover > a + .snb
+			//display: block
+
+// snb
+.snb
+	display: none
+	margin-top: 18px
+
+	a
+		display: block
+		margin: 6px 0
+		padding: 3px 0
+		+font-size(12px)
+		color: #fac5c5
+		text-align: center
+		font-family: $dotum
+
+		&:hover
+			color: #fff
+			text-decoration: underline
+
+// header shearching
+.header_search_wrap
+	float: right
+
+	.form
+		box-sizing: border-box
+		position: relative
+		margin:
+			top: 19px
+			right: 19px
+		padding-right: 7px
+		+size(216px, 35px)
+		background-color: #E9E9E9
+		border-radius: 17px
+		@extend %pie
+
+		input[type="text"]
+			outline: 0
+			margin:
+				top: 7px
+				bottom: 7px
+				left: 3px
+			width: 180px
+			height: 21px
+			border: 0
+			background-color: transparent
+			line-height: 21px
+			font-family: $dotum
+			+font-size(12px)
+
+		input[type="image"]
+			position: absolute
+			top: 2px
+			right: 9px
+			padding: 5px
+			background: #e9e9e9
