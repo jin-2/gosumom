@@ -1,0 +1,177 @@
+//
+ * --------------------------------
+ * main 
+ * --------------------------------
+
+.page_main
+	position: relative
+
+.main_visual_slider
+	width: 100%
+	height: 450px
+
+	li
+		width: 100%
+		height: 450px
+
+	li.one
+		background-color: lighten(#bd4932, 25)
+
+	li.two
+		background-color: lighten(#DB9E36, 25)
+
+	li.three
+		background-color: lighten(#105B63, 25)
+
+// 메인 서칭바
+.main_serching_bar
+	position: absolute
+	top: 254px
+	left: 50%
+	margin-left: -(544px/2)
+	
+	fieldset
+		box-sizing: border-box
+		margin: 0 auto 0
+		padding: 
+			top: 20px
+			left: 60px
+			right: 30px
+		+size(544px, 80px)
+		//@extend %is
+		//background-position: 0 0
+		background: url(#{$path}/bg_collect.png) no-repeat 0 0
+
+	input[type="text"]
+		width: 415px
+		+font-size(16px)
+		border: 0
+		outline: 0
+		line-height: 40px
+
+	input[type="image"]
+		position: absolute
+		right: 25px
+		padding: 5px
+
+// 대쉬보드
+.dashboard
+	height: 93px
+	border: 1px solid #E0E0E0
+	border-width: 1px 0
+	text-align: center
+
+	ul
+		display: inline-block
+		margin-top: 13px
+		@extend %cf
+
+	li
+		position: relative
+		float: left
+		margin-right: 77px
+		padding:
+			left: 64px
+		color: #a3a3a3
+		text-align: left
+	li.last
+		margin-right: 0
+
+	.number
+		color: #aaa
+		display: block
+		height: 40px
+		margin-bottom: 5px
+		font-family: $dotum
+		+font-size(12px)
+		line-height: 1
+		em
+			font-family: $open
+			+font-size(40px)
+			color: #FF6777
+			font-style: normal
+			font-weight: 300
+
+	.icon
+		position: absolute
+		left: 0
+		top: 6px
+		display: inline-block
+		+size(50px, 46px)
+		@extend %is
+
+		&.mom
+			background-position: 0 -300px
+
+		&.review
+			background-position: -100px -300px
+
+		&.view
+			background-position: -200px -300px
+
+		&.center
+			background-position: -300px -300px
+
+// 메인 타이틀
+.main_title
+	padding-top: 26px
+	font-family: $open
+	+font-size(40px)
+	text-align: center
+	font-weight: 300
+	letter-spacing: -1px
+	color: #3C3C3C
+
+	span
+		font-weight: 700
+		letter-spacing: 0
+
+	& + .desc
+		margin:
+			top: 1px
+			bottom: 22px
+		color: #A6A5A5
+		text-align: center
+
+// 메인 고수맘 인사이드
+.main_inside
+	background-color: #EDEDED
+	padding-bottom: 41px
+	.wrapper
+		overflow: hidden
+
+	.box
+		float: left
+		margin-right: 24px
+		width: 384px
+		height: 238px
+
+		&.last
+			margin-right: 0
+
+// 메인 리뷰 갤러리
+.main_review_slider
+	height: 253px
+
+	li
+		width: 1200px
+		margin: 0 auto
+
+	li:nth-child(2n)
+		background-color: lighten(#bd4932, 25)
+
+// 메인 리뷰 리스트
+.main_reviews
+	.detail_search_wrap
+		text-align: center
+
+// 메인 리뷰 소팅
+.main_sorting_wrap
+	.wrapper
+		margin:
+			top: 16px
+			bottom: 19px
+		padding-top: 12px
+
+	.sorting_tab
+		float: right

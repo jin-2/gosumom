@@ -1,0 +1,82 @@
+// @import placeholder/IR
+// @import placeholder/clearfix
+// @import placeholder/accessible
+
+//////////////////////////////////////
+// float 적용 요소 감싸는 클래스 - clearfix
+//////////////////////////////////////
+%cf
+	&::before, &::after
+		content: ' '
+		display: table
+	&::after
+		clear: both
+	.ie8 &
+		zoom: 1
+
+////////////////////////////////
+// 이미지 대체 기법
+////////////////////////////////
+%ir
+	display: inline-block
+	overflow: hidden
+	text-indent: -9999em
+	.no-img &
+		overflow: auto
+		text-indent: 0
+
+// 스크린리더/브라우저에서 모두 감추기
+////////////////////////////////
+%hidden
+	display: none !important
+	visibility: hidden
+
+// 스크린리더에서는 읽기 가능
+////////////////////////////////
+%acc-hidden
+	overflow: hidden
+	position: absolute
+	clip: rect(0 0 0 0)
+	clip: rect(0, 0, 0, 0)
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+	// 스크린리더에서는 읽기 가능 + 포커스 적용
+	&.focusable:active,
+	&.focusable:focus
+		overflow: visible
+		position: static
+		clip: auto
+		width: auto
+		height: auto
+		margin: 0
+
+// 화면에서는 안 보이지만, 레이아웃 공간 적용
+////////////////////////////////////
+%invisible
+	visibility: hidden
+
+// 플레이스홀더 padding margin reset
+%box-reset
+	margin: 0
+	padding: 0
+
+// 플레이스홀더 스프라이트이미지 사용
+%is-img
+	background: url(/momHTML2/public/img/sprite_bg.png) no-repeat 0 0
+
+// 말줄임
+%ellipsis
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+// PIE.htc
+%pie
+	behavior: url(/momHTML2/public/js/vendor/PIE.htc)
+
+// image sprite 
+%is
+	background: url(/momHTML2/public/img/bg_collect.png) no-repeat 0 0

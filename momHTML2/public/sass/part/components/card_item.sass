@@ -1,246 +1,216 @@
-// 메인 컨텐츠 카드형식
+// 메인 컨텐츠 카드형식 
+// 리뷰 박스 핑크색
 .masonry
 	.item
 		overflow: hidden
 		float: left
-		width: 287px
-		margin: 0 4px 8px
+		width: 285px
+		margin: 20px
 		border-radius: 10px
 		background-color: #fff
-		box-shadow: 2px 2px 4px #b1b0b0
+		box-shadow: 1px 1px 2px rgba(#000, 0.1)
 		text-align: center
+		@extend %pie
 
 		> a
 			display: block
-
-		.box
-			padding: 20px
-
-			&.full_line_top
-				border-top: 1px solid #dedede
-
+			border-top: 7px solid #EB3B4B
+			text-decoration: none
 			
-		.title
-			display: block
-			+font-size(20px)
+			.ie8 &
+				border-radius: 10px
+				border-top: 0
+				@extend %pie
 
-		.location
+		.school_name
 			display: block
-			margin-top: 10px
+			padding-top: 18px
+			+font-size(16px)
+			color: #333
+			font-weight: 600
+
+		.grade_average
+			display: block
+			margin-top: 7px
+			color: #e0e0e0
 			+font-size(11px)
-			color: #bbb
-			font-family: "돋움", "Dotum"
 
-		.letter
+		.rating_star_wrap
+			margin-top: 2px
+
+		.list_info, .best_review, .state
+			font-family: $dotum
+			+font-size(11px)
+
+		.list_info
 			overflow: hidden
-			margin-top: 8px
-			font-family: "돋움", "Dotum"
-			+font-size(12px)
-			line-height: 1.7
-			text-align: left
-			color: #666
+			padding: 0 20px
+			color: #555
 
-			// &::before
-			// 	content: ""
-			// 	display: block
-			// 	width: 40px
-			// 	margin: 16px auto 0
-			// 	padding-top: 12px
-			// 	border-top: 1px solid #dbdbdb
+			.ie8 &
+				margin-top: 25px
+				
+			&::before
+				content: ""
+				display: block
+				width: 30px
+				margin: 11px auto 14px
+				border-top: 1px solid #DBDBDB
+		
+			li
+				box-sizing: border-box
+				float: left
+				width: 50%
+				+font-size(11px)
+				color: #555
 
-		.reviewer
-			position: relative
-			color: #666
-			font-family: "돋움", "Dotum"
-			+font-size(12px)
+			li.full
+				width: 100%
+
+		.best_review
+			margin-top: 17px
+			padding: 0 20px
+			border-top: 1px solid #f6f6f6
 			text-align: left
+			color: #ADADAD
 
 			.nickname
 				display: block
-				height: 14px
-				margin-right: 75px
-				+font-size(12px)
-				@extend %ellipsis
-			.date
-				position: absolute
-				top: 21px
-				right: 20px
-				+font-size(11px)
+				padding: 8px 0 8px
 
-		.info_wrap
-			position: relative
-			padding-bottom: 21px
-
-			.review_count
-				position: absolute
-				bottom: 3px
-				right: 0
-
-		
-
-		.review_count
-			+font-size(12px)
+		.state
+			overflow: hidden
+			margin-top: 9px
+			border-top: 1px solid #f6f6f6
 			font-weight: bold
-			color: $point-color
-			font-family: "돋움", "Dotum"
-			.icon
+			color: #ACACAC
+
+			> div
+				box-sizing: border-box
+				float: left
+				padding: 12px 0 12px
+				width: 33%
+				border-left: 1px solid #f6f6f6
+
+				&:first-child
+					border-left: 0
+
+			.center
+				width: 34%
+			
+			.review, .note, .check 
 				display: inline-block
-				width: 15px
-				height: 15px
-				margin-right: 6px
-				background: url(http://gosumom.com/public/img/sprite_bg.png) no-repeat -290px 0
+				margin-right: 4px
+				+size(16px, 16px)
+				background: url(#{$path}/bg_collect.png) no-repeat
+				text-indent: -9999px
 
-		.best_review
-			padding-top: 8px
-			border-top: 1px solid #ddd
-			text-align: left
+			.review
+				background-position: -250px -240px
+			.note
+				background-position: -300px -240px
+			.check
+				background-position: -350px -240px
 
-			p
-				color: #666
-
-.result .item 
-	a
-		border-top: 6px solid #333
-		&:hover
-			border-top: 6px solid $point-color
-
-.rating_star_wrap .score
-	color: #888
-
-$item_pink: #660469
-$item_pink_bg: #c961cc
-$item_pink_border: #b35ab5
-
-$item_purple: #fff
-$item_purple_bg: #9c92eb
-$item_purple_border: #8c83d3
-
-$item_yellow: #644c00
-$item_yellow_bg: #ffdb6b
-$item_yellow_border: #f2d066
-
-$item_blue: #fff
-$item_blue_bg: #8fa1ef
-$item_blue_border: #8091d7
-
+// 사진 있을 때
 .masonry
 	.item
-		.reviewer
-			background-color: #fff
+		.photo 
+			position: relative
+			height: 203px
+			> img
+				position: absolute
+				left: 0
+				top: -7px
+				+size(285px, 210px)
+				border-top-left-radius: 10px
+				border-top-right-radius: 10px
+				.ie8 & 
+					border-radius: 10px
+					@extend %pie
+					top: 0
+			.icon
+				position: absolute
+				margin-left: -(67px/2)
+				bottom: -(67px/2)
+				left: 50%
+				display: inline-block
+				+size(67px, 67px)
+				background: url(#{$path}/bg_collect.png) no-repeat -400px -300px
+				.ie8 & 
+					bottom: -40px
 
-		// 핑크색 박스
-		&.pink 
-			background-color: $item_pink_bg
-			color: $item_pink
-			
-			.title, .letter, .list_info li, .location
+			& + .school_name
+				padding-top: 42px
+				.ie8 & 
+					padding-top: 49px
+
+$item2_color: #19bdc6
+// 상담수첩 박스 녹색
+.masonry.other
+	.item
+		> a
+			border-color: $item2_color
+
+		.satisfy_average
+			display: block
+			margin-top: 4px
+			+font-size(13px)
+			color: #ADADAD
+			font-weight: 700
+
+		.score
+			+font-size(15px)
+			color: #19BDC6
+
+		.photo .icon
+			background-position: -500px -300px
+
+// 리뷰 박스 후버 시
+.masonry
+	.item
+		a:hover, a:focus
+			background-color: #EB3B4B
+
+			.school_name, .grade_average, .list_info li, .best_review, .state, .rating_star_wrap .score
 				color: #fff
 
-			.rating_star
-				background-position: 0 -180px
+			.best_review, .state, .state > div
+				border-color: #e86d78
 
-			.review_count
-				color: #333
+			.rating_star .inner
+				background-position: 0 -460px
 
-			.icon
-				background-position: -290px -30px
+// 상담 수첩 박스 후버 시
+.masonry.other
+	.item
+		a:hover, a:focus
+			background-color: $item2_color
 
-			.best_review
-				border-top-color: #fff
+			.school_name, .grade_average, .list_info li, .best_review, .state, .satisfy_average
+				color: #fff
 
-			.box.full_line_top
-				border-top-color: $item_pink_border
+			.best_review, .state, .state > div
+				border-color: #55c8ce
 
-			.rating_star_wrap .score
-				color: #333
-		
-		// 보라색 박스
-		&.purple
-			background-color: $item_purple_bg
-			color: $item_purple
-			
-			.title, .letter, .list_info li
-				color: $item_purple
+			.score
+				color: #04575F
 
-			.rating_star
-				background-position: 0 -180px
+// 박스 후버 공통
+.masonry, .masonry.other
+	.item
+		a:hover, a:focus
+			.review
+				background-position: -250px -200px
 
-			.review_count
-				color: #333
+			.note
+				background-position: -300px -200px
 
-			.icon
-				background-position: -290px -30px
+			.check
+				background-position: -350px -200px
 
-			.location
-				color: #333
-
-			.best_review
-				border-top-color: #fff
-
-			.box.full_line_top
-				border-top-color: $item_purple_border
-
-			.rating_star_wrap .score
-				color: #333
-
-		// 갈색 박스
-		&.yellow
-			background-color: $item_yellow_bg
-			color: $item_yellow
-			
-			.title, .letter, .list_info li
-				color: $item_yellow
-
-			.rating_star
-				background-position: 0 -180px
-
-			.review_count
-				color: #333
-
-			.icon
-				background-position: -290px -30px
-
-			.location
-				color: #333
-
-			.best_review
-				border-top-color: #fff
-
-			.box.full_line_top
-				border-top-color: $item_yellow_border
-
-			.rating_star_wrap .score
-				color: #333
-
-		// 회색 박스
-		&.blue
-			background-color: $item_blue_bg
-			color: $item_blue
-			
-			.title, .letter, .list_info li
-				color: $item_blue
-
-			.rating_star
-				background-position: 0 -180px
-
-			.review_count
-				color: #333
-
-			.icon
-				background-position: -290px -30px
-
-			.location
-				color: #333
-
-			.best_review
-				border-top-color: #fff
-
-			.box.full_line_top
-				border-top-color: $item_blue_border
-
-			.rating_star_wrap .score
-				color: #333
+			.list_info li
+				background: url(#{$path}/bul_dot_white.png) no-repeat 0 5px
 
 
-		
 
