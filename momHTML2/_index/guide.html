@@ -7,7 +7,7 @@
 <script type="text/javascript" src="common/shCore.js"></script>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 <link href="./common/style.css" rel="stylesheet" type="text/css">
-<link href="/momHTML/public/css/style.css" rel="stylesheet" type="text/css">
+<link href="/momHTML2/public/css/style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
@@ -28,6 +28,8 @@
 	<h3 class="blind">Publishing Guide</h3>
 	<div id="_contents">
 		<ul id="_snb">
+			<li><a href="#_slider">Slider</a></li>
+			<li><a href="#_lozenges">Lozenges</a></li>
 			<li><a href="#_title">Title</a></li>
 			<li><a href="#_button">Button</a></li>
 			<li><a href="#_selectbox">selectbox</a></li>
@@ -39,6 +41,52 @@
 		<!-- contents -->
 		<div id="contents">
 			<div class="contents" style="margin:0 auto; width:1144px">
+				<h4 id="_slider">Slider</h4>
+
+				<div class="slider_wrap">
+					<div class="big">
+						<ul id="slider">
+							<!-- 첫번째 이미지는 기본 이미지 img_default_gallery -->
+							<li><img src="/momHTML2/public/img/img_default_gallery.jpg" alt="어린이집 사진을 업로드 해주세요!" /></li>
+							<li><img src="http://lorempixel.com/500/350/people/2/" alt="" /></li>
+							<li><img src="http://lorempixel.com/500/350/people/3/" alt="" /></li>
+							<li><img src="http://lorempixel.com/500/350/people/4/" alt="" /></li>
+							<li><img src="http://lorempixel.com/500/350/people/5/" alt="" /></li>
+						</ul>
+					</div>
+					<div id="slider_pager" class="thumb">
+						<a data-slide-index="0" href="#" class="active">
+							<img src="/momHTML2/public/img/img_default_gallery.jpg" alt="" />
+							<span class="overlay"></span>
+						</a>
+						<a data-slide-index="1" href="#">
+							<img src="http://lorempixel.com/100/70/people/2/" alt="" />
+							<span class="overlay"></span>
+						</a>
+						<a data-slide-index="2" href="#">
+							<img src="http://lorempixel.com/100/70/people/3/" alt="" />
+							<span class="overlay"></span>
+						</a>
+						<a data-slide-index="3" href="#">
+							<img src="http://lorempixel.com/100/70/people/4/" alt="" />
+							<span class="overlay"></span>
+						</a>
+						<a data-slide-index="4" href="#">
+							<img src="http://lorempixel.com/100/70/people/5/" alt="" />
+							<span class="overlay"></span>
+						</a>
+					</div>
+				</div><!-- slider_wrap -->
+
+				<hr>
+				<!-- // Slider -->
+
+				<h4 id="_lozenges">Lozenges</h4>
+
+				<span class="pill">리뷰 종합 평점 </span>
+
+				<!-- // Lozenges -->
+
 				<!-- title -->
 				<h4 id="_title">Title</h4>
 

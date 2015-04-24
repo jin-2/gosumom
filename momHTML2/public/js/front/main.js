@@ -32,10 +32,19 @@
 	// 메인 슬라이더
 	if( $('#main_visual_slider') ) {
 		$('#main_visual_slider').bxSlider({
+			auto: true,
 			pagerCustom: '.main_visual_wrap .pager'
 		});
 	}
 	if( $('#main_review_slider') ) $('#main_review_slider').bxSlider();
+
+	// 리뷰상세보기 슬라이더
+	if( $('#slider') ) {
+		$('#slider').bxSlider({
+			auto: true,
+			pagerCustom: '#slider_pager'
+		});
+	}
 
 	// 메인 리스트 소팅 탭
 	$('.sorting_tab a').click(function(e){
