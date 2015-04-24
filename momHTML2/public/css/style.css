@@ -390,6 +390,6 @@ body { background-color: #F7F7F7; font-family: "나눔고딕", "Nanum Gothic", "
 .slider_wrap .thumb .overlay { box-sizing: border-box; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 70px; background: #343434; opacity: 0.5; filter: Alpha(opacity=50); }
 .slider_wrap .thumb a:focus .overlay, .slider_wrap .thumb a:hover .overlay, .slider_wrap .thumb a.active .overlay { border: 4px solid #EB3B4B; background: none; opacity: 1; filter: Alpha(opacity=100); }
 
-.pill { display: inline-block; padding: 0 8px; border-radius: 3px; background-color: #dcdcdc; font-size: 13px; font-size: 1.3rem; font-weight: 600; color: #fff; letter-spacing: -1px; }
+.pill { display: inline-block; padding: 0 8px; border-radius: 5px; background-color: #dcdcdc; font-size: 13px; font-size: 1.3rem; font-weight: 600; color: #fff; letter-spacing: -1px; line-height: 1.55; }
 
 /*# sourceMappingURL=style.css.map */
