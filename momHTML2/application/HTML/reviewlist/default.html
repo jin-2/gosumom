@@ -16,9 +16,9 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="/momHTML2/public/js/front/vendor/modernizr-2.8.3.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/momHTML2/public/js/front/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/momHTML2/public/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 </head>
-<body class="main">
+<body>
 	<!--[if lt IE 8]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -88,114 +88,41 @@
 		</header>
 		<!-- // header -->
 
-		<div id="contents" class="page_main">
-			<!-- 메인 비쥬얼 - 고수맘 이야기  -->
-			<div class="main_visual_wrap">
-				<ul id="main_visual_slider" class="main_visual_slider">
-					<li class="slide one">
-						<div class="wrapper"><img src="http://lorempixel.com/1200/450/cats/1/" /></div>
-					</li>
-					<li class="slide two">
-						<div class="wrapper"><img src="http://lorempixel.com/1200/450/cats/2/" /></div>
-					</li>
-					<li class="slide three">
-						<div class="wrapper"><img src="http://lorempixel.com/1200/450/cats/3/" /></div>
-					</li>
-				</ul>
-				<div class="pager">
-					<div><a href="#" data-slide-index="0">고수맘 이야기 배너 보기</a></div>
-					<div><a href="#" data-slide-index="1">고수맘의 생생Talk 배너 보기</a></div>
-					<div><a href="#" data-slide-index="2">리뷰예절 배너 보기</a></div>
+		<div id="contents" class="page_list">
+			<div class="sub_visual">
+				<div class="wrapper">
+					<h3>어린이집 리뷰</h3>
+					<p>좋은 어린이집 선택을 위한 초보맘의 생생 리뷰 </p>
 				</div>
 			</div>
-			<!-- //메인 비쥬얼 - 고수맘 이야기  -->
-
-			<!-- 메인 검색바 -->
-			<form action="#" class="main_serching_bar">
-				<fieldset>
-					<legend>어린이집 검색</legend>
-					<label for="search_word"><span class="placeholder">어린이집명으로 검색하세요.</span></label>
-					<input type="text" name="search_word" id="search_word" placeholder="" >
-					<input type="image" src="/momHTML2/public/img/btn_main_search.png" alt="검색">
-				</fieldset>
-			</form>
-			<!-- //메인 검색바 -->
-
-			<!-- 대쉬보드 이동 -->
-			<div class="dashboard">
-				<div class="wrapper">
-					<ul>
-						<li><span class="icon mom"></span><span class="number"><em>9,501</em>명</span> 총 접속맘</li>
-						<li><span class="icon review"></span><span class="number"><em>38</em>건</span> 작성리뷰</li>
-						<li><span class="icon view"></span><span class="number"><em>572</em>회</span> 리뷰조회수</li>
-						<li class="last"><span class="icon center"></span><span class="number"><em>34,000</em>개</span> 등록어린이집수</li>
-					</ul>
-				</div> 
-			</div>
-			<!-- // 대쉬보드 -->
-
-			<!-- 고수맘 인사이드 -->
-			<section class="main_inside">
-				<div class="wrapper">
-					<h3 class="main_title">GOSUMOM <span>INSIDE</span></h3>
-					<p class="desc">내게 힘이 되어 주는 고수맘들이 한곳에 모여있는, 고수맘을 소개합니다.</p>
-					<div class="box">
-						<a href="#">
-							<img src="/momHTML2/public/img/inside1.gif" alt="리뷰와 상담후기보기: 리뷰 &amp; 상담후기 - 모든 리뷰. 상담 보는 방법">
-						</a>
-					</div>
-					<div class="box">
-						<a href="#">
-							<img src="/momHTML2/public/img/inside2.gif" alt="소통에 대한 고민: 어린이집 에티켓 - 에티켓에 대해 알아보기">
-						</a>
-					</div>
-					<div class="box last">
-						<a href="#">
-							<img src="/momHTML2/public/img/inside3.gif" alt="고수맘 설문 이벤트: 설문조사 참여하기 - 어린이집 선택시 어떤 부분을 가장 먼저 고려하시나요?">
-						</a>
-					</div>
+			<div class="wrapper">
+				<div class="breadcrumb line">
+					<ol>
+						<li><a href="#">Home</a></li>
+						<li class="current">어린이집 리뷰</li>
+					</ol>
 				</div>
-			</section>
-			<!-- //고수맘 인사이드 -->
 
-			<!-- 리뷰 갤러리  -->
-			<ul id="main_review_slider" class="main_review_slider">
-				<li class="item">
-					<div class="wrapper"><img src="http://lorempixel.com/1200/253/abstract/1/" /></div>
-				</li>
-				<li class="item">
-					<div class="wrapper"><img src="http://lorempixel.com/1200/253/abstract/2/" /></div>
-				</li>
-			</ul>
-			<!-- //리뷰 갤러리 -->
+				<p class="search_result_text">총 <strong>00</strong>개의 어린이집이 검색되었습니다.</p>
+				<div class="sorting_tab">
+					<span><a href="#" class="average">평점순</a></span>
+					<span><a href="#" class="review">리뷰순</a></span>
+				</div>
 
-			<!-- 고수맘 리뷰 리스트-->
-			<section class="main_reviews">
-				<h3 class="main_title">GOSUMOM <span>REVIEW</span></h3>
-				<p class="desc">내게 힘이 되어 주는 고수맘들이 한곳에 모여있는, 고수맘을 소개합니다.</p>
 				<form action="#" class="detail_search_wrap">
 					<fieldset>
 						<legend>어린이집 검색</legend>
-						<select name="" id="" title="시/도를 선택해주세요">
+						<select name="" id="">
 							<option value="">시/도</option>
 						</select>
-						<select name="" id="" title="구/군을 선택해주세요">
+						<select name="" id="">
 							<option value="">구/군</option>
 						</select>
-						<input type="text" name="" id="" placeholder="" title="어린이집명을 입력해주세요">
+						<input type="text" name="" id="" placeholder="">
 						<button type="submit" class="button_search">검색</button>
 					</fieldset>
 				</form>
-				<div class="main_sorting_wrap">
-					<div class="wrapper line">
-						<div class="sorting_tab">
-							<span><a href="http://www.naver.com" class="average">평점순</a></span>
-							<span><a href="#" class="review">리뷰순</a></span>
-						</div>
-						<p class="search_result_text">총 <strong>00</strong>개의 어린이집이 검색되었습니다.</p>
-					</div>
-				</div>
-				<!-- 어린이집 리스트 -->
+
 				<div class="wrapper">
 					<div id="card_list" class="masonry">
 						<!-- item -->
@@ -400,12 +327,9 @@
 						</div>
 						<!-- //.item -->
 					</div>
-				</div>
-				<!-- //어린이집 리스트 -->
-
-			</section>
-			<!-- //고수맘 리뷰 리스트 -->
-		</div>
+				</div><!-- #fit-width -->
+			</div>
+		</div><!-- contents -->
 
 		<!-- footer -->
 		<footer class="footer">

@@ -1,11 +1,24 @@
 // 메인 컨텐츠 카드형식 
 // 리뷰 박스 핑크색
+
+.masonry.wrapper
+	width: 1220px !important
 .masonry
+	padding-bottom: 100px
+	&::after
+		content: ""
+		display: block
+		clear: both
+		.ie8 &
+			zoom: 1
 	.item
 		overflow: hidden
 		float: left
 		width: 285px
-		margin: 20px
+		margin:
+			right: 20px
+			top: 10px
+			bottom: 10px
 		border-radius: 10px
 		background-color: #fff
 		box-shadow: 1px 1px 2px rgba(#000, 0.1)
@@ -13,11 +26,14 @@
 		@extend %pie
 
 		> a
+			//position: relative
 			display: block
 			border-top: 7px solid #EB3B4B
 			text-decoration: none
 			
 			.ie8 &
+				position: relative
+				//border: 1px solid #e5e5e5
 				border-radius: 10px
 				border-top: 0
 				@extend %pie
@@ -112,16 +128,11 @@
 			.check
 				background-position: -350px -240px
 
-// 사진 있을 때
-.masonry
-	.item
 		.photo 
 			position: relative
-			height: 203px
+			height: 210px
 			> img
-				position: absolute
-				left: 0
-				top: -7px
+				position: relative
 				+size(285px, 210px)
 				border-top-left-radius: 10px
 				border-top-right-radius: 10px
@@ -137,13 +148,17 @@
 				display: inline-block
 				+size(67px, 67px)
 				background: url(#{$path}/bg_collect.png) no-repeat -400px -300px
-				.ie8 & 
-					bottom: -40px
+				
+// 사진 있을 때
+.masonry
+	.item.more
+		> a
+			border-top: 0
 
-			& + .school_name
-				padding-top: 42px
-				.ie8 & 
-					padding-top: 49px
+		.photo + .school_name
+			padding-top: 42px
+			.ie8 & 
+				padding-top: 49px
 
 $item2_color: #19bdc6
 // 상담수첩 박스 녹색

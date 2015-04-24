@@ -85,6 +85,12 @@ textarea
 ::-webkit-placeholder
 	color: #cecdcd
 
+.placeholder
+	color: #cecdcd
+	font-family: $dotum
+	+font-size(12px)
+	line-height: 21px
+
 // base list style
 .list_info
 			
@@ -115,6 +121,7 @@ body
 .wrapper
 	width: $page-width
 	margin: 0 auto
+	@extend %cf
 
 //
  * --------------------------------
@@ -140,7 +147,7 @@ body
 		width: 250px
 
 	.button_search
-		margin: 0 2px
+		margin-left: 2px
 
 // 검색 버튼 스타일
 .button_search
@@ -170,13 +177,8 @@ body
 
 .search_result_text
 	color: #252525
-
-	&::before
-		content: ""
-		display: inline-block
-		margin-right: 6px
-		+size(4px, 7px)
-		background: url(#{$path}/bg_collect.png) no-repeat -200px -220px
+	padding-left: 10px
+	background: url(#{$path}/bul_arrow.png) no-repeat 0 5px
 
 	strong
 		font-family: Tahoma
@@ -223,6 +225,25 @@ body
 	li.three
 		background-color: lighten(#105B63, 25)
 
+.main_visual_wrap
+	position: relative
+	.pager
+		position: absolute
+		bottom: 11px
+		left: 50%
+		margin-left: -51px
+		div
+			display: inline-block
+		a
+			display: block
+			padding: 8px
+			+size(14px, 14px)
+			background: url(#{$path}/bg_collect.png) no-repeat -442px -192px
+			text-indent: -9999px
+
+		a:hover, a.active
+			background-position: -442px -232px
+
 // 메인 서칭바
 .main_serching_bar
 	position: absolute
@@ -253,6 +274,13 @@ body
 		position: absolute
 		right: 25px
 		padding: 5px
+
+	.placeholder
+		position: absolute
+		top: 30px
+		left: 70px
+		+font-size(14px)
+		font-family: $nanumG
 
 // 대쉬보드
 .dashboard
@@ -375,5 +403,150 @@ body
 
 	.sorting_tab
 		float: right
+
+//
+ * --------------------------------
+ * sub - 어린이집 리뷰 리스트
+ * --------------------------------
+
+// sub common visual
+.page_list
+	.sub_visual
+		box-sizing: border-box
+		padding:
+			top: 64px
+		height: 200px
+		background: #000a16 url(#{$path}/visual_reviewlist.jpg) no-repeat 50% 0
+		+font-size(35px)
+		color: #fff
+		text-shadow: 1px 1px 5px #000
+
+		&.counseling
+			background: #353418 url(#{$path}/visual_councelling.jpg) no-repeat 50% 0
+
+		h3
+			font-weight: 300
+			letter-spacing: -1px
+
+		p
+			margin-top: 6px
+			+font-size(16px)
+
+// sub common breadcrumb
+.breadcrumb
+	overflow: hidden
+	ol
+		float: right
+		margin:
+			top: 28px
+			bottom: 11px
+
+	li, a
+		color: #828282
+		+font-size(12px)
+		letter-spacing: -1px
+	li
+		float: left
+		margin-right: 6px
+		a
+			margin-right: 5px
+
+	// home
+	li:first-child
+		a
+			display: inline-block
+			margin:
+				top: 2px
+				right: -3px
+			+size(12px, 11px)
+			text-indent: -9999px
+			background: url(#{$path}/bg_collect.png) no-repeat -400px -200px
+
+	li.current
+		margin-right: 0
+		font-weight: 600
+
+	&.line
+		background-position: 0 100%
+
+
+.page_list
+	.detail_search_wrap
+		float: right
+		margin-top: 40px
+
+	.search_result_text
+		float: left
+		margin-top: 57px
+
+	.sorting_tab
+		display: inline-block
+		margin:
+			left: 19px
+			top: 57px
+
+	.masonry
+		margin-bottom: 110px
+		padding:
+			top: 20px
+			bottom: 180px
+		background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
+
+//
+ * --------------------------------
+ * 공통 갤러리
+ * --------------------------------
+
+.slider_wrap
+	$slider-wrap: 604px
+	$slider-bigW: 500px
+	$slider-bigH: 350px
+	$slider-thumW: 100px
+	$slider-thumH: 70px
+	overflow: hidden
+	width: $slider-wrap
+
+	.big
+		float: left
+		+size($slider-bigW, $slider-bigH)
+		
+		ul
+			position: relative
+
+		li
+			position: absolute
+			top: 0
+			left: 0
+
+	.thumb
+		box-sizing: border-box
+		float: right
+		+size($slider-thumW, $slider-thumH)
+		a
+			position: relative
+			display: block
+		.overlay
+			box-sizing: border-box
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			+size(100%, $slider-thumH)
+			background: #343434
+			opacity: 0.5
+			filter: Alpha(opacity=50)
+
+	.thumb
+		a:focus, a:hover, a.active
+			.overlay
+				border: 4px solid #EB3B4B
+				background: none
+				opacity: 1
+				filter: Alpha(opacity=100)
+		
+
+
+
+
 
 
