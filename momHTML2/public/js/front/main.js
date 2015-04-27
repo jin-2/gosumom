@@ -63,15 +63,20 @@
 	// 	if($(this).val().length == 0)  $(this).addClass("placeholder");
 	// });
 
-	$('.main_serching_bar #search_word').focus(function(){
+	$('.main_serching_bar .search_word').focus(function(){
 		$(this).keydown(function(){
 			$('.main_serching_bar .placeholder').hide();
 		});
 	})
 
-	$('.main_serching_bar #search_word').focusout(function(){
+	$('.main_serching_bar .search_word').focusout(function(){
 		if($(this).val().length == 0) $('.main_serching_bar .placeholder').show();
 	})
+
+	$(".nano_scroll").nanoScroller({
+		alwaysVisible: true
+	});
+
 
 	// toogle box
 	$('.togglebox .toggle_btn').click(function(e){

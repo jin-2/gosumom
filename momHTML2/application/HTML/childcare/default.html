@@ -105,7 +105,6 @@
 					<ol>
 						<li><a href="#">Home</a></li>
 						<li><a href="#">어린이집 리뷰</a>&gt;</li>
-						<li><a href="#">어린이집 리뷰</a>&gt;</li>
 						<li class="current">어린이집 이름</li>
 					</ol>
 				</div>
@@ -147,24 +146,26 @@
 						</div>
 					</div><!-- slider_wrap -->
 					<div class="school_info_wrap">
-						<div class="rating_star_wrap">
+						<div class="text_total"><span class="pill">리뷰 종합 평점 </span></div>
+						<div class="rating_star_wrap medium">
 							<span class="rating_star">
 								<span class="inner" style="width:71%"></span>
 							</span>
-							<strong class="score">3.5</strong>
+							<strong class="score">3.5점 <span class="hidden">5점 만점 중</span></strong>
 						</div>
+						<span class="like_count"><span class="icon_heart"></span> <span class="emerald">9,999명</span>이 찜하였습니다.</span>
 						<h3 class="name">아튼빌어린이집</h3>
 						<ul class="info">
 							<li>- 서울시 강남구 논현로 257</li>
 							<li>- 02-1234-5678</li>
 							<li>- 정원 : 29명</li>
 						</ul>
-						<a href="http://www.childcare.go.kr/" title="새 창으로 열기" target="_blank">아이사랑 보육포털 상세정보 보기 &gt;</a>
+						<a href="http://www.childcare.go.kr/" title="새 창으로 열기" target="_blank" class="link">아이사랑 보육포털 상세정보 보기 &gt;</a>
 						<div class="btn_wrap">
-							<button type="button"><img src="" alt="사진크게보기"></button>
-							<button type="button"><img src="" alt="관심등록"></button>
-							<button type="button"><img src="" alt="지도보기"></button>
-							<button type="button"><img src="" alt="페이스북"></button>
+							<button type="button"><img src="/momHTML2/public/img/btn_upload.png" alt="사진 업로드"></button>
+							<button type="button" class="like_school active"><img src="/momHTML2/public/img/btn_check.png" alt="찜한 어린이집"></button>
+							<button type="button"><img src="/momHTML2/public/img/btn_face_share.png" alt="페이스북"></button>
+							<button type="button"><img src="/momHTML2/public/img/btn_cacao.png" alt="카카오스토리"></button>
 						</div>
 					</div>
 				</section>
@@ -172,7 +173,7 @@
 
 				<!-- 탭 -->
 				<ul class="sub_tab">
-					<li><a href="#">어린이집 리뷰</a></li>
+					<li><a href="#" class="active">어린이집 리뷰</a></li>
 					<li><a href="#">상담후기</a></li>
 					<li><a href="#">어린이집 사진</a></li>
 					<li><a href="#">지도보기</a></li>
@@ -182,86 +183,93 @@
 				<section class="sub_contents">
 					<!-- 리뷰 종합 평점 -->
 					<div class="review_total">
-						<span class="pill">리뷰 종합 평점 </span>
 						<h3 class="name">아튼빌어린이집</h3>
-						<div class="rating_star_wrap">
+						<div class="text_total"><span class="pill">리뷰 종합 평점 </span></div>
+						<div class="rating_star_wrap medium">
 							<span class="rating_star">
 								<span class="inner" style="width:71%"></span>
-							</span>
-							<strong class="score">3.4점</strong>
-							<span><span class="icon_heart"></span> <span class="emerald">9,999명</span>이 찜하였습니다.</span>
+							</span> <br>
+							<strong class="hidden">3.4점 <span>5점 만점 중</span></strong>
 						</div>
 						<ul class="review_items">
 							<li class="director">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
 								원장선생님
 							</li>
 							<li class="teacher">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
 								담임선생님
 							</li>
 							<li class="clean">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
 								위생 및 청결 
 							</li>
 							<li class="safety">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
 								건강과 안전
 							</li>
 							<li class="food">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
 								먹거리(식단과 영양)
 							</li>
 							<li class="toy">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
-								교구 및 교재,놀이시설
+								교구 및 교재,놀이시설 <br>
 								및 장난감의 다양성
 							</li>
 							<li class="education">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
 								교육의 기회
 							</li>
 							<li class="cost">
-								<div class="rating_star_wrap">
+								<span class="icon"></span>
+								<div class="rating_star_wrap small_fat">
 									<span class="rating_star">
 										<span class="inner" style="width:71%"></span>
 									</span>
-									<strong class="score">3.4점</strong>
+									<strong class="hidden">3.5점 <span>5점 만점 중</span></strong>
 								</div>
 								보육비용
 							</li>
@@ -270,313 +278,218 @@
 					<!-- // 리뷰 종합 평점 -->
 
 					<div class="review_write_link">
-						<p>과거 또는 현재 아튼빌어린이집을 다니고 있는 엄마들이 작성한 정보입니다.</p>
-						<a href="#"><img src="" alt="리뷰작성"></a>
+						<p>과거 또는 현재 <strong>아튼빌어린이집</strong>을 다니고 있는 엄마들이 작성한 정보입니다.</p>
+						<a href="#"><img src="/momHTML2/public/img/btn_review_write_small.png" alt="리뷰작성"></a>
 					</div>
 
 					<!-- 어린이집 리뷰 내용 -->
 					<section>
-						<div class="review_personal">
-							<h3 class="name">아튼빌어린이집</h3>
-							<div class="rating_star_wrap">
-								<span class="pill">리뷰 종합 평점 </span>
-								<span class="rating_star">
-									<span class="inner" style="width:71%"></span>
-								</span>
-								<strong class="score">3.4점</strong>
-							</div>
-							<ul class="review_items">
-								<li class="director">
-									원장선생님
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+						<dl class="review_personal">
+							<dt class="personal_profile">
+								<span class="photo"><img src="/momHTML/public/img/@login.jpg" alt=""></span>
+								<span class="name">맘짱왕 엄청 힘이 님의 리뷰</span>
+								<span class="date">2015. 04. 03.</span>
+							</dt>
+							<dd class="total">
+								<div class="rating_star_wrap medium">
+									<span class="rating_star">
+										<span class="inner" style="width:71%"></span>
+									</span>
+									<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
+								</div>
+								<div class="text">
+									평균보다 약간 좋은 정도네요. 일단 저는 믿고 보냈습니다. 선생님들과 한번 미팅을 가져서 인성을 볼 수 있었으면 좋겠습니다. 더욱더 안심할 수 있도록 꾸준한 관리와 아이들을 사랑해 주세요. 부탁입니다. 마음편히 일이 가고 싶어요.
+									평균보다 약간 좋은 정도네요. 일단 저는 믿고 보냈습니다. 선생님들과 한번 미팅을 가져서 인성을 볼 수 있었으면 좋겠습니다. 더욱더 안심할 수 있도록 꾸준한 관리와 아이들을 사랑해 주세요. 부탁입니다. 마음편히 일이 가고 싶어요.
+								</div>
+							</dd>
+							<dd>
+								<ul class="review_items detail">
+									<li class="director">
+										<div class="item">
+											<span class="icon"></span>
+											원장선생님
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="teacher">
-									담임선생님
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												한줄 평이 없습니다.
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="clean">
-									위생 및 청결 
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 
+									</li>
+									<li class="teacher">
+										<div class="item">
+											<span class="icon"></span>
+											담임선생님
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="safety">
-									건강과 안전
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													한줄 평이 없습니다.
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="food">
-									먹거리(식단과 영양)
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+									</li>
+									<li class="clean">
+										<div class="item">
+											<span class="icon"></span>
+											위생 및 청결 
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="toy">
-									교구 및 교재,놀이시설
-									및 장난감의 다양성
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="education">
-									교육의 기회
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+									</li>
+									<li class="safety">
+										<div class="item">
+											<span class="icon"></span>
+											건강과 안전
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="cost">
-									보육비용
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-							</ul>
-							<div class="btn_wrap">
-								<button type="button" class="sympathy"><span class="icon"></span> 공감해요: 1건</button>
-								<button type="button" class="report"><span class="icon"></span> 신고하기</button>
-								<button type="button" class="share"><span class="icon"></span> 페이스북에 공유</button>
-							</div>
-						</div>
-						<div class="review_personal">
-							<h3 class="name">아튼빌어린이집</h3>
-							<div class="rating_star_wrap">
-								<span class="pill">리뷰 종합 평점 </span>
-								<span class="rating_star">
-									<span class="inner" style="width:71%"></span>
-								</span>
-								<strong class="score">3.4점</strong>
-							</div>
-							<div>
-								<p>
-									익명으로
-									어린이집 리뷰를 작성하고,
-									모든 어린이집의
-									리뷰를 확인하세요.
-								</p>
-								<a href="#"><img src="" alt="리뷰작성"></a>
-							</div>
-							<!-- <ul class="review_items">
-								<li class="director">
-									원장선생님
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+									</li>
+									<li class="food">
+										<div class="item">
+											<span class="icon"></span>
+											먹거리(식단과 영양)
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="teacher">
-									담임선생님
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												한줄 평이 없습니다.
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="clean">
-									위생 및 청결 
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 
+									</li>
+									<li class="toy">
+										<div class="item">
+											<span class="icon"></span>
+											교구 및 교재의 다양성
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="safety">
-									건강과 안전
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="food">
-									먹거리(식단과 영양)
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+									</li>
+									<li class="education">
+										<div class="item">
+											<span class="icon"></span>
+											교육의 기회
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="toy">
-									교구 및 교재,놀이시설
-									및 장난감의 다양성
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="education">
-									교육의 기회
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+									</li>
+									<li class="cost">
+										<div class="item">
+											<span class="icon"></span>
+											보육비용
+											<div class="rating_star_wrap small_fat">
+												<span class="rating_star">
+													<span class="inner" style="width:71%"></span>
+												</span>
+												<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="cost">
-									보육비용
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.4점</strong>
-									</div>
-									<div class="box_text">
-										<div class="nano">
-											<div class="nano-content">
-												우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+										<div class="box_text">
+											<div class="nano_scroll">
+												<div class="nano-content">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-							</ul>
-							<div class="btn_wrap">
-								<button type="button sympathy"><span class="icon"></span> 공감해요: 1건</button>
-								<button type="button report"><span class="icon"></span> 신고하기</button>
-								<button type="button share"><span class="icon"></span> 페이스북에 공유</button>
-							</div> -->
-						</div>
+									</li>
+								</ul>
+								<div class="btn_wrap">
+									<a href="#" class="button_sns feel"><span class="icon"></span>공감해요: 1건</a>
+									<a href="#" class="button_sns report"><span class="icon"></span>신고하기</a>
+									<a href="#" class="button_sns share"><span class="icon"></span>페이스북에 공유</a>
+								</div>
+							</dd>
+						</dl>
+						<dl class="review_personal">
+							<dt class="personal_profile">
+								<span class="photo"><img src="/momHTML/public/img/@login.jpg" alt=""></span>
+								<span class="name">맘짱왕 엄청 힘이 님의 리뷰</span>
+								<span class="date">2015. 04. 03.</span>
+							</dt>
+							<dd class="total">
+								<div class="rating_star_wrap medium">
+									<span class="rating_star">
+										<span class="inner" style="width:71%"></span>
+									</span>
+									<strong class="score red">3.5점 <span class="hidden">5점 만점 중</span></strong>
+								</div>
+								<div class="text">
+									평균보다 약간 좋은 정도네요. 일단 저는 믿고 보냈습니다. 선생님들과 한번 미팅을 가져서 인성을 볼 수 있었으면 좋겠습니다. 더욱더 안심할 수 있도록 꾸준한 관리와 아이들을 사랑해 주세요. 부탁입니다. 마음편히 일이 가고 싶어요.
+									평균보다 약간 좋은 정도네요. 일단 저는 믿고 보냈습니다. 선생님들과 한번 미팅을 가져서 인성을 볼 수 있었으면 좋겠습니다. 더욱더 안심할 수 있도록 꾸준한 관리와 아이들을 사랑해 주세요. 부탁입니다. 마음편히 일이 가고 싶어요.
+								</div>
+							</dd>
+							<dd class="blind">
+								익명으로 <br>
+								어린이집 리뷰를 <span class="scarlet">작성</span>하고,<br>
+								모든 어린이집의<br>
+								리뷰를 <span class="scarlet">확인</span>하세요. <br>
+								<a href="#"><img src="/momHTML2/public/img/btn_review_write_large.png" alt="리뷰작성"></a>
+							</dd>
+						</dl>
 						<div class="paging">
 							<a href="#" class="first"><span>처음</span></a>
 							<a href="#" class="prev"><span>이전</span></a>
@@ -615,6 +528,7 @@
 	<script src="/momHTML2/public/js/front/plugin/masonry.pkgd.min.js"></script>
 	<script src="/momHTML2/public/js/front/plugin/jquery.bpopup.min.js"></script>
 	<script src="/momHTML2/public/js/front/plugin/jquery.bxslider.js"></script>
+	<script src="/momHTML2/public/js/front/plugin/jquery.nanoscroller.js"></script>
 	<script src="/momHTML2/public/js/front/main.js"></script>
 	<script>
 		function initPage(){

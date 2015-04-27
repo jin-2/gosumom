@@ -113,10 +113,13 @@ textarea
  * --------------------------------
 
 body
-	background-color: $bg-color
+	background-color: #f0f0f0
 	font-family: $nanumG, $dotum, sans-serif
 	+font-size(14px)
 	color: $base-font-color
+
+	&.main
+		background-color: $bg-color
 
 .wrapper
 	width: $page-width
@@ -184,22 +187,60 @@ body
 		font-family: Tahoma
 		color: $main-point-color
 
-// 별모양
+//
+ * --------------------------------
+ * 공통: 별모양
+ * --------------------------------
 .rating_star
 	display: inline-block
 	+size(75px, 13px)
-	background: url(#{$path}/bg_collect.png) no-repeat 0 -400px
+	background: url(#{$path}/bg_collect.png) no-repeat -650px 0
 	
 	.inner
 		display: block
 		height: 100%
-		background: url(#{$path}/bg_collect.png) no-repeat 0 -430px
+		background: url(#{$path}/bg_collect.png) no-repeat -650px -30px
 
-.rating_star_wrap .score
-	color: #ADADAD
-	font-family: $open
-	font-weight: 700
+.rating_star_wrap 
+	.score
+		color: #ADADAD
+		font-family: $open
+		font-weight: 700
+		&.red
+			color: #EB3B4B
+			+font-size(14px)
+			font-weight: 600
+			font-family: $nanumG
 
+// small_fat
+.small_fat
+	.rating_star
+		+size(91px, 17px)
+		background-position: -650px -90px
+		vertical-align: middle
+	.inner
+		background-position: -650px -120px
+
+// medium
+.medium 
+	.rating_star
+		+size(130px, 23px)
+		background-position: -650px -150px
+		vertical-align: middle
+	.inner
+		background-position: -650px -190px
+	.score
+		color: #787878
+		font-family: $nanumG
+		+font-size(16px)
+		font-weight: 400
+		vertical-align: middle
+		letter-spacing: -1
+	.score.red
+		color: #EB3B4B
+		+font-size(22px)
+		font-weight: 600
+	
 //
  * --------------------------------
  * main 
@@ -264,14 +305,18 @@ body
 		background: url(#{$path}/bg_collect.png) no-repeat 0 0
 
 	input[type="text"]
+		position: relative
+		z-index: 2
 		width: 415px
 		+font-size(16px)
 		border: 0
 		outline: 0
 		line-height: 40px
+		background-color: transparent
 
 	input[type="image"]
 		position: absolute
+		z-index: 1
 		right: 25px
 		padding: 5px
 
@@ -469,7 +514,6 @@ body
 	&.line
 		background-position: 0 100%
 
-
 .page_list
 	.detail_search_wrap
 		float: right
@@ -548,7 +592,7 @@ body
 
 //
  * --------------------------------
- * 꾸밈 요소
+ * 공통 꾸밈 요소
  * --------------------------------
 .pill
 	display: inline-block
@@ -561,10 +605,480 @@ body
 	color: #fff
 	letter-spacing: -1px
 	line-height: 1.55
+	.ie8 &
+		position: relative
+		@extend %pie
 
+.icon_heart
+	display: inline-block
+	+size(18px, 15px)
+	background: url(#{$path}/bg_collect.png) no-repeat -150px -220px
+	vertical-align: middle
 
+.emerald
+	color: #19bdc6
 
+.scarlet
+	color: #eb3b4b
 
+//
+ * --------------------------------
+ * 어린이집 상세페이지
+ * --------------------------------
+.school_wrap
+	overflow: hidden
+	padding:
+		top: 28px
+	.slider_wrap
+		float: left
+		width: 604px
+	.school_info_wrap
+		float: right
+		width: 520px
+
+.school_info_wrap
+	.text_total
+		margin-bottom: 5px
+
+	.like_count
+		margin-left: 6px
+		padding-left: 11px
+		border-left: 1px solid #dcdcdc
+		+font-size(12px)
+
+	.rating_star_wrap,
+	.like_count
+		display: inline-block
+
+	.name
+		margin-top: 5px
+		+font-size(40px)
+		color: #343434
+		font-weight: 600
+		letter-spacing: -1px
+
+	.info
+		margin:
+			top: 17px
+			bottom: 11px
+		padding-top: 17px
+		border-top: 1px solid #DCDCDC
+		+font-size(14px)
+		color: #787878
+		li
+			margin-top: 10px
+			&:first-child
+				margin-top: 0
+
+	.link
+		margin-left: 8px
+		color: $scarlet
+		+font-size(12px)
+		font-family: $dotum
+
+	.btn_wrap
+		margin-top: 18px
+
+	button
+		overflow: hidden
+		margin-left: 34px
+		width: 101px
+		height: 101px
+		background-color: transparent
+
+		&:first-child
+			margin-left: 0
+
+	button.like_school.active
+		img
+			margin-top: -109px
+
+.review_total
+	.name
+		margin-top: 36px
+		+font-size(32px)
+		text-align: center
+		letter-spacing: -1px
+	.text_total
+		margin-top: 10px
+		text-align: center
+		span
+			color: #787878
+	.rating_star_wrap
+		margin-top: 5px
+		text-align: center
+		.score
+			display: inline-block
+			margin-top: 5px
+
+.review_items
+	li
+		.icon
+			display: inline-block
+			+size(45px, 37px)
+			background: url(#{$path}/bg_collect.png) no-repeat
+	.director .icon
+		background-position: 7px -130px
+	.teacher .icon
+		background-position: -51px -129px
+	.clean .icon
+		background-position: -116px -128px
+	.safety .icon
+		background-position: -185px -127px
+	.food .icon
+		background-position: -270px -128px
+	.toy .icon
+		background-position: -347px -128px
+	.education .icon
+		background-position: -427px -125px
+	.cost .icon
+		background-position: -501px -129px
+
+.review_total
+	.review_items
+		overflow: hidden
+		margin-top: 25px
+		li
+			float: left
+			margin-left: 5px
+			padding-top: 13px
+			+size(126px, 116px)
+			border: 2px solid #dcdcdc
+			border-radius: 15px
+			text-align: center
+			+font-size(12px)
+			font-weight: 600
+			.ie8 &
+				position: relative
+				@extend %pie
+				margin-left: 4px
+
+			&:first-child
+				margin-left: 0
+
+		.rating_star_wrap
+			margin: 11px 0 10px
+
+.review_write_link
+	overflow: hidden
+	margin-top: 39px
+	padding: 14px 0 10px
+	border:
+		bottom: 4px solid #343434
+	+font-size(20px)
+	background: url(#{$path}/bg_dash_line2.gif) repeat-x 0 0
+	p
+		float: left
+		padding-top: 28px
+		letter-spacing: -1px
+	a
+		float: right
+
+.personal_profile
+	box-sizing: border-box
+	position: relative
+	padding-left: 59px
+	height: 48px
+	.photo 
+		overflow: hidden
+		position: absolute
+		top: 0
+		left: 0
+		display: inline-block
+		+size(47px, 48px)
+		border-radius: 50%
+		
+		img
+			+size(47px, 48px)
+			.ie8 &
+				border-radius: 50%
+				position: relative
+				@extend %pie
+
+	.name
+		display: block
+		margin-top: 4px
+		+font-size(16px)
+		letter-spacing: -1px
+		@extend %ellipsis
+		em
+			font-style: normal
+	
+	.date
+		color: #B4B4B4
+		+font-size(11px)
+		font-family: $dotum
+
+.review_personal
+	overflow: hidden
+	padding: 30px 0 20px
+	border-bottom: 1px solid #c8c8c8
+	.personal_profile
+		float: left
+		width: 200px
+	dd
+		float: left
+	dd.total
+		box-sizing: border-box
+		width: 835px
+		padding-left: 40px
+		border-left: 1px solid #e6e6e6
+
+	.total
+		.text
+			overflow: hidden
+			max-height: 125px
+			margin-top: 9px
+			+font-size(18px)
+			font-weight: 600
+			line-height: 1.4
+
+		.score
+			margin-left: 12px
+	.btn_wrap
+		margin-top: 16px
+		padding-right: 14px
+		text-align: right
+	.button_sns
+		margin-left: 6px
+
+.review_items.detail
+	overflow: hidden
+	margin-top: 40px
+	width: 1088px
+	li
+		box-sizing: border-box
+		overflow: hidden
+		float: left
+		margin:
+			right: 14px
+			bottom: 14px
+		+size(258px, 210px)
+		border: 1px solid #e6e6e6
+		border-radius: 17px
+
+		.ie8 &
+			position: relative
+			@extend %pie
+		
+	.item
+		box-sizing: border-box
+		height: 84px
+		padding: 22px 0 0 26px
+		font-weight: 600
+		+font-size(16px)
+
+		.icon
+			float: left
+			margin-right: 10px
+
+	.score
+		margin-left: 4px
+		vertical-align: middle
+
+.review_items
+	.box_text
+		box-sizing: border-box
+		padding: 18px 20px
+		height: 124px
+		background-color: #f0f0f0
+		+font-size(12px)
+		font-family: $dotum
+		color: #787878
+		line-height: 1.5
+		.ie8 &
+			position: relative
+			border-radius: 17px
+			@extend %pie
+
+.review_personal
+	.blind
+		display: block
+		padding-top: 90px
+		+size(1075px, 440px)
+		background: url(#{$path}/review_hidden.jpg) no-repeat 0 0
+		+font-size(32px)
+		text-align: center
+		line-height: 1.45
+
+		a
+			display: inline-block
+			margin-top: 20px
+
+//
+ * --------------------------------
+ * 디자인 스크롤
+ * --------------------------------
+.nano_scroll
+	position: relative
+	width: 100%
+	height: 100%
+	overflow: hidden
+	> .nano-content
+		position: absolute
+		overflow: scroll
+		overflow-x: hidden
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		&:focus
+			outline: thin dotted
+		&::-webkit-scrollbar
+			display: none
+
+.has-scrollbar > .nano-content::-webkit-scrollbar
+	display: block
+
+.nano_scroll
+	> .nano-pane
+		background: rgba(180, 180, 180, 1)
+		position: absolute
+		width: 5px
+		right: 0
+		top: 0
+		bottom: 0
+		visibility: hidden\9
+		//Target only IE7 and IE8 with this hack
+		opacity: .01
+		-webkit-transition: .2s
+		-moz-transition: .2s
+		-o-transition: .2s
+		transition: .2s
+		-moz-border-radius: 5px
+		-webkit-border-radius: 5px
+		border-radius: 5px
+		behavior: url(PIE.htc)
+		> .nano-slider
+			background: #444
+			background: rgba(0, 0, 0, 0.5)
+			position: relative
+			margin: 0 1px
+			-moz-border-radius: 3px
+			-webkit-border-radius: 3px
+			border-radius: 3px
+			behavior: url(PIE.htc)
+	&:hover > .nano-pane
+		visibility: visible\9
+		// Target only IE7 and IE8 with this hack
+		opacity: 0.99
+
+.nano-pane
+	&.active, &.flashed
+		visibility: visible\9
+		//Target only IE7 and IE8 with this hack
+		opacity: 0.99
+
+.nano_scroll
+	background: #f0f0f0
+	width: 100%
+	height: 86px
+	>
+		.nano-content
+			padding-right: 20px
+		.nano-pane
+			background: #b4b4b4
+			> .nano-slider
+				background: #797979
+
+//
+ * --------------------------------
+ * 공통 서브 탭
+ * --------------------------------
+.sub_tab
+	overflow: hidden
+	a
+		display: block
+		margin-left: 1px
+		padding: 17px 0 18px
+		text-align: center
+		background-color: #dcdcdc
+		color: #343434
+		font-weight: 600
+		text-decoration: none
+		+font-size(16px)
+
+		&:hover, &.active
+			background-color: #eb3b4b
+			color: #fff
+	li
+		float: left
+		&:first-child
+			a
+				margin-left: 0
+
+// 어린이집 상세보기 탭
+.page_childcare
+	.sub_tab
+		margin: 34px auto 0
+		width: 880px
+		li
+			width: 25%
+
+.sub_contents
+	margin:
+		top: -26px
+		bottom: 60px
+	padding:
+		top: 26px
+		left: 62px
+		right: 63px
+		bottom: 100px
+	width: 1075px
+	background-color: #fff
+
+.paging
+	overflow: hidden
+	margin-top: 40px
+	line-height: 32px
+	text-align: center
+
+	a, strong
+		display: inline-block
+		margin: 2px
+		width: 33px
+		height: 33px
+		border: 1px solid #ddd
+		vertical-align: middle
+		font-weight: bold
+		font-family: "tahoma"
+		+font-size(11px)
+		background-color: #f6f6f6
+
+	span
+		font-size: 0
+		text-indent: -999px
+
+	strong, a:hover
+		background: #eb3b4b
+		color: #fff
+		border: 1px solid #db1c2e
+		vertical-align: top
+
+	.first, .prev, .next, .last
+		color: #c4c4c4
+		+font-size(18px)
+		font-weight: normal
+		background-color: #fff
+
+	.prev , .last
+		margin-left: -5px
+
+	.first::before
+		content: "\f100"
+		font-family: FontAwesome
+
+	.prev::before
+		content: "\f104"
+		font-family: FontAwesome
+
+	.next::before
+		content: "\f105"
+		font-family: FontAwesome
+
+	.last::before
+		content: "\f101"
+		font-family: FontAwesome
 
 
 
