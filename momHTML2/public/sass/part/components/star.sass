@@ -1,0 +1,53 @@
+//
+ * --------------------------------
+ * 공통: 별모양
+ * --------------------------------
+.rating_star
+	display: inline-block
+	+size(75px, 13px)
+	background: url(#{$path}/bg_collect.png) no-repeat -650px 0
+	
+	.inner
+		display: block
+		height: 100%
+		background: url(#{$path}/bg_collect.png) no-repeat -650px -30px
+
+.rating_star_wrap 
+	.score
+		color: #ADADAD
+		font-family: $open
+		font-weight: 700
+		&.red
+			color: #EB3B4B
+			+font-size(14px)
+			font-weight: 600
+			font-family: $nanumG
+
+// small_fat
+.small_fat
+	.rating_star
+		+size(91px, 17px)
+		background-position: -650px -90px
+		vertical-align: middle
+	.inner
+		background-position: -650px -120px
+
+// medium
+.medium 
+	.rating_star
+		+size(130px, 23px)
+		background-position: -650px -150px
+		vertical-align: middle
+	.inner
+		background-position: -650px -190px
+	.score
+		color: #787878
+		font-family: $nanumG
+		+font-size(16px)
+		font-weight: 400
+		vertical-align: middle
+		letter-spacing: -1
+	.score.red
+		color: #EB3B4B
+		+font-size(22px)
+		font-weight: 600

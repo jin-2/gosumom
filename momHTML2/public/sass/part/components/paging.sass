@@ -1,0 +1,57 @@
+.paging
+	overflow: hidden
+	margin-top: 40px
+	line-height: 32px
+	text-align: center
+
+	a, strong
+		display: inline-block
+		// margin: 2px
+		width: 33px
+		height: 33px
+		border: 1px solid #ddd
+		vertical-align: middle
+		font-weight: bold
+		font-family: "tahoma"
+		+font-size(11px)
+		background-color: #f6f6f6
+
+	span
+		font-size: 0
+		text-indent: -999px
+
+	strong, a:hover
+		background: #eb3b4b
+		color: #fff
+		border: 1px solid #db1c2e
+		vertical-align: top
+
+	.first, .prev, .next, .last
+		color: #c4c4c4
+		+font-size(18px)
+		font-weight: normal
+		background-color: #fff
+
+	.prev , .last
+		margin-left: -5px
+
+	.prev
+		margin-right: 16px
+	.next
+		margin-left: 16px
+
+	.first::before
+		content: "\f100"
+		font-family: FontAwesome
+
+	.prev::before
+		content: "\f104"
+		font-family: FontAwesome
+
+	.next::before
+		content: "\f105"
+		font-family: FontAwesome
+
+	.last::before
+		content: "\f101"
+		font-family: FontAwesome

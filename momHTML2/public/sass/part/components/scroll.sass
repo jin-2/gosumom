@@ -1,0 +1,75 @@
+//
+ * --------------------------------
+ * 디자인 스크롤
+ * --------------------------------
+.nano_scroll
+	position: relative
+	width: 100%
+	height: 100%
+	overflow: hidden
+	> .nano-content
+		position: absolute
+		overflow: scroll
+		overflow-x: hidden
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		&:focus
+			outline: thin dotted
+		&::-webkit-scrollbar
+			display: none
+
+.has-scrollbar > .nano-content::-webkit-scrollbar
+	display: block
+
+.nano_scroll
+	> .nano-pane
+		background: rgba(180, 180, 180, 1)
+		position: absolute
+		width: 5px
+		right: 0
+		top: 0
+		bottom: 0
+		visibility: hidden\9
+		//Target only IE7 and IE8 with this hack
+		opacity: .01
+		-webkit-transition: .2s
+		-moz-transition: .2s
+		-o-transition: .2s
+		transition: .2s
+		-moz-border-radius: 5px
+		-webkit-border-radius: 5px
+		border-radius: 5px
+		behavior: url(PIE.htc)
+		> .nano-slider
+			background: #444
+			background: rgba(0, 0, 0, 0.5)
+			position: relative
+			margin: 0 1px
+			-moz-border-radius: 3px
+			-webkit-border-radius: 3px
+			border-radius: 3px
+			behavior: url(PIE.htc)
+	&:hover > .nano-pane
+		visibility: visible\9
+		// Target only IE7 and IE8 with this hack
+		opacity: 0.99
+
+.nano-pane
+	&.active, &.flashed
+		visibility: visible\9
+		//Target only IE7 and IE8 with this hack
+		opacity: 0.99
+
+.nano_scroll
+	background: #f0f0f0
+	width: 100%
+	height: 86px
+	>
+		.nano-content
+			padding-right: 20px
+		.nano-pane
+			background: #b4b4b4
+			> .nano-slider
+				background: #797979

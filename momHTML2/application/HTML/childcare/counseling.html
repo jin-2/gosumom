@@ -182,7 +182,14 @@
 
 				<section class="sub_contents">
 					<div>
-						
+						<h3>상담 만족도</h3>
+						<div>
+							<canvas id="chart_satisfaction" width="154" height="154"/>
+						</div>
+						<h3>상담 결과</h3>
+						<div>
+							<canvas id="chart_result" width="154" height="154"/>
+						</div>
 					</div>
 				</section>
 			</div><!-- //.wrapper -->
@@ -210,9 +217,99 @@
 	<script src="/momHTML2/public/js/front/plugin/jquery.bpopup.min.js"></script>
 	<script src="/momHTML2/public/js/front/plugin/jquery.bxslider.js"></script>
 	<script src="/momHTML2/public/js/front/plugin/jquery.nanoscroller.js"></script>
+	<script src="/momHTML2/public/js/front/plugin/chart.min.js"></script>
 	<script src="/momHTML2/public/js/front/main.js"></script>
 	<script>
-		
+		// 상담만족도 data
+		var pieData_satisfaction = [
+				{
+					value: 52,
+					color:"#3e85f7",
+					highlight: "#5a96f7",
+					label: "긍정적"
+				},
+				{
+					value: 30,
+					color: "#69db42",
+					highlight: "#7fda60",
+					label: "보통"
+				},
+				{
+					value: 18,
+					color: "#cc96fd",
+					highlight: "#dbb8fb",
+					label: "Yellow"
+				}
+			];
+
+			// 상담 결과 data
+			var pieData_result = [
+				{
+					value: 15,
+					color:"#f7464a",
+					highlight: "#f67073",
+					label: "입학 결정"
+				},
+				{
+					value: 60,
+					color: "#46bfbd",
+					highlight: "#68c5c3",
+					label: "제외 (배제)"
+				},
+				{
+					value: 25,
+					color: "#fdb45c",
+					highlight: "#fbc584",
+					label: "고민중"
+				}
+			];
+
+
+			window.onload = function(){
+				
+				var satisfaction = document.getElementById("chart_satisfaction").getContext("2d");
+				var result = document.getElementById("chart_result").getContext("2d");
+
+				// 상담만족도
+				window.myPie = new Chart(satisfaction).Pie(pieData_satisfaction, {
+					//Boolean - stroke show
+					segmentShowStroke : true,
+
+					//String - stroke color
+					segmentStrokeColor : "#fff",
+
+					//Number - stroke width
+					segmentStrokeWidth : 2,
+
+					//Number - 원 중심 여백
+					percentageInnerCutout : 50, // This is 0 for Pie charts
+
+					//Number - animation speed
+					animationSteps : 100,
+
+					//String - Animation easing effect
+					animationEasing : "easeOutBounce",
+
+					//Boolean - Doughnut animate the rotation
+					animateRotate : true,
+
+					//Boolean - animate scaling the Doughnut
+					animateScale : false
+				});
+
+				// 상담 결과
+				window.myPie = new Chart(result).Pie(pieData_result, {
+					segmentShowStroke : true,
+					segmentStrokeColor : "#fff",
+					segmentStrokeWidth : 2,
+					percentageInnerCutout : 0,
+					animationSteps : 100,
+					animationEasing : "easeOutBounce",
+					animateRotate : true,
+					animateScale : false
+				});
+			};
+
 	</script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -1,0 +1,36 @@
+// sub common breadcrumb
+.breadcrumb
+	overflow: hidden
+	ol
+		float: right
+		margin:
+			top: 28px
+			bottom: 11px
+
+	li, a
+		color: #828282
+		+font-size(12px)
+		letter-spacing: -1px
+	li
+		float: left
+		margin-right: 6px
+		a
+			margin-right: 5px
+
+	// home
+	li:first-child
+		a
+			display: inline-block
+			margin:
+				top: 2px
+				right: -3px
+			+size(12px, 11px)
+			text-indent: -9999px
+			background: url(#{$path}/bg_collect.png) no-repeat -400px -200px
+
+	li.current
+		margin-right: 0
+		font-weight: 600
+
+	&.line
+		background-position: 0 100%

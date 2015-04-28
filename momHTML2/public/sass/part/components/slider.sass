@@ -1,0 +1,53 @@
+//
+ * --------------------------------
+ * 공통 갤러리
+ * --------------------------------
+
+.slider_wrap
+	$slider-wrap: 604px
+	$slider-bigW: 500px
+	$slider-bigH: 350px
+	$slider-thumW: 100px
+	$slider-thumH: 70px
+	overflow: hidden
+	width: $slider-wrap
+
+	.big
+		float: left
+		+size($slider-bigW, $slider-bigH)
+		
+		ul
+			position: relative
+
+		li
+			position: absolute
+			top: 0
+			left: 0
+
+	.thumb
+		box-sizing: border-box
+		float: right
+		+size($slider-thumW, $slider-thumH)
+		a
+			position: relative
+			display: block
+		img
+			+size($slider-thumW, $slider-thumH)
+		.overlay
+			box-sizing: border-box
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			+size(100%, $slider-thumH)
+			background: #343434
+			opacity: 0.5
+			filter: Alpha(opacity=50)
+
+	.thumb
+		a:focus, a:hover, a.active
+			.overlay
+				border: 4px solid #EB3B4B
+				background: none
+				opacity: 1
+				filter: Alpha(opacity=100)

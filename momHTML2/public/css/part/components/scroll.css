@@ -1,0 +1,19 @@
+.nano_scroll { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.nano_scroll > .nano-content { position: absolute; overflow: scroll; overflow-x: hidden; top: 0; right: 0; bottom: 0; left: 0; }
+.nano_scroll > .nano-content:focus { outline: thin dotted; }
+.nano_scroll > .nano-content::-webkit-scrollbar { display: none; }
+
+.has-scrollbar > .nano-content::-webkit-scrollbar { display: block; }
+
+.nano_scroll > .nano-pane { background: #b4b4b4; position: absolute; width: 5px; right: 0; top: 0; bottom: 0; visibility: hidden\9; opacity: 0.01; -webkit-transition: 0.2s; -moz-transition: 0.2s; -o-transition: 0.2s; transition: 0.2s; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; behavior: url(PIE.htc); }
+.nano_scroll > .nano-pane > .nano-slider { background: #444; background: rgba(0, 0, 0, 0.5); position: relative; margin: 0 1px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url(PIE.htc); }
+.nano_scroll:hover > .nano-pane { visibility: visible\9; opacity: 0.99; }
+
+.nano-pane.active, .nano-pane.flashed { visibility: visible\9; opacity: 0.99; }
+
+.nano_scroll { background: #f0f0f0; width: 100%; height: 86px; }
+.nano_scroll > .nano-content { padding-right: 20px; }
+.nano_scroll > .nano-pane { background: #b4b4b4; }
+.nano_scroll > .nano-pane > .nano-slider { background: #797979; }
+
+/*# sourceMappingURL=scroll.css.map */

@@ -59,6 +59,18 @@
 		if($(this).val().length == 0) $('.main_serching_bar .placeholder').show();
 	})
 
+	// 플레이스홀더 공통사용
+	$('.placeholder_wrap input[type="text"]').focus(function(){
+		$(this).keydown(function(){
+			$(this).parents().find('.placeholder').hide();
+		});
+	});
+	$('.placeholder_wrap input[type="text"]').focusout(function(){
+		if($(this).val().length == 0){
+			$(this).parents().find('.placeholder').show();
+		}
+	});
+
 	// 스크롤 디자인
 	if( $(".nano_scroll") ){
 		$(".nano_scroll").nanoScroller({

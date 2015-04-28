@@ -187,59 +187,7 @@ body
 		font-family: Tahoma
 		color: $main-point-color
 
-//
- * --------------------------------
- * 공통: 별모양
- * --------------------------------
-.rating_star
-	display: inline-block
-	+size(75px, 13px)
-	background: url(#{$path}/bg_collect.png) no-repeat -650px 0
-	
-	.inner
-		display: block
-		height: 100%
-		background: url(#{$path}/bg_collect.png) no-repeat -650px -30px
 
-.rating_star_wrap 
-	.score
-		color: #ADADAD
-		font-family: $open
-		font-weight: 700
-		&.red
-			color: #EB3B4B
-			+font-size(14px)
-			font-weight: 600
-			font-family: $nanumG
-
-// small_fat
-.small_fat
-	.rating_star
-		+size(91px, 17px)
-		background-position: -650px -90px
-		vertical-align: middle
-	.inner
-		background-position: -650px -120px
-
-// medium
-.medium 
-	.rating_star
-		+size(130px, 23px)
-		background-position: -650px -150px
-		vertical-align: middle
-	.inner
-		background-position: -650px -190px
-	.score
-		color: #787878
-		font-family: $nanumG
-		+font-size(16px)
-		font-weight: 400
-		vertical-align: middle
-		letter-spacing: -1
-	.score.red
-		color: #EB3B4B
-		+font-size(22px)
-		font-weight: 600
 	
 //
  * --------------------------------
@@ -477,43 +425,6 @@ body
 			margin-top: 6px
 			+font-size(16px)
 
-// sub common breadcrumb
-.breadcrumb
-	overflow: hidden
-	ol
-		float: right
-		margin:
-			top: 28px
-			bottom: 11px
-
-	li, a
-		color: #828282
-		+font-size(12px)
-		letter-spacing: -1px
-	li
-		float: left
-		margin-right: 6px
-		a
-			margin-right: 5px
-
-	// home
-	li:first-child
-		a
-			display: inline-block
-			margin:
-				top: 2px
-				right: -3px
-			+size(12px, 11px)
-			text-indent: -9999px
-			background: url(#{$path}/bg_collect.png) no-repeat -400px -200px
-
-	li.current
-		margin-right: 0
-		font-weight: 600
-
-	&.line
-		background-position: 0 100%
-
 .page_list
 	.detail_search_wrap
 		float: right
@@ -535,60 +446,6 @@ body
 			top: 20px
 			bottom: 180px
 		background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
-
-//
- * --------------------------------
- * 공통 갤러리
- * --------------------------------
-
-.slider_wrap
-	$slider-wrap: 604px
-	$slider-bigW: 500px
-	$slider-bigH: 350px
-	$slider-thumW: 100px
-	$slider-thumH: 70px
-	overflow: hidden
-	width: $slider-wrap
-
-	.big
-		float: left
-		+size($slider-bigW, $slider-bigH)
-		
-		ul
-			position: relative
-
-		li
-			position: absolute
-			top: 0
-			left: 0
-
-	.thumb
-		box-sizing: border-box
-		float: right
-		+size($slider-thumW, $slider-thumH)
-		a
-			position: relative
-			display: block
-		img
-			+size($slider-thumW, $slider-thumH)
-		.overlay
-			box-sizing: border-box
-			position: absolute
-			top: 0
-			left: 0
-			display: block
-			+size(100%, $slider-thumH)
-			background: #343434
-			opacity: 0.5
-			filter: Alpha(opacity=50)
-
-	.thumb
-		a:focus, a:hover, a.active
-			.overlay
-				border: 4px solid #EB3B4B
-				background: none
-				opacity: 1
-				filter: Alpha(opacity=100)
 
 //
  * --------------------------------
@@ -907,82 +764,6 @@ body
 
 //
  * --------------------------------
- * 디자인 스크롤
- * --------------------------------
-.nano_scroll
-	position: relative
-	width: 100%
-	height: 100%
-	overflow: hidden
-	> .nano-content
-		position: absolute
-		overflow: scroll
-		overflow-x: hidden
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0
-		&:focus
-			outline: thin dotted
-		&::-webkit-scrollbar
-			display: none
-
-.has-scrollbar > .nano-content::-webkit-scrollbar
-	display: block
-
-.nano_scroll
-	> .nano-pane
-		background: rgba(180, 180, 180, 1)
-		position: absolute
-		width: 5px
-		right: 0
-		top: 0
-		bottom: 0
-		visibility: hidden\9
-		//Target only IE7 and IE8 with this hack
-		opacity: .01
-		-webkit-transition: .2s
-		-moz-transition: .2s
-		-o-transition: .2s
-		transition: .2s
-		-moz-border-radius: 5px
-		-webkit-border-radius: 5px
-		border-radius: 5px
-		behavior: url(PIE.htc)
-		> .nano-slider
-			background: #444
-			background: rgba(0, 0, 0, 0.5)
-			position: relative
-			margin: 0 1px
-			-moz-border-radius: 3px
-			-webkit-border-radius: 3px
-			border-radius: 3px
-			behavior: url(PIE.htc)
-	&:hover > .nano-pane
-		visibility: visible\9
-		// Target only IE7 and IE8 with this hack
-		opacity: 0.99
-
-.nano-pane
-	&.active, &.flashed
-		visibility: visible\9
-		//Target only IE7 and IE8 with this hack
-		opacity: 0.99
-
-.nano_scroll
-	background: #f0f0f0
-	width: 100%
-	height: 86px
-	>
-		.nano-content
-			padding-right: 20px
-		.nano-pane
-			background: #b4b4b4
-			> .nano-slider
-				background: #797979
-
-//
- * --------------------------------
  * 공통 서브 탭
  * --------------------------------
 .sub_tab
@@ -1027,63 +808,27 @@ body
 	width: 1075px
 	background-color: #fff
 
-.paging
-	overflow: hidden
-	margin-top: 40px
-	line-height: 32px
-	text-align: center
+//
+ * --------------------------------
+ * placeholder
+ * --------------------------------
+.placeholder_wrap
+	position: relative
+	display: inline-block
+	vertical-align: top
+	background-color: #fff
+	.placeholder
+		z-index: 1
+		position: absolute
+		top: 11px
+		left: 12px
+	input[type="text"]
+		position: relative
+		z-index: 2
+		background-color: transparent
 
-	a, strong
-		display: inline-block
-		// margin: 2px
-		width: 33px
-		height: 33px
-		border: 1px solid #ddd
-		vertical-align: middle
-		font-weight: bold
-		font-family: "tahoma"
-		+font-size(11px)
-		background-color: #f6f6f6
 
-	span
-		font-size: 0
-		text-indent: -999px
 
-	strong, a:hover
-		background: #eb3b4b
-		color: #fff
-		border: 1px solid #db1c2e
-		vertical-align: top
-
-	.first, .prev, .next, .last
-		color: #c4c4c4
-		+font-size(18px)
-		font-weight: normal
-		background-color: #fff
-
-	.prev , .last
-		margin-left: -5px
-
-	.prev
-		margin-right: 16px
-	.next
-		margin-left: 16px
-
-	.first::before
-		content: "\f100"
-		font-family: FontAwesome
-
-	.prev::before
-		content: "\f104"
-		font-family: FontAwesome
-
-	.next::before
-		content: "\f105"
-		font-family: FontAwesome
-
-	.last::before
-		content: "\f101"
-		font-family: FontAwesome
 
 
 
