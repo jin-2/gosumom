@@ -188,33 +188,35 @@ textarea { box-sizing: border-box; width: 100%; padding: 10px 15px; border: 1px 
 .masonry .item a:hover .check, .masonry .item a:focus .check, .masonry.other .item a:hover .check, .masonry.other .item a:focus .check { background-position: -350px -200px; }
 .masonry .item a:hover .list_info li, .masonry .item a:focus .list_info li, .masonry.other .item a:hover .list_info li, .masonry.other .item a:focus .list_info li { background: url(/momHTML2/public/img/bul_dot_white.png) no-repeat 0 5px; }
 
-.top_bar { background-color: #D2D2D2; color: #fff; font-size: 11px; font-size: 1.1rem; }
+.top_bar { background-color: #EDEDED; color: #BABABA; font-size: 11px; font-size: 1.1rem; }
 .main .top_bar { background-color: #EB3B4B; color: #ededed; }
-.top_bar .wrapper { height: 26px; line-height: 26px; }
+.top_bar .wrapper { height: 26px; }
 .top_bar .text { display: inline-block; font-weight: normal; }
 .top_bar .text > span::before { content: "/"; display: inline-block; padding-left: 10px; padding-right: 9px; }
 .top_bar .text span { font-family: "Open Sans", sans-serif; font-weight: 700; }
-.top_bar .user_wrap { float: right; font-family: "돋움", "dotum"; }
-.top_bar .user_wrap a { float: left; padding-right: 13px; padding-left: 10px; color: #fff; }
-.main .top_bar .user_wrap a { color: #fefefe; }
+.top_bar .user_wrap { float: right; height: 26px; font-family: "돋움", "dotum"; }
+.top_bar .user_wrap .name { margin-right: 4px; }
+.top_bar .user_wrap a { display: inline-block; margin-top: 8px; padding-right: 5px; padding-left: 8px; border-left: 1px dotted #bababa; color: #BABABA; line-height: 1; }
+.main .top_bar .user_wrap a { color: #fefefe; border-left-color: #c92b39; }
+.top_bar .user_wrap a.first { border-left: 0; }
 .top_bar .user_wrap span { float: left; }
-.top_bar .user_wrap .facebook { position: relative; margin-top: 3px; margin-left: 11px; padding: 0; width: 20px; height: 20px; background-color: #BBBBBB; border-radius: 50%; }
+.top_bar .user_wrap .facebook { position: relative; top: -5px; display: inline-block; padding: 0; width: 20px; height: 20px; background-color: #BBBBBB; border-radius: 50%; border-left: 0; vertical-align: top; }
 .main .top_bar .user_wrap .facebook { background-color: #C81021; }
 
 .header { border-bottom: 1px solid #eb3b4b; background-color: #fff; }
 .main .header { border-color: #E5E5E5; }
 .header .wrapper { z-index: 30; position: relative; height: 69px; }
-.header .logo { float: left; margin-right: 56px; margin-top: 19px; }
+.header .logo { position: absolute; top: -19px; left: 0; }
 .header .button_note_write, .header .button_review_write { float: right; }
 
-.gnb_wrap { position: absolute; left: 243px; }
+.gnb_wrap { position: absolute; left: 309px; }
 
-.gnb { margin-top: 12px; margin-right: 59px; }
-.gnb > li { float: left; padding: 17px 11px 18px; color: #333; }
+.gnb { margin-top: 18px; margin-right: 59px; }
+.gnb > li { float: left; margin-right: 20px; padding: 8px 10px 8px; color: #333; font-size: 16px; font-size: 1.6rem; }
 .gnb > li > a { display: block; text-decoration: none; }
 .gnb > li > a:hover { color: #fff; }
-.gnb > li:hover, .gnb > li:focus { background-color: #EB3B4B; }
-.gnb > li:hover > a { color: #fff; }
+.gnb > li:hover, .gnb > li:focus, .gnb > li.active { background-color: #EB3B4B; }
+.gnb > li:hover > a, .gnb > li.active > a { color: #fff; }
 
 .snb { display: none; margin-top: 18px; }
 .snb a { display: block; margin: 6px 0; padding: 3px 0; font-size: 12px; font-size: 1.2rem; color: #fac5c5; text-align: center; font-family: "돋움", "dotum"; }
@@ -372,7 +374,7 @@ body.main { background-color: #F7F7F7; }
 .wrapper { width: 1200px; margin: 0 auto; }
 
 .detail_search_wrap select { margin: 0 2px; width: 130px; height: 40px; padding-top: 7px; padding-bottom: 7px; padding-left: 17px; padding-right: 10px; border: 1px solid #cbcbcb; line-height: 26px; }
-.detail_search_wrap input[type="text"] { width: 250px; }
+.detail_search_wrap input[type="text"] { width: 250px; line-height: 40px; }
 .detail_search_wrap .button_search { margin-left: 2px; }
 
 .button_search { height: 40px; padding: 0 30px; background-color: #333; font-size: 15px; font-weight: 600; color: #fff; line-height: 40px; }
