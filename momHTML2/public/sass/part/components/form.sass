@@ -1,0 +1,62 @@
+//urls
+$url_0: url(../img/bg_collect.png)
+
+.dcheck 
+	overflow: hidden
+	position: relative
+	display: inline-block
+	input 
+		position: absolute
+		opacity: 0
+		filter: alpha(opacity=0)
+		border: 0 none
+		+size(16px, 16px)
+
+	label 
+		display: inline-block
+		//height: 17px
+		padding:
+			right: 15px
+		+font-size(13px)
+		color: #373737
+		em 
+			display: inline-block
+			float: left
+			margin-right: 7px
+			width: 16px
+			height: 16px
+			background: $url_0 no-repeat 0 -400px
+
+	&.checked 
+		label em 
+			background-position: -50px -400px
+
+.dradio 
+	display: inline-block
+	position: relative
+	height: 22px
+	input 
+		position: absolute
+		opacity: 0
+		filter: alpha(opacity=0)
+		border: 0 none
+		+size(21px, 21px)
+
+	label 
+		display: inline-block
+		//height: 18px
+		padding-right: 15px
+		+font-size(14px)
+		line-height: 1.5
+		span 
+			display: inline-block
+			float: left
+			margin: 0 8px 0 0
+			width: 21px
+			height: 21px
+			margin-right: 5px
+			background: $url_0 no-repeat -100px -400px
+
+	&.checked 
+		label span 
+			background-position: -150px -400px

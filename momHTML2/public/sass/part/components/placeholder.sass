@@ -1,0 +1,35 @@
+//
+ * --------------------------------
+ * placeholder
+ * --------------------------------
+ // placeholder polyfill
+.-placeholder
+	color: #cecdcd
+	font-family: $dotum
+	+font-size(12px)
+	line-height: 21px
+::placeholder,
+::-moz-placeholder,
+::-webkit-placeholder
+	color: #cecdcd
+
+.placeholder
+	color: #cecdcd
+	font-family: $dotum
+	+font-size(12px)
+	line-height: 21px
+
+.placeholder_wrap
+	position: relative
+	display: inline-block
+	vertical-align: top
+	background-color: #fff
+	.placeholder
+		z-index: 1
+		position: absolute
+		top: 11px
+		left: 12px
+	input
+		position: relative
+		z-index: 2
+		background-color: transparent

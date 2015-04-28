@@ -60,14 +60,14 @@
 	})
 
 	// 플레이스홀더 공통사용
-	$('.placeholder_wrap input[type="text"]').focus(function(){
+	$('.placeholder_wrap input').focus(function(){
 		$(this).keydown(function(){
-			$(this).parents().find('.placeholder').hide();
+			$(this).siblings().find('.placeholder').hide();
 		});
 	});
-	$('.placeholder_wrap input[type="text"]').focusout(function(){
+	$('.placeholder_wrap input').focusout(function(){
 		if($(this).val().length == 0){
-			$(this).parents().find('.placeholder').show();
+			$(this).siblings().find('.placeholder').show();
 		}
 	});
 

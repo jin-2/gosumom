@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,iBAAiB,GAChB,QAAQ,EAAE,QAAQ,EAClB,OAAO,EAAE,YAAY,EACrB,cAAc,EAAE,GAAG,EACnB,gBAAgB,EAAE,IAAI;AACtB,8BAAY,GACX,OAAO,EAAE,CAAC,EACV,QAAQ,EAAE,QAAQ,EAClB,GAAG,EAAE,IAAI,EACT,IAAI,EAAE,IAAI;AACX,oCAAkB,GACjB,QAAQ,EAAE,QAAQ,EAClB,OAAO,EAAE,CAAC,EACV,gBAAgB,EAAE,WAAW",
+"sources": ["../../../sass/part/components/placeholder.sass"],
+"names": [],
+"file": "placeholder.css"
+}

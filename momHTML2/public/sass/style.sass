@@ -1,5 +1,5 @@
 /**
- * 모듈 호출 
+ * 모듈 호출  
  * --------------------------------
  */
 
@@ -13,12 +13,8 @@
 @import "part/placeholders"
 // base(normalize override)
 //@import "part/common"
-// 공통 UI
-@import "part/components/components"
 // main
 //@import "part/main"
-// page 단위 css
-// @import "page"
 
 /* base */
 html
@@ -74,22 +70,8 @@ textarea
 .line
 	background: url(#{$path}/bg_line.gif) repeat-x 0 0
 
-// placeholder polyfill
-.-placeholder
-	color: #cecdcd
-	font-family: $dotum
-	+font-size(12px)
-	line-height: 21px
-::placeholder,
-::-moz-placeholder,
-::-webkit-placeholder
-	color: #cecdcd
-
-.placeholder
-	color: #cecdcd
-	font-family: $dotum
-	+font-size(12px)
-	line-height: 21px
+// 공통 UI
+@import "part/components/components"
 
 // base list style
 .list_info
@@ -810,22 +792,93 @@ body
 
 //
  * --------------------------------
- * placeholder
+ * intro
  * --------------------------------
-.placeholder_wrap
-	position: relative
-	display: inline-block
-	vertical-align: top
-	background-color: #fff
+.page_intro
+	overflow: hidden
+	padding-bottom: 100px
+	background: #fff url(../img/intro_bg.png) no-repeat 50% 0
+	.title
+		float: left
+		margin:
+			left: 38px
+			top: 154px
+	.view_sample
+		float: left
+		margin:
+			left: 15px
+			top: 95px
+
+.form_intro_box
+	float: right
+	margin:
+		right: 40px
+		top: 86px
+	width: 330px
+	text-align: center
+	h4
+		+font-size(13px)
+		color: #FDFDFD
+		font-family: $dotum
+		span
+			font-weight: normal
+	.placeholder_wrap
+		overflow: hidden
+		display: block
+		margin-top: 10px
+		border-radius: 5px
+		input
+			padding: 0
+			width: 94%
+			border: 0
+			.ie8 &
+				position: relative
+				@extend %pie
+	.join
+		width: (330px - 24px - 23px)
+		margin-bottom: 10px
+		padding:
+			top: 10px
+			left: 24px
+			right: 23px
+		background-color: rgba(#fff, 0.4)
+		border-radius: 10px
+		.ie8 &
+			position: relative
+			background-color: #d0cecb
+			@extend %pie
+		.btn_join
+			margin:
+				left: -24px
+				top: 21px
+	.join_sns 
+		margin-bottom: 20px
+		padding-bottom: 20px
+		border-bottom: 1px solid #D6D4D3
+		a
+			display: block
+			margin-top: 10px
+
+	.dcheck
+		margin-top: 4px
+		display: block
+		font-family: $dotum
+		+font-size(12px)
+		text-align: left
+		label
+			padding-right: 6px
+			color: #fefefe
+		a
+			color: #fefefe
+			text-decoration: underline
+
 	.placeholder
-		z-index: 1
-		position: absolute
-		top: 11px
-		left: 12px
-	input[type="text"]
-		position: relative
-		z-index: 2
-		background-color: transparent
+		color: #B7B7B7
+
+
+
+
+
 
 
 
