@@ -1,16 +1,6 @@
-//(function(global){
-// 공통 js
 (function(window, document, undefined) {
-	// 리뷰 박스
-	// var container = document.querySelector('#card_list');
-	// var msnry = new Masonry( container, {
-	// 	// options...
-	// 	itemSelector: '.item',
-	// 	columnWidth: 285,
-	// 	isFitWidth: true,
-	// 	gutter: 20
-	// });
-
+	
+	// 네모박스 정렬 - masonry
 	if( $('#card_list') ){
 		$('#card_list').masonry({
 			itemSelector: '.item',
@@ -29,20 +19,28 @@
 			$(this).find('.snb').hide();
 		})
 
-	// 메인 슬라이더
+	// 메인 상단 슬라이더
 	if( $('#main_visual_slider') ) {
 		$('#main_visual_slider').bxSlider({
 			auto: true,
-			pagerCustom: '.main_visual_wrap .pager'
+			pagerCustom: '.main_visual_wrap .pager',
+			controls: false
 		});
 	}
-	if( $('#main_review_slider') ) $('#main_review_slider').bxSlider();
 
-	// 리뷰상세보기 슬라이더
+	// 메인 중간 슬라이더
+	if( $('#main_review_slider') ) {
+		$('#main_review_slider').bxSlider({
+			controls: false
+		});
+	}
+
+	// 어린이집 상세보기 슬라이더
 	if( $('#slider') ) {
 		$('#slider').bxSlider({
 			auto: true,
-			pagerCustom: '#slider_pager'
+			pagerCustom: '#slider_pager',
+			controls: false
 		});
 	}
 
@@ -51,137 +49,23 @@
 		//e.preventDefault();
 	});
 
-	// 
-	//placeholder
-	//var frm_main = document.frm_main;
-	// $('#quick_request_wrapper').on('focus','.placeholder',function(){
-	// 	$(this).keydown(function(){
-	// 	$(this).removeClass("placeholder");
-	// 	});
-	// });
-	// $('#quick_request_wrapper').on('focusout','input[type=text]',function(){
-	// 	if($(this).val().length == 0)  $(this).addClass("placeholder");
-	// });
-
+	// 플레이스홀더
 	$('.main_serching_bar .search_word').focus(function(){
 		$(this).keydown(function(){
 			$('.main_serching_bar .placeholder').hide();
 		});
 	})
-
 	$('.main_serching_bar .search_word').focusout(function(){
 		if($(this).val().length == 0) $('.main_serching_bar .placeholder').show();
 	})
 
-	$(".nano_scroll").nanoScroller({
-		alwaysVisible: true
-	});
-
-
-	// toogle box
-	$('.togglebox .toggle_btn').click(function(e){
-		e.preventDefault();
-		$(this).next('.toggle_content').toggle();
-	});
-
-	$('.review_content .button_more_review').click(function(e){
-		e.preventDefault();
-		var condition = $(this).parent().hasClass('blind')
-		if( !condition ){
-			if( !$(this).hasClass('active') ){
-				$(this).addClass('active').text('닫기')
-			}else{
-				$(this).removeClass('active').text('자세히보기');
-			}
-		}
-	});
-
-	$('.register_rule .noti_text').click(function(e){
-		e.preventDefault();
-		$(this).toggleClass('active');
-	});
-
-	// 핸드폰 인증 팝업
-	$('.button_phone_check').click(function(){
-		if (screen.width <= 800) {
-			$('#popup_phone_check').bPopup({
-				closeClass: 'popup_close',
-				follow: [false, false],
-				position: ['auto', 200]
-			});
-		} else {
-			$('#popup_phone_check').bPopup({
-				closeClass: 'popup_close',
-				positionStyle: 'fixed'
-			});
-		}
-	})
-
-	$('.my_review_list .button_more_review').click(function(e){
-		e.preventDefault();
-		if( !$(this).hasClass('active') ){
-				$(this).addClass('active').text('닫기');
-				$(this).parent().next('.toggle_content').show();
-			}else{
-				$(this).removeClass('active').text('자세히보기');
-				$(this).parent().next('.toggle_content').hide();
-			}
-	});
-
-	// 커뮤니티 메뉴 중비중 
-	$('.gnb .community').click(function(){
-		alert('곧 만나요~');
-	});
-
-	// custom select
-	$('.select_custom .select_insert, .search_input .search_button').click(function(e){
-		e.preventDefault();
-		$(this).next('.select_option').toggle();
-	});
-
-	// footer dashboard
-	$('.dashboard .button').click(function(){
-		$(this).toggleClass('active');
-		if( $(this).hasClass('active') ){
-			$(this).parent('.wrapper').css('height', '0');
-		}else{
-			$(this).parent('.wrapper').css('height', '125px');
-		}
-	});
-
-	// 마이페이지 비밀번호 변경
-	$('#member_pw').click(function(){
-		$('.password_modify').toggle();
-	})
-
-	// 모바일 헬프 오버레이
-	var $win, doc_H, $overlayer, margin_box;
-
-	initSetting(function() {
-		$win.on('resize', setHeight);
-	});
-
-	function initSetting(fn) {
-		$win = $(window);
-		setHeight();
-		fn ? fn() : null;
+	// 스크롤 디자인
+	if( $(".nano_scroll") ){
+		$(".nano_scroll").nanoScroller({
+			alwaysVisible: true
+		});
 	}
 
-	function setHeight() {
-		doc_H = $win.height();
-
-		if (!$overlayer) { $overlayer = $('#intro_layer.small'); }
-		overlayer_H = $overlayer.height();
-
-		margin_box = ( doc_H - overlayer_H ) / 2;
-
-		$overlayer.css('margin-top', margin_box);
-	}
-
-	
-	
-
-//})(window);
 }(window, document));
 
 // Design checkbox
