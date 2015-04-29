@@ -10,14 +10,11 @@
 	font-size: 14px
 	vertical-align: top
 
-	
-
-
 // 소셜 버튼
 .button_sns
 	box-sizing: border-box
 	display: inline-block
-	padding: 0 20px
+	padding: 0 18px
 	height: 37px
 	border-radius: 4px
 	background-color: #787878
@@ -56,3 +53,27 @@
 
 .button_sns:hover
 	color: #fff
+
+// intro ( 회원가입, 로그인 )
+.button_intro
+	box-sizing: border-box
+	display: inline-block
+	padding-left: 49px
+	+size(330px, 49px)
+	@extend %is
+	color: #FEFEFE
+	+font-size(16px)
+	text-align: center
+	line-height: 49px
+	&:hover
+		text-decoration: none
+
+	&.red
+		background-position: 0 -490px
+
+	&.blue
+		background-position: -370px -400px
+
+	&.yellow
+		background-position: -370px -490px
+		color: #9D9408

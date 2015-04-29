@@ -79,4 +79,11 @@
 
 // image sprite 
 %is
-	background: url(/momHTML2/public/img/bg_collect.png) no-repeat 0 0
+	background: url(../img/bg_collect.png) no-repeat 0 0
+
+%box-round
+	border: 1px solid #e6e6e6
+	border-radius: 17px
+	.ie8 &
+		position: relative
+		@extend %pie

@@ -12,11 +12,11 @@
 <meta name="viewport" content="width=1240">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Place favicon.ico in the root directory -->
-<link rel="stylesheet" href="/momHTML2/public/css/style.css">
+<link rel="stylesheet" href="../../../public/css/style.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="/momHTML2/public/js/front/vendor/modernizr-2.8.3.min.js"></script>
+<script src="../../../public/js/front/vendor/modernizr-2.8.3.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/momHTML2/public/js/front/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="../../../public/js/front/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 </head>
 <body class="page">
 	<!--[if lt IE 8]>
@@ -35,7 +35,7 @@
 					<a href="#">로그아웃</a>
 					<a href="#">회원가입</a>
 					<a href="#">Contact Us</a>
-					<a href="#" class="facebook"><img src="/momHTML2/public/img/btn_facebook.png" alt="페이스북"></a>
+					<a href="#" class="facebook"><img src="../../../public/img/btn_facebook.png" alt="페이스북"></a>
 				</div>
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 		<!-- header -->
 		<header class="header">
 			<div class="wrapper">
-				<h1 class="logo"><a href="/main/default.html"><img src="/momHTML2/public/img/logo.png" alt="Gosumom"></a></h1>
+				<h1 class="logo"><a href="/main/default.html"><img src="../../../public/img/logo.png" alt="Gosumom"></a></h1>
 
 				<nav class="gnb_wrap">
 					<h2 class="hidden">주메뉴</h2>
@@ -82,8 +82,8 @@
 					</ul>
 				</nav><!-- //.gnb -->
 
-				<a href="#" class="button_note_write"><img src="/momHTML2/public/img/btn_note_write.gif" alt="상담후기작성"></a>
-				<a href="#" class="button_review_write"><img src="/momHTML2/public/img/btn_review_write.gif" alt="리뷰작성"></a>
+				<a href="#" class="button_note_write"><img src="../../../public/img/btn_note_write.gif" alt="상담후기작성"></a>
+				<a href="#" class="button_review_write"><img src="../../../public/img/btn_review_write.gif" alt="리뷰작성"></a>
 			</div>
 		</header>
 		<!-- // header -->
@@ -105,7 +105,7 @@
 						<div class="big">
 							<ul id="slider">
 								<!-- 첫번째 이미지는 기본 이미지 img_default_gallery -->
-								<li><img src="/momHTML2/public/img/img_default_gallery.jpg" alt="어린이집 사진을 업로드 해주세요!" /></li>
+								<li><img src="../../../public/img/img_default_gallery.jpg" alt="어린이집 사진을 업로드 해주세요!" /></li>
 								<li><img src="http://lorempixel.com/500/350/people/2/" alt="" /></li>
 								<li><img src="http://lorempixel.com/500/350/people/3/" alt="" /></li>
 								<li><img src="http://lorempixel.com/500/350/people/4/" alt="" /></li>
@@ -114,7 +114,7 @@
 						</div>
 						<div id="slider_pager" class="thumb">
 							<a data-slide-index="0" href="#" class="active">
-								<img src="/momHTML2/public/img/img_default_gallery.jpg" alt="" />
+								<img src="../../../public/img/img_default_gallery.jpg" alt="" />
 								<span class="overlay"></span>
 							</a>
 							<a data-slide-index="1" href="#">
@@ -152,10 +152,10 @@
 						</ul>
 						<a href="http://www.childcare.go.kr/" title="새 창으로 열기" target="_blank" class="link">아이사랑 보육포털 상세정보 보기 &gt;</a>
 						<div class="btn_wrap">
-							<button type="button"><img src="/momHTML2/public/img/btn_upload.png" alt="사진 업로드"></button>
-							<button type="button" class="like_school active"><img src="/momHTML2/public/img/btn_check.png" alt="찜한 어린이집"></button>
-							<button type="button"><img src="/momHTML2/public/img/btn_face_share.png" alt="페이스북"></button>
-							<button type="button"><img src="/momHTML2/public/img/btn_cacao.png" alt="카카오스토리"></button>
+							<button type="button"><img src="../../../public/img/btn_upload.png" alt="사진 업로드"></button>
+							<button type="button" class="like_school active"><img src="../../../public/img/btn_check.png" alt="찜한 어린이집"></button>
+							<button type="button"><img src="../../../public/img/btn_face_share.png" alt="페이스북"></button>
+							<button type="button"><img src="../../../public/img/btn_cacao.png" alt="카카오스토리"></button>
 						</div>
 					</div>
 				</section>
@@ -171,16 +171,185 @@
 				<!-- // 탭 -->
 
 				<section class="sub_contents">
-					<div>
+					<div class="box_graph">
 						<h3>상담 만족도</h3>
-						<div>
+						<div class="canvas_wrap">
 							<canvas id="chart_satisfaction" width="154" height="154"/>
 						</div>
+						<ul>
+							<li class="positive">
+								<span class="color_thumb"></span>
+								<span class="label">긍정적</span>
+								<strong class="value">15%</strong>
+							</li>
+							<li class="normal">
+								<span class="color_thumb"></span>
+								<span class="label">보통</span>
+								<strong class="value">60%</strong>
+							</li>
+							<li class="negative">
+								<span class="color_thumb"></span>
+								<span class="label">부정적</span>
+								<strong class="value">35%</strong>
+							</li>
+						</ul>
+					</div>
+					<div class="box_graph result">
 						<h3>상담 결과</h3>
-						<div>
+						<div class="canvas_wrap">
 							<canvas id="chart_result" width="154" height="154"/>
 						</div>
+						<ul>
+							<li class="decision">
+								<span class="color_thumb"></span>
+								<span class="label">입학 결정</span>
+								<strong class="value">15%</strong>
+							</li>
+							<li class="except">
+								<span class="color_thumb"></span>
+								<span class="label">제외 (배제)</span>
+								<strong class="value">15%</strong>
+							</li>
+							<li class="consider">
+								<span class="color_thumb"></span>
+								<span class="label">고민 중</span>
+								<strong class="value">15%</strong>
+							</li>
+						</ul>
 					</div>
+
+					<form action="#" class="sorting_counseling">
+						<fieldset>
+							<legend>상담후기 리뷰 보기</legend>
+							<select name="" id="" title="상담 만족도 여부로 분류해서 보기">
+								<option value="" selected>상담 만족도 여부</option>
+								<option value="">긍정적</option>
+								<option value="">보통</option>
+								<option value="">부정적</option>
+							</select>
+
+							<select name="" id="" title="상담 결과 여부로 분류해서 보기">
+								<option value="" selected>상담 결과 여부</option>
+								<option value="">입학 결정</option>
+								<option value="">제외 (배제)</option>
+								<option value="">고민중</option>
+							</select>
+
+							<a href="#" class="counseling_write"><img src="../../../public/img/btn_counseling_write.png" alt="상담후기 작성"></a>
+						</fieldset>
+					</form>
+
+					<section>
+						<dl class="counseling_personal">
+							<dt class="personal_profile">
+								<span class="photo"><img src="../../../public/img/@login.jpg" alt=""></span>
+								<span class="name">맘짱왕 엄청 힘이 님의 리뷰</span>
+								<span class="date">2015. 04. 03.</span>
+							</dt>
+							<dd class="total">
+								<span class="satisfaction">상담 만족도 <strong class="color_positive">긍정적</strong></span>
+								<span class="result">상담 결과 <strong class="color_decision">입학 결정</strong></span>
+								<a href="#" class="button_sns feel"><span class="icon"></span>공감해요: 1건</a>
+								<a href="#" class="button_sns report"><span class="icon"></span>신고하기</a>
+								<a href="#" class="button_sns share"><span class="icon"></span>페이스북에 공유</a>
+							</dd>
+							<!-- <dd class="counseling_items">
+								<div class="box">
+									<div class="item">
+										<span class="icon"></span>
+										<strong>원장 및 보육 교사에 대한 총평</strong>
+									</div>
+									<div class="box_text">
+										교사가 많았으면 합니다. 교사가 많았으면 합니다. 
+										교사가 많았으면 합니다. 교사가 많았으면 합니다. 
+										교사가 많았으면 합니다. 교사가 많았으면 합니다. 
+										교사가 많았으면 합니다. 교사가 많았으면 합니다. 
+										교사가 많았으면 합니다. 교사가 많았으면 합니다. 
+										교사가 많았으면 합니다. 교사가 많았으면 합니다. 
+									</div>
+								</div>
+								<div class="box">
+									<div class="item">
+										<span class="icon"></span>
+										<strong>시설, 안전, 청결에 대한 총평</strong>
+									</div>
+									<div class="box_text">
+										한줄 평이 없습니다.
+									</div>
+								</div>
+								<div class="box">
+									<div class="item">
+										<span class="icon"></span>
+										<strong>추가비용에 대한 총평</strong>
+										특별활동비, 차량운행비, 입학금 등 세부 비용은 얼마인가요?
+									</div>
+									<div class="box_text">
+										한줄 평이 없습니다.
+									</div>
+								</div>
+							</dd> -->
+							<dd>
+								<ul class="counseling_items">
+									<li class="director">
+										<div class="item">
+											<span class="icon"></span>
+											<strong>원장 및 보육 교사에 대한 총평</strong>
+										</div>
+										<div class="box_text">
+											<div class="nano_scroll has-scrollbar">
+												<div class="nano-content" tabindex="0" style="right: -17px;">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 바깥 야외체험활동이많고 부모가 같이참관하는 행사가많아서 아주맘에들어요. 아빠와함께하는 체험활동도 있고 프로그램이 아주좋구요..그럼에도 불구하고 특활비가 아주 저렴해요~
+												</div>
+											<div class="nano-pane" style="opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 46px; transform: translate(0px, 40px);"></div></div></div>
+										</div>
+									</li>
+									<li class="clean">
+										<div class="item">
+											<span class="icon"></span>
+											<strong>시설, 안전, 청결에 대한 총평</strong>
+										</div>
+										<div class="box_text">
+											<div class="nano_scroll has-scrollbar">
+												<div class="nano-content" tabindex="0" style="right: -17px;">
+													한줄 평이 없습니다.
+												</div>
+											<div class="nano-pane" style="display: none; opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 72px; transform: translate(0px, 0px);"></div></div></div>
+										</div>
+									</li>
+									<li class="cost">
+										<div class="item">
+											<span class="icon"></span>
+											<strong>추가비용에 대한 총평</strong>
+											특별활동비, 차량운행비, 입학금 등 세부 비용은 얼마인가요?
+										</div>
+										<div class="box_text">
+											<div class="nano_scroll has-scrollbar">
+												<div class="nano-content" tabindex="0" style="right: -17px;">
+													우선 선생님들.원장님이너무좋아 아무것도 따지지않고 보낸곳이구요. 
+												</div>
+											<div class="nano-pane" style="display: none; opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 72px; transform: translate(0px, 0px);"></div></div></div>
+										</div>
+									</li>
+								</ul>
+							</dd>
+							<!-- <dd class="blind">
+								익명으로 상담후기를 <span class="emerald">작성</span>하고,<br>
+								모든 어린이집의 상담후기를 <span class="emerald">확인</span>하세요.
+								<a href="#"><img src="" alt="상담후기 작성"></a>
+							</dd> -->
+						</dl>
+						<div class="paging">
+							<a href="#" class="first"><span>처음</span></a>
+							<a href="#" class="prev"><span>이전</span></a>
+							<a href="#">1</a>
+							<a href="#">2</a>
+							<strong>3</strong>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#" class="next"><span>다음</span></a>
+							<a href="#" class="last"><span>마지막</span></a>
+						</div>
+					</section>
 				</section>
 			</div><!-- //.wrapper -->
 		</div><!-- //.content-wrap -->
@@ -202,13 +371,13 @@
 	</div>
 	<!-- // #container -->
 
-	<script src="/momHTML2/public/js/front/plugin/jquery.endless-scroll.js"></script>
-	<script src="/momHTML2/public/js/front/plugin/masonry.pkgd.min.js"></script>
-	<script src="/momHTML2/public/js/front/plugin/jquery.bpopup.min.js"></script>
-	<script src="/momHTML2/public/js/front/plugin/jquery.bxslider.js"></script>
-	<script src="/momHTML2/public/js/front/plugin/jquery.nanoscroller.js"></script>
-	<script src="/momHTML2/public/js/front/plugin/chart.min.js"></script>
-	<script src="/momHTML2/public/js/front/main.js"></script>
+	<script src="../../../public/js/front/plugin/jquery.endless-scroll.js"></script>
+	<script src="../../../public/js/front/plugin/masonry.pkgd.min.js"></script>
+	<script src="../../../public/js/front/plugin/jquery.bpopup.min.js"></script>
+	<script src="../../../public/js/front/plugin/jquery.bxslider.js"></script>
+	<script src="../../../public/js/front/plugin/jquery.nanoscroller.js"></script>
+	<script src="../../../public/js/front/plugin/chart.min.js"></script>
+	<script src="../../../public/js/front/main.js"></script>
 	<script>
 		// 상담만족도 data
 		var pieData_satisfaction = [
@@ -228,7 +397,7 @@
 					value: 18,
 					color: "#cc96fd",
 					highlight: "#dbb8fb",
-					label: "Yellow"
+					label: "부정적"
 				}
 			];
 
@@ -236,14 +405,14 @@
 			var pieData_result = [
 				{
 					value: 15,
-					color:"#f7464a",
-					highlight: "#f67073",
+					color: "#46bfbd",
+					highlight: "#68c5c3",
 					label: "입학 결정"
 				},
 				{
 					value: 60,
-					color: "#46bfbd",
-					highlight: "#68c5c3",
+					color:"#f7464a",
+					highlight: "#f67073",
 					label: "제외 (배제)"
 				},
 				{

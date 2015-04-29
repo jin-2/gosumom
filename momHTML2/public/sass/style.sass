@@ -42,7 +42,7 @@ a
 	color: $base-font-color
 	text-decoration: none
 	&:hover
-		color: #000
+		//color: #000
 		text-decoration: underline
 
 input[type="text"], input[type="search"], input[type="password"], input[type="email"]
@@ -63,6 +63,16 @@ textarea
 
 .hidden, legend
 	@extend %acc-hidden
+
+select
+	height: 40px
+	padding:
+		top: 7px
+		bottom: 7px
+		left: 17px
+		right: 8px
+	border: 1px solid #cbcbcb
+	line-height: 26px
 
 .row
 	@extend %cf
@@ -429,11 +439,15 @@ body
 			top: 57px
 
 	.masonry
-		margin-bottom: 110px
 		padding:
 			top: 20px
-			bottom: 180px
-		background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
+			//bottom: 200px
+		//background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
+.masonry_wrap		
+	margin-bottom: 100px
+	background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
+	.masonry
+		padding-bottom: 200px
 
 //
  * --------------------------------
@@ -556,7 +570,7 @@ body
 			display: inline-block
 			margin-top: 5px
 
-.review_items
+.review_items, .counseling_items
 	li
 		.icon
 			display: inline-block
@@ -700,12 +714,7 @@ body
 			right: 14px
 			bottom: 14px
 		+size(258px, 210px)
-		border: 1px solid #e6e6e6
-		border-radius: 17px
-
-		.ie8 &
-			position: relative
-			@extend %pie
+		@extend %box-round
 		
 	.item
 		box-sizing: border-box
@@ -722,7 +731,7 @@ body
 		margin-left: 4px
 		vertical-align: middle
 
-.review_items
+.review_items, .counseling_items
 	.box_text
 		box-sizing: border-box
 		padding: 18px 20px
@@ -799,7 +808,7 @@ body
 
 //
  * --------------------------------
- * intro
+ * intro - 회원가입
  * --------------------------------
 .page_intro
 	overflow: hidden
@@ -815,12 +824,20 @@ body
 		margin:
 			left: 15px
 			top: 95px
+			bottom: 65px
+	.form_intro_box
+		float: right
+		margin:
+			right: 40px
+			top: 86px
+		.join_sns 
+			margin-bottom: 20px
+			padding-bottom: 20px
+			border-bottom: 1px solid #D6D4D3
+			a
+				margin-top: 10px
 
 .form_intro_box
-	float: right
-	margin:
-		right: 40px
-		top: 86px
 	width: 330px
 	text-align: center
 	h4
@@ -854,17 +871,11 @@ body
 			position: relative
 			background-color: #d0cecb
 			@extend %pie
-		.btn_join
+		.btn_join, .button_intro
 			margin:
 				left: -24px
 				top: 21px
-	.join_sns 
-		margin-bottom: 20px
-		padding-bottom: 20px
-		border-bottom: 1px solid #D6D4D3
-		a
-			display: block
-			margin-top: 10px
+	
 
 	.dcheck
 		margin-top: 4px
@@ -882,10 +893,228 @@ body
 	.placeholder
 		color: #B7B7B7
 
+//
+ * --------------------------------
+ * intro - 로그인
+ * --------------------------------
+.page_login
+	background: url(#{$path}/bg_login.gif) repeat 0 0
+	.wrapper
+		padding-bottom: 200px
+	.title
+		padding:
+			top: 78px
+			bottom: 28px
+		text-align: center
+	
+	.form_intro_box
+		margin: 0 auto
+		.join_sns 
+			margin-top: 20px
+			padding-top: 10px
+			border-top: 1px solid #fff
+			a
+				margin-top: 10px
+
+	.dcheck 
+		margin-top: 6px
+		label
+			color: #AEADAD
+
+	.use
+		margin-top: 20px
+		a
+			color: #818181
+			font-weight: 600
+		a:first-child
+			margin-right: 30px
+			padding-right: 30px
+			border-right: 1px solid #b9b9b9
 
 
+//
+ * --------------------------------
+ * 어린이집 상세 - 상담후기 탭
+ * --------------------------------
+.box_graph
+	overflow: hidden
+	box-sizing: border-box
+	float: left
+	@extend %box-round
+	padding: 27px 31px 27px
+	+size(517px, 220px)
 
+	&.result
+		margin-left: 41px
 
+	h3
+		width: 100px
+		float: left
+		font-size: 20px
+		font-weight: 400
+		letter-spacing: -1px
+
+	.canvas_wrap
+		float: left
+		margin-left: -20px 
+		padding-top: 10px
+	ul
+		float: left
+		margin:
+			left: 56px
+			top: 60px
+		li
+			margin-bottom: 11px
+
+			span, strong
+				vertical-align: top
+
+	.color_thumb
+		display: inline-block
+		margin-right: 6px
+		+size(17px, 17px)
+		border-radius: 50%
+		
+		.ie8 &
+			@extend %pie
+
+	.label
+		letter-spacing: -1px
+
+	.value
+		display: inline-block
+		margin-top: -6px
+		font-family: $play
+		font-weight: 700
+		+font-size(20px)
+		letter-spacing: -2px
+
+$positive: #3e85f7
+$normal: #69db42
+$negative: #cc96fd
+
+$decision: #46BFBD
+$except: #F7464A
+$consider: #FDB45C
+
+.color_positive
+	color: #3e85f7
+.color_normal
+	color: #69db42
+.color_negative
+	color: #cc96fd
+
+.color_decision
+	color: #46BFBD
+.color_except
+	color: #F7464A
+.color_consider
+	color: #FDB45C
+
+.positive
+	.color_thumb
+		background-color: $positive
+	.value
+		color: $positive
+
+.normal
+	.color_thumb
+		background-color: $normal
+	.value
+		color: $normal
+
+.negative
+	.color_thumb
+		background-color: $negative
+	.value
+		color: $negative
+
+.decision
+	.color_thumb
+		background-color: $decision
+	.value
+		color: $decision
+
+.except
+	.color_thumb
+		background-color: $except
+	.value
+		color: $except
+
+.consider
+	.color_thumb
+		background-color: $consider
+	.value
+		color: $consider
+
+// 상담후기 분류
+.sorting_counseling
+	clear: both
+	padding:
+		top: 30px
+		bottom: 7px
+	width: 100%
+	border-bottom: 4px solid #343434
+	select
+		margin-top: 16px
+	select + select
+		margin-left: 2px
+	.counseling_write
+		float: right
+		display: inline-block
+
+// 개인별 상담후기
+.counseling_personal
+	padding-top: 30px
+	// .personal_profile
+	dt
+		float: left
+		width: 200px
+
+	dd
+		float: left
+
+	.total
+		width: 1075px - 200px
+
+		.satisfaction , .result
+			box-sizing: border-box
+			float: left
+			display: block
+			padding-top: 15px
+			height: 55px
+			border-left: 1px solid #e6e6e6
+			+font-size(18px)
+			font-weight: 600
+			text-align: center
+			strong
+				font-weight: 600
+
+		.satisfaction
+			width: 216px
+
+		.result
+			width: 241px
+			margin-right: 1px
+
+		.button_sns
+			margin:
+				top: 5px
+				left: 6px
+
+.counseling_items
+	padding-top: 30px
+	li
+		overflow: hidden
+		@extend %box-round
+	.item
+		box-sizing: border-box
+		padding:
+			top: 17px
+			left: 20px
+		height: 66px
+
+			
 
 
 
