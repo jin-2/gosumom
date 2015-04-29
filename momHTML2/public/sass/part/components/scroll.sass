@@ -41,7 +41,7 @@
 		-moz-border-radius: 5px
 		-webkit-border-radius: 5px
 		border-radius: 5px
-		behavior: url(PIE.htc)
+		@extend %pie
 		> .nano-slider
 			background: #444
 			background: rgba(0, 0, 0, 0.5)
@@ -50,7 +50,7 @@
 			-moz-border-radius: 3px
 			-webkit-border-radius: 3px
 			border-radius: 3px
-			behavior: url(PIE.htc)
+			@extend %pie
 	&:hover > .nano-pane
 		visibility: visible\9
 		// Target only IE7 and IE8 with this hack
