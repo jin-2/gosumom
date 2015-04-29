@@ -499,7 +499,7 @@ body.main { background-color: #F7F7F7; }
 .review_write_link a { float: right; }
 
 .personal_profile { box-sizing: border-box; position: relative; padding-left: 59px; height: 48px; }
-.personal_profile .photo { overflow: hidden; position: absolute; top: 0; left: 0; display: inline-block; width: 47px; height: 48px; border-radius: 50%; }
+.personal_profile .photo { overflow: hidden; position: absolute; top: 0; left: 0; display: inline-block; width: 47px; height: 48px; border-radius: 50%; background: #e6e6e6 url(../img/bg_collect.png) no-repeat -263px -391px; }
 .personal_profile .photo img { width: 47px; height: 48px; }
 .ie8 .personal_profile .photo img { border-radius: 50%; position: relative; }
 .personal_profile .name { display: block; margin-top: 4px; font-size: 16px; font-size: 1.6rem; letter-spacing: -1px; }
