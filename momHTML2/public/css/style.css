@@ -395,7 +395,7 @@ body.main { background-color: #F7F7F7; }
 .main_visual_slider li.three { background-color: #22c0d1; }
 
 .main_visual_wrap { position: relative; }
-.main_visual_wrap .pager { position: absolute; bottom: 11px; left: 50%; margin-left: -51px; }
+.main_visual_wrap .pager { position: absolute; bottom: 11px; left: 50%; margin-left: -98.5px; padding-top: 19px; padding-left: 50px; padding-right: 50px; background: url(/momHTML2/public/img/bg_keyword.png) no-repeat 50% 0; }
 .main_visual_wrap .pager div { display: inline-block; }
 .main_visual_wrap .pager a { display: block; padding: 8px; width: 14px; height: 14px; background: url(/momHTML2/public/img/bg_collect.png) no-repeat -442px -192px; text-indent: -9999px; }
 .main_visual_wrap .pager a:hover, .main_visual_wrap .pager a.active { background-position: -442px -232px; }
