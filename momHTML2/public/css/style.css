@@ -449,6 +449,7 @@ body.main { background-color: #F7F7F7; }
 .main_sorting_wrap .sorting_tab { float: right; }
 
 .page_list .sub_visual { box-sizing: border-box; padding-top: 64px; height: 200px; background: #000a16 url(/momHTML2/public/img/visual_reviewlist.jpg) no-repeat 50% 0; font-size: 35px; font-size: 3.5rem; color: #fff; text-shadow: 1px 1px 5px #000; }
+.page_list .sub_visual.brown { color: #635d58; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
 .page_list .sub_visual.counseling { background: #353418 url(/momHTML2/public/img/visual_councelling.jpg) no-repeat 50% 0; }
 .page_list .sub_visual h3 { font-weight: 300; letter-spacing: -1px; }
 .page_list .sub_visual p { margin-top: 6px; font-size: 16px; font-size: 1.6rem; }
