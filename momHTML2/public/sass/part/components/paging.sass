@@ -21,16 +21,16 @@
 		text-indent: -999px
 
 	strong, a:hover
-		background: #eb3b4b
+		background-color: #eb3b4b
 		color: #fff
 		border: 1px solid #db1c2e
 		vertical-align: top
 
 	.first, .prev, .next, .last
-		color: #c4c4c4
-		+font-size(18px)
-		font-weight: normal
-		background-color: #fff
+		@extend %is
+		&:hover
+			background-color: #fff
+			border-color: #ddd
 
 	.prev , .last
 		margin-left: -5px
@@ -40,18 +40,25 @@
 	.next
 		margin-left: 16px
 
-	.first::before
-		content: "\f100"
-		font-family: FontAwesome
+	.first
+		background-position: -1px -581px
 
-	.prev::before
-		content: "\f104"
-		font-family: FontAwesome
+	.prev
+		background-position: -51px -581px
 
-	.next::before
-		content: "\f105"
-		font-family: FontAwesome
+	.next
+		background-position: -101px -581px
 
-	.last::before
-		content: "\f101"
-		font-family: FontAwesome
+	.last
+		background-position: -151px -581px
+
+.paging.other
+
+	strong, a:hover
+		background-color: #19bdc6
+		border: 1px solid #18acb4
+
+	.first, .prev, .next, .last
+		&:hover
+			background-color: #fff
+			border-color: #ddd

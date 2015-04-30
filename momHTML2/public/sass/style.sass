@@ -508,7 +508,8 @@ body
 	.rating_star_wrap,
 	.like_count
 		display: inline-block
-
+	.score
+		margin-left: 6px
 	.name
 		margin-top: 5px
 		+font-size(40px)
@@ -647,6 +648,7 @@ body
 		+size(47px, 48px)
 		border-radius: 50%
 		background: #e6e6e6 $path-is no-repeat -263px -391px
+		@extend %pie
 		
 		img
 			+size(47px, 48px)
@@ -731,11 +733,14 @@ body
 		margin-left: 4px
 		vertical-align: middle
 
+	.nano_scroll
+		height: 88px
+
 .review_items, .counseling_items
 	.box_text
 		box-sizing: border-box
-		padding: 18px 20px
-		height: 124px
+		padding: 12px 20px 14px
+		//height: 124px
 		background-color: #f0f0f0
 		+font-size(12px)
 		font-family: $dotum
@@ -941,6 +946,7 @@ body
 	box-sizing: border-box
 	float: left
 	@extend %box-round
+	margin-top: 33px
 	padding: 27px 31px 27px
 	+size(517px, 220px)
 
@@ -958,6 +964,7 @@ body
 		float: left
 		margin-left: -20px 
 		padding-top: 10px
+		width: 154px
 	ul
 		float: left
 		margin:
@@ -975,8 +982,7 @@ body
 		+size(17px, 17px)
 		border-radius: 50%
 		
-		.ie8 &
-			@extend %pie
+		@extend %pie-ie
 
 	.label
 		letter-spacing: -1px
@@ -1056,6 +1062,7 @@ $consider: #FDB45C
 	width: 100%
 	border-bottom: 4px solid #343434
 	select
+		width: 173px
 		margin-top: 16px
 	select + select
 		margin-left: 2px
@@ -1065,7 +1072,11 @@ $consider: #FDB45C
 
 // 개인별 상담후기
 .counseling_personal
-	padding-top: 30px
+	overflow: hidden
+	padding:
+		top: 30px
+		bottom: 30px
+	border-bottom: 1px solid #c8c8c8
 	// .personal_profile
 	dt
 		float: left
@@ -1102,19 +1113,62 @@ $consider: #FDB45C
 				top: 5px
 				left: 6px
 
+	.blind
+		box-sizing: border-box
+		+size(100%, 198px+30px)
+		padding-top: 76px
+		background: url(#{$path}/review_hidden2.png) no-repeat 0 0
+		+font-size(24px)
+		text-align: center
+		line-height: 1.25
+		letter-spacing: -1px
+		a
+			display: inline-block
+			margin-top: 19px
+
 .counseling_items
+	overflow: hidden
 	padding-top: 30px
 	li
 		overflow: hidden
+		box-sizing: border-box
+		float: left
 		@extend %box-round
+		margin-left: 12px
+		width: 350px
+		&:first-child
+			margin-left: 0
+		.ie8 &
+			width: 345px
 	.item
 		box-sizing: border-box
 		padding:
 			top: 17px
 			left: 20px
 		height: 66px
+		
+		
+		strong
+			margin-top: 8px
+			display: inline-block
+			vertical-align: top
+			+font-size(16px)
+			font-weight: 600
+			color: #343434
 
-			
+		.small
+			+font-size(11px)
+			color: #B4B4B4
+			font-family: $dotum
+			letter-spacing: -1px
+
+	.icon
+		float: left
+		margin-right: 3px
+
+	.nano_scroll
+		height: 104px
+
 
 
 

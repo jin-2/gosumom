@@ -75,7 +75,7 @@
 
 // PIE.htc
 %pie
-	behavior: url(../js/front/vendor/PIE.htc)
+	behavior: url(/momHTML2/public/js/front/vendor/PIE.htc)
 
 // image sprite 
 %is
@@ -84,6 +84,11 @@
 %box-round
 	border: 1px solid #e6e6e6
 	border-radius: 17px
+	.ie8 &
+		position: relative
+		@extend %pie
+		
+%pie-ie
 	.ie8 &
 		position: relative
 		@extend %pie
