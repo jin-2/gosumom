@@ -1169,6 +1169,37 @@ $consider: #FDB45C
 	.nano_scroll
 		height: 104px
 
+//
+ * --------------------------------
+ * 어린이집 상세 - 지도보기 탭
+ * --------------------------------
+.map_wrap
+	margin-top: 40px
+.map_info
+	padding-top: 33px
+	h3, address
+		display: inline-block
+	.icon
+		display: inline-block
+		margin:
+			top: -13px
+			right: 3px
+		+size(48px, 48px)
+		@extend %is
+		background-position: -600px -300px
+		vertical-align: top
+	h3
+		+font-size(20px)
+		font-weight: 400
+		letter-spacing: -1px
+	address
+		margin-left: 15px
+		padding-left: 12px
+		border-left: 1px solid #dcdcdc
+		+font-size(14px)
+		font-style: normal
+		color: #787878
+
 
 
 
