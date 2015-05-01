@@ -255,7 +255,7 @@
 
 										<div class="btn_wrap">
 											<button type="button" class="button fix117 popup_close">취소</button>
-											<button type="submit" class="button scarlet fix117">등록</button>
+											<button type="submit" id="button_upload_check" class="button scarlet fix117">등록</button>
 										</div>
 									</fieldset>
 								</form>
@@ -377,11 +377,17 @@
 	<!-- <script src="https://cdnjs.com/libraries/chart.js"></script> -->
 	<script src="../../../public/js/front/main.js"></script>
 	<script>
+		// 사진 업로드 팝업
 		$('#button_upload').click(function(){
 			$('#popup_upload').bPopup({
 				closeClass: 'popup_close',
-				//follow: [false, false],
-				//position: ['auto', 200]
+			});
+		});
+
+		// 사진 업로드 확인 팝업
+		$('#button_upload_check').click(function(){
+			$('#popup_upload_chechk').bPopup({
+				closeClass: 'popup_close',
 			});
 		});
 	</script>
