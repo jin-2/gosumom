@@ -804,6 +804,7 @@ body
 			width: 25%
 
 .sub_contents
+	box-sizing: border-box
 	margin:
 		top: -26px
 		bottom: 60px
@@ -812,8 +813,10 @@ body
 		left: 62px
 		right: 63px
 		bottom: 100px
-	width: 1075px
 	background-color: #fff
+	&.tab_content_gallery
+		padding-right: 62px
+
 
 //
  * --------------------------------
@@ -1204,9 +1207,181 @@ $consider: #FDB45C
 		font-style: normal
 		color: #787878
 
+//
+ * --------------------------------
+ * 어린이집 상세 - 어린이집 사진
+ * --------------------------------
+.masonry_gallery
+	.item
+		box-sizing: border-box
+		margin-bottom: 25px
+		padding: 20px
+		padding-top: 0
+		width: 342px
+		background-color: #f0f0f0
+		color: #787878
+		
+		> img
+			width: 342px
+			margin:
+				left: -20px
+				bottom: 14px
+	.text
+		line-height: 1.75
+	.date
+		display: block
+		margin-top: 10px
+		text-align: right
+		color: #adadad
+		+font-size(11px)
+		font-family: $dotum
+
+	.item:nth-of-type(5n)
+		background-color: $scarlet
+		color: #fff
+		.date
+			color: inherit
+
+.tab_content_gallery
+	.head
+		margin:
+			top: 48px
+			bottom: 40px
+		color: #444
+		text-align: center
+		> button
+			margin-top: 19px
+
+	.keyword
+		margin-bottom: 5px
+		+font-size(16px)
+		font-weight: 400
+		
+//
+ * --------------------------------
+ * 팝업
+ * --------------------------------
+.popup_wrap
+	//display: none
+	box-sizing: border-box
+	width: 600px
+	border: 3px solid #3e3e3e
+	background-color: #fff
+	.inner
+		position: relative
+		padding:
+			top: 36px
+			left: 40px
+			right: 40px
+			bottom: 47px
+		border-top: 5px solid #eb3b4b
+
+	.btn_wrap
+		margin-top: 20px
+		text-align: center
+	
+	button + button
+		margin-left: 2px
+
+	.close
+		display: inline-block
+		position: absolute
+		top: 4px
+		right: 5px
+		+size(40px, 40px)
+		@extend %is
+		background-position: -487px -569px
+		text-indent: -9999px
+
+	.title
+		margin-bottom: 18px
+		+font-size(28px)
+		font-weight: 600
+		text-align: center
+		color: #343434
+
+// 사진업로드 팝업
+.photo_upload
+	text-align: left
+	.placeholder_wrap
+		margin-top: 5px
+		input
+			width: 514px
+	.placeholder
+		color: #b4b4b4
+		+font-size(14px)
+		font-family: $nanumG
+
+// 사진업로드 확인 팝업
+.check_upload
+	color: #6D6D6D
+	+font-size(16px)
+	.done
+		box-sizing: border-box
+		padding: 
+			top: 41px
+		+size(100%, 217px)
+		background-color: #f4f4f4
+
+		.icon
+			display: inline-block
+			margin-bottom: 20px
+			+size(101px, 101px)
+			@extend %is
+			background-position: -600px -580px
+	
+	.notice
+		margin-top: 30px
+		line-height: 1.5
+
+	.btn_wrap
+		margin-top: 35px
+		padding-top: 20px
+		border-top: 1px dotted #b2b2b2
 
 
+//
+ * --------------------------------
+ * input file
+ * --------------------------------
+.file_input_wrap
+	overflow: hidden
+	margin-top: 5px
+	> input[type="text"]
+		width: 409px
+		background-color: #f4f4f4
 
+	.src 
+		float: left
+		resize: none
+		line-height: 40px
 
+	.button_file_input 
+		overflow: hidden
+		position: relative
+		float: left
+		margin-left: 5px
+		+size(100px, 40px)
 
+	.input_hidden 
+		position: absolute
+		right: 0
+		top: 0
+		opacity: 0
+		filter: alpha(opacity=0)
+		height: 40px
 
+.box_caution
+	padding: 19px 19px 18px
+	border: 1px solid #ef626f
+	border-radius: 3px
+	color: #787878
+	+font-size(12px)
+	line-height: 1.4
+	.icon
+		float: left
+		display: inline-block
+		margin-right: 10px
+		+size(36px, 31px)
+		@extend %is
+		background-position: -500px -200px

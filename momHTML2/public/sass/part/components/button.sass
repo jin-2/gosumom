@@ -1,14 +1,109 @@
 // 검정색 버튼
-.button 
+a.button, a.button_large, a.button_line, a.button_line_large
+	display: inline-block
+	text-decoration: none
+
+.button , .button_large, .button_line, .button_line_large
 	box-sizing: border-box
-	padding: 0 30px
-	height: 40px
-	//line-height: 40px
-	background-color: #333
+	padding: 0 35px
+	height: 50px
+	border-radius: 3px
+	border-right: 1px solid #2c2a2b
+	border-bottom: 1px solid #2c2a2b
+	//box-shadow: 1px 1px 1px #2c2a2b
+	background-color: #4b4748
 	color: #fff
-	font-weight: bold
-	font-size: 14px
+	font-weight: 600
+	+font-size(16px)
+	line-height: 50px
 	vertical-align: top
+	text-align: center
+	@extend %pie-ie
+
+	&.scarlet
+		background-color: $scarlet
+		border-color: #e42b38
+		color: #fff
+
+	&.emerald
+		background-color: $emerald
+		border-color: #11abb5
+		color: #fff
+
+.button_large
+	height: 60px
+	line-height: 60px
+
+.button_large .icon, .button_line .icon
+	display: inline-block
+	margin:
+		right: 9px
+		top: -4px
+	+size(22px, 22px)
+	@extend %is
+	background-position: -250px -580px
+	vertical-align: middle
+
+	&.upload
+		background-position: -250px -580px
+
+	&.arrow_left
+		background-position: -300px -580px
+
+	&.arrow_right
+		background-position: -350px -580px
+
+	&.check
+		background-position: -400px -580px
+
+	&.search
+		background-position: -400px -580px
+		background-color: red
+
+	&.delete
+		background-position: -400px -580px
+		background-color: red
+
+.button_line, .button_line_large
+	height: 33px
+	border: 1px solid #4b4748
+	border-radius: 2px
+	background-color: #787878
+	+font-size(14px)
+	line-height: 33px
+	&.scarlet
+		border-color: #d31829
+	&.white
+		border-color: #eb3a4a
+		background-color: #fff
+		color: #eb3c4b
+
+.button_line_large
+	height: 40px
+	line-height: 40px
+
+.fix100, .fix117, .fix120, .fix70, .fix130, .fix80
+	padding: 0
+
+.fix70
+	width: 70px
+.fix80
+	width: 80px
+.fix100
+	width: 100px
+.fix117
+	width: 117px
+.fix120
+	width: 120px
+.fix130
+	width: 130px
+
+
+
+
+
+
+
 
 // 소셜 버튼
 .button_sns

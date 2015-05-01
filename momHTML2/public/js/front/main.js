@@ -10,6 +10,16 @@
 		});
 	}
 
+	// 네모박스 정렬 - masonry
+	// if( $('#card_gallery') ){
+	// 	$('#card_gallery').masonry({
+	// 		itemSelector: '.item',
+	// 		columnWidth: 342,
+	// 		isFitWidth: true,
+	// 		gutter: 25
+	// 	});
+	// }
+
 	// gnb
 	$('.gnb li')
 		.mouseenter(function(){
@@ -78,7 +88,24 @@
 		});
 	}
 
+	// 파입업로드
+	$('.file_input_wrap .input_hidden').change(function(){
+		console.log( $(this).parent().siblings() )
+		var src = $(this).val();
+		$(this).parents().siblings().val(src);
+	});
 }(window, document));
+
+$(window).load(function(){
+	if( $('#card_gallery') ){
+		$('#card_gallery').masonry({
+			itemSelector: '.item',
+			columnWidth: 342,
+			isFitWidth: true,
+			gutter: 25
+		});
+	};
+})
 
 // Design checkbox
 $.fn.designCheckbox = function(option){
