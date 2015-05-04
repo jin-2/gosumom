@@ -803,19 +803,26 @@ body
 		li
 			width: 25%
 
-.sub_contents
-	box-sizing: border-box
-	margin:
-		top: -26px
-		bottom: 60px
-	padding:
-		top: 26px
-		left: 62px
-		right: 63px
-		bottom: 100px
-	background-color: #fff
-	&.tab_content_gallery
-		padding-right: 62px
+// 어린이집 상세보기 컨텐츠 스타일
+.page_childcare
+	.sub_contents
+		box-sizing: border-box
+		margin:
+			top: -26px
+			bottom: 60px
+		padding:
+			top: 26px
+			left: 62px
+			right: 63px
+			bottom: 100px
+		background-color: #fff
+		&.tab_content_gallery
+			padding-right: 62px
+
+
+.page_write
+	.sub_contents
+		box-sizing: border-box
 
 
 //
@@ -1439,5 +1446,202 @@ $consider: #FDB45C
 		.next
 			right: 0
 			background-position: 0 -650px
-	
-	
+//
+ * --------------------------------
+ * 리뷰작성 상세
+ * --------------------------------
+.page_write
+	overflow: hidden
+	.sub_contents
+		float: left
+		width: 820px
+		padding-bottom: 100px
+	aside
+		float: right
+		width: 300px
+
+.page_write
+	background-color: #f7f7f7
+	.name
+		+font-size(40px)
+		letter-spacing: -2px
+		line-height: 1
+	.info
+		display: block
+		margin-top: 18px
+		color: #787878
+		font-style: normal
+	.noti
+		margin:
+			top: 19px
+			bottom: 6px
+		padding: 27px 0 29px
+		border-top: 1px solid #eb3b4b
+		border-bottom: 1px solid #dcdcdc
+		+font-size(18px)
+		letter-spacing: -1px
+		strong
+			font-weight: 600
+
+	.review_culture
+		margin-bottom: 30px
+		background-color: $scarlet
+
+	.breadcrumb 
+		margin-bottom: 40px
+
+.writing_form
+	li
+		padding-top: 20px
+
+		.icon
+			float: left
+			display: block
+			margin:
+				right: 10px
+				bottom: 10px
+			+size(49px, 49px)
+			@extend %is
+		
+	.director .icon
+		background-position: 0 -750px
+	.teacher .icon
+		background-position: -60px -750px
+	.clean .icon
+		background-position: -120px -750px
+	.safety .icon
+		background-position: -180px -750px
+	.food .icon
+		background-position: -240px -750px
+	.toy .icon
+		background-position: -300px -750px
+	.education .icon
+		background-position: -360px -750px
+	.cost .icon
+		background-position: -420px -750px
+	.time .icon
+		background-position: -480px -750px
+
+	.label
+		float: left
+		margin:
+			top: 13px
+			right: 26px
+		+font-size(20px)
+		font-weight: 400
+
+	.desc
+		float: left
+		margin-top: 4px
+		color: #787878
+		letter-spacing: -1px
+		line-height: 1.5
+
+	.desc.row1
+		margin-top: 15px
+
+	.set_radio
+		clear: both
+		margin-top: 10px
+		padding: 10px 0 6px 25px
+		background-color: #fff
+
+	.dradio label span
+		margin-right: 9px
+
+	.dradio label
+		margin-right: 24px
+		color: #787878
+
+	.placeholder_wrap
+		box-sizing: border-box
+		margin-top: 4px
+		padding: 10px
+		padding-right: 100px
+		+size(820px, 80px)
+		background-color: #fff
+
+		textarea
+			z-index: 2
+			position: relative
+			width: 100%
+			height: 60px
+			border-color: #fff
+			background-color: transparent
+
+		.placeholder
+			z-index: 1
+			top: 30px
+			left: 25px
+			color: #d0d0d0
+			font-family: $nanumG
+			+font-size(13px)
+
+	.byte
+		position: absolute
+		top: 32px
+		right: 24px
+		color: #c8c8c8
+	.change
+		color: #343434
+
+	.one_line
+		box-sizing: border-box
+		margin-top: 31px
+		padding: 0 20px
+		+size(820px, 180px)
+		background: url(#{$path}/bg_redbox.gif) no-repeat 0 0
+		
+		.label
+			display: block
+			margin:
+				top: 28px
+				right: 0
+				bottom: 19px
+			width: 100%
+			text-align: center
+			color: #fff
+			text-align: center
+			+font-size(24px)
+			.name
+				font-weight: 600
+				+font-size(24px)
+
+		.placeholder_wrap
+			width: 100%
+
+	.time
+		.set_radio
+			padding-top: 30px
+			padding-bottom: 28px
+
+	.btn_wrap
+		margin-top: 30px
+		text-align: center
+		.button_large
+			margin-left: 1px
+
+
+.star_five, .star_four, .star_three, .star_two, .star_one
+	float: left
+	display: block
+	margin-top: 1px
+	+size(86px, 17px)
+	@extend %is
+	text-indent: -9999px
+
+.star_five
+	background-position: -690px -350px
+
+.star_four
+	background-position: -690px -320px
+
+.star_three
+	background-position: -690px -290px
+
+.star_two
+	background-position: -690px -260px
+
+.star_one
+	background-position: -690px -230px
+

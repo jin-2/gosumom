@@ -81,6 +81,18 @@
 		}
 	});
 
+	// 플레이스홀더 공통사용
+	$('.placeholder_wrap textarea').focus(function(){
+		$(this).keydown(function(){
+			$(this).siblings('.placeholder').hide();
+		});
+	});
+	$('.placeholder_wrap textarea').focusout(function(){
+		if($(this).val().length == 0){
+			$(this).siblings('.placeholder').show();
+		}
+	});
+
 	// 스크롤 디자인
 	if( $(".nano_scroll") ){
 		$(".nano_scroll").nanoScroller({
