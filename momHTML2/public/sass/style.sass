@@ -27,7 +27,7 @@ ul, ol, li
 img, input, button
 	vertical-align: top
 
-h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd
+h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd, figure
 	@extend %box-reset
 
 fieldset
@@ -1222,6 +1222,7 @@ $consider: #FDB45C
 		color: #787878
 		
 		> img
+			cursor: pointer
 			width: 342px
 			margin:
 				left: -20px
@@ -1299,6 +1300,12 @@ $consider: #FDB45C
 		font-weight: 600
 		text-align: center
 		color: #343434
+
+	.title_desc
+		margin:
+			top: -12px
+			bottom: 19px
+		text-align: center
 
 // 사진업로드 팝업
 .photo_upload
@@ -1386,3 +1393,51 @@ $consider: #FDB45C
 		+size(36px, 31px)
 		@extend %is
 		background-position: -500px -200px
+
+// 사진확대보기 팝업
+#popup_zoom.popup_wrap
+	max-width: 1200px
+	width: auto
+	.ie8 &
+		width: 1200px
+	@media all and (min-width:1200px)
+		width: 1200px
+
+.popup_wrap 
+	.inner.photo_zoom
+		padding:
+			left: 97px
+			right: 96px
+	.btn_wrap
+		margin-top: 35px
+		padding-top: 20px
+		border-top: 1px dotted #b2b2b2
+
+.photo_zoom
+	figure
+		text-align: center
+		img
+			max-width: 100%
+	figcaption
+		margin: 30px 0
+		color: #373737
+		font-family: $nanumBG
+		line-height: 1.4
+	.control
+		.prev, .next
+			position: absolute
+			top: 40%
+			display: block
+			overflow: hidden
+			width: 40px
+			height: 80px
+			@extend %is
+			background-position: -60px -650px
+			text-indent: -9999px
+		.prev
+			left: 0
+		.next
+			right: 0
+			background-position: 0 -650px
+	
+	
