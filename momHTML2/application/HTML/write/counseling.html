@@ -165,7 +165,7 @@
 									<strong class="label">국가에서 지원되는 보조금을 제외한 특별활동비, 차량운행비, 입학금 등 세부 비용은 얼마인가요? </strong>
 									<div class="placeholder_wrap">
 										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
-										<textarea cols="10" rows="3"></textarea>
+										<textarea cols="10" rows="3">454</textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
 								</li>
@@ -175,16 +175,16 @@
 								<strong class="label"><span class="name">아튼빌어린이집</span>으로 결정 하셨나요?</strong>
 								<div class="set_radio">
 									<span class="dradio other">
-										<input type="radio" name="rad1" id="rad1_1"> 
-										<label for="rad1_1"><span></span>입학 결정</label>
+										<input type="radio" name="rad2" id="rad2_1"> 
+										<label for="rad2_1"><span></span>입학 결정</label>
 									</span>
 									<span class="dradio other">
-										<input type="radio" name="rad1" id="rad1_2"> 
-										<label for="rad1_2"><span></span>제외(배제)</label>
+										<input type="radio" name="rad2" id="rad2_2"> 
+										<label for="rad2_2"><span></span>제외(배제)</label>
 									</span>
 									<span class="dradio other">
-										<input type="radio" name="rad1" id="rad1_3"> 
-										<label for="rad1_3"><span></span>고민 중</label>
+										<input type="radio" name="rad2" id="rad2_3"> 
+										<label for="rad2_3"><span></span>고민 중</label>
 									</span>
 								</div>
 							</div>
@@ -240,7 +240,6 @@
 				// count 정보 및 count 정보와 관련된 textarea/input 요소를 찾아내서 변수에 저장한다.
 				var $count = $('.change', this);
 				var $input = $('textarea', this);
-				console.log( $count, $input )
 				// .text()가 문자열을 반환하기에 이 문자를 숫자로 만들기 위해 1을 곱한다.
 				//var maximumCount = $count.text() * 1;
 				var MAXIMUMCOUNT = 300;
@@ -258,6 +257,10 @@
 					// 필요한 경우 DOM을 수정한다.
 					if (before != now) {
 						$count.text(now);
+					}
+					// value가 있을 때
+					if (now > 0){
+						$input.siblings('.placeholder').hide();
 					}
 				};
 				// input, keyup, paste 이벤트와 update 함수를 바인드한다

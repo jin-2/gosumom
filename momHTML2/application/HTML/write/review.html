@@ -189,7 +189,7 @@
 								<li class="clean">
 									<span class="icon"></span>
 									<strong class="label">위생 및 청결</strong>
-									<p class="desc row1">화장실 및 조리실의 청결상태, 교구 및 교재, 장난감의 청결상태 등을 포함합니다.</p>
+									<p class="desc">화장실 및 조리실의 청결상태, 교구 및 교재, 장난감의 청결상태 등을 포함합니다.</p>
 									<div class="set_radio">
 										<span class="dradio" title="5점">
 											<input type="radio" name="rad3" id="rad3_1"> 
@@ -257,7 +257,7 @@
 								<li class="food">
 									<span class="icon"></span>
 									<strong class="label">먹거리(식단과 영양)</strong>
-									<p class="desc row1">조리사 상주 여부, 적절한 식단, 영양을 고려한 다양한 반찬, 풍족한 간식의 제공을 포함합니다.</p>
+									<p class="desc">조리사 상주 여부, 적절한 식단, 영양을 고려한 다양한 반찬, 풍족한 간식의 제공을 포함합니다.</p>
 									<div class="set_radio">
 										<span class="dradio" title="5점">
 											<input type="radio" name="rad5" id="rad5_1"> 
@@ -291,7 +291,7 @@
 								<li class="toy">
 									<span class="icon"></span>
 									<strong class="label">교구 및 교재, 놀이 시설 및 장난감의 다양성</strong>
-									<p class="desc row1">장시간 다양한 놀이활동이 가능한지를 포함합니다.</p>
+									<p class="desc">장시간 다양한 놀이활동이 가능한지를 포함합니다.</p>
 									<div class="set_radio">
 										<span class="dradio" title="5점">
 											<input type="radio" name="rad6" id="rad6_1"> 
@@ -325,7 +325,7 @@
 								<li class="education">
 									<span class="icon"></span>
 									<strong class="label">교육의 기회</strong>
-									<p class="desc row1">적절한 특별활동 프로그램, 영아들을 위한 기본 커리큘럼 유무와 실행유무, 다양한 외출활동 등을 포함합니다.</p>
+									<p class="desc">적절한 특별활동 프로그램, 영아들을 위한 기본 커리큘럼 유무와 실행유무, 다양한 외출활동 등을 포함합니다.</p>
 									<div class="set_radio">
 										<span class="dradio" title="5점">
 											<input type="radio" name="rad7" id="rad7_1"> 
@@ -350,7 +350,7 @@
 									</div>
 									<div class="placeholder_wrap">
 										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
-										<textarea cols="10" rows="3"></textarea>
+										<textarea cols="10" rows="3">123</textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
 								</li>
@@ -359,7 +359,7 @@
 								<li class="cost">
 									<span class="icon"></span>
 									<strong class="label">보육 비용</strong>
-									<p class="desc row1">입학금, 통학차량운행비, 특별활동비, 현장학습비, 행사비 등의 적절성 여부를 포함합니다.</p>
+									<p class="desc">입학금, 통학차량운행비, 특별활동비, 현장학습비, 행사비 등의 적절성 여부를 포함합니다.</p>
 									<div class="set_radio">
 										<span class="dradio" title="5점">
 											<input type="radio" name="rad1" id="rad1_1"> 
@@ -470,7 +470,6 @@
 				// count 정보 및 count 정보와 관련된 textarea/input 요소를 찾아내서 변수에 저장한다.
 				var $count = $('.change', this);
 				var $input = $('textarea', this);
-				console.log( $count, $input )
 				// .text()가 문자열을 반환하기에 이 문자를 숫자로 만들기 위해 1을 곱한다.
 				//var maximumCount = $count.text() * 1;
 				var MAXIMUMCOUNT = 300;
@@ -489,12 +488,19 @@
 					if (before != now) {
 						$count.text(now);
 					}
+					// value가 있을 때
+					if (now > 0){
+						$input.siblings('.placeholder').hide();
+					}
+
 				};
+				
 				// input, keyup, paste 이벤트와 update 함수를 바인드한다
 				$input.on('input keyup paste', function() {
 					setTimeout(update, 0)
 				});
 				update();
+
 			});
 		});
 	</script>

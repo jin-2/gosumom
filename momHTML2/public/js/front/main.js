@@ -168,10 +168,11 @@ $.fn.designRadio = function(option){
 	var option = $.extend({}, $.fn.designRadio.option, option);
 	return this.each(function(){
 	var select_root = $(this),
-			select_type = select_root.find("input[type=radio]");
+		select_type = select_root.find("input[type=radio]");
 		$(this).find('input[type=radio]').click(function(){
 			select_root.find('input[type=radio]').each(function(){
 				if($(this).prop('checked')){
+					console.log($(this))
 					$(this).parent().addClass('checked');
 				}else{
 					$(this).parent().removeClass('checked');
