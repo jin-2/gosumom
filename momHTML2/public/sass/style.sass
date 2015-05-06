@@ -103,6 +103,17 @@ select
  * --------------------------------
  * layout
  * --------------------------------
+#loadmoreajaxloader
+	//margin-bottom: 50px
+	text-align: center
+
+.noti_scroll
+	margin-top: 7px
+	+font-size(30px)
+	font-weight: 600
+	color: #d3d3d3
+	text-align: center
+	letter-spacing: -1px
 
 body
 	background-color: #f0f0f0
@@ -369,15 +380,54 @@ body
 			margin-right: 0
 
 // 메인 리뷰 갤러리
-.main_review_slider
-	height: 253px
+.main_review_wrap
+	overflow: hidden
+	position: relative
+	height: 240px
 
 	li
-		width: 1200px
-		margin: 0 auto
+		height: 240px
+		background: url(#{$path}/middle_banner_bg.jpg) no-repeat center 0
 
-	li:nth-child(2n)
-		background-color: lighten(#bd4932, 25)
+		&.story
+			background-position: center 0
+
+		&.review
+			background-position: center -240px
+
+		&.note
+			background-position: center -480px
+
+		&.talk
+			background-position: center -720px
+
+		&.my
+			background-position: center -960px
+
+	.pager
+		overflow: hidden
+		position: absolute
+		bottom: 20px
+		left: 50%
+		margin-left: -(210px/2)
+		
+		div
+			float: left
+			display: inline-block
+		a 
+			display: block
+			margin: 0 5px
+			padding: 10px 0
+			cursor: pointer
+			span
+				display: block
+				+size(32px, 5px)
+				background-color: #fff
+				text-indent: -9999px
+
+		a:hover, a.active
+			span
+				background-color: $scarlet
 
 // 메인 리뷰 리스트
 .main_reviews
@@ -452,10 +502,10 @@ body
 			//bottom: 200px
 		//background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
 .masonry_wrap		
-	margin-bottom: 100px
-	background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
+	margin-bottom: 150px
+	// background: url(#{$path}/bg_logo_list.png) no-repeat 50% 100%
 	.masonry
-		padding-bottom: 200px
+		//padding-bottom: 150px
 
 //
  * --------------------------------

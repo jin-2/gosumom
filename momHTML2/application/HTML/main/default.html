@@ -166,14 +166,42 @@
 			<!-- //고수맘 인사이드 -->
 
 			<!-- 리뷰 갤러리  -->
-			<ul id="main_review_slider" class="main_review_slider">
-				<li class="item">
-					<div class="wrapper"><img src="http://lorempixel.com/1200/253/abstract/1/" /></div>
-				</li>
-				<li class="item">
-					<div class="wrapper"><img src="http://lorempixel.com/1200/253/abstract/2/" /></div>
-				</li>
-			</ul>
+			<div class="main_review_wrap">
+				<ul id="main_review_slider" class="main_review_slider">
+					<li class="slide story">
+						<div class="wrapper">
+							<img src="../../../public/img/banner1_story.png" alt="고수맘 이야기 - 고수맘의 첫번째 시작과 함께 이 땅의 초보맘들이 힘내시길 바랍니다." />
+						</div>
+					</li>
+					<li class="slide review">
+						<div class="wrapper">
+							<img src="../../../public/img/banner2_review.png" alt="어린이집 리뷰 - 과거 또는 현재 어린이집 등원경험이 있는 학부모가 작성한 정보입니다." />
+						</div>
+					</li>
+					<li class="slide note">
+						<div class="wrapper">
+							<img src="../../../public/img/banner3_note.png" alt="상담후기 - 여러 어린이집을 방문한 초보맘들이 작성한 방문후기입니다." />
+						</div>
+					</li>
+					<li class="slide talk">
+						<div class="wrapper">
+							<img src="../../../public/img/banner4_talk.png" alt="고수맘의 생생Talk - 선배맘들과 다양한 고민거리들을 묻고 답하며 소통할 수 있습니다." />
+						</div>
+					</li>
+					<li class="slide my">
+						<div class="wrapper">
+							<img src="../../../public/img/banner5_my.png" alt="마이페이지 - 찜한 어린이집, 내 리뷰와 상담후기를 관리할 수 있는 공간입니다." />
+						</div>
+					</li>
+				</ul>
+				<div class="pager">
+					<div><a href="#" data-slide-index="0"><span>첫번째 배너 보기</span></a></div>
+					<div><a href="#" data-slide-index="1"><span>두번째 배너 보기</span></a></div>
+					<div><a href="#" data-slide-index="2"><span>세번째 배너 보기</span></a></div>
+					<div><a href="#" data-slide-index="3"><span>네번째 배너 보기</span></a></div>
+					<div><a href="#" data-slide-index="4"><span>다섯번째 배너 보기</span></a></div>
+				</div>
+			</div>
 			<!-- //리뷰 갤러리 -->
 
 			<!-- 고수맘 리뷰 리스트-->
@@ -199,7 +227,7 @@
 				<div class="main_sorting_wrap">
 					<div class="wrapper line">
 						<div class="sorting_tab">
-							<span><a href="#" class="average">평점순</a></span>
+							<span><a href="#" class="average active">평점순</a></span>
 							<span><a href="#" class="review">리뷰순</a></span>
 						</div>
 						<p class="search_result_text">총 <strong>00</strong>개의 어린이집이 검색되었습니다.</p>
@@ -232,9 +260,18 @@
 										맡기고 있습니다.
 									</div>
 									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
+										<div>
+											<span class="review"></span><br>
+											리뷰 <em>285</em>
+										</div>
+										<div class="center">
+											<span class="note"></span><br>
+											상담후기 <em>58</em>
+										</div>
+										<div>
+											<span class="check"></span><br>
+											찜 <em>123</em>
+										</div>
 									</div>
 								</div><!-- //box -->
 							</a>
@@ -269,426 +306,25 @@
 										맡기고 있습니다.
 									</div>
 									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
+										<div>
+											<span class="review"></span><br>
+											리뷰 <em>285</em>
+										</div>
+										<div class="center">
+											<span class="note"></span><br>
+											상담후기 <em>58</em>
+										</div>
+										<div>
+											<span class="check"></span><br>
+											찜 <em>123</em>
+										</div>
 									</div>
 								</div><!-- //box -->
 							</a>
 						</div>
 						<!-- //.item -->
-
-						<!-- item -->
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-						<!-- //.item -->
-
-						<!-- item -->
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-						<!-- //.item -->
-
-						<!-- item -->
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-						<!-- //.item -->
-
-						<!-- item -->
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-						<!-- //.item -->
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
-
-						<div class="item">
-							<a href="#">
-								<div class="box">
-									<strong class="school_name">어린이집 이름</strong>
-									<span class="grade_average">리뷰평점</span>
-									<div class="rating_star_wrap">
-										<span class="rating_star">
-											<span class="inner" style="width:71%"></span>
-										</span>
-										<strong class="score">3.5 <span class="hidden">5점 만점 중</span></strong>
-									</div>
-									<ul class="list_info">
-										<li class="full">서울시 강남구 논현로 257</li>
-										<li>02-1234-5678</li>
-										<li>정원 : 29명</li>
-									</ul>
-									<div class="best_review">
-										<strong class="nickname">whi2ang**</strong>
-										시설이 좀 오래된 것 같아 걱정했는데 선생님들이
-										아이를 잘 챙겨주셔서 너무 안심하고
-										맡기고 있습니다.
-									</div>
-									<div class="state">
-										<div><span class="review">리뷰</span> 34</div>
-										<div class="center"><span class="note">상담수첩</span> 15</div>
-										<div><span class="check">찜하기</span> 123</div>
-									</div>
-								</div><!-- //box -->
-							</a>
-						</div>
 					</div>
+					<div id="loadmoreajaxloader"><img src="../../../public/img/loading.gif" /></div>
 				</div>
 				<!-- //어린이집 리스트 -->
 
@@ -721,18 +357,19 @@
 		$('.sorting_tab a').click(function(){
 			alert();
 		})
+
 		function sorting_move(){
 			$('body').prepend("<button type='button' class='moving'>이동</button>");
 			//document.getElementById('result_list').scrollIntoView;
 			$('body').on('click', '.moving', function(){
-				document.getElementById('result_list').scrollIntoView();
-				// var pos=$("#card_list").position().top;
-				// console.log(pos)
-				// $("html, body").animate({scrollTop:pos},'fast');
+				var pos=$("#result_list").position().top;
+				console.log(pos)
+				$("html, body").animate({scrollTop:pos},'fast');
 			})
 			
 		}
-		sorting_move();
+		//sorting_move();
+
 	</script>
 
 	<script>

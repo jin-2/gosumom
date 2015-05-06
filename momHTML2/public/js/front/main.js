@@ -41,6 +41,8 @@
 	// 메인 중간 슬라이더
 	if( $('#main_review_slider') ) {
 		$('#main_review_slider').bxSlider({
+			auto: true,
+			pagerCustom: '.main_review_wrap .pager',
 			controls: false
 		});
 	}

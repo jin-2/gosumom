@@ -4,7 +4,7 @@
 .masonry.wrapper
 	width: 1220px !important
 .masonry
-	padding-bottom: 100px
+	padding-bottom: 50px
 	&::after
 		content: ""
 		display: block
@@ -52,7 +52,7 @@
 			+font-size(11px)
 
 		.rating_star_wrap
-			margin-top: 2px
+			margin-top: 4px
 
 		.list_info, .best_review, .state
 			font-family: $dotum
@@ -70,7 +70,7 @@
 				content: ""
 				display: block
 				width: 30px
-				margin: 11px auto 14px
+				margin: 12px auto 14px
 				border-top: 1px solid #DBDBDB
 		
 			li
@@ -98,13 +98,17 @@
 			overflow: hidden
 			margin-top: 9px
 			border-top: 1px solid #f6f6f6
-			font-weight: bold
 			color: #ACACAC
+
+			em
+				color: #eb3b4b
+				font-style: normal
+				font-weight: bold
 
 			> div
 				box-sizing: border-box
 				float: left
-				padding: 12px 0 12px
+				padding: 11px 0 10px
 				width: 33%
 				border-left: 1px solid #f6f6f6
 
@@ -116,17 +120,19 @@
 			
 			.review, .note, .check 
 				display: inline-block
-				margin-right: 4px
-				+size(16px, 16px)
+				margin:
+					right: 4px
+					bottom: 3px
+				+size(21px, 20px)
 				background: url(#{$path}/bg_collect.png) no-repeat
 				text-indent: -9999px
 
 			.review
-				background-position: -250px -240px
+				background-position: -320px -680px
 			.note
-				background-position: -300px -240px
+				background-position: -360px -680px
 			.check
-				background-position: -350px -240px
+				background-position: -280px -680px
 
 		.photo 
 			position: relative
@@ -172,14 +178,20 @@ $item2_color: #19bdc6
 			margin-top: 4px
 			+font-size(13px)
 			color: #ADADAD
-			font-weight: 700
+			font-weight: 600
 
 		.score
-			+font-size(15px)
 			color: #19BDC6
+			.num
+				+font-size(16px)
+				font-family: $play
 
 		.photo .icon
 			background-position: -500px -300px
+
+		.state
+			em
+				color: $item2_color
 
 // 리뷰 박스 후버 시
 .masonry
@@ -187,7 +199,7 @@ $item2_color: #19bdc6
 		a:hover, a:focus
 			background-color: #EB3B4B
 
-			.school_name, .grade_average, .list_info li, .best_review, .state, .rating_star_wrap .score
+			.school_name, .grade_average, .list_info li, .best_review, .state, .rating_star_wrap .score, .state em
 				color: #fff
 
 			.best_review, .state, .state > div
@@ -216,13 +228,13 @@ $item2_color: #19bdc6
 	.item
 		a:hover, a:focus
 			.review
-				background-position: -250px -200px
+				background-position: -320px -630px
 
 			.note
-				background-position: -300px -200px
+				background-position: -360px -630px
 
 			.check
-				background-position: -350px -200px
+				background-position: -280px -630px
 
 			.list_info li
 				background: url(#{$path}/bul_dot_white.png) no-repeat 0 5px
