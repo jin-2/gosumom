@@ -1,9 +1,9 @@
 // 검정색 버튼
-a.button, a.button_large, a.button_line, a.button_line_large
+a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlarge
 	display: inline-block
 	text-decoration: none
 
-.button , .button_large, .button_line, .button_line_large
+.button , .button_large, .button_line, .button_line_large, .button_line_xlarge
 	box-sizing: border-box
 	padding: 0 35px
 	height: 50px
@@ -34,7 +34,7 @@ a.button, a.button_large, a.button_line, a.button_line_large
 	height: 60px
 	line-height: 60px
 
-.button_large .icon, .button_line .icon
+.button_large .icon, .button_line .icon, .button_line_xlarge .icon
 	display: inline-block
 	margin:
 		right: 9px
@@ -64,7 +64,7 @@ a.button, a.button_large, a.button_line, a.button_line_large
 		background-position: -400px -580px
 		background-color: red
 
-.button_line, .button_line_large
+.button_line, .button_line_large, .button_line_xlarge
 	height: 33px
 	border: 1px solid #4b4748
 	border-radius: 2px
@@ -77,12 +77,33 @@ a.button, a.button_large, a.button_line, a.button_line_large
 		border-color: #eb3a4a
 		background-color: #fff
 		color: #eb3c4b
+	&.white_other
+		border-color: #19bdc6
+		background-color: #fff
+		color: #19bdc6
 
 .button_line_large
 	height: 40px
 	line-height: 40px
 
-.fix100, .fix117, .fix120, .fix70, .fix130, .fix80
+.button_line_xlarge
+	height: 60px
+	border-radius: 4px
+	line-height: 60px
+	+font-size(16px)
+
+	.icon
+		+size(28px, 27px)
+		margin-right: 6px
+		&.note
+			background-position: -150px -650px
+		&.pen
+			background-position: -200px -650px
+
+	& + &
+		margin-left: 1px
+
+.fix100, .fix117, .fix120, .fix70, .fix130, .fix80, .fix185
 	padding: 0
 
 .fix70
@@ -97,6 +118,8 @@ a.button, a.button_large, a.button_line, a.button_line_large
 	width: 120px
 .fix130
 	width: 130px
+.fix185
+	width: 185px
 
 
 

@@ -401,7 +401,7 @@ body
  * --------------------------------
 
 // sub common visual
-.page_list, .page_write
+.page_list, .page_write, .page_search
 	.sub_visual
 		box-sizing: border-box
 		padding:
@@ -427,7 +427,7 @@ body
 			margin-top: 6px
 			+font-size(16px)
 
-.page_write
+.page_write, .page_search
 	.sub_visual
 		background-image: url(#{$path}/visual_writing.jpg)
 
@@ -1694,4 +1694,92 @@ $consider: #FDB45C
 
 .star_one
 	background-position: -690px -230px
+
+//
+ * --------------------------------
+ * 리뷰작성 - 어린이집 검색
+ * --------------------------------
+.page_search
+	.detail_search_wrap
+		margin:
+			top: 40px
+			bottom: 50px
+		text-align: center
+
+	.search_result_text
+		float: left
+
+	.sorting_tab
+		float: left
+		margin-left: 20px
+
+.writing_search_text
+	margin-bottom: 50px
+	text-align: center
+	.icon
+		display: inline-block
+		+size(196px, 196px)
+		@extend %is
+		
+		&.search
+			background-position: -800px 0
+
+		&.no
+			background-position: -800px -220px
+
+	p
+		margin-top: 23px
+		+font-size(20px)
+		color: #333
+		line-height: 1.5
+
+	p.small
+		margin-top: 10px
+		+font-size(14px)
+		color: #787878
+		line-height: 1.45
+
+.page_search
+	padding-bottom: 100px
+	.result
+		display: table
+		clear: both
+		padding-top: 17px
+		width: 100%
+		border-collapse: separate
+		border-spacing: 0 5px
+
+		li
+			display: table-row
+			margin-top: 5px
+
+			> strong, > address
+				display: table-cell
+				min-height: 60px
+				background: #fff
+				vertical-align: middle
+
+			> strong
+				box-sizing: border-box
+				padding:
+					top: 10px
+					bottom: 10px
+					left: 47px
+					right: 20px
+				width: 247px
+				+font-size(16px)
+				color: #222
+				font-weight: 600
+
+			> address
+				width: 573px
+				margin-right: 5px
+				font-style: normal
+				color: #252525
+
+		.btn_wrap
+			display: table-cell
+			padding-left: 5px
+			vertical-align: middle
+
 
