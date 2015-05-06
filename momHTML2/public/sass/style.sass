@@ -401,7 +401,7 @@ body
  * --------------------------------
 
 // sub common visual
-.page_list
+.page_list, .page_write
 	.sub_visual
 		box-sizing: border-box
 		padding:
@@ -410,11 +410,11 @@ body
 		background: #000a16 url(#{$path}/visual_reviewlist.jpg) no-repeat 50% 0
 		+font-size(35px)
 		color: #fff
-		text-shadow: 1px 1px 5px #000
+		//text-shadow: 1px 1px 5px #000
 
 		&.brown
 			color: #635d58
-			text-shadow: 1px 1px 1px rgba(#000, 0.2)
+			//text-shadow: 1px 1px 1px rgba(#000, 0.2)
 
 		&.counseling
 			background: #353418 url(#{$path}/visual_councelling.jpg) no-repeat 50% 0
@@ -426,6 +426,10 @@ body
 		p
 			margin-top: 6px
 			+font-size(16px)
+
+.page_write
+	.sub_visual
+		background-image: url(#{$path}/visual_writing.jpg)
 
 .page_list
 	.detail_search_wrap
@@ -1464,6 +1468,7 @@ $consider: #FDB45C
 	background-color: #f7f7f7
 	.name
 		+font-size(40px)
+		font-weight: 600
 		letter-spacing: -2px
 		line-height: 1
 	.info
@@ -1484,8 +1489,11 @@ $consider: #FDB45C
 			font-weight: 600
 
 	.review_culture
+		overflow: hidden
 		margin-bottom: 30px
-		background-color: $scarlet
+		+size(300px, 386px)
+		img
+			margin-top: -386px
 
 	.breadcrumb 
 		margin-bottom: 40px
@@ -1522,6 +1530,15 @@ $consider: #FDB45C
 	.time .icon
 		background-position: -480px -750px
 
+	.satisfaction .icon
+		background-position: -540px -750px
+	.people .icon
+		background-position: -600px -750px
+	.round .icon
+		background-position: -660px -750px
+	.add .icon
+		background-position: -720px -750px
+
 	.label
 		float: left
 		margin:
@@ -1529,6 +1546,7 @@ $consider: #FDB45C
 			right: 26px
 		+font-size(20px)
 		font-weight: 400
+		letter-spacing: -2px
 
 	.desc
 		float: left
@@ -1537,8 +1555,11 @@ $consider: #FDB45C
 		letter-spacing: -1px
 		line-height: 1.5
 
-	.desc.row1
+	& .clean .desc, & .food .desc, & .toy .desc, & .education .desc, & .cost .desc
 		margin-top: 15px
+
+	.desc.row1
+		//margin-top: 15px
 
 	.set_radio
 		clear: both
@@ -1575,7 +1596,7 @@ $consider: #FDB45C
 			left: 25px
 			color: #d0d0d0
 			font-family: $nanumG
-			+font-size(13px)
+			+font-size(14px)
 
 	.byte
 		position: absolute
@@ -1610,10 +1631,9 @@ $consider: #FDB45C
 		.placeholder_wrap
 			width: 100%
 
-	.time
-		.set_radio
-			padding-top: 30px
-			padding-bottom: 28px
+	.time .set_radio, .satisfaction .set_radio, .one_line .set_radio
+		padding-top: 30px
+		padding-bottom: 28px
 
 	.btn_wrap
 		margin-top: 30px
@@ -1621,7 +1641,37 @@ $consider: #FDB45C
 		.button_large
 			margin-left: 1px
 
+	.satisfaction, .one_line
+		.set_radio
+			padding-left: 194px
+		.dradio
+			width: 178px
+		label
+			+font-size(16px)
 
+	.one_line 
+		.set_radio
+			padding-left: 170px
+		label
+			margin-top: 0
+
+.page_write.counseling
+	.noti
+		border-top-color: #19bdc6
+
+	.writing_form .one_line
+		background-image: url(#{$path}/bg_bluebox.gif)
+
+	.writing_form li
+		padding-top: 31px
+
+	.review_culture img
+		margin-top: 0
+
+	li.satisfaction
+		padding-top: 13px
+
+// 리뷰작성 별
 .star_five, .star_four, .star_three, .star_two, .star_one
 	float: left
 	display: block
