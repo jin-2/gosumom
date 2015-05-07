@@ -108,6 +108,11 @@
 		var src = $(this).val();
 		$(this).parents().siblings().val(src);
 	});
+
+	// 마이페이지 비밀번호 변경
+	$('#member_pw').click(function(){
+		$('.password_modify').toggle();
+	})
 }(window, document));
 
 $(window).load(function(){

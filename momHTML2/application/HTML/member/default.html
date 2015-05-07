@@ -1,0 +1,340 @@
+<!doctype html>
+<!--[if IE 8]> <html lang="ko-KR" class="no-js lt-ie10 lt-ie9 ie8">        <![endif]-->
+<!--[if IE 9]> <html lang="ko-KR" class="no-js lt-ie10 ie9">               <![endif]-->
+<html class="no-js" lang="ko-KR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Gosumom</title>
+<meta name="description" content="Mom can change the world">
+<meta name="keywords" content="엄마, 어린이집, 유치원, 리뷰">
+<meta name="author" content="TENDENCY">
+<meta name="viewport" content="width=1240">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" href="../../../public/css/style.css">
+<script src="../../../public/js/front/vendor/modernizr-2.8.3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../public/js/front/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+</head>
+<body class="page">
+	<!--[if lt IE 8]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!-- #container -->
+	<div id="container">
+
+		<!-- top -->
+		<div class="top_bar">
+			<div class="wrapper">
+				<div class="user_wrap">
+					<strong class="name">snow****님</strong>
+					<a href="#" class="first">로그인</a>
+					<a href="#">로그아웃</a>
+					<a href="#">회원가입</a>
+					<a href="#">Contact Us</a>
+					<a href="#" class="facebook"><img src="/momHTML2/public/img/btn_facebook.png" alt="페이스북"></a>
+				</div>
+			</div>
+		</div>
+		<!-- //top -->
+
+		<!-- header -->
+		<header class="header">
+			<div class="wrapper">
+				<h1 class="logo"><a href="/main/default.html"><img src="/momHTML2/public/img/logo.png" alt="Gosumom"></a></h1>
+
+				<nav class="gnb_wrap">
+					<h2 class="hidden">주메뉴</h2>
+					<ul class="gnb">
+						<li><a href="#">고수맘 이야기</a>
+							<ul class="snb">
+								<li><a href="#">고수맘 이야기</a></li>
+								<li><a href="#">고수맘 사용법</a></li>
+								<li><a href="#">고수맘 꿀팁</a></li>
+							</ul>
+						</li>
+						<li><a href="#">어린이집 리뷰</a></li>
+						<li><a href="#">상담후기</a></li>
+						<li><a href="#">고수맘의 생생Talk</a>
+							<ul class="snb">
+								<li><a href="#">칭찬할래요</a></li>
+								<li><a href="#">건의할래요</a></li>
+								<li><a href="#">물어볼래요</a></li>
+							</ul>
+						</li>
+						<li><a href="#">마이페이지</a>
+							<ul class="snb">
+								<li><a href="#">프로필</a></li>
+								<li><a href="#">관심정보</a></li>
+								<li><a href="#">내 리뷰</a></li>
+								<li><a href="#">내 상담수첩</a></li>
+								<li><a href="#">설문참여</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav><!-- //.gnb -->
+
+				<a href="#" class="button_note_write"><img src="/momHTML2/public/img/btn_note_write.gif" alt="상담후기작성"></a>
+				<a href="#" class="button_review_write"><img src="/momHTML2/public/img/btn_review_write.gif" alt="리뷰작성"></a>
+			</div>
+		</header>
+		<!-- // header -->
+
+		<div id="contents" class="page_member">
+			<div class="sub_visual">
+				<div class="wrapper">
+					<h3>마이페이지</h3>
+					<p>나의 프로필, 내가 찜한 어린이집, 내 리뷰와 상담후기 등을 관리할 수 있는 공간입니다.</p>
+				</div>
+			</div>
+
+			<div class="tab_wrap">
+				<div class="wrapper">
+					<div class="breadcrumb">
+						<ol>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">마이페이지</a>&gt;</li>
+							<li class="current">프로필</li>
+						</ol>
+					</div>
+
+					<ul class="sub_tab">
+						<li><a href="#" class="active">프로필</a></li>
+						<li><a href="#">찜목록</a></li>
+						<li><a href="#">내 리뷰</a></li>
+						<li><a href="#">내 상담후기</a></li>
+						<li><a href="#">설문참여</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="wrapper">
+				<section class="sub_contents">
+					<h4 class="title"><span class="icon"></span>프로필</h4>
+					<form action="#">
+						<fildset>
+							<legend class="hidden">프로필 수정양식</legend>
+							<table class="table">
+								<caption class="hidden">회원정보</caption>
+								<colgroup>
+									<col width="200">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>
+											<label for="member_photo" class="head">프로필 정보</label>
+										</th>
+										<td>
+											<div class="photo"><img src="http://lorempixel.com/238/238/cats" alt=""></div>
+											<button type="button" id="button_profile" class="button_line_large fix80">변경</button>
+
+											<!-- 팝업 -->
+											<div id="popup_profile_photo" class="popup_wrap">
+												<div class="inner profile_photo">
+													<button type="button" class="popup_close close">닫기</button>
+													<h4 class="title">프로필사진 변경</h4>
+													<p class="title_desc">사진을 선택해주세요.</p>
+													<div class="photo_wrap">
+														<img src="http://lorempixel.com/238/238/cats" alt="">
+													</div>
+													<div class="btn_wrap">
+														<div class="button_file_input2">
+															<button type="button" class="button_line white fix100"><span class="icon search"></span>찾아보기</button>
+															<input type="file" name="" class="input_hidden">
+														</div>														
+														<button type="button" class="button_line white fix100"><span class="icon delete"></span>삭제하기</button>
+													</div>
+													<div class="btn_wrap">
+														<button type="button" class="button fix117">취소</button>
+														<button type="submit" class="button fix117 scarlet">변경</button>
+													</div>
+												</div>
+											</div>
+											<!-- // 팝업 -->
+
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<label for="member_email" class="head">이메일</label>
+										</th>
+										<td>
+											<input type="email" name="member_email" id="member_email" value="user@mail.co.kr" disabled="disabled">
+											<span class="note">*페이스북으로 로그인됨</span>
+											<span class="dcheck checked">
+												<input type="checkbox" id="get_mail" name="" value="" checked="checked">
+												<label for="get_mail"><em></em>E-Mail 수신 동의</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<label for="member_nickname" class="head">닉네임</label>
+										</th>
+										<td>
+											<input type="text" name="member_nickname" id="member_nickname" value="고수맘이 되고 싶은 하수맘">
+											<button type="button" id="" class="button_line_large fix110">닉네임 변경</button>
+											<span class="note">*사용 가능한 닉네임입니다.</span>
+											<span class="note">*이미 사용중인 닉네임입니다.</span>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<label for="member_phone" class="head">휴대폰 번호</label>
+										</th>
+										<td>
+											<button type="button" class="button_line_large fix130">SMS 인증하기</button>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<label for="member_phone" class="head">휴대폰 번호</label>
+										</th>
+										<td>
+											<select name="" id="member_phone" title="핸드폰 처음 3자리 선택">
+												<option value="010">010</option>
+											</select>
+											<span class="bar"></span>
+											<input type="text" name="member_phone2" id="member_phone2" maxlength="4" class="phone" title="핸드폰 중간 4자리 입력">
+											<span class="bar"></span>
+											<input type="text" name="member_phone3" id="member_phone3" maxlength="4" class="phone" title="핸드폰 마지막 4자리 입력">
+											<button type="button" id="member_sms" class="button_line_large fix130">휴대폰 번호 변경</button>
+											<span class="dcheck">
+												<input type="checkbox" id="get_mail" name="" value="" >
+												<label for="get_mail"><em></em>SMS 수신 동의</label>
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<label for="member_pw" class="head">비밀번호 변경</label>
+										</th>
+										<td>
+											<button type="button" id="member_pw" class="button_line_large fix130">비밀번호 변경</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- 비밀번호 변경 table -->
+							<div class="password_modify">
+								<table class="table">
+									<caption class="hidden">비밀번호 변경</caption>
+									<colgroup>
+										<col width="200">
+										<col width="*">
+									</colgroup>
+									<tbody>
+										<tr class="first">
+											<th>
+												<label for="member_pw_current" class="head">현재 비밀번호</label>
+											</th>
+											<td>
+												<input type="password" name="member_pw_current" id="member_pw_current">
+												<span class="note">*현재 비밀번호가 올바르지 않습니다.</span>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												<label for="member_pw_new" class="head">새 비밀번호</label>
+											</th>
+											<td>
+												<input type="password" name="member_pw_new" id="member_pw_new">
+												<span class="note">*비밀번호 형식이 맞지 않습니다.</span>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												<label for="member_pw_check" class="head">새 비밀번호 확인</label>
+											</th>
+											<td>
+												<input type="password" name="member_pw_check" id="member_pw_check">
+												<span class="note">*이미 입력한 비밀번호와 동일한 비밀번호를 입력해주세요.</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- 회원 탈퇴 -->
+							<div class="drop_out">
+								<table class="table">
+									<caption class="hidden">회원탈퇴</caption>
+									<colgroup>
+										<col width="200">
+										<col width="*">
+									</colgroup>
+									<tbody>
+										<tr class="first">
+											<th>
+												<label for="member_pw_current" class="head">회원 탈퇴</label>
+											</th>
+											<td>
+											<button type="submit" id="member_pw" class="button_line_large fix130">회원 탈퇴 신청</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="btn_wrap">
+								<button type="button" class="button_large fix120"><span class="icon cancel"></span>취소</button>
+								<button type="submit" class="button_large scarlet fix120"><span class="icon check"></span>확인</button>
+							</div>
+						</fildset>
+					</form>
+				</section>
+			</div><!-- //.wrapper -->
+		</div><!-- //.content-wrap -->
+
+
+
+		<footer class="footer">
+			<div class="wrapper">
+				<ul class="etc_menu">
+					<li><a href="#">사이트맵</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보 취급방침</a></li>
+					<li><a href="mailto:help@gosumom.com">고객센터 help@gosumom.com</a></li>
+				</ul>
+				<p class="copyright">© 2015 GOSUMOM. All Rights Reserved</p>
+			</div>
+		</footer>
+
+	</div>
+	<!-- // #container -->
+
+	<script src="../../../public/js/front/plugin/jquery.endless-scroll.js"></script>
+	<script src="../../../public/js/front/plugin/masonry.pkgd.min.js"></script>
+	<script src="../../../public/js/front/plugin/jquery.bpopup.min.js"></script>
+	<script src="../../../public/js/front/plugin/jquery.bxslider.js"></script>
+	<script src="../../../public/js/front/plugin/jquery.nanoscroller.js"></script>
+	<script src="../../../public/js/front/plugin/chart.js"></script>
+	<!-- using the polyfill ExplorerCanvas -->
+	<!--[if lte IE 8]> <script src="../../../public/js/front/plugin/excanvas.js"></script> <![endif]-->
+	<!-- <script src="https://cdnjs.com/libraries/chart.js"></script> -->
+	<script src="../../../public/js/front/main.js"></script>
+	<script>
+		// 프로필사진 업로드 팝업
+		$('#button_profile').click(function(){
+			$('#popup_profile_photo').bPopup({
+				closeClass: 'popup_close',
+			});
+		});
+
+	</script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+	// (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	// function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	// e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	// e.src='//www.google-analytics.com/analytics.js';
+	// r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	// ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+	</script>
+</body>
+</html>

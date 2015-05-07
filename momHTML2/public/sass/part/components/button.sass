@@ -57,12 +57,19 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 		background-position: -400px -580px
 
 	&.search
-		background-position: -400px -580px
-		background-color: red
+		background-position: -200px -700px
 
 	&.delete
-		background-position: -400px -580px
-		background-color: red
+		background-position: -150px -700px
+
+	&.cancel
+		background-position: -210px -580px
+
+.button_line 
+	.icon.delete, .icon.search
+		+size(14px, 14px)
+		margin-right: 4px
+
 
 .button_line, .button_line_large, .button_line_xlarge
 	height: 33px
@@ -103,7 +110,7 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 	& + &
 		margin-left: 1px
 
-.fix100, .fix117, .fix120, .fix70, .fix130, .fix80, .fix185
+.fix100, .fix117, .fix120, .fix70, .fix130, .fix80, .fix185, .fix110
 	padding: 0
 
 .fix70
@@ -112,6 +119,8 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 	width: 80px
 .fix100
 	width: 100px
+.fix110
+	width: 110px
 .fix117
 	width: 117px
 .fix120
