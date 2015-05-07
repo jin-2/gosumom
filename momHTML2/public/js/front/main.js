@@ -113,6 +113,14 @@
 	$('#member_pw').click(function(){
 		$('.password_modify').toggle();
 	})
+
+	// if( $('#card_list') ){
+	// 	console.log('yes')
+	// 	$('.footer').css({
+	// 		'position':'fixed'
+	// 	});
+	// }
+	
 }(window, document));
 
 $(window).load(function(){
