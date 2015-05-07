@@ -153,7 +153,7 @@
 						<a href="http://www.childcare.go.kr/" title="새 창으로 열기" target="_blank" class="link">아이사랑 보육포털 상세정보 보기 &gt;</a>
 						<div class="btn_wrap">
 							<button type="button"><img src="/momHTML2/public/img/btn_upload.png" alt="사진 업로드"></button>
-							<button type="button" class="like_school active"><img src="/momHTML2/public/img/btn_check.png" alt="찜한 어린이집"></button>
+							<button type="button" class="like_school"><img src="/momHTML2/public/img/btn_check.png" alt="찜한 어린이집"></button>
 							<button type="button"><img src="/momHTML2/public/img/btn_face_share.png" alt="페이스북"></button>
 							<button type="button"><img src="/momHTML2/public/img/btn_cacao.png" alt="카카오스토리"></button>
 						</div>
@@ -179,7 +179,8 @@
 							<span class="rating_star">
 								<span class="inner" style="width:71%"></span>
 							</span> <br>
-							<strong class="hidden">3.4점 <span>5점 만점 중</span></strong>
+							<strong class="score red">3.5점<span class="hidden">5점 만점 중</span></strong>
+							<!-- <strong class="hidden">3.4점 <span>5점 만점 중</span></strong> -->
 						</div>
 						<ul class="review_items">
 							<li class="director">
@@ -268,7 +269,11 @@
 					<!-- // 리뷰 종합 평점 -->
 
 					<div class="review_write_link">
-						<p>과거 또는 현재 <strong>아튼빌어린이집</strong>을 다니고 있는 엄마들이 작성한 정보입니다.</p>
+						<p>과거 또는 현재 <strong>아튼빌어린이집</strong>을 다니고 있는 엄마들이 작성한 정보입니다.</p><div class="sorting_tab">
+							<span><a href="#" class="average active">평점순</a></span>
+							<span><a href="#" class="review">리뷰순</a></span>
+							<span><a href="#" class="review">공감순</a></span>
+						</div>
 						<a href="#"><img src="/momHTML2/public/img/btn_review_write_small.png" alt="리뷰작성"></a>
 					</div>
 
@@ -473,10 +478,8 @@
 								</div>
 							</dd>
 							<dd class="blind">
-								익명으로 <br>
-								어린이집 리뷰를 <span class="scarlet">작성</span>하고,<br>
-								모든 어린이집의<br>
-								리뷰를 <span class="scarlet">확인</span>하세요. <br>
+								익명으로 어린이집 리뷰를 <span class="scarlet">작성</span>하고,<br>
+								모든 어린이집의 리뷰를 <span class="scarlet">확인</span>하세요. <br>
 								<a href="#"><img src="/momHTML2/public/img/btn_review_write_large.png" alt="리뷰작성"></a>
 							</dd>
 						</dl>

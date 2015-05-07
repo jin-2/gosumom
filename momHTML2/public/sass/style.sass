@@ -186,10 +186,15 @@ body
 			border-bottom: 2px solid $main-point-color
 			text-decoration: none
 
+	span
+		margin-left: 4px
+		padding-left: 12px
+		background: url(#{$path}/bg_sorting_tab.gif) no-repeat 0 3px
+
 	span:first-child
-		margin-right: 4px
-		padding-right: 12px
-		background: url(#{$path}/bg_sorting_tab.gif) no-repeat 100% 3px
+		margin-left: 0
+		padding-left: 0
+		background: none
 
 .search_result_text
 	color: #252525
@@ -388,6 +393,7 @@ body
 	li
 		height: 240px
 		background: url(#{$path}/middle_banner_bg.jpg) no-repeat center 0
+
 
 		&.story
 			background-position: center 0
@@ -640,11 +646,11 @@ body
 		span
 			color: #787878
 	.rating_star_wrap
-		margin-top: 5px
+		margin-top: 6px
 		text-align: center
 		.score
 			display: inline-block
-			margin-top: 5px
+			margin-top: 7px
 
 .review_items, .counseling_items
 	li
@@ -696,18 +702,27 @@ body
 
 .review_write_link
 	overflow: hidden
+	position: relative
 	margin-top: 39px
-	padding: 14px 0 10px
+	padding: 40px 0 39px
 	border:
 		bottom: 4px solid #343434
-	+font-size(20px)
+	
 	background: url(#{$path}/bg_dash_line2.gif) repeat-x 0 0
 	p
 		float: left
-		padding-top: 28px
+		//padding-top: 28px
 		letter-spacing: -1px
-	a
-		float: right
+		+font-size(20px)
+	> a
+		position: absolute
+		top: 0
+		right: 0
+	.sorting_tab
+		float: left
+		margin:
+			left: 28px
+			top: 3px
 
 .personal_profile
 	box-sizing: border-box
@@ -832,9 +847,10 @@ body
 		padding-top: 90px
 		+size(1075px, 440px)
 		background: url(#{$path}/review_hidden.jpg) no-repeat 0 0
-		+font-size(32px)
+		+font-size(24px)
 		text-align: center
-		line-height: 1.45
+		line-height: 1.25
+		letter-spacing: -2px
 
 		a
 			display: inline-block
@@ -1206,7 +1222,7 @@ $consider: #FDB45C
 		+font-size(24px)
 		text-align: center
 		line-height: 1.25
-		letter-spacing: -1px
+		letter-spacing: -2px
 		a
 			display: inline-block
 			margin-top: 19px
@@ -1307,18 +1323,20 @@ $consider: #FDB45C
 				bottom: 14px
 	.text
 		line-height: 1.75
-	.date
+	.writer
 		display: block
 		margin-top: 10px
 		text-align: right
 		color: #adadad
 		+font-size(11px)
 		font-family: $dotum
+		strong
+			padding-right: 8px
 
-	.item:nth-of-type(5n)
+	.item:hover
 		background-color: $scarlet
 		color: #fff
-		.date
+		.writer
 			color: inherit
 
 .tab_content_gallery
@@ -1780,7 +1798,12 @@ $consider: #FDB45C
 		float: left
 		margin-left: 20px
 
+.page_list, .main_reviews
+	.writing_search_text
+		margin: 100px 0
+
 .writing_search_text
+	clear: both
 	margin-bottom: 50px
 	text-align: center
 	.icon

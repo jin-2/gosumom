@@ -203,7 +203,7 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 .masonry .item { overflow: hidden; float: left; width: 285px; margin-right: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; background-color: #fff; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); text-align: center; }
 .masonry .item > a { display: block; border-top: 7px solid #EB3B4B; text-decoration: none; }
 .ie8 .masonry .item > a { position: relative; border-radius: 10px; border-top: 0; }
-.masonry .item .school_name { display: block; padding-top: 18px; font-size: 16px; font-size: 1.6rem; color: #333; font-weight: 600; }
+.masonry .item .school_name { display: block; padding: 18px 10px 0; font-size: 16px; font-size: 1.6rem; color: #333; font-weight: 600; }
 .masonry .item .grade_average { display: block; margin-top: 7px; color: #e0e0e0; font-size: 11px; font-size: 1.1rem; }
 .masonry .item .rating_star_wrap { margin-top: 4px; }
 .masonry .item .list_info, .masonry .item .best_review, .masonry .item .state { font-family: "돋움", "dotum"; font-size: 11px; font-size: 1.1rem; }
@@ -212,7 +212,7 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 .masonry .item .list_info::before { content: ""; display: block; width: 30px; margin: 12px auto 14px; border-top: 1px solid #DBDBDB; }
 .masonry .item .list_info li { box-sizing: border-box; float: left; width: 50%; font-size: 11px; font-size: 1.1rem; color: #555; }
 .masonry .item .list_info li.full { width: 100%; }
-.masonry .item .best_review { margin-top: 17px; padding: 0 20px; border-top: 1px solid #f6f6f6; text-align: left; color: #ADADAD; }
+.masonry .item .best_review { margin-top: 17px; padding: 0 20px; border-top: 1px solid #f6f6f6; text-align: left; color: #ADADAD; letter-spacing: -1px; }
 .masonry .item .best_review .nickname { display: block; padding: 8px 0 8px; }
 .masonry .item .state { overflow: hidden; margin-top: 9px; border-top: 1px solid #f6f6f6; color: #ACACAC; }
 .masonry .item .state em { color: #eb3b4b; font-style: normal; font-weight: bold; }
@@ -454,7 +454,8 @@ body.main { background-color: #F7F7F7; }
 
 .sorting_tab a { color: #222; font-weight: 700; }
 .sorting_tab a.active, .sorting_tab a:hover { border-bottom: 2px solid #EB3B4B; text-decoration: none; }
-.sorting_tab span:first-child { margin-right: 4px; padding-right: 12px; background: url(/momHTML2/public/img/bg_sorting_tab.gif) no-repeat 100% 3px; }
+.sorting_tab span { margin-left: 4px; padding-left: 12px; background: url(/momHTML2/public/img/bg_sorting_tab.gif) no-repeat 0 3px; }
+.sorting_tab span:first-child { margin-left: 0; padding-left: 0; background: none; }
 
 .search_result_text { color: #252525; padding-left: 10px; background: url(/momHTML2/public/img/bul_arrow.png) no-repeat 0 5px; }
 .search_result_text strong { font-family: Tahoma; color: #EB3B4B; }
@@ -566,8 +567,8 @@ body.main { background-color: #F7F7F7; }
 .review_total .name { margin-top: 36px; font-size: 32px; font-size: 3.2rem; text-align: center; letter-spacing: -1px; }
 .review_total .text_total { margin-top: 10px; text-align: center; }
 .review_total .text_total span { color: #787878; }
-.review_total .rating_star_wrap { margin-top: 5px; text-align: center; }
-.review_total .rating_star_wrap .score { display: inline-block; margin-top: 5px; }
+.review_total .rating_star_wrap { margin-top: 6px; text-align: center; }
+.review_total .rating_star_wrap .score { display: inline-block; margin-top: 7px; }
 
 .review_items li .icon, .counseling_items li .icon { display: inline-block; width: 45px; height: 37px; background: url(/momHTML2/public/img/bg_collect.png) no-repeat; }
 .review_items .director .icon, .counseling_items .director .icon { background-position: 7px -130px; }
@@ -585,9 +586,10 @@ body.main { background-color: #F7F7F7; }
 .review_total .review_items li:first-child { margin-left: 0; }
 .review_total .review_items .rating_star_wrap { margin: 11px 0 10px; }
 
-.review_write_link { overflow: hidden; margin-top: 39px; padding: 14px 0 10px; border-bottom: 4px solid #343434; font-size: 20px; font-size: 2rem; background: url(/momHTML2/public/img/bg_dash_line2.gif) repeat-x 0 0; }
-.review_write_link p { float: left; padding-top: 28px; letter-spacing: -1px; }
-.review_write_link a { float: right; }
+.review_write_link { overflow: hidden; position: relative; margin-top: 39px; padding: 40px 0 39px; border-bottom: 4px solid #343434; background: url(/momHTML2/public/img/bg_dash_line2.gif) repeat-x 0 0; }
+.review_write_link p { float: left; letter-spacing: -1px; font-size: 20px; font-size: 2rem; }
+.review_write_link > a { position: absolute; top: 0; right: 0; }
+.review_write_link .sorting_tab { float: left; margin-left: 28px; margin-top: 3px; }
 
 .personal_profile { box-sizing: border-box; position: relative; padding-left: 59px; height: 48px; }
 .personal_profile .photo { overflow: hidden; position: absolute; top: 0; left: 0; display: inline-block; width: 47px; height: 48px; border-radius: 50%; background: #e6e6e6 url(../img/bg_collect.png) no-repeat -263px -391px; }
@@ -616,7 +618,7 @@ body.main { background-color: #F7F7F7; }
 .review_items .box_text, .counseling_items .box_text { box-sizing: border-box; padding: 12px 20px 14px; background-color: #f0f0f0; font-size: 12px; font-size: 1.2rem; font-family: "돋움", "dotum"; color: #787878; line-height: 1.5; }
 .ie8 .review_items .box_text, .ie8 .counseling_items .box_text { position: relative; border-radius: 17px; }
 
-.review_personal .blind { display: block; padding-top: 90px; width: 1075px; height: 440px; background: url(/momHTML2/public/img/review_hidden.jpg) no-repeat 0 0; font-size: 32px; font-size: 3.2rem; text-align: center; line-height: 1.45; }
+.review_personal .blind { display: block; padding-top: 90px; width: 1075px; height: 440px; background: url(/momHTML2/public/img/review_hidden.jpg) no-repeat 0 0; font-size: 24px; font-size: 2.4rem; text-align: center; line-height: 1.25; letter-spacing: -2px; }
 .review_personal .blind a { display: inline-block; margin-top: 20px; }
 
 .sub_tab { overflow: hidden; }
@@ -721,7 +723,7 @@ body.main { background-color: #F7F7F7; }
 .counseling_personal .total .satisfaction { width: 216px; }
 .counseling_personal .total .result { width: 241px; margin-right: 1px; }
 .counseling_personal .total .button_sns { margin-top: 5px; margin-left: 6px; }
-.counseling_personal .blind { box-sizing: border-box; width: 100%; height: 228px; padding-top: 76px; background: url(/momHTML2/public/img/review_hidden2.png) no-repeat 0 0; font-size: 24px; font-size: 2.4rem; text-align: center; line-height: 1.25; letter-spacing: -1px; }
+.counseling_personal .blind { box-sizing: border-box; width: 100%; height: 228px; padding-top: 76px; background: url(/momHTML2/public/img/review_hidden2.png) no-repeat 0 0; font-size: 24px; font-size: 2.4rem; text-align: center; line-height: 1.25; letter-spacing: -2px; }
 .counseling_personal .blind a { display: inline-block; margin-top: 19px; }
 
 .counseling_items { overflow: hidden; padding-top: 30px; }
@@ -745,9 +747,10 @@ body.main { background-color: #F7F7F7; }
 .masonry_gallery .item { box-sizing: border-box; margin-bottom: 25px; padding: 20px; padding-top: 0; width: 342px; background-color: #f0f0f0; color: #787878; }
 .masonry_gallery .item > img { cursor: pointer; width: 342px; margin-left: -20px; margin-bottom: 14px; }
 .masonry_gallery .text { line-height: 1.75; }
-.masonry_gallery .date { display: block; margin-top: 10px; text-align: right; color: #adadad; font-size: 11px; font-size: 1.1rem; font-family: "돋움", "dotum"; }
-.masonry_gallery .item:nth-of-type(5n) { background-color: #eb3b4b; color: #fff; }
-.masonry_gallery .item:nth-of-type(5n) .date { color: inherit; }
+.masonry_gallery .writer { display: block; margin-top: 10px; text-align: right; color: #adadad; font-size: 11px; font-size: 1.1rem; font-family: "돋움", "dotum"; }
+.masonry_gallery .writer strong { padding-right: 8px; }
+.masonry_gallery .item:hover { background-color: #eb3b4b; color: #fff; }
+.masonry_gallery .item:hover .writer { color: inherit; }
 
 .tab_content_gallery .head { margin-top: 48px; margin-bottom: 40px; color: #444; text-align: center; }
 .tab_content_gallery .head > button { margin-top: 19px; }
@@ -869,7 +872,9 @@ body.main { background-color: #F7F7F7; }
 .page_search .search_result_text { float: left; }
 .page_search .sorting_tab { float: left; margin-left: 20px; }
 
-.writing_search_text { margin-bottom: 50px; text-align: center; }
+.page_list .writing_search_text, .main_reviews .writing_search_text { margin: 100px 0; }
+
+.writing_search_text { clear: both; margin-bottom: 50px; text-align: center; }
 .writing_search_text .icon { display: inline-block; width: 196px; height: 196px; }
 .writing_search_text .icon.search { background-position: -800px 0; }
 .writing_search_text .icon.no { background-position: -800px -220px; }
