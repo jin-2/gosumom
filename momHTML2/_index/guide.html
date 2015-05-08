@@ -89,12 +89,25 @@
 
 				<span class="pill">리뷰 종합 평점 </span>
 				<hr>
+				
 				<span class="like_count"><span class="icon_heart"></span> <span class="emerald">9,999명</span>이 찜하였습니다.</span>
+				<hr>
+
+				<span class="give_state done"><span class="icon"></span>승인</span>
+				<span class="give_state ing"><span class="icon"></span>심사중</span>
+				<span class="give_state reject"><span class="icon"></span>거절</span>
+				<hr>
 
 				<!-- // Lozenges -->
 
 				<!-- Star -->
 				<h4 id="_star">Star</h4>
+					<div class="rating_star_wrap small_x">
+						<span class="rating_star">
+							<span class="inner" style="width:71%"></span>
+						</span>
+						<strong class="hidden">3.5<span>5점 만점 중</span></strong>
+					</div>
 
 					<div class="rating_star_wrap">
 						<span class="rating_star">
@@ -220,6 +233,23 @@
 					</div>
 				</div>
 				<hr>
+
+				<!-- 팝업 -->
+				<div id="popup_profile_photo" class="popup_wrap">
+					<div class="inner">
+						<button type="button" class="popup_close close">닫기</button>
+						<h4 class="title">프로필사진 변경</h4>
+						<p class="title_desc">사진을 선택해주세요.</p>
+						내용
+						<div class="btn_wrap">
+							<button type="button" class="button fix117">취소</button>
+							<button type="submit" class="button fix117 scarlet">변경</button>
+						</div>
+					</div>
+				</div>
+				<!-- // 팝업 -->
+				<hr>
+
 				<!-- //box -->
 
 				<!-- form -->
@@ -306,7 +336,6 @@
 						<a href="#" class="next"><span>다음</span></a>
 						<a href="#" class="last"><span>마지막</span></a>
 					</div>
-
 					<hr>
 
 					<div class="paging other">
@@ -320,6 +349,72 @@
 						<a href="#" class="next"><span>다음</span></a>
 						<a href="#" class="last"><span>마지막</span></a>
 					</div>
+					<hr>
+
+					<table class="table">
+						<caption class="hidden">회원정보</caption>
+						<colgroup>
+							<col width="200">
+							<col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>
+									<label for="member_nickname" class="head">닉네임</label>
+								</th>
+								<td>
+									<input type="text" name="member_nickname" id="member_nickname" value="고수맘이 되고 싶은 하수맘">
+									<button type="button" id="" class="button_line_large fix110">닉네임 변경</button>
+									<span class="note">*사용 가능한 닉네임입니다.</span>
+									<span class="note">*이미 사용중인 닉네임입니다.</span>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label class="head">휴대폰 번호</label>
+								</th>
+								<td>
+									<button type="button" class="button_line_large fix130">SMS 인증하기</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+
+					<table class="table_col">
+						<caption class="hidden">회원정보</caption>
+						<colgroup>
+							<col width="200">
+							<col width="*">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>th1</th>
+								<th>th2</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<label for="member_nickname" class="head">닉네임</label>
+								</td>
+								<td>
+									<input type="text" name="member_nickname" id="member_nickname" value="고수맘이 되고 싶은 하수맘">
+									<button type="button" id="" class="button_line_large fix110">닉네임 변경</button>
+									<span class="note">*사용 가능한 닉네임입니다.</span>
+									<span class="note">*이미 사용중인 닉네임입니다.</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label class="head">휴대폰 번호</label>
+								</td>
+								<td>
+									<button type="button" class="button_line_large fix130">SMS 인증하기</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				
 				<!-- //board -->
 

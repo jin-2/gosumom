@@ -1935,68 +1935,6 @@ $consider: #FDB45C
 			background-position: -730px -400px
 			vertical-align: top
 
-// common table
-.table 
-	button, a[class*=button], input, select, span
-		vertical-align: middle
-
-	input + button, input + a[class*=button]
-		margin-left: 2px
-
-.table
-	width: 100%
-	border-top: 1px solid $scarlet
-	border-collapse: separate
-
-	th, td
-		padding: 10px 0
-		border-bottom: 1px solid #e2e2e2
-		@extend %cf
-
-	tbody th
-		+font-size(15px)
-		font-weight: 600
-		text-align: left
-		background-color: #f4f4f4
-		color: #424242
-
-		.head
-			padding-left: 30px
-
-	td
-		padding-left: 10px
-
-	input
-		vertical-align: middle
-
-	.note
-		margin-left: 17px
-		color: $scarlet
-		vertical-align: middle
-		letter-spacing: -1px
-
-	.dcheck
-		display: block
-		margin-top: 10px
-		font-weight: 600
-
-	.photo
-		display: inline-block
-		width: 78px
-		height: 78px
-		border: 1px solid #d5d5d5
-		@extend %is
-		background-position: -410px -630px
-		background-color: #f3f3f3
-		vertical-align: bottom
-		img
-			+size(78px, 78px)
-
-		& + .button_line_large
-			vertical-align: bottom
-			margin:
-				left: 2px
-
 .page_member
 	padding-bottom: 90px
 	.table
@@ -2074,3 +2012,76 @@ $consider: #FDB45C
 		opacity: 0
 		filter: alpha(apacity=0)
 		height: 33px
+
+// common style 마이페이지 승인상태
+.give_state
+	overflow: hidden
+	+font-size(15px)
+	font-weight: 600
+	.icon
+		display: inline-block
+		margin-right: 7px
+		+size(18px, 18px)
+		@extend %is
+		vertical-align: top
+
+	&.done
+		color: #EB3B4B
+		.icon
+			background-position: -530px -640px
+
+	&.ing
+		color: #919191
+		.icon
+			background-position: -530px -670px
+
+	&.reject
+		.icon
+			background-position: -530px -700px
+
+// 마이페이지 리스트 테이블
+.page_member
+	table
+		tr td:first-child
+			color: #7B7B7B
+			
+		.number
+			font-family: $play
+
+		.switch
+			.bar
+				display: inline-block
+				margin: 8px 2px 0
+				+size(1px, 16px)
+				background: url(#{$path}/bg_button_bar.gif) repeat-y 0 0
+
+		.reject
+			cursor: pointer
+			text-decoration: none
+
+		.color_positive, .color_normal, .color_negative
+			+font-size(15px)
+			font-weight: 600
+
+		a[href^=tel]
+			text-decoration: none
+
+// 마이페이지 - 욕설, 비방 팝업
+#popup_reject
+	width: 400px
+
+	.reject_reason
+		.box
+			padding: 31px 29px 28px
+			border: 1px solid #d5d5d5
+			background-color: #f3f3f3
+			line-height: 1.5
+			color: #252525
+.popup_wrap
+	.reject_reason.inner
+		padding: 
+			left: 30px
+			right: 30px
+
+	.btn_wrap
+		margin-top: 20px
