@@ -82,7 +82,7 @@
 		</header>
 		<!-- // header -->
 
-		<div id="contents" class="page_member">
+		<div id="contents" class="page_member survey">
 			<div class="sub_visual">
 				<div class="wrapper">
 					<h3>마이페이지</h3>
@@ -112,185 +112,107 @@
 
 			<section class="sub_contents">
 				<div class="wrapper">
-					<h4 class="title"><span class="icon"></span>프로필</h4>
+					<h4><img src="../../../public/img/survey_title.png" alt="엄마들의 생각이 궁금해요~"></h4>
+					<p><img src="../../../public/img/survey_desc.png" alt="참여해주신 설문조사의 결과는 객관적인 평가가 될 수 있도록 별점 평가에 반영됩니다. 내 아이의 보다 나은 보육 환경을 위해  적극적으로 참여해 주세요. "></p>
+
 					<form action="#">
-						<fildset>
-							<legend class="hidden">프로필 수정양식</legend>
-							<table class="table">
-								<caption class="hidden">회원정보</caption>
-								<colgroup>
-									<col width="200">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th>
-											<label for="member_photo" class="head">프로필 정보</label>
-										</th>
-										<td>
-											<div class="photo"><img src="http://lorempixel.com/238/238/cats" alt=""></div>
-											<button type="button" id="button_profile" class="button_line_large fix80">변경</button>
-
-											<!-- 팝업 -->
-											<div id="popup_profile_photo" class="popup_wrap">
-												<div class="inner profile_photo">
-													<button type="button" class="popup_close close">닫기</button>
-													<h4 class="title">프로필사진 변경</h4>
-													<p class="title_desc">사진을 선택해주세요.</p>
-													<div class="photo_wrap">
-														<img src="http://lorempixel.com/238/238/cats" alt="">
-													</div>
-													<div class="btn_wrap">
-														<div class="button_file_input2">
-															<button type="button" class="button_line white fix100"><span class="icon search"></span>찾아보기</button>
-															<input type="file" name="" class="input_hidden">
-														</div>														
-														<button type="button" class="button_line white fix100"><span class="icon delete"></span>삭제하기</button>
-													</div>
-													<div class="btn_wrap">
-														<button type="button" class="button fix117">취소</button>
-														<button type="submit" class="button fix117 scarlet">변경</button>
-													</div>
-												</div>
-											</div>
-											<!-- // 팝업 -->
-
-										</td>
-									</tr>
-									<tr>
-										<th>
-											<label for="member_email" class="head">이메일</label>
-										</th>
-										<td>
-											<input type="email" name="member_email" id="member_email" value="user@mail.co.kr" disabled="disabled">
-											<span class="note">*페이스북으로 로그인됨</span>
-											<span class="dcheck checked">
-												<input type="checkbox" id="get_mail" name="" value="" checked="checked">
-												<label for="get_mail"><em></em>E-Mail 수신 동의</label>
+						<fieldset>
+							<dl class="survey_item">
+								<dt>
+									<img src="../../../public/img/survey_Q.png" alt="어린이집 선택 시 어떤 부분을 가장 먼저 고려하시나요?">
+								</dt>
+								<dd>
+									<ol class="survey_list set_radio">
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item1"> 
+												<label for="survey_item1">
+													<span></span>
+													<img src="../../../public/img/value1.png" alt=""><br>
+													원장선생님
+												</label>
 											</span>
-										</td>
-									</tr>
-									<tr>
-										<th>
-											<label for="member_nickname" class="head">닉네임</label>
-										</th>
-										<td>
-											<input type="text" name="member_nickname" id="member_nickname" value="고수맘이 되고 싶은 하수맘">
-											<button type="button" id="" class="button_line_large fix110">닉네임 변경</button>
-											<span class="note">*사용 가능한 닉네임입니다.</span>
-											<span class="note">*이미 사용중인 닉네임입니다.</span>
-										</td>
-									</tr>
-									<tr>
-										<th>
-											<label class="head">휴대폰 번호</label>
-										</th>
-										<td>
-											<button type="button" class="button_line_large fix130">SMS 인증하기</button>
-										</td>
-									</tr>
-									<tr>
-										<th>
-											<label for="member_phone" class="head">휴대폰 번호</label>
-										</th>
-										<td>
-											<select name="" id="member_phone" title="핸드폰 처음 3자리 선택">
-												<option value="010">010</option>
-											</select>
-											<span class="bar"></span>
-											<input type="text" name="member_phone2" id="member_phone2" maxlength="4" class="phone" title="핸드폰 중간 4자리 입력">
-											<span class="bar"></span>
-											<input type="text" name="member_phone3" id="member_phone3" maxlength="4" class="phone" title="핸드폰 마지막 4자리 입력">
-											<button type="button" id="member_sms" class="button_line_large fix130">휴대폰 번호 변경</button>
-											<span class="dcheck">
-												<input type="checkbox" id="get_mail" name="" value="" >
-												<label for="get_mail"><em></em>SMS 수신 동의</label>
+										</li>
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item2"> 
+												<label for="survey_item2">
+													<span></span>
+													<img src="../../../public/img/value2.png" alt="">
+													담임선생님
+												</label>
 											</span>
-										</td>
-									</tr>
-									<tr>
-										<th>
-											<label class="head">비밀번호 변경</label>
-										</th>
-										<td>
-											<button type="button" id="member_pw" class="button_line_large fix130">비밀번호 변경</button>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<!-- 비밀번호 변경 table -->
-							<div class="password_modify">
-								<table class="table">
-									<caption class="hidden">비밀번호 변경</caption>
-									<colgroup>
-										<col width="200">
-										<col width="*">
-									</colgroup>
-									<tbody>
-										<tr class="first">
-											<th>
-												<label for="member_pw_current" class="head">현재 비밀번호</label>
-											</th>
-											<td>
-												<input type="password" name="member_pw_current" id="member_pw_current">
-												<span class="note">*현재 비밀번호가 올바르지 않습니다.</span>
-											</td>
-										</tr>
-										<tr>
-											<th>
-												<label for="member_pw_new" class="head">새 비밀번호</label>
-											</th>
-											<td>
-												<input type="password" name="member_pw_new" id="member_pw_new">
-												<span class="note">*비밀번호 형식이 맞지 않습니다.</span>
-											</td>
-										</tr>
-										<tr>
-											<th>
-												<label for="member_pw_check" class="head">새 비밀번호 확인</label>
-											</th>
-											<td>
-												<input type="password" name="member_pw_check" id="member_pw_check">
-												<span class="note">*이미 입력한 비밀번호와 동일한 비밀번호를 입력해주세요.</span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<!-- 회원 탈퇴 -->
-							<div class="drop_out">
-								<table class="table">
-									<caption class="hidden">회원탈퇴</caption>
-									<colgroup>
-										<col width="200">
-										<col width="*">
-									</colgroup>
-									<tbody>
-										<tr class="first">
-											<th>
-												<label for="member_pw_current" class="head">회원 탈퇴</label>
-											</th>
-											<td>
-											<button type="submit" id="member_pw" class="button_line_large fix130">회원 탈퇴 신청</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="btn_wrap">
-								<button type="button" class="button_large fix120"><span class="icon cancel"></span>취소</button>
-								<button type="submit" class="button_large scarlet fix120"><span class="icon check"></span>확인</button>
-							</div>
-						</fildset>
+										</li>
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item3"> 
+												<label for="survey_item3">
+													<span></span>
+													<img src="../../../public/img/value3.png" alt="">
+													위생 및 청결
+												</label>
+											</span>
+										</li>
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item4"> 
+												<label for="survey_item4">
+													<span></span>
+													<img src="../../../public/img/value4.png" alt="">
+													건강과 안전
+												</label>
+											</span>
+										</li>
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item5"> 
+												<label for="survey_item5">
+													<span></span>
+													<img src="../../../public/img/value5.png" alt="">
+													먹거리
+												</label>
+											</span>
+										</li>
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item6"> 
+												<label for="survey_item6">
+													<span></span>
+													<img src="../../../public/img/value6.png" alt="">
+													교구 및 교재의 다양성
+												</label>
+											</span>
+										</li>
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item7"> 
+												<label for="survey_item7">
+													<span></span>
+													<img src="../../../public/img/value7.png" alt="">
+													교육의 기회
+												</label>
+											</span>
+										</li>
+										<li>
+											<span class="dradio">
+												<input type="radio" name="rad" id="survey_item8"> 
+												<label for="survey_item8">
+													<span></span>
+													<img src="../../../public/img/value8.png" alt="">
+													보육 비용
+												</label>
+											</span>
+										</li>
+									</ol>
+								</dd>
+							</dl>
+							<input type="image" src="../../../public/img/btn_survey.png" alt="설문참여">
+						</fieldset>
 					</form>
+					
 				</div>
 			</section>
 		</div><!-- //.content-wrap -->
-
-
 
 		<footer class="footer">
 			<div class="wrapper">

@@ -2085,3 +2085,65 @@ $consider: #FDB45C
 
 	.btn_wrap
 		margin-top: 20px
+
+//
+ * --------------------------------
+ * 설문조사 페이지
+ * --------------------------------
+.page_member.survey
+	padding-bottom: 0
+
+	.sub_contents
+		background: url(#{$path}/bg_sky.jpg) no-repeat 50% 0
+		
+		.wrapper
+			box-sizing: border-box
+			height: 800px
+			text-align: center
+			padding: 100px 0 93px
+
+	.tab_wrap
+		margin-bottom: 0
+
+.survey_item
+	margin:
+		top: 59px
+		bottom: 70px
+
+	dd
+		margin-top: 28px
+
+.survey_list
+	overflow: hidden
+	li
+		float: left
+		width: 142px
+		height: 193px
+		text-align: center
+
+	.dradio
+		height: 193px
+
+		input
+			position: absolute
+			left: 50%
+			bottom: 0
+			opacity: 1
+			margin-left: -10px
+
+		label 
+			padding-right: 0
+			+font-size(16px)
+			color: #424242
+			font-weight: 600
+			letter-spacing: -1px
+			cursor: pointer
+			
+			span
+				position: absolute
+				bottom: 0
+				left: 50%
+				margin-left: -10px
+			
+			img
+				margin-bottom: 4px
