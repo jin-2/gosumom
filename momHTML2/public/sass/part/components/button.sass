@@ -84,10 +84,7 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 		border-color: #eb3a4a
 		background-color: #fff
 		color: #eb3c4b
-	&.white_other
-		border-color: #19bdc6
-		background-color: #fff
-		color: #19bdc6
+	
 
 .button_line_large
 	height: 40px
@@ -98,6 +95,15 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 	border-radius: 4px
 	line-height: 60px
 	+font-size(16px)
+	background-color: #fff
+	border-color: #eb3a4a
+	color: #eb3c4b
+
+	&.other
+		border-color: #19bdc6
+		background-color: #fff
+		color: #19bdc6
+
 
 	.icon
 		+size(28px, 27px)
@@ -105,10 +111,22 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 		&.note
 			background-position: -150px -650px
 		&.pen
-			background-position: -200px -650px
+			background-position: -230px -650px
 
 	& + &
 		margin-left: 1px
+
+.button_line_xlarge:hover
+	background-color: $scarlet
+	color: #fff
+	.icon
+		&.note
+			background-position: -120px -650px
+		&.pen
+			background-position: -200px -650px
+	&.other
+		background-color: $emerald
+		color: #fff
 
 .fix100, .fix117, .fix120, .fix70, .fix130, .fix80, .fix185, .fix110
 	padding: 0
