@@ -112,7 +112,7 @@
 
 			<section class="sub_contents">
 				<div class="wrapper">
-					<h4><img src="../../../public/img/survey_title.png" alt="엄마들의 생각이 궁금해요~"></h4>
+					<h4><img src="../../../public/img/survey_title_result.png" alt="고수맘의 설문결과입니다."></h4>
 					<p><img src="../../../public/img/survey_desc.png" alt="참여해주신 설문조사의 결과는 객관적인 평가가 될 수 있도록 별점 평가에 반영됩니다. 내 아이의 보다 나은 보육 환경을 위해  적극적으로 참여해 주세요. "></p>
 
 					<form action="#">
@@ -206,12 +206,12 @@
 									</ol>
 								</dd>
 							</dl>
-							<div class="btn_wrap">
-								<input type="image" src="../../../public/img/btn_survey.png" alt="설문참여">
-							</div>
+							<input type="image" src="../../../public/img/btn_survey.png" alt="설문참여">
 						</fieldset>
 					</form>
-					
+					<div>
+						<canvas id="canvas" height="187" width="1200"></canvas>
+					</div>
 				</div>
 			</section>
 		</div><!-- //.content-wrap -->
@@ -242,6 +242,35 @@
 	<!-- <script src="https://cdnjs.com/libraries/chart.js"></script> -->
 	<script src="../../../public/js/front/main.js"></script>
 	<script>
+		var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+		var barChartData = {
+			labels : ["원장선생님","2","3","4","5","6","7","8"],
+			datasets : [
+				{
+					fillColor : "rgba(231,50,64,1)",
+					highlightFill: "rgba(231,50,64,0.9)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+
+		}
+		window.onload = function(){
+			var ctx = document.getElementById("canvas").getContext("2d");
+			window.myBar = new Chart(ctx).Bar(barChartData, {
+				responsive : true,
+				scaleGridLineColor : "#cbd0d1",
+				scaleGridLineWidth : 1,
+				barValueSpacing : 60,
+				barShowStroke : false,
+				scaleFontFamily: "'Play', sans-serif",
+				scaleFontSize: 13,
+				scaleFontStyle: "bold",
+				scaleFontColor: "#4C505B",
+				scaleShowLabels: true,
+
+			});
+		}
 		
 	</script>
 

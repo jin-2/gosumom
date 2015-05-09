@@ -2094,42 +2094,97 @@ $consider: #FDB45C
 	padding-bottom: 0
 
 	.sub_contents
-		background: url(#{$path}/bg_sky.jpg) no-repeat 50% 0
+		background: #F3F3EA url(#{$path}/bg_sky.jpg) no-repeat 50% 0
 		
 		.wrapper
 			box-sizing: border-box
-			height: 800px
+			//height: 800px
 			text-align: center
 			padding: 100px 0 93px
 
 	.tab_wrap
 		margin-bottom: 0
 
+	.btn_wrap
+		margin-top: 59px
+		text-align: center
+
 .survey_item
 	margin:
 		top: 59px
-		bottom: 70px
 
 	dd
 		margin-top: 28px
 
+	dd.total_wrap
+		margin-top: 70px
+		text-align: center
+	.total
+		display: inline-block
+		
+		.head, .body
+			float: left
+			display: block
+			height: 50px
+			line-height: 50px
+
+		.head
+			position: relative
+			margin-left: 10px
+			padding: 0 20px
+			background-color: #4c505b
+			color: #fff
+			+font-size(16px)
+			font-weight: 600
+			.arrow
+				position: absolute
+				top: 19px
+				right: -5px
+				width: 0
+				height: 0
+				border-top: 5px solid transparent
+				border-left: 6px solid #4c505b
+				border-bottom: 5px solid transparent
+
+		.body
+			padding: 0 17px
+			background-color: #fff
+			+font-size(14px)
+			color: #444
+			letter-spacing: -1px
+
+		.number
+			+font-size(16px)
+			font-family: $play
+			font-weight: 700
+
 .survey_list
 	overflow: hidden
 	li
+		position: relative
 		float: left
-		padding: 0 6px
+		padding: 0 5px 0 6px
 		width: 142px
 		height: 193px
 		text-align: center
+
+		+font-size(16px)
+		color: #424242
+		font-weight: 600
+		letter-spacing: -1px
 
 		&:first-child, &.last
 			width: 130px
 
 		&:first-child
-			padding-left: 0
+			padding:
+				left: 0
+				right: 11px
 
 		&.last
-			padding-right: 0
+			padding:
+				right: 0
+				left: 11px
 
 	.dradio
 		height: 193px
@@ -2143,9 +2198,9 @@ $consider: #FDB45C
 		label 
 			padding-right: 0
 			+font-size(16px)
-			color: #424242
-			font-weight: 600
-			letter-spacing: -1px
+			// color: #424242
+			// font-weight: 600
+			// letter-spacing: -1px
 			cursor: pointer
 			
 			span
@@ -2155,5 +2210,57 @@ $consider: #FDB45C
 				margin-left: -10px
 				float: none
 			
-			img
-				margin-bottom: 4px
+	img
+		margin-bottom: 4px
+	
+	// 결과페이지
+	&.result
+		li
+			height: auto
+			padding-top: 35px
+		.score
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			text-align: center
+			font-weight: 700
+			font-family: $play
+			+font-size(18px)
+			color: $scarlet
+
+			.ko
+				font-family: $nanumG
+				font-weight: 600
+	
+
+
+
+
+.result_graph
+	overflow: hidden
+	margin-bottom: 5px
+	padding: 4px 0
+	height: 160px
+	background: url(#{$path}/bg_graph.png) no-repeat 0 0
+	> div
+		height: 152px
+		float: left
+		width: 12.5%
+		text-align: center
+
+.bar_graph_wrap
+	position: relative
+	display: inline-block
+	width: 20px
+	height: 152px
+
+	.bar_inner
+		position: absolute
+		left: 0
+		bottom: 0
+		display: inline-block
+		background: $scarlet url(#{$path}/bg_bar_graph.gif) repeat-y 0 0
+		width: 100%
+		height: 50%
+		vertical-align: bottom
