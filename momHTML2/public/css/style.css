@@ -934,6 +934,7 @@ body.main { background-color: #F7F7F7; }
 .tab_wrap .sub_tab a { border-right: 1px solid #ed4f5d; margin-left: 0; background-color: #eb3b4b; color: #fff; }
 .tab_wrap .sub_tab li:first-child a { border-left: 1px solid #ed4f5d; }
 .tab_wrap .sub_tab a:hover, .tab_wrap .sub_tab a.active { background-color: #fff; color: #eb3b4b; }
+.tab_wrap .sub_tab a.active.survey { background-color: #dbecf2; }
 
 .page_member { background-color: #fff; }
 .page_member .tab_wrap { margin-bottom: 50px; }
