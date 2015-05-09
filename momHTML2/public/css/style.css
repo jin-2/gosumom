@@ -432,6 +432,9 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 .dradio.other label span { width: 22px; }
 .dradio.other.checked label span { background-position: -200px -400px; }
 
+.dradio.other2 label span { background: url(../img/bg_collect.png) no-repeat 1px -439px; }
+.dradio.other2.checked label span { background-position: -49px -439px; }
+
 .-placeholder { color: #cecdcd; font-family: "돋움", "dotum"; font-size: 12px; font-size: 1.2rem; line-height: 21px; }
 
 ::placeholder, ::-moz-placeholder, ::-webkit-placeholder { color: #cecdcd; }
@@ -920,7 +923,7 @@ body.main { background-color: #F7F7F7; }
 .page_search .result li > address { width: 573px; margin-right: 5px; font-style: normal; color: #252525; }
 .page_search .result .btn_wrap { display: table-cell; padding-left: 5px; vertical-align: middle; }
 
-.tab_wrap { height: 54px; background-color: #eb3b4b; }
+.tab_wrap { background-color: #eb3b4b; }
 .tab_wrap .wrapper { position: relative; }
 .tab_wrap .breadcrumb { position: absolute; top: 0; right: 0; }
 .tab_wrap .breadcrumb li, .tab_wrap .breadcrumb a { color: #F59DA5; }
@@ -992,11 +995,14 @@ body.main { background-color: #F7F7F7; }
 .survey_item dd { margin-top: 28px; }
 
 .survey_list { overflow: hidden; }
-.survey_list li { float: left; width: 142px; height: 193px; text-align: center; }
+.survey_list li { float: left; padding: 0 6px; width: 142px; height: 193px; text-align: center; }
+.survey_list li:first-child, .survey_list li.last { width: 130px; }
+.survey_list li:first-child { padding-left: 0; }
+.survey_list li.last { padding-right: 0; }
 .survey_list .dradio { height: 193px; }
-.survey_list .dradio input { position: absolute; left: 50%; bottom: 0; opacity: 1; margin-left: -10px; }
+.survey_list .dradio input { position: absolute; left: 50%; bottom: 0; margin-left: -10px; }
 .survey_list .dradio label { padding-right: 0; font-size: 16px; font-size: 1.6rem; color: #424242; font-weight: 600; letter-spacing: -1px; cursor: pointer; }
-.survey_list .dradio label span { position: absolute; bottom: 0; left: 50%; margin-left: -10px; }
+.survey_list .dradio label span { position: absolute; bottom: 0; left: 50%; margin-left: -10px; float: none; }
 .survey_list .dradio label img { margin-bottom: 4px; }
 
 /*# sourceMappingURL=style.css.map */

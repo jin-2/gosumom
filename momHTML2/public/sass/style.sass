@@ -1877,7 +1877,7 @@ $consider: #FDB45C
  * 탭
  * --------------------------------
 .tab_wrap
-	height: 54px
+	//height: 54px
 	background-color: $scarlet
 	
 	.wrapper
@@ -2117,9 +2117,19 @@ $consider: #FDB45C
 	overflow: hidden
 	li
 		float: left
+		padding: 0 6px
 		width: 142px
 		height: 193px
 		text-align: center
+
+		&:first-child, &.last
+			width: 130px
+
+		&:first-child
+			padding-left: 0
+
+		&.last
+			padding-right: 0
 
 	.dradio
 		height: 193px
@@ -2128,7 +2138,6 @@ $consider: #FDB45C
 			position: absolute
 			left: 50%
 			bottom: 0
-			opacity: 1
 			margin-left: -10px
 
 		label 
@@ -2144,6 +2153,7 @@ $consider: #FDB45C
 				bottom: 0
 				left: 50%
 				margin-left: -10px
+				float: none
 			
 			img
 				margin-bottom: 4px
