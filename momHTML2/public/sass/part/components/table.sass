@@ -66,6 +66,9 @@
 	border-top: 1px solid $scarlet
 	border-collapse: separate
 
+	tr td:first-child
+		color: #7B7B7B
+
 	th, td
 		padding: 8px 0
 		border:
@@ -94,3 +97,24 @@
 		padding: 40px
 		+font-size(15px)
 		color: #252525 !important
+
+table
+	.number
+		font-family: $play
+	.icon_vital
+		overflow: hidden
+		display: inline-block
+		+size(30px, 30px)
+		@extend %is
+		background-position: -570px -230px
+		text-indent: -9999px
+		vertical-align: top
+
+	.today
+		font-family: $play
+		font-weight: 700
+		color: $scarlet
+		font-style: normal
+		vertical-align: top
+
+

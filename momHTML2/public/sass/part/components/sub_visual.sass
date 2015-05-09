@@ -1,0 +1,51 @@
+// sub common visual
+.page_list, .page_write, .page_search, .page_member, .page_community
+	.sub_visual
+		overflow: hidden
+		box-sizing: border-box
+		padding:
+			top: 64px
+		height: 200px
+		background: #000a16 url(#{$path}/visual_sub.jpg) no-repeat 50% 0
+		+font-size(35px)
+		color: #fff
+		//text-shadow: 1px 1px 5px #000
+
+		&.brown
+			color: #635d58
+			//text-shadow: 1px 1px 1px rgba(#000, 0.2)
+
+		h3
+			font-weight: 400
+			letter-spacing: -1px
+
+		p
+			margin-top: 6px
+			+font-size(16px)
+
+// 어린이집 리뷰
+.page_list
+	.sub_visual
+		background-position-y: -600px
+		// 상담후기
+		&.counseling
+			background-position-y: 0
+			h3
+				color: #4F4F4F
+			p
+				color: #454545
+
+// 리뷰, 상담후기 작성
+.page_write, .page_search
+	.sub_visual
+		background-position-y: -1400px
+
+// 마이페이지 
+.page_member
+	.sub_visual
+		background-position-y: 0
+
+// 커뮤니티
+.page_community
+	.sub_visual
+		background-position-y: -1200px
