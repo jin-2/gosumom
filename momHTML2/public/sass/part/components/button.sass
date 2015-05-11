@@ -1,9 +1,9 @@
 // 검정색 버튼
-a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlarge, span.button_line
+a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlarge, span.button_line, a.button_line_small
 	display: inline-block
 	text-decoration: none
 
-.button , .button_large, .button_line, .button_line_large, .button_line_xlarge
+.button , .button_large, .button_line, .button_line_large, .button_line_xlarge, .button_line_small
 	box-sizing: border-box
 	padding: 0 35px
 	height: 50px
@@ -71,7 +71,7 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 		margin-right: 4px
 
 
-.button_line, .button_line_large, .button_line_xlarge
+.button_line, .button_line_large, .button_line_xlarge, .button_line_small
 	height: 33px
 	border: 1px solid #4b4748
 	border-radius: 2px
@@ -84,7 +84,15 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 		border-color: #eb3a4a
 		background-color: #fff
 		color: #eb3c4b
-	
+
+.button_line_small
+	height: 25px
+	border-color: #e2e2e2
+	background-color: #fff
+	color: #737373
+	line-height: 25px
+	+font-size(12px)
+	font-weight: 600
 
 .button_line_large
 	height: 40px
@@ -128,9 +136,10 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 		background-color: $emerald
 		color: #fff
 
-.fix100, .fix117, .fix120, .fix70, .fix130, .fix80, .fix185, .fix110
+.fix100, .fix117, .fix120, .fix70, .fix130, .fix80, .fix185, .fix110, .fix45
 	padding: 0
-
+.fix45
+	width: 45px
 .fix70
 	width: 70px
 .fix80
@@ -147,13 +156,6 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 	width: 130px
 .fix185
 	width: 185px
-
-
-
-
-
-
-
 
 // 소셜 버튼
 .button_sns
@@ -222,3 +224,28 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 	&.yellow
 		background-position: -370px -490px
 		color: #9D9408
+
+.button_sns2
+	display: inline-block
+	padding-top: 30px
+	+size(50px, 20px)
+	@extend %is
+	background-position: -780px -700px
+	+font-size(11px)
+	font-weight: 600
+	color: #fff
+	text-align: center
+	letter-spacing: -1px
+	vertical-align: middle
+
+	& + &
+		margin-left: 2px
+
+	&.feel
+		background-position: -780px -700px
+	&.report
+		background-position: -840px -700px
+	&.facebook
+		background-position: -900px -700px
+	&.cacao
+		background-position: -960px -700px

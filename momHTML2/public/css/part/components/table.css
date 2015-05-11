@@ -5,24 +5,31 @@ Error: Undefined variable: "$scarlet".
 6: 	input + button, input + a[class*=button]
 7: 		margin-left: 2px
 8: 
-9: .table
-10: 	width: 100%
-11: 	border-top: 1px solid $scarlet
-12: 	border-collapse: separate
-13: 
-14: 	th, td
-15: 		padding: 10px 0
-16: 		border-bottom: 1px solid #e2e2e2
+9: 	.note
+10: 		margin-left: 17px
+11: 		color: $scarlet
+12: 		vertical-align: middle
+13: 		letter-spacing: -1px
+14: 
+15: 	.number
+16: 		font-family: $play
 
 Backtrace:
 sass/part/components/table.sass:11
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `map'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `_perform'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
@@ -71,4 +78,4 @@ c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$scarlet\".\A         on line 11 of sass/part/components/table.sass\A \A 6: 	input + button, input + a[class*=button]\A 7: 		margin-left: 2px\A 8: \A 9: .table\A 10: 	width: 100%\A 11: 	border-top: 1px solid $scarlet\A 12: 	border-collapse: separate\A 13: \A 14: 	th, td\A 15: 		padding: 10px 0\A 16: 		border-bottom: 1px solid #e2e2e2"; }
+  content: "Error: Undefined variable: \"$scarlet\".\A         on line 11 of sass/part/components/table.sass\A \A 6: 	input + button, input + a[class*=button]\A 7: 		margin-left: 2px\A 8: \A 9: 	.note\A 10: 		margin-left: 17px\A 11: 		color: $scarlet\A 12: 		vertical-align: middle\A 13: 		letter-spacing: -1px\A 14: \A 15: 	.number\A 16: 		font-family: $play"; }

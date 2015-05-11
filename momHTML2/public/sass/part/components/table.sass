@@ -1,43 +1,68 @@
 // common table
-.table 
+table 
 	button, a[class*=button], input, select, span
 		vertical-align: middle
 
 	input + button, input + a[class*=button]
 		margin-left: 2px
 
-.table
+	.note
+		margin-left: 17px
+		color: $scarlet
+		vertical-align: middle
+		letter-spacing: -1px
+
+	.number
+		font-family: $play
+		
+	.icon_vital
+		overflow: hidden
+		display: inline-block
+		+size(30px, 30px)
+		@extend %is
+		background-position: -570px -230px
+		text-indent: -9999px
+		vertical-align: top
+
+	.today
+		font-family: $play
+		font-weight: 700
+		color: $scarlet
+		font-style: normal
+		vertical-align: top
+
+.table, .table_col
 	width: 100%
 	border-top: 1px solid $scarlet
 	border-collapse: separate
 
 	th, td
-		padding: 10px 0
-		border-bottom: 1px solid #e2e2e2
-		@extend %cf
+		border:
+			bottom: 1px solid #e2e2e2
+			left: 1px solid #e2e2e2
 
-	tbody th
+	tr th:first-child, tr td:first-child
+		border-left: 0
+
+	th
 		background-color: #f4f4f4
 		color: #424242
 		font-weight: 600
 		+font-size(15px)
+
+.table
+	th, td
+		padding: 10px 0
+		@extend %cf
+
+	tbody th
 		text-align: left
-		
 
 		.head
 			padding-left: 30px
 
 	td
 		padding-left: 10px
-
-	input
-		vertical-align: middle
-
-	.note
-		margin-left: 17px
-		color: $scarlet
-		vertical-align: middle
-		letter-spacing: -1px
 
 	.dcheck
 		display: block
@@ -62,22 +87,12 @@
 				left: 2px
 
 .table_col
-	width: 100%
-	border-top: 1px solid $scarlet
-	border-collapse: separate
-
 	tr td:first-child
 		color: #7B7B7B
 
 	th, td
 		padding: 8px 0
-		border:
-			bottom: 1px solid #e2e2e2
-			left: 1px solid #e2e2e2
 		text-align: center
-		
-	tr th:first-child, tr td:first-child
-		border-left: 0
 
 	thead th
 		padding: 20px 0 19px
@@ -98,23 +113,5 @@
 		+font-size(15px)
 		color: #252525 !important
 
-table
-	.number
-		font-family: $play
-	.icon_vital
-		overflow: hidden
-		display: inline-block
-		+size(30px, 30px)
-		@extend %is
-		background-position: -570px -230px
-		text-indent: -9999px
-		vertical-align: top
-
-	.today
-		font-family: $play
-		font-weight: 700
-		color: $scarlet
-		font-style: normal
-		vertical-align: top
 
 

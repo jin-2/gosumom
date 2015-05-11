@@ -667,7 +667,7 @@ body
 		+font-size(20px)
 	> a
 		position: absolute
-		top: 0
+		top: 14px
 		right: 0
 	.sorting_tab
 		float: left
@@ -1893,6 +1893,9 @@ $consider: #FDB45C
 		> .icon
 			width: 34px
 			background-position: -570px -180px
+		> .icon.pen
+			width: 28px
+			background-position: -570px -80px
 
 .page_member
 	padding-bottom: 90px
@@ -2248,9 +2251,225 @@ $consider: #FDB45C
 			color: #7B7B7B
 
 	.btn_wrap
-		position: relative
 		margin-top: 20px
+		text-align: right
+
+		.button + .button
+			margin-left: 1px
+
+.list
+	.btn_wrap
+		position: relative
 		.button
 			position: absolute
 			top: 0
 			right: 0
+
+// 커뮤니티 글쓰기 페이지
+.write
+	.table
+		input[type="text"]
+			width: 99%
+
+		input[readonly="readonly"]
+			width: 62%
+
+		textarea
+			width: 99%
+			height: 430px
+
+		.file_input_wrap
+			margin-top: 0
+
+	.btn_wrap
+		overflow: hidden
+		.button
+			position: static
+			.ie8 &
+				position: relative
+		.left
+			float: left
+
+.view_content
+	color: #252525
+	.view_head
+		display: table
+		width: 100%
+		border:
+			top: 1px solid $scarlet
+			bottom: 1px solid #e2e2e2
+		text-align: left
+		
+		> div
+			display: table-cell
+			padding: 15px 0 14px
+
+		.info
+			width: 38%
+			padding-right: 20px
+			text-align: right
+
+		.count
+			width: 7.5%
+			border-left: 1px solid #e2e2e2
+			background-color: #f4f4f4
+			text-align: center
+			color: #666666
+
+			.number
+				display: block
+				color: #252525
+
+	.view_title
+		//float: left
+		display: inline-block
+		padding-left: 30px
+		vertical-align: middle
+		+font-size(16px)
+		font-weight: 600
+		color: #424242
+
+	.writer
+		font-weight: 600
+
+	.writer, .date
+		margin-right: 5px
+		padding-right: 10px
+		background: url(#{$path}/bg_sorting_tab.gif) no-repeat 100% 4px 
+
+	.number
+		font-family: $play
+
+	.view_body
+		padding: 37px 30px 32px
+		font-family: $nanumBG
+		color: #373737
+		line-height: 1.75
+
+		img
+			display: block
+			max-width: 100%
+			margin: 10px auto
+			//text-align: center
+
+	.view_file
+		display: table
+		width: 100%
+		border: 
+			top: 1px solid #e2e2e2
+			bottom: 1px solid #e2e2e2
+		
+		.view_file_head, .view_file_data
+			display: table-cell
+			padding: 18px 0 17px
+
+		.view_file_head
+			width: 150px
+			border-right: 1px solid #e2e2e2
+			background-color: #f4f4f4
+			+font-size(15px)
+			font-weight: 600
+			text-align: center
+
+		.view_file_data
+			padding:
+				left: 30px
+				right: 30px
+			color: $scarlet
+
+.comment_wrap
+	border-top: 1px solid $scarlet
+
+	li
+		position: relative
+		padding:
+			right: 30px
+			left: 105px
+			top: 23px
+			bottom: 20px
+		border-bottom: 1px solid #e2e2e2
+
+	.photo
+		overflow: hidden
+		position: absolute
+		top: 20px
+		left: 30px 
+		display: inline-block
+		+size(55px, 55px)
+		border-radius: 50%
+		background: #e6e6e6 $path-is no-repeat -259px -391px
+		@extend %pie
+		
+		img
+			+size(55px, 55px)
+			.ie8 &
+				border-radius: 50%
+				position: relative
+				@extend %pie
+
+	.name
+		margin-right: 5px
+		padding-right: 10px
+		background: url(#{$path}/bg_button_bar.gif) no-repeat 100% 4px
+		font-family: $nanumG
+		font-weight: 600
+		+font-size(16px)
+		color: #424242
+
+	.date
+		margin-right: 0
+		padding-right: 0
+		background: none 
+		font-family: $play
+		color: #7B7B7B
+
+	.comment
+		margin-top: 6px
+		+font-size(16px)
+		color: #7B7B7B
+		line-height: 1.4
+		textarea
+			height: 90px
+			vertical-align: top
+			+font-size(16px)
+
+	.btn_wrap
+		position: absolute
+		top: -1px
+		right: 30px
+
+.comment_input_wrap
+	position: relative
+	margin-top: 50px
+	padding: 10px 30px
+	height: 122px - 20px
+	border-top: 1px solid $scarlet
+	background-color: #f4f4f4
+
+	textarea
+		float: left
+		+size(1011px, 100px)
+
+	button
+		position: absolute
+		top: 10px
+		right: 30px
+		+size(130px, 100px)
+		background-color: $scarlet
+		color: #fff
+		font-weight: 600
+
+.comment_count
+	margin:
+		top: 50px
+		bottom: 9px
+	padding-left: 10px
+	background: url(#{$path}/bul_arrow.png) no-repeat 0 5px
+	strong
+		font-family: Tahoma
+		font-weight: 600
+		color: $scarlet
+
+.view_content
+	.paging
+		margin-top: 30px
