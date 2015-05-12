@@ -2571,7 +2571,6 @@ $consider: #FDB45C
  * --------------------------------
 .page_etc
 	background-color: #f7f7f7
-.page_etc
 	color: #333
 
 	.heading
@@ -2703,4 +2702,41 @@ $consider: #FDB45C
 		font-weight: 600
 		color: #767676
 
+//
+ * --------------------------------
+ * 고수맘 사용법
+ * --------------------------------
+.page_story
+	background-color: #fff
+.using_wrap
+	.slogan
+		padding-top: 70px
+		height: 145px - 70px
+		text-align: center
 
+	.using_pager
+		position: absolute
+		top: 50%
+		right: 70px
+		width: 30px
+		margin-top: -100px
+		a
+			display: inline-block
+			+size(28px, 28px)
+			@extend %is
+			background-position: -94px -435px
+			text-indent: -9999px
+
+			&.active, &:hover
+				background-position: -144px -435px
+
+		&.fixed
+			position: fixed
+
+.using_inner
+	position: relative
+
+	> section
+		position: relative
+		height: 602px
+		border-top: 1px solid $scarlet
