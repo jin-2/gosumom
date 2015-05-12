@@ -120,6 +120,8 @@ a:hover { text-decoration: underline; }
 
 input[type="text"], input[type="search"], input[type="password"], input[type="email"] { box-sizing: border-box; height: 40px; padding: 0 10px; line-height: 40px; border: 1px solid #d5d5d5; font-size: 14px; font-size: 1.4rem; }
 
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0 50px white inset; -webkit-text-fill-color: #333; }
+
 textarea { box-sizing: border-box; width: 100%; padding: 10px 15px; border: 1px solid #d5d5d5; font-size: 14px; font-size: 1.4rem; }
 
 legend { position: absolute; top: -9999px; width: 0; height: 0; font-size: 0; line-height: 0; }
@@ -484,10 +486,10 @@ table .today { font-family: "Play", sans-serif; font-weight: 700; color: #eb3b4b
 .table_col td.left { text-align: left; padding-left: 25px; }
 .table_col td.no_result { padding: 40px; font-size: 15px; font-size: 1.5rem; color: #252525 !important; }
 
-.page_list .sub_visual, .page_write .sub_visual, .page_search .sub_visual, .page_member .sub_visual, .page_community .sub_visual { overflow: hidden; box-sizing: border-box; padding-top: 64px; height: 200px; background: #000a16 url(/momHTML2/public/img/visual_sub.jpg) no-repeat 50% 0; font-size: 35px; font-size: 3.5rem; color: #fff; }
-.page_list .sub_visual.brown, .page_write .sub_visual.brown, .page_search .sub_visual.brown, .page_member .sub_visual.brown, .page_community .sub_visual.brown { color: #635d58; }
-.page_list .sub_visual h3, .page_write .sub_visual h3, .page_search .sub_visual h3, .page_member .sub_visual h3, .page_community .sub_visual h3 { font-weight: 400; letter-spacing: -1px; }
-.page_list .sub_visual p, .page_write .sub_visual p, .page_search .sub_visual p, .page_member .sub_visual p, .page_community .sub_visual p { margin-top: 6px; font-size: 16px; font-size: 1.6rem; }
+.page_list .sub_visual, .page_write .sub_visual, .page_search .sub_visual, .page_member .sub_visual, .page_community .sub_visual, .page_story .sub_visual { overflow: hidden; box-sizing: border-box; padding-top: 64px; height: 200px; background: #000a16 url(/momHTML2/public/img/visual_sub.jpg) no-repeat 50% 0; font-size: 35px; font-size: 3.5rem; color: #fff; }
+.page_list .sub_visual.brown, .page_write .sub_visual.brown, .page_search .sub_visual.brown, .page_member .sub_visual.brown, .page_community .sub_visual.brown, .page_story .sub_visual.brown { color: #635d58; }
+.page_list .sub_visual h3, .page_write .sub_visual h3, .page_search .sub_visual h3, .page_member .sub_visual h3, .page_community .sub_visual h3, .page_story .sub_visual h3 { font-weight: 400; letter-spacing: -1px; }
+.page_list .sub_visual p, .page_write .sub_visual p, .page_search .sub_visual p, .page_member .sub_visual p, .page_community .sub_visual p, .page_story .sub_visual p { margin-top: 6px; font-size: 16px; font-size: 1.6rem; }
 
 .page_list .sub_visual { background-position-y: -600px; }
 .page_list .sub_visual.counseling { background-position-y: 0; }
@@ -499,6 +501,8 @@ table .today { font-family: "Play", sans-serif; font-weight: 700; color: #eb3b4b
 .page_member .sub_visual { background-position-y: 0; }
 
 .page_community .sub_visual { background-position-y: -1200px; }
+
+.page_story .sub_visual { background-position-y: -1000px; }
 
 .list_info li { margin-top: 11px; padding-left: 12px; list-style: none; text-align: left; font-size: 12px; font-size: 1.2rem; font-family: "돋움", "dotum"; color: #555; background: url(/momHTML2/public/img/bul_dot.png) no-repeat 0 5px; }
 .list_info li:first-child { margin-top: 0; }
@@ -1100,5 +1104,22 @@ body.main { background-color: #F7F7F7; }
 .comment_count strong { font-family: Tahoma; font-weight: 600; color: #eb3b4b; }
 
 .view_content .paging { margin-top: 30px; }
+
+.gosumom_stroy { height: 4089px; background: #fff url(../img/story_bg.jpg) no-repeat 50% 145px; color: #252525; letter-spacing: -1px; }
+.gosumom_stroy .reverse { color: #fff; }
+.gosumom_stroy h4 { margin-bottom: 45px; font-size: 70px; font-size: 7rem; color: #252525; font-family: "나눔바른고딕", "Nanum Barun Gothic"; }
+.gosumom_stroy strong { display: block; margin-bottom: 24px; font-size: 40px; font-size: 4rem; font-family: "나눔바른고딕", "Nanum Barun Gothic"; font-weight: 400; }
+.gosumom_stroy p { font-size: 16px; font-size: 1.6rem; line-height: 1.6; }
+.gosumom_stroy div[class^=section] { box-sizing: border-box; }
+.gosumom_stroy .slogan { padding-top: 70px; height: 75px; text-align: center; }
+.gosumom_stroy .section1 { height: 800px; padding-left: 720px; padding-top: 207px; }
+.gosumom_stroy .section1 strong { font-size: 22px; font-size: 2.2rem; line-height: 1.4; }
+.gosumom_stroy .section1 p { line-height: 1.4; }
+.gosumom_stroy .section2 { height: 364px; padding-top: 97px; text-align: center; }
+.gosumom_stroy .section3 { height: 645px; margin-bottom: 10px; padding-top: 79px; }
+.gosumom_stroy .section4 { float: left; height: 800px; width: 50%; padding-top: 71px; }
+.gosumom_stroy .section5 { float: right; height: 800px; width: 50%; padding-top: 319px; padding-left: 79px; }
+.gosumom_stroy .section6 { clear: both; height: 650px; padding-top: 82px; }
+.gosumom_stroy .section7 { height: 650px; padding-top: 286px; padding-left: 679px; }
 
 /*# sourceMappingURL=style.css.map */

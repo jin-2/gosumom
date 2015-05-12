@@ -54,6 +54,10 @@ input[type="text"], input[type="search"], input[type="password"], input[type="em
 	border: 1px solid #d5d5d5
 	+font-size(14px)
 
+input:-webkit-autofill
+	-webkit-box-shadow: 0 0 0 50px white inset
+	-webkit-text-fill-color: #333
+
 textarea
 	box-sizing: border-box
 	width: 100%
@@ -2473,3 +2477,94 @@ $consider: #FDB45C
 .view_content
 	.paging
 		margin-top: 30px
+
+//
+ * --------------------------------
+ * 고수맘 이야기
+ * --------------------------------
+.gosumom_stroy
+	height: 3944px + 145px
+	background: #fff url(../img/story_bg.jpg) no-repeat 50% 145px
+	color: #252525
+	letter-spacing: -1px
+
+	.reverse
+		color: #fff
+
+	h4
+		margin-bottom: 45px
+		+font-size(70px)
+		color: #252525
+		font-family: $nanumBG
+
+	strong
+		display: block
+		margin-bottom: 24px
+		+font-size(40px)
+		font-family: $nanumBG
+		font-weight: 400
+
+	p
+		+font-size(16px)
+		line-height: 1.6
+
+	div[class^=section]
+		box-sizing: border-box
+
+	.slogan
+		padding-top: 70px
+		height: 145px - 70px
+		text-align: center
+
+	.section1
+		height: 800px
+		padding:
+			left: 720px
+			top: 207px
+
+		strong
+			+font-size(22px)
+			line-height: 1.4
+
+		p
+			line-height: 1.4
+
+	.section2
+		height: 364px
+		padding-top: 97px
+		text-align: center
+
+	.section3
+		height: 645px
+		margin-bottom: 10px
+		padding-top: 79px
+
+	.section4
+		float: left
+		height: 800px
+		width: 50%
+		padding-top: 71px
+
+	.section5
+		float: right
+		height: 800px
+		width: 50%
+		padding:
+			top: 319px
+			left: 79px
+	
+	.section6
+		clear: both
+		height: 650px
+		padding:
+			top: 10px + 72px
+
+	.section7
+		height: 650px
+		padding:
+			top: 10px + 276px
+			left: 679px
+
+	
+
+
