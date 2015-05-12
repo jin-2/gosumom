@@ -1132,7 +1132,7 @@ body.main { background-color: #F7F7F7; }
 .page_etc .description.mb0 { margin-bottom: 0; }
 .page_etc .heading2 { margin-bottom: 7px; }
 .page_etc .bar { display: inline-block; margin-top: 9px; margin-right: 2px; padding-left: 0; width: 6px; border-top: 2px solid #333; vertical-align: top; }
-.page_etc .list_wrap { margin-bottom: 42px; line-height: 1.6; letter-spacing: -1px; }
+.page_etc .list_wrap { margin-bottom: 40px; line-height: 1.6; letter-spacing: -1px; }
 .page_etc .list_wrap > li { position: relative; margin-top: 21px; padding-top: 24px; border-top: 1px solid #c8c8c8; }
 .page_etc .list_wrap > li:first-child { margin-top: 10px; border-top: 0; }
 .page_etc .list_wrap .go_top { position: absolute; bottom: -18px; right: 0; padding: 0 9px; background-color: #eb3b4b; border-radius: 5px; font-size: 13px; font-size: 1.3rem; color: #fff; line-height: 16px; }
@@ -1144,5 +1144,13 @@ body.main { background-color: #F7F7F7; }
 .list_dot { margin-bottom: 10px; }
 .list_dot li { margin-top: 1px; padding-left: 11px; background: url(/momHTML2/public/img/bul_rect.png) no-repeat 0 10px; }
 .list_dot .num_round { display: inline; padding-left: 0; font-size: 15px; font-size: 1.5rem; }
+
+.page_etc .title { margin-top: 60px; font-size: 26px; font-size: 2.6rem; font-weight: 600; line-height: 1; color: #343434; }
+.page_etc .title + .desc { margin-top: 14px; font-size: 15px; font-size: 1.5rem; letter-spacing: -1px; color: #343434; line-height: 1.5; }
+
+.table_of_contents { overflow: hidden; margin-top: 21px; width: 100%; background-color: #fff; }
+.table_of_contents div { box-sizing: border-box; float: left; padding-left: 22px; padding-top: 10px; width: 400px; height: 190px; border: 1px solid #c8c8c8; border-left: 0; }
+.table_of_contents div:first-child { border-left: 1px solid #c8c8c8; }
+.table_of_contents a { display: block; margin: 11px 0; font-size: 13px; font-size: 1.3rem; font-weight: 600; color: #767676; }
 
 /*# sourceMappingURL=style.css.map */
