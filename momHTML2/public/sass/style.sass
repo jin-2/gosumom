@@ -2565,6 +2565,95 @@ $consider: #FDB45C
 			top: 10px + 276px
 			left: 679px
 
+//
+ * --------------------------------
+ * 개인정보 보호정책
+ * --------------------------------
+.page_etc
+	background-color: #f7f7f7
+.page_etc
+	color: #333
+
+	.heading
+		display: block
+		margin-bottom: 8px
+		+font-size(20px)
+		font-weight: 600
+
+	.description
+		margin-bottom: 10px
+		padding-left: 12px
+		background: url(#{$path}/bul_arrow.png) no-repeat 1px 7px
+		font-weight: 600
+
+		&.mb0
+			margin-bottom: 0
 	
+	.heading2
+		margin-bottom: 7px
+
+	.bar
+		display: inline-block
+		margin:
+			top: 9px
+			right: 2px
+		padding-left: 0
+		width: 6px
+		border-top: 2px solid #333
+		vertical-align: top
+
+	.list_wrap
+		line-height: 1.6
+		letter-spacing: -1px
+
+		> li
+			position: relative
+			margin-top: 21px
+			padding-top: 24px
+			border-top: 1px solid #c8c8c8
+
+			&:first-child
+				border-top: 0
+
+		.go_top
+			position: absolute
+			bottom: -22px
+			right: 0
+			padding: 0 9px
+			background-color: $scarlet
+			border-radius: 5px
+			+font-size(13px)
+			color: #fff
+			line-height: 16px
+
+	li 
+		ol
+			padding-left: 12px
+
+			div
+				padding-bottom: 10px
+		
+		span
+			display: block
+			padding-left: 17px
+
+		strong
+			display: block
+			margin-top: 10px
+
+	
+
+
+.list_dot
+	margin-bottom: 10px
+	li
+		margin-top: 1px
+		padding-left: 11px
+		background: url(#{$path}/bul_rect.png) no-repeat 0 9px
+
+	.num_round
+		display: inline
+		padding-left: 0
+		+font-size(15px)
 
 

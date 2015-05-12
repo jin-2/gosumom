@@ -486,10 +486,10 @@ table .today { font-family: "Play", sans-serif; font-weight: 700; color: #eb3b4b
 .table_col td.left { text-align: left; padding-left: 25px; }
 .table_col td.no_result { padding: 40px; font-size: 15px; font-size: 1.5rem; color: #252525 !important; }
 
-.page_list .sub_visual, .page_write .sub_visual, .page_search .sub_visual, .page_member .sub_visual, .page_community .sub_visual, .page_story .sub_visual { overflow: hidden; box-sizing: border-box; padding-top: 64px; height: 200px; background: #000a16 url(/momHTML2/public/img/visual_sub.jpg) no-repeat 50% 0; font-size: 35px; font-size: 3.5rem; color: #fff; }
-.page_list .sub_visual.brown, .page_write .sub_visual.brown, .page_search .sub_visual.brown, .page_member .sub_visual.brown, .page_community .sub_visual.brown, .page_story .sub_visual.brown { color: #635d58; }
-.page_list .sub_visual h3, .page_write .sub_visual h3, .page_search .sub_visual h3, .page_member .sub_visual h3, .page_community .sub_visual h3, .page_story .sub_visual h3 { font-weight: 400; letter-spacing: -1px; }
-.page_list .sub_visual p, .page_write .sub_visual p, .page_search .sub_visual p, .page_member .sub_visual p, .page_community .sub_visual p, .page_story .sub_visual p { margin-top: 6px; font-size: 16px; font-size: 1.6rem; }
+.page_list .sub_visual, .page_write .sub_visual, .page_search .sub_visual, .page_member .sub_visual, .page_community .sub_visual, .page_story .sub_visual, .page_etc .sub_visual { overflow: hidden; box-sizing: border-box; padding-top: 64px; height: 200px; background: #000a16 url(/momHTML2/public/img/visual_sub.jpg) no-repeat 50% 0; font-size: 35px; font-size: 3.5rem; color: #fff; }
+.page_list .sub_visual.brown, .page_write .sub_visual.brown, .page_search .sub_visual.brown, .page_member .sub_visual.brown, .page_community .sub_visual.brown, .page_story .sub_visual.brown, .page_etc .sub_visual.brown { color: #635d58; }
+.page_list .sub_visual h3, .page_write .sub_visual h3, .page_search .sub_visual h3, .page_member .sub_visual h3, .page_community .sub_visual h3, .page_story .sub_visual h3, .page_etc .sub_visual h3 { font-weight: 400; letter-spacing: -1px; }
+.page_list .sub_visual p, .page_write .sub_visual p, .page_search .sub_visual p, .page_member .sub_visual p, .page_community .sub_visual p, .page_story .sub_visual p, .page_etc .sub_visual p { margin-top: 6px; font-size: 16px; font-size: 1.6rem; }
 
 .page_list .sub_visual { background-position-y: -600px; }
 .page_list .sub_visual.counseling { background-position-y: 0; }
@@ -503,6 +503,8 @@ table .today { font-family: "Play", sans-serif; font-weight: 700; color: #eb3b4b
 .page_community .sub_visual { background-position-y: -1200px; }
 
 .page_story .sub_visual { background-position-y: -1000px; }
+
+.page_etc .sub_visual { background-position-y: -1000px; }
 
 .list_info li { margin-top: 11px; padding-left: 12px; list-style: none; text-align: left; font-size: 12px; font-size: 1.2rem; font-family: "돋움", "dotum"; color: #555; background: url(/momHTML2/public/img/bul_dot.png) no-repeat 0 5px; }
 .list_info li:first-child { margin-top: 0; }
@@ -1121,5 +1123,26 @@ body.main { background-color: #F7F7F7; }
 .gosumom_stroy .section5 { float: right; height: 800px; width: 50%; padding-top: 319px; padding-left: 79px; }
 .gosumom_stroy .section6 { clear: both; height: 650px; padding-top: 82px; }
 .gosumom_stroy .section7 { height: 650px; padding-top: 286px; padding-left: 679px; }
+
+.page_etc { background-color: #f7f7f7; }
+
+.page_etc { color: #333; }
+.page_etc .heading { display: block; margin-bottom: 8px; font-size: 20px; font-size: 2rem; font-weight: 600; }
+.page_etc .description { margin-bottom: 10px; padding-left: 12px; background: url(/momHTML2/public/img/bul_arrow.png) no-repeat 1px 7px; font-weight: 600; }
+.page_etc .description.mb0 { margin-bottom: 0; }
+.page_etc .heading2 { margin-bottom: 7px; }
+.page_etc .bar { display: inline-block; margin-top: 9px; margin-right: 2px; padding-left: 0; width: 6px; border-top: 2px solid #333; vertical-align: top; }
+.page_etc .list_wrap { line-height: 1.6; letter-spacing: -1px; }
+.page_etc .list_wrap > li { position: relative; margin-top: 21px; padding-top: 24px; border-top: 1px solid #c8c8c8; }
+.page_etc .list_wrap > li:first-child { border-top: 0; }
+.page_etc .list_wrap .go_top { position: absolute; bottom: -22px; right: 0; padding: 0 9px; background-color: #eb3b4b; border-radius: 5px; font-size: 13px; font-size: 1.3rem; color: #fff; line-height: 16px; }
+.page_etc li ol { padding-left: 12px; }
+.page_etc li ol div { padding-bottom: 10px; }
+.page_etc li span { display: block; padding-left: 17px; }
+.page_etc li strong { display: block; margin-top: 10px; }
+
+.list_dot { margin-bottom: 10px; }
+.list_dot li { margin-top: 1px; padding-left: 11px; background: url(/momHTML2/public/img/bul_rect.png) no-repeat 0 9px; }
+.list_dot .num_round { display: inline; padding-left: 0; font-size: 15px; font-size: 1.5rem; }
 
 /*# sourceMappingURL=style.css.map */
