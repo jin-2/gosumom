@@ -2909,3 +2909,144 @@ $consider: #FDB45C
 
 	.section10
 		padding-top: 139px
+
+//
+ * --------------------------------
+ * 어린이집의 구분
+ * --------------------------------
+.tip_sort, .tip_character
+	.tip_visual
+		overflow: hidden
+		box-sizing: border-box
+		padding:
+			top: 123px
+			left: 81px
+		height: 448px
+		background: url(#{$path}/tip_visual.jpg) no-repeat 0 0
+		color: #333
+
+		h4
+			font-family: $nanumBG
+			+font-size(60px)
+			font-weight: 400
+
+		p
+			margin-top: 24px
+			+font-size(16px)
+			line-height: 1.65
+
+.tip_character 
+	.tip_visual
+		padding-top: 100px
+		background-position-y: -448px
+
+.masonry_tip_list
+	color: #333
+	.item
+		margin-top: 20px
+		border: 2px solid #dcdcdc
+
+		.item_head
+			padding: 
+				top: 23px
+				left: 25px
+				right: 25px
+				bottom: 18px
+			border-bottom: 1px dotted #b2b2b2
+			+font-size(20px)
+			color: $scarlet
+		
+		.item_body
+			.inner
+				padding:
+					left: 27px
+					//top: 19px
+					right: 25px
+					bottom: 26px
+
+	.shape_round
+		margin:
+			top: 19px
+			bottom: 7px
+
+	.blue
+		color: #304980
+
+	.gray
+		color: #969696
+
+	.list_bar
+		li
+			padding-left: 21px
+			background: url(#{$path}/bul_collect.png) no-repeat 10px 9px
+			line-height: 1.7
+
+	.list_star, .list_star_s
+		margin-top: 2px
+		padding-left: 23px
+		background: url(#{$path}/bul_collect.png) no-repeat 10px -144px
+		line-height: 1.5
+
+	.list_star_s
+		padding-left: 8px
+		background: none
+
+		.ex
+			padding-left: 14px
+
+	.define
+		background-color: #f5f5f4
+		padding: 17px 13px 18px
+		dt, dd
+			display: inline
+			color: #969696
+			+font-size(12px)
+
+	sup
+		+font-size(9px)
+
+	ol.list_round
+		> li
+			margin:
+				bottom: 6px
+				//top: 5px
+			line-height: 1.6
+
+		.list_bar li
+			background-position: 3px 9px
+			padding-left: 16px
+
+	li
+		ul
+			margin: 5px 0
+
+	.ex
+		padding-left: 36px
+		text-indent: -20px
+
+	.list_bar li
+		.ex
+			padding-left: 20px
+			text-indent: -20px
+
+	.list_bar
+		.list_star
+			margin-left: -22px
+
+	.mt8
+		margin-top: 8px
+
+
+.shape_round
+	box-sizing: border-box
+	display: inline-block
+	padding:
+		top: 4px
+		bottom: 4px
+		left: 20px
+		right: 20px
+	border: 1px solid #C8C8C8
+	border-radius: 15px
+	font-style: normal
+	.ie8 &
+		@extend %pie-ie
