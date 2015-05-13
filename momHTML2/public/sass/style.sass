@@ -779,13 +779,13 @@ body
 		vertical-align: middle
 
 	.nano_scroll
-		height: 88px
+		//height: 98px
 
 .review_items, .counseling_items
 	.box_text
 		box-sizing: border-box
-		padding: 12px 20px 14px
-		//height: 124px
+		padding: 19px 20px 19px
+		height: 124px
 		background-color: #f0f0f0
 		+font-size(12px)
 		font-family: $dotum
@@ -810,6 +810,17 @@ body
 		a
 			display: inline-block
 			margin-top: 20px
+
+.nothing_wrap
+	padding: 50px
+	border-bottom: 1px solid #c8c8c8
+	+font-size(24px)
+	text-align: center
+	line-height: 1.25
+	letter-spacing: -2px
+	a
+		display: inline-block
+		margin-top: 20px
 
 //
  * --------------------------------
@@ -1116,6 +1127,7 @@ $consider: #FDB45C
 		top: 30px
 		bottom: 7px
 	width: 100%
+	height: 59px
 	border-bottom: 4px solid #343434
 	select
 		width: 173px
@@ -2744,3 +2756,111 @@ $consider: #FDB45C
 		position: relative
 		height: 602px
 		border-top: 1px solid $scarlet
+
+//
+ * --------------------------------
+ * 고수맘 에티켓
+ * --------------------------------
+.tip_etiquette
+	position: relative
+	padding:
+		top: 75px
+		bottom: 40px
+	.title
+		margin:
+			top: 5px
+			bottom: 40px
+		+font-size(24px)
+		font-weight: normal
+		text-align: center
+
+	.btn_area
+		text-align: right
+		margin-top: 20px
+
+	.tip_paging
+		position: absolute
+		top: 75px
+		left: 50%
+		width: 542px
+		margin-left: -542px / 2
+		a
+			display: inline-block
+			+size(38px, 38px)
+			border: 1px solid #cbcbcb
+			@extend %is
+			text-indent: -9999px
+
+		a.prev
+			float: left
+			background-position: -570px -700px
+
+		a.next
+			float: right
+			background-position: -630px -700px
+
+.tip_etiquette_body
+	height: 1932px
+	background: url(#{$path}/tip_etiquette_bg.gif) no-repeat 0 0
+
+	h5
+		margin-bottom: 20px
+		+font-size(30px)
+		font-weight: 600
+		line-height: 1.2
+
+	p
+		+font-size(16px)
+		line-height: 1.65
+
+	p+p
+		margin-top: 30px
+
+	.num_round
+		display: inline-block
+		margin-bottom: 4px
+		+size(38px, 38px)
+		@extend %is
+		text-indent: -9999px
+
+		&.one
+			background-position: -780px -770px
+		&.two
+			background-position: -830px -770px
+		&.three
+			background-position: -880px -770px
+		&.four
+			background-position: -930px -770px
+
+	> div
+		box-sizing: border-box
+		float: left
+		width: 50%
+		color: #333
+		letter-spacing: -1px
+
+	div.reverse
+		color: #fff
+
+	.section1, .section2
+		height: 641px
+
+	.section3, .section4
+		height: 591px
+
+	.section5, .section6
+		height: 700px
+
+	.section2
+		padding: 
+			top: 60px
+			left: 58px
+
+	.section3, .section4, .section5, .section6
+		padding:
+			top: 71px
+			left: 58px
+		
+		p
+			+font-size(14px)
+	
