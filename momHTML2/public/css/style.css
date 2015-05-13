@@ -1207,7 +1207,9 @@ body.main { background-color: #F7F7F7; }
 
 .tip_character .tip_visual { padding-top: 100px; background-position-y: -448px; }
 
-.masonry_tip_list { color: #333; }
+.masonry_tip_list { color: #333; letter-spacing: -1px; }
+.masonry_tip_list .item.last { box-sizing: border-box; border: 0; padding-top: 295px; padding-left: 76px; width: 590px; height: 350px; background: url(/momHTML2/public/img/tip_last_item.gif) no-repeat 0 0; }
+.masonry_tip_list .item.last a { color: #304980; }
 .masonry_tip_list .item { margin-top: 20px; border: 2px solid #dcdcdc; }
 .masonry_tip_list .item .item_head { padding-top: 23px; padding-left: 25px; padding-right: 25px; padding-bottom: 18px; border-bottom: 1px dotted #b2b2b2; font-size: 20px; font-size: 2rem; color: #eb3b4b; }
 .masonry_tip_list .item .item_body .inner { padding-left: 27px; padding-right: 25px; padding-bottom: 26px; }
@@ -1215,8 +1217,8 @@ body.main { background-color: #F7F7F7; }
 .masonry_tip_list .blue { color: #304980; }
 .masonry_tip_list .gray { color: #969696; }
 .masonry_tip_list .list_bar li { padding-left: 21px; background: url(/momHTML2/public/img/bul_collect.png) no-repeat 10px 9px; line-height: 1.7; }
-.masonry_tip_list .list_star, .masonry_tip_list .list_star_s { margin-top: 2px; padding-left: 23px; background: url(/momHTML2/public/img/bul_collect.png) no-repeat 10px -144px; line-height: 1.5; }
-.masonry_tip_list .list_star_s { padding-left: 8px; background: none; }
+.masonry_tip_list .list_star, .masonry_tip_list .list_star_s { margin-top: 2px; padding-left: 23px; background: url(/momHTML2/public/img/bul_collect.png) no-repeat 10px -294px; line-height: 1.5; }
+.masonry_tip_list .list_star_s { padding-left: 20px; text-indent: -10px; background: none; }
 .masonry_tip_list .list_star_s .ex { padding-left: 14px; }
 .masonry_tip_list .define { background-color: #f5f5f4; padding: 17px 13px 18px; }
 .masonry_tip_list .define dt, .masonry_tip_list .define dd { display: inline; color: #969696; font-size: 12px; font-size: 1.2rem; }
@@ -1225,10 +1227,13 @@ body.main { background-color: #F7F7F7; }
 .masonry_tip_list ol.list_round .list_bar li { background-position: 3px 9px; padding-left: 16px; }
 .masonry_tip_list li ul { margin: 5px 0; }
 .masonry_tip_list .ex { padding-left: 36px; text-indent: -20px; }
+.masonry_tip_list span.ex { display: block; }
 .masonry_tip_list .list_bar li .ex { padding-left: 20px; text-indent: -20px; }
 .masonry_tip_list .list_bar .list_star { margin-left: -22px; }
 .masonry_tip_list .mt8 { margin-top: 8px; }
 
 .shape_round { box-sizing: border-box; display: inline-block; padding-top: 4px; padding-bottom: 4px; padding-left: 20px; padding-right: 20px; border: 1px solid #C8C8C8; border-radius: 15px; font-style: normal; }
+
+#card_tip_list .item { float: left; width: 590px; }
 
 /*# sourceMappingURL=style.css.map */

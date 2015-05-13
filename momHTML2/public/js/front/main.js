@@ -11,6 +11,16 @@
 	}
 
 	// 네모박스 정렬 - masonry
+	if( $('#card_tip_list') ){
+		$('#card_tip_list').masonry({
+			itemSelector: '.item',
+			columnWidth: 590,
+			isFitWidth: true,
+			gutter: 20
+		});
+	}
+
+	// 네모박스 정렬 - masonry
 	// if( $('#card_gallery') ){
 	// 	$('#card_gallery').masonry({
 	// 		itemSelector: '.item',
