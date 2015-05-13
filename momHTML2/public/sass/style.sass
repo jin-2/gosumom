@@ -2761,7 +2761,7 @@ $consider: #FDB45C
  * --------------------------------
  * 고수맘 에티켓
  * --------------------------------
-.tip_etiquette
+.tip_wrap
 	position: relative
 	padding:
 		top: 75px
@@ -2799,10 +2799,7 @@ $consider: #FDB45C
 			float: right
 			background-position: -630px -700px
 
-.tip_etiquette_body
-	height: 1932px
-	background: url(#{$path}/tip_etiquette_bg.gif) no-repeat 0 0
-
+.tip_etiquette_body, .tip_choice_body
 	h5
 		margin-bottom: 20px
 		+font-size(30px)
@@ -2810,11 +2807,25 @@ $consider: #FDB45C
 		line-height: 1.2
 
 	p
-		+font-size(16px)
+		+font-size(14px)
 		line-height: 1.65
 
 	p+p
 		margin-top: 30px
+
+	> div
+		box-sizing: border-box
+		float: left
+		width: 50%
+		color: #333
+		letter-spacing: -1px
+
+	div.reverse
+		color: #fff
+
+.tip_etiquette_body
+	height: 1932px
+	background: url(#{$path}/tip_etiquette_bg.gif) no-repeat 0 0
 
 	.num_round
 		display: inline-block
@@ -2832,12 +2843,7 @@ $consider: #FDB45C
 		&.four
 			background-position: -930px -770px
 
-	> div
-		box-sizing: border-box
-		float: left
-		width: 50%
-		color: #333
-		letter-spacing: -1px
+	
 
 	div.reverse
 		color: #fff
@@ -2852,6 +2858,10 @@ $consider: #FDB45C
 		height: 700px
 
 	.section2
+		p
+			+font-size(16px)
+
+	.section2
 		padding: 
 			top: 60px
 			left: 58px
@@ -2861,6 +2871,41 @@ $consider: #FDB45C
 			top: 71px
 			left: 58px
 		
+//
+ * --------------------------------
+ * 꿀팁 - 어린이집 선택
+ * --------------------------------
+.tip_choice_body
+	height: 1814px
+	background: url(#{$path}/tip_choice_bg.gif) no-repeat 0 0
+
+	> div
+		box-sizing: border-box
+		float: left
+		width: 400px
+		padding:
+			left: 30px
+			right: 30px
+			top: 182px
+
+	.section1
+		width: 100%
+		height: 441px
+		padding:
+			top: 36px
+			left: 515px
 		p
-			+font-size(14px)
-	
+			+font-size(16px)
+			line-height: 1.5
+
+	.section2, .section3, .section4
+		height: 508px
+
+	.section5, .section6, .section7
+		height: 428px
+
+	.section8, .section9, .section10
+		height: 437px
+
+	.section10
+		padding-top: 139px
