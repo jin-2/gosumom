@@ -487,14 +487,11 @@ table .today { font-family: "Play", sans-serif; font-weight: 700; color: #eb3b4b
 .table_col td.no_result { padding: 40px; font-size: 15px; font-size: 1.5rem; color: #252525 !important; }
 
 .page_list .sub_visual, .page_write .sub_visual, .page_search .sub_visual, .page_member .sub_visual, .page_community .sub_visual, .page_story .sub_visual, .page_etc .sub_visual { overflow: hidden; box-sizing: border-box; padding-top: 64px; height: 200px; background: #000a16 url(/momHTML2/public/img/visual_sub.jpg) no-repeat 50% 0; font-size: 35px; font-size: 3.5rem; color: #fff; }
-.page_list .sub_visual.brown, .page_write .sub_visual.brown, .page_search .sub_visual.brown, .page_member .sub_visual.brown, .page_community .sub_visual.brown, .page_story .sub_visual.brown, .page_etc .sub_visual.brown { color: #635d58; }
 .page_list .sub_visual h3, .page_write .sub_visual h3, .page_search .sub_visual h3, .page_member .sub_visual h3, .page_community .sub_visual h3, .page_story .sub_visual h3, .page_etc .sub_visual h3 { font-weight: 400; letter-spacing: -1px; }
 .page_list .sub_visual p, .page_write .sub_visual p, .page_search .sub_visual p, .page_member .sub_visual p, .page_community .sub_visual p, .page_story .sub_visual p, .page_etc .sub_visual p { margin-top: 6px; font-size: 16px; font-size: 1.6rem; }
 
-.page_list .sub_visual { background-position-y: -600px; }
-.page_list .sub_visual.counseling { background-position-y: 0; }
-.page_list .sub_visual.counseling h3 { color: #4F4F4F; }
-.page_list .sub_visual.counseling p { color: #454545; }
+.page_list .sub_visual { color: #4f4f4f; background-position-y: -600px; }
+.page_list .sub_visual.counseling { color: #fff; background-position-y: -800px; }
 
 .page_write .sub_visual, .page_search .sub_visual { background-position-y: -1400px; }
 
@@ -783,6 +780,7 @@ body.main { background-color: #F7F7F7; }
 .counseling_personal .total .satisfaction { width: 216px; }
 .counseling_personal .total .result { width: 241px; margin-right: 1px; }
 .counseling_personal .total .button_sns { margin-top: 5px; margin-left: 6px; }
+.counseling_personal .btn_wrap { margin-top: 30px; text-align: right; }
 .counseling_personal .blind { box-sizing: border-box; width: 100%; height: 228px; padding-top: 76px; background: url(/momHTML2/public/img/review_hidden2.png) no-repeat 0 0; font-size: 24px; font-size: 2.4rem; text-align: center; line-height: 1.25; letter-spacing: -2px; }
 .counseling_personal .blind a { display: inline-block; margin-top: 19px; }
 
