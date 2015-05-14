@@ -2448,6 +2448,7 @@ $consider: #FDB45C
 		+font-size(16px)
 		color: #7B7B7B
 		line-height: 1.4
+		word-break: break-all
 		textarea
 			height: 90px
 			vertical-align: top
@@ -2914,7 +2915,7 @@ $consider: #FDB45C
  * --------------------------------
  * 어린이집의 구분
  * --------------------------------
-.tip_sort, .tip_character
+.tip_sort, .tip_character, .tip_manage, .tip_teacher
 	.tip_visual
 		overflow: hidden
 		box-sizing: border-box
@@ -2934,11 +2935,22 @@ $consider: #FDB45C
 			margin-top: 24px
 			+font-size(16px)
 			line-height: 1.65
+			letter-spacing: -1px
 
 .tip_character 
 	.tip_visual
 		padding-top: 100px
 		background-position-y: -448px
+
+.tip_manage
+	.tip_visual
+		padding-top: 100px
+		background-position-y: -896px
+
+.tip_teacher
+	.tip_visual
+		padding-top: 100px
+		background-position-y: -1344px
 
 .masonry_tip_list
 	color: #333
@@ -2991,9 +3003,14 @@ $consider: #FDB45C
 
 	.list_bar
 		li
+			margin: 7px 0
 			padding-left: 21px
 			background: url(#{$path}/bul_collect.png) no-repeat 10px 9px
-			line-height: 1.7
+			line-height: 1.5
+
+		li.list_table
+			padding-left: 0
+			background: none
 
 	.list_star, .list_star_s
 		margin-top: 2px
@@ -3036,6 +3053,7 @@ $consider: #FDB45C
 			margin: 5px 0
 
 	.ex
+		margin-top: 7px
 		padding-left: 36px
 		text-indent: -20px
 
@@ -3049,10 +3067,39 @@ $consider: #FDB45C
 
 	.list_bar
 		.list_star
-			margin-left: -22px
+			margin:
+				left: -22px
+				top: 7px
 
 	.mt8
 		margin-top: 8px
+
+	.table_col
+		thead th
+			+font-size(14px)
+		thead th, td
+			padding:
+				top: 17px
+				bottom: 15px
+			color: #333
+		
+		tr td:first-child
+			color: #333
+
+		tbody
+			th
+				background-color: #fff
+				+font-size(14px)
+
+	.table_info
+		margin-bottom: 8px
+		+font-size(12px)
+		color: #969696
+		text-align: right
+
+.tip_manage
+	.inner
+		padding-top: 13px
 
 
 .shape_round

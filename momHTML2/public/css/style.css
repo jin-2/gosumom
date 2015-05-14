@@ -1096,7 +1096,7 @@ body.main { background-color: #F7F7F7; }
 .ie8 .comment_wrap .photo img { border-radius: 50%; position: relative; }
 .comment_wrap .name { margin-right: 5px; padding-right: 10px; background: url(/momHTML2/public/img/bg_button_bar.gif) no-repeat 100% 4px; font-family: "나눔고딕", "Nanum Gothic"; font-weight: 600; font-size: 16px; font-size: 1.6rem; color: #424242; }
 .comment_wrap .date { margin-right: 0; padding-right: 0; background: none; font-family: "Play", sans-serif; color: #7B7B7B; }
-.comment_wrap .comment { margin-top: 6px; font-size: 16px; font-size: 1.6rem; color: #7B7B7B; line-height: 1.4; }
+.comment_wrap .comment { margin-top: 6px; font-size: 16px; font-size: 1.6rem; color: #7B7B7B; line-height: 1.4; word-break: break-all; }
 .comment_wrap .comment textarea { height: 90px; vertical-align: top; font-size: 16px; font-size: 1.6rem; }
 .comment_wrap .btn_wrap { position: absolute; top: -1px; right: 30px; }
 
@@ -1201,11 +1201,15 @@ body.main { background-color: #F7F7F7; }
 .tip_choice_body .section8, .tip_choice_body .section9, .tip_choice_body .section10 { height: 437px; }
 .tip_choice_body .section10 { padding-top: 139px; }
 
-.tip_sort .tip_visual, .tip_character .tip_visual { overflow: hidden; box-sizing: border-box; padding-top: 123px; padding-left: 81px; height: 448px; background: url(/momHTML2/public/img/tip_visual.jpg) no-repeat 0 0; color: #333; }
-.tip_sort .tip_visual h4, .tip_character .tip_visual h4 { font-family: "나눔바른고딕", "Nanum Barun Gothic"; font-size: 60px; font-size: 6rem; font-weight: 400; }
-.tip_sort .tip_visual p, .tip_character .tip_visual p { margin-top: 24px; font-size: 16px; font-size: 1.6rem; line-height: 1.65; }
+.tip_sort .tip_visual, .tip_character .tip_visual, .tip_manage .tip_visual, .tip_teacher .tip_visual { overflow: hidden; box-sizing: border-box; padding-top: 123px; padding-left: 81px; height: 448px; background: url(/momHTML2/public/img/tip_visual.jpg) no-repeat 0 0; color: #333; }
+.tip_sort .tip_visual h4, .tip_character .tip_visual h4, .tip_manage .tip_visual h4, .tip_teacher .tip_visual h4 { font-family: "나눔바른고딕", "Nanum Barun Gothic"; font-size: 60px; font-size: 6rem; font-weight: 400; }
+.tip_sort .tip_visual p, .tip_character .tip_visual p, .tip_manage .tip_visual p, .tip_teacher .tip_visual p { margin-top: 24px; font-size: 16px; font-size: 1.6rem; line-height: 1.65; letter-spacing: -1px; }
 
 .tip_character .tip_visual { padding-top: 100px; background-position-y: -448px; }
+
+.tip_manage .tip_visual { padding-top: 100px; background-position-y: -896px; }
+
+.tip_teacher .tip_visual { padding-top: 100px; background-position-y: -1344px; }
 
 .masonry_tip_list { color: #333; letter-spacing: -1px; }
 .masonry_tip_list .item.last { box-sizing: border-box; border: 0; padding-top: 295px; padding-left: 76px; width: 590px; height: 350px; background: url(/momHTML2/public/img/tip_last_item.gif) no-repeat 0 0; }
@@ -1216,7 +1220,8 @@ body.main { background-color: #F7F7F7; }
 .masonry_tip_list .shape_round { margin-top: 19px; margin-bottom: 7px; }
 .masonry_tip_list .blue { color: #304980; }
 .masonry_tip_list .gray { color: #969696; }
-.masonry_tip_list .list_bar li { padding-left: 21px; background: url(/momHTML2/public/img/bul_collect.png) no-repeat 10px 9px; line-height: 1.7; }
+.masonry_tip_list .list_bar li { margin: 7px 0; padding-left: 21px; background: url(/momHTML2/public/img/bul_collect.png) no-repeat 10px 9px; line-height: 1.5; }
+.masonry_tip_list .list_bar li.list_table { padding-left: 0; background: none; }
 .masonry_tip_list .list_star, .masonry_tip_list .list_star_s { margin-top: 2px; padding-left: 23px; background: url(/momHTML2/public/img/bul_collect.png) no-repeat 10px -294px; line-height: 1.5; }
 .masonry_tip_list .list_star_s { padding-left: 20px; text-indent: -10px; background: none; }
 .masonry_tip_list .list_star_s .ex { padding-left: 14px; }
@@ -1226,11 +1231,18 @@ body.main { background-color: #F7F7F7; }
 .masonry_tip_list ol.list_round > li { margin-bottom: 6px; line-height: 1.6; }
 .masonry_tip_list ol.list_round .list_bar li { background-position: 3px 9px; padding-left: 16px; }
 .masonry_tip_list li ul { margin: 5px 0; }
-.masonry_tip_list .ex { padding-left: 36px; text-indent: -20px; }
+.masonry_tip_list .ex { margin-top: 7px; padding-left: 36px; text-indent: -20px; }
 .masonry_tip_list span.ex { display: block; }
 .masonry_tip_list .list_bar li .ex { padding-left: 20px; text-indent: -20px; }
-.masonry_tip_list .list_bar .list_star { margin-left: -22px; }
+.masonry_tip_list .list_bar .list_star { margin-left: -22px; margin-top: 7px; }
 .masonry_tip_list .mt8 { margin-top: 8px; }
+.masonry_tip_list .table_col thead th { font-size: 14px; font-size: 1.4rem; }
+.masonry_tip_list .table_col thead th, .masonry_tip_list .table_col td { padding-top: 17px; padding-bottom: 15px; color: #333; }
+.masonry_tip_list .table_col tr td:first-child { color: #333; }
+.masonry_tip_list .table_col tbody th { background-color: #fff; font-size: 14px; font-size: 1.4rem; }
+.masonry_tip_list .table_info { margin-bottom: 8px; font-size: 12px; font-size: 1.2rem; color: #969696; text-align: right; }
+
+.tip_manage .inner { padding-top: 13px; }
 
 .shape_round { box-sizing: border-box; display: inline-block; padding-top: 4px; padding-bottom: 4px; padding-left: 20px; padding-right: 20px; border: 1px solid #C8C8C8; border-radius: 15px; font-style: normal; }
 
