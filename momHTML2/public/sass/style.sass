@@ -2931,7 +2931,7 @@ $consider: #FDB45C
 			+font-size(60px)
 			font-weight: 400
 
-		p
+		p, dl
 			margin-top: 24px
 			+font-size(16px)
 			line-height: 1.65
@@ -2952,6 +2952,13 @@ $consider: #FDB45C
 		padding-top: 100px
 		background-position-y: -1344px
 
+		dl dt
+			display: inline-block
+			margin-bottom: 10px
+			padding-bottom: 1px
+			border-bottom: 1px solid #333
+			line-height: 1
+
 .masonry_tip_list
 	color: #333
 	letter-spacing: -1px
@@ -2967,6 +2974,14 @@ $consider: #FDB45C
 
 		a
 			color: #304980
+
+		.tip_teacher &
+			width: 100%
+			padding:
+				top: 27px
+				left: 745px
+			height: 46px
+			background-position: 655px -267px
 
 	.item
 		margin-top: 20px
@@ -3091,23 +3106,102 @@ $consider: #FDB45C
 				background-color: #fff
 				+font-size(14px)
 
+		.left
+			padding-left: 19px
+
 	.table_info
 		margin-bottom: 8px
 		+font-size(12px)
 		color: #969696
 		text-align: right
 
+	em.underline
+		display: inline-block
+		margin:
+			top: 25px
+			bottom: 10px
+		padding-bottom: 1px
+		border-bottom: 1px solid #333
+		font-weight: 600
+		font-style: normal
+		line-height: 1
+
+	.list_indent
+		li
+			padding-left: 20px
+			> span
+				display: inline-block
+				text-indent: -20px
+
+	.list_round_big
+		ul, ol
+			margin-bottom: 7px
+		li
+			line-height: 1.6
+		> li
+			padding-left: 29px
+			//text-indent: -29px
+		li > strong:first-child
+			display: block
+			margin-top: 20px
+			text-indent: -29px
+			+font-size(16px)
+			font-weight: 600
+
+		.list_star
+			padding-left: 16px
+			background-position: 2px -295px
+
+		.shape_round
+			margin-left: -6px
+
+		.num
+			display: inline-block
+			margin-right: 7px
+			+size(22px, 21px)
+			border-radius: 50%
+			background-color: #333333
+			color: #fff
+			line-height: 21px
+			text-align: center
+			text-indent: 0
+
+			.ie8 &
+				@extend %pie-ie
+
+		table
+			margin-top: 10px
+
+	.list_bar_s
+		li
+			padding-left: 10px
+			span:first-child
+				display: inline-block
+				text-indent: -10px
+				vertical-align: top
+
+	.inner .table_wrap
+		padding:
+			left: 28px
+			right: 28px
+			top: 20px
+		table
+			line-height: 1.6
+
+
 .tip_manage
 	.inner
 		padding-top: 13px
+
+
 
 
 .shape_round
 	box-sizing: border-box
 	display: inline-block
 	padding:
-		top: 4px
-		bottom: 4px
+		top: 1px
+		bottom: 1px
 		left: 20px
 		right: 20px
 	border: 1px solid #C8C8C8
