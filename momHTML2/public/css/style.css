@@ -95,9 +95,9 @@ h1, h2, h3, h4, h5, h6, ul, ol, li, p, fieldset, button, dl, dt, dd, figure { ma
 
 .personal_profile .name, .page_community .table_col .in_title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.ie8 .review_items.detail li, .review_items.detail .ie8 li, .ie8 .box_graph, .ie8 .counseling_items li, .counseling_items .ie8 li, .ie8 .button_sns, .masonry .item, .ie8 .masonry .item > a, .ie8 .masonry .item .photo > img, .top_bar .user_wrap .facebook, .header_search_wrap .form, .nano_scroll > .nano-pane, .nano_scroll > .nano-pane > .nano-slider, .ie8 .pill, .ie8 .review_total .review_items li, .personal_profile .photo, .ie8 .personal_profile .photo img, .ie8 .review_items .box_text, .ie8 .counseling_items .box_text, .ie8 .form_intro_box .placeholder_wrap input, .ie8 .form_intro_box .join, .comment_wrap .photo, .ie8 .comment_wrap .photo img { behavior: url(/momHTML2/public/js/front/vendor/PIE.htc); }
+.ie8 .review_items.detail li, .review_items.detail .ie8 li, .ie8 .box_graph, .ie8 .counseling_items li, .counseling_items .ie8 li, .ie8 .button_sns, .masonry .item, .ie8 .masonry .item > a, .ie8 .masonry .item .photo > img, .top_bar .user_wrap .facebook, .header_search_wrap .form, .nano_scroll > .nano-pane, .nano_scroll > .nano-pane > .nano-slider, .ie8 .pill, .ie8 .review_total .review_items li, .personal_profile .photo, .ie8 .personal_profile .photo img, .ie8 .review_items .box_text, .ie8 .counseling_items .box_text, .ie8 .form_intro_box .placeholder_wrap input, .ie8 .form_intro_box .join, .comment_wrap .photo, .ie8 .comment_wrap .photo img, .ie8 .tip_main_list li { behavior: url(/momHTML2/public/js/front/vendor/PIE.htc); }
 
-.button_large .icon, .button_line .icon, .button_line_xlarge .icon, .button_intro, .button_sns2, .paging .first, .paging .prev, .paging .next, .paging .last, table .icon_vital, .table .photo, .map_info .icon, .popup_wrap .close, .check_upload .done .icon, .box_caution .icon, .photo_zoom .control .prev, .photo_zoom .control .next, .writing_form li .icon, .star_five, .star_four, .star_three, .star_two, .star_one, .writing_search_text .icon, .page_member .title > .icon, .page_community .title > .icon, .popup_wrap .profile_photo .photo_wrap, .give_state .icon, .using_wrap .using_pager a, .tip_wrap .tip_paging a, .tip_etiquette_body .num_round { background: url(../img/bg_collect.png) no-repeat 0 0; }
+.button_large .icon, .button_line .icon, .button_line_xlarge .icon, .button_intro, .button_sns2, .paging .first, .paging .prev, .paging .next, .paging .last, table .icon_vital, .table .photo, .map_info .icon, .popup_wrap .close, .check_upload .done .icon, .box_caution .icon, .photo_zoom .control .prev, .photo_zoom .control .next, .writing_form li .icon, .star_five, .star_four, .star_three, .star_two, .star_one, .writing_search_text .icon, .page_member .title > .icon, .page_community .title > .icon, .popup_wrap .profile_photo .photo_wrap, .give_state .icon, .using_wrap .using_pager a, .tip_wrap .tip_paging a, .tip_etiquette_body .num_round, .tip_main_list .more { background: url(../img/bg_collect.png) no-repeat 0 0; }
 
 .review_items.detail li, .box_graph, .counseling_items li { border: 1px solid #e6e6e6; border-radius: 17px; }
 .ie8 .review_items.detail li, .review_items.detail .ie8 li, .ie8 .box_graph, .ie8 .counseling_items li, .counseling_items .ie8 li { position: relative; }
@@ -1262,8 +1262,16 @@ body.main { background-color: #F7F7F7; }
 
 .tip_manage .inner { padding-top: 13px; }
 
+.tip_main .slogan { padding-top: 70px; height: 75px; text-align: center; }
+
 .shape_round { box-sizing: border-box; display: inline-block; padding-top: 1px; padding-bottom: 1px; padding-left: 20px; padding-right: 20px; border: 1px solid #C8C8C8; border-radius: 15px; font-style: normal; }
 
 #card_tip_list .item { float: left; width: 590px; }
+
+.tip_main_list { overflow: hidden; width: 1222px; margin-bottom: 50px; }
+.tip_main_list li { position: relative; float: left; box-sizing: border-box; margin-right: 22px; margin-bottom: 20px; width: 385px; height: 270px; border: 1px solid #d3d3d3; border-radius: 10px; }
+.tip_main_list .head { height: 58px; padding-left: 25px; border-bottom: 1px solid #d3d3d3; color: #eb3b4b; font-size: 20px; font-size: 2rem; font-weight: normal; line-height: 58px; }
+.tip_main_list .body { padding-top: 26px; padding-left: 24px; padding-right: 24px; color: #323232; font-size: 15px; font-size: 1.5rem; letter-spacing: -1px; line-height: 1.5; }
+.tip_main_list .more { position: absolute; top: -1px; right: -1px; display: block; width: 60px; height: 60px; background-position: -730px -380px; text-indent: -9999px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3193,6 +3193,11 @@ $consider: #FDB45C
 	.inner
 		padding-top: 13px
 
+.tip_main
+	.slogan
+		padding-top: 70px
+		height: 145px - 70px
+		text-align: center
 
 
 
@@ -3214,3 +3219,56 @@ $consider: #FDB45C
 	.item
 		float: left
 		width: 590px
+
+//
+ * --------------------------------
+ * 꿀팁메인
+ * --------------------------------
+.tip_main_list
+	overflow: hidden
+	width: 1222px
+	margin-bottom: 50px
+
+	li
+		position: relative
+		float: left
+		box-sizing: border-box
+		margin:
+			right: 22px
+			bottom: 20px
+		+size(385px, 270px)
+		border: 1px solid #d3d3d3
+		border-radius: 10px
+
+		.ie8 &
+			@extend %pie
+
+	.head
+		height: 58px
+		padding-left: 25px
+		border-bottom: 1px solid #d3d3d3
+		color: $scarlet
+		+font-size(20px)
+		font-weight: normal
+		line-height: 58px
+
+	.body
+		padding:
+			top: 26px
+			left: 24px
+			right: 24px
+		color: #323232
+		+font-size(15px)
+		letter-spacing: -1px
+		line-height: 1.5
+		//word-break: break-word
+
+	.more
+		position: absolute
+		top: -1px
+		right: -1px
+		display: block
+		+size(60px, 60px)
+		@extend %is
+		background-position: -730px -380px
+		text-indent: -9999px
