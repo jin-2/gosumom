@@ -20,16 +20,6 @@
 		});
 	}
 
-	// 네모박스 정렬 - masonry
-	// if( $('#card_gallery') ){
-	// 	$('#card_gallery').masonry({
-	// 		itemSelector: '.item',
-	// 		columnWidth: 342,
-	// 		isFitWidth: true,
-	// 		gutter: 25
-	// 	});
-	// }
-
 	// gnb
 	$('.gnb li')
 		.mouseenter(function(){
@@ -80,6 +70,21 @@
 	$('.main_serching_bar .search_word').focusout(function(){
 		if($(this).val().length == 0) $('.main_serching_bar .placeholder').show();
 	})
+	// if( $('.main_serching_bar .search_word').val() > 0 ){
+	// 	$('.main_serching_bar .placeholder').hide();
+	// }
+
+	// $('.main_serching_bar').each(function(){
+	// 	var input_text = $('.search_word', this);
+	// 	if( input_text.val().length > 0 ){
+	// 		input_text.siblings('label').find('.placeholder').hide();
+	// 	}
+
+	// 	var textarea = $('textarea', this);
+	// 	if( textarea.val().length > 0 ){
+	// 		textarea.siblings('.placeholder').hide();
+	// 	}
+	// });
 
 	// 플레이스홀더 공통사용
 	$('.placeholder_wrap input').focus(function(){
@@ -104,6 +109,20 @@
 			$(this).siblings('.placeholder').show();
 		}
 	});
+
+	// 공통사용 value 있을 때 플레이스홀더 숨기기
+	// $('.placeholder_wrap').each(function(){
+
+	// 	var input_text = $('input[type="text"]', this);
+	// 	if( input_text.val().length > 0 ){
+	// 		input_text.siblings('label').find('.placeholder').hide();
+	// 	}
+
+	// 	var textarea = $('textarea', this);
+	// 	if( textarea.val().length > 0 ){
+	// 		textarea.siblings('.placeholder').hide();
+	// 	}
+	// });
 
 	// 스크롤 디자인
 	if( $(".nano_scroll") ){

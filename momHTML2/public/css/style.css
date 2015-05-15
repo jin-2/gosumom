@@ -291,7 +291,8 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 .main .header { border-color: #E5E5E5; }
 .header .wrapper { z-index: 30; position: relative; height: 69px; }
 .header .logo { position: absolute; top: -19px; left: 0; }
-.header .button_note_write, .header .button_review_write { float: right; }
+.header .button_note_write, .header .button_review_write { overflow: hidden; display: inlline-block; height: 69px; float: right; }
+.header .button_note_write:hover img, .header .button_review_write:hover img { margin-top: -69px; }
 
 .gnb_wrap { position: absolute; left: 309px; }
 
@@ -312,16 +313,17 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 .header_search_wrap .form input[type="image"] { position: absolute; top: 2px; right: 9px; padding: 5px; background: #e9e9e9; }
 
 .footer { z-index: 30; width: 100%; background-color: #fff; padding: 17px 0; border-top: 1px solid #E8E8E8; color: #b2b2b2; text-align: center; font-size: 12px; font-size: 1.2rem; }
-.main .footer { position: static; }
-@media all and (min-width: 1200px) { .main .footer { position: fixed; bottom: 0; } }
-.footer ul { display: inline-block; }
+body.fixed .footer { position: static; }
+@media all and (min-width: 1200px) { body.fixed .footer { position: fixed; bottom: 0; } }
+.footer ul { display: inline-block; margin-bottom: 3px; }
 .footer li { float: left; }
 .footer li::before { content: ""; display: inline-block; margin: 0 16px 0 13px; height: 8px; border-left: 1px solid #CECECE; }
 .footer li:first-child::before { display: none; border-left: 0; }
 .ie8 .footer li { margin: 0 15px; }
 .footer a { color: inherit; vertical-align: top; }
 .footer a:hover { color: #656565; }
-.footer .copyright { margin-top: 10px; font-family: helvetica; font-size: 10px; font-size: 1rem; }
+.footer .copyright { margin-top: 5px; font-family: helvetica; font-size: 10px; font-size: 1rem; }
+.footer address { display: inline; font-style: normal; }
 
 /* default bxslider style */
 /* PAGER */
@@ -932,7 +934,7 @@ body.main { background-color: #F7F7F7; }
 .page_search .search_result_text { float: left; }
 .page_search .sorting_tab { float: left; margin-left: 20px; }
 
-.page_list .writing_search_text, .main_reviews .writing_search_text { padding: 100px 0; }
+.page_list .writing_search_text, .main_reviews .writing_search_text { padding: 100px 0 265px; }
 
 .writing_search_text { clear: both; margin-bottom: 50px; text-align: center; }
 .writing_search_text .icon { display: inline-block; width: 196px; height: 196px; }

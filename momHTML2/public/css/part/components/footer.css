@@ -10,7 +10,7 @@ Error: Undefined mixin 'font-size'.
 13: 	text-align: center
 14: 	+font-size(12px)
 15: 
-16: 	.main &
+16: 	body.fixed &
 17: 		position: static
 18: 		
 19: 		@media all and (min-width:1200px)
@@ -71,4 +71,4 @@ c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font-size'.\A         on line 14 of sass/part/components/footer.sass, in `font-size'\A         from line 14 of sass/part/components/footer.sass\A \A 9: 	background-color: #fff\A 10: 	padding: 17px 0\A 11: 	border-top: 1px solid #E8E8E8\A 12: 	color: #b2b2b2\A 13: 	text-align: center\A 14: 	+font-size(12px)\A 15: \A 16: 	.main &\A 17: 		position: static\A 18: 		\A 19: 		@media all and (min-width:1200px)"; }
+  content: "Error: Undefined mixin 'font-size'.\A         on line 14 of sass/part/components/footer.sass, in `font-size'\A         from line 14 of sass/part/components/footer.sass\A \A 9: 	background-color: #fff\A 10: 	padding: 17px 0\A 11: 	border-top: 1px solid #E8E8E8\A 12: 	color: #b2b2b2\A 13: 	text-align: center\A 14: 	+font-size(12px)\A 15: \A 16: 	body.fixed &\A 17: 		position: static\A 18: 		\A 19: 		@media all and (min-width:1200px)"; }
