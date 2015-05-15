@@ -384,9 +384,17 @@ body
 		margin-right: 24px
 		width: 384px
 		height: 238px
+		background: url(#{$path}/inside_bg.gif) no-repeat 0 -238px
+
+		&.first
+			background-position: 0 0
 
 		&.last
 			margin-right: 0
+			background-position: 0 -476px
+
+	.box:hover
+		background-position-x: -384px
 
 // 메인 리뷰 갤러리
 .main_review_wrap
@@ -443,6 +451,9 @@ body
 .main_reviews
 	.detail_search_wrap
 		text-align: center
+
+	.writing_search_text
+		padding-bottom: 265px
 
 // 메인 리뷰 소팅
 .main_sorting_wrap
@@ -1771,7 +1782,7 @@ $consider: #FDB45C
 
 .page_list, .main_reviews
 	.writing_search_text
-		padding: 100px 0 265px
+		padding: 100px 0 
 
 .writing_search_text
 	clear: both
@@ -2734,9 +2745,13 @@ $consider: #FDB45C
 	.using_pager
 		position: absolute
 		top: 50%
-		right: 70px
+		right: 20px
 		width: 30px
 		margin-top: -100px
+
+		@media all and (min-width:1300px)
+			right: 70px
+
 		a
 			display: inline-block
 			+size(28px, 28px)
@@ -3332,3 +3347,6 @@ $consider: #FDB45C
 		li > a:hover
 			color: $scarlet
 
+.loading_wrap
+	margin: 300px 0
+	text-align: center
