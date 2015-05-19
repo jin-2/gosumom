@@ -319,10 +319,22 @@
 	<script src="../../../public/js/front/main.js"></script>
 	<script>
 		// 프로필사진 업로드 팝업
+		var sizeScreen = screen.width;
+		var SIZE_MEDIUM = 800;
 		$('#button_profile').click(function(){
-			$('#popup_profile_photo').bPopup({
-				closeClass: 'popup_close',
-			});
+			if(sizeScreen > SIZE_MEDIUM){
+				$('#popup_profile_photo').bPopup({
+					closeClass: 'popup_close',
+					positionStyle: 'absolute'
+				});
+			} else {
+				$('#popup_profile_photo').bPopup({
+					closeClass: 'popup_close',
+					positionStyle: 'absolute',
+					follow: [false, false],
+					position: [200, 200]
+				});
+			}
 		});
 
 	</script>

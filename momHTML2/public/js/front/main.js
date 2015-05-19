@@ -1,4 +1,47 @@
 (function(window, document, undefined) {
+	// 어린이집 상세 상단 갤러리 이미지 사이즈 조정
+	$('#slider img').each(function(index, el) {
+		var maxWidth = 500;
+		var maxHeight = 350;
+		var ratio = 0;
+		var width = $(this).width();
+		var height = $(this).height();
+
+		if(width > maxWidth){
+			ratio = maxWidth / width;
+			$(this).css("width", maxWidth);
+			$(this).css("height", height * ratio);
+			height = height * ratio;
+		}
+
+		var width = $(this).width();
+		var height = $(this).height();
+
+		if(height > maxHeight){
+			ratio = maxHeight / height;
+			$(this).css("height", maxHeight);
+			$(this).css("width", width * ratio);
+			width = width * ratio;
+		}
+
+		if(height < maxHeight){
+			//var marginTop = (maxHeight - height)/2
+			var marginTop = -Math.round((maxHeight - height) / 2);
+			//console.log('maxHeight: '+maxHeight+'height: '+height+'marginTop: '+marginTop);
+			if(marginTop < 0){
+				$(this).css('margin-top', marginTop)
+			}
+		}else if(height == maxHeight){
+			return false;
+		}
+
+	});
+
+	// 고수맘이야기 top이동
+	$('#go_top').click(function(){
+		$("html, body").animate({ scrollTop: 0 }, 600);
+		return false;
+	});
 	
 	// 네모박스 정렬 - masonry
 	if( $('#card_list') ){
@@ -34,7 +77,8 @@
 		$('#main_visual_slider').bxSlider({
 			auto: true,
 			pagerCustom: '.main_visual_wrap .pager',
-			controls: false
+			controls: false,
+			mode: 'fade'
 		});
 	}
 
@@ -43,7 +87,8 @@
 		$('#main_review_slider').bxSlider({
 			auto: true,
 			pagerCustom: '.main_review_wrap .pager',
-			controls: false
+			controls: false,
+			mode: 'fade'
 		});
 	}
 
@@ -70,59 +115,31 @@
 	$('.main_serching_bar .search_word').focusout(function(){
 		if($(this).val().length == 0) $('.main_serching_bar .placeholder').show();
 	})
-	// if( $('.main_serching_bar .search_word').val() > 0 ){
-	// 	$('.main_serching_bar .placeholder').hide();
-	// }
-
-	// $('.main_serching_bar').each(function(){
-	// 	var input_text = $('.search_word', this);
-	// 	if( input_text.val().length > 0 ){
-	// 		input_text.siblings('label').find('.placeholder').hide();
-	// 	}
-
-	// 	var textarea = $('textarea', this);
-	// 	if( textarea.val().length > 0 ){
-	// 		textarea.siblings('.placeholder').hide();
-	// 	}
-	// });
+	if( $('.main_serching_bar .search_word').val()){
+		$('.main_serching_bar .placeholder').hide();
+	}
 
 	// 플레이스홀더 공통사용
-	$('.placeholder_wrap input').focus(function(){
+	$('.placeholder_wrap input, .placeholder_wrap textarea').focus(function(){
 		$(this).keydown(function(){
 			$(this).siblings().find('.placeholder').hide();
 		});
 	});
-	$('.placeholder_wrap input').focusout(function(){
+	$('.placeholder_wrap input, .placeholder_wrap textarea').focusout(function(){
 		if($(this).val().length == 0){
 			$(this).siblings().find('.placeholder').show();
 		}
 	});
 
-	// 플레이스홀더 공통사용
-	$('.placeholder_wrap textarea').focus(function(){
-		$(this).keydown(function(){
-			$(this).siblings('.placeholder').hide();
-		});
-	});
-	$('.placeholder_wrap textarea').focusout(function(){
-		if($(this).val().length == 0){
-			$(this).siblings('.placeholder').show();
-		}
-	});
-
 	// 공통사용 value 있을 때 플레이스홀더 숨기기
-	// $('.placeholder_wrap').each(function(){
+	$('.placeholder_wrap').each(function(){
 
-	// 	var input_text = $('input[type="text"]', this);
-	// 	if( input_text.val().length > 0 ){
-	// 		input_text.siblings('label').find('.placeholder').hide();
-	// 	}
+		var input_text = $('input', this);
+		if( input_text.val() ){
+			input_text.siblings('label').find('.placeholder').hide();
+		}
 
-	// 	var textarea = $('textarea', this);
-	// 	if( textarea.val().length > 0 ){
-	// 		textarea.siblings('.placeholder').hide();
-	// 	}
-	// });
+	});
 
 	// 스크롤 디자인
 	if( $(".nano_scroll") ){
@@ -143,16 +160,7 @@
 		$('.password_modify').toggle();
 	})
 
-	// if( $('#card_list') ){
-	// 	console.log('yes')
-	// 	$('.footer').css({
-	// 		'position':'fixed'
-	// 	});
-	// }
-	
-}(window, document));
-
-$(window).load(function(){
+	// 어린이집 상세 갤러리
 	if( $('#card_gallery') ){
 		$('#card_gallery').masonry({
 			itemSelector: '.item',
@@ -161,7 +169,19 @@ $(window).load(function(){
 			gutter: 25
 		});
 	};
-})
+	
+}(window, document));
+
+// $(window).load(function(){
+// 	if( $('#card_gallery') ){
+// 		$('#card_gallery').masonry({
+// 			itemSelector: '.item',
+// 			columnWidth: 342,
+// 			isFitWidth: true,
+// 			gutter: 25
+// 		});
+// 	};
+// })
 
 // Design checkbox
 $.fn.designCheckbox = function(option){
@@ -216,7 +236,6 @@ $.fn.designRadio = function(option){
 		$(this).find('input[type=radio]').click(function(){
 			select_root.find('input[type=radio]').each(function(){
 				if($(this).prop('checked')){
-					console.log($(this))
 					$(this).parent().addClass('checked');
 				}else{
 					$(this).parent().removeClass('checked');

@@ -15,17 +15,20 @@
 	.big
 		float: left
 		+size($slider-bigW, $slider-bigH)
+		background-color: #dcdcdc
 		
 		ul
 			position: relative
 
 		li
+			overflow: hidden
 			position: absolute
 			top: 0
 			left: 0
+			text-align: center
 
 		img
-			+size(500px, 350px)
+			// +size(100%, auto)
 
 	.thumb
 		box-sizing: border-box

@@ -105,9 +105,9 @@
 							<ul id="slider">
 								<!-- 첫번째 이미지는 기본 이미지 img_default_gallery -->
 								<li><img src="../../../public/img/img_default_gallery.jpg" alt="어린이집 사진을 업로드 해주세요!" /></li>
-								<li><img src="http://lorempixel.com/500/350/people/2/" alt="" /></li>
-								<li><img src="http://lorempixel.com/500/350/people/3/" alt="" /></li>
-								<li><img src="http://lorempixel.com/500/350/people/4/" alt="" /></li>
+								<li><img src="http://lorempixel.com/400/250/people/2/" alt="" /></li>
+								<li><img src="http://lorempixel.com/800/500/people/3/" alt="" /></li>
+								<li><img src="http://lorempixel.com/600/800/people/4/" alt="" /></li>
 								<li><img src="http://lorempixel.com/500/350/people/5/" alt="" /></li>
 							</ul>
 						</div>
@@ -396,6 +396,46 @@
 	<!-- <script src="https://cdnjs.com/libraries/chart.js"></script> -->
 	<script src="../../../public/js/front/main.js"></script>
 	<script>
+		var sizeScreen = screen.width;
+		var SIZE_MEDIUM = 800;
+		
+		if(sizeScreen > SIZE_MEDIUM){
+			// 사진 업로드 팝업
+			$('#button_upload').click(function(){
+				$('#popup_upload').bPopup({
+					closeClass: 'popup_close',
+					positionStyle: 'absolute'
+				});
+			});
+
+			// 사진 업로드 확인 팝업
+			$('#button_upload_check').click(function(){
+				$('#popup_upload_chechk').bPopup({
+					closeClass: 'popup_close',
+					positionStyle: 'absolute'
+				});
+			});
+
+		} else {
+			// 사진 업로드 팝업
+			$('#button_upload').click(function(){
+				$('#popup_upload').bPopup({
+					closeClass: 'popup_close',
+					positionStyle: 'fixed',
+					position: [100, 100]
+				});
+			});
+			// 사진 업로드 확인 팝업
+			$('#button_upload_check').click(function(){
+				$('#popup_upload_chechk').bPopup({
+					closeClass: 'popup_close',
+					positionStyle: 'fixed',
+					position: [100, 100]
+				});
+			});
+
+		}
+
 		// 사진 업로드 팝업
 		$('#button_upload').click(function(){
 			$('#popup_upload').bPopup({
@@ -422,25 +462,50 @@
 			var thumbImgSrc = $thumb.attr('src');
 			var thumbIndex = $('#card_gallery .item').index($(this));
 
-			$('#popup_zoom').bPopup({
-				closeClass:'popup_close',
-				//follow: [true, true], //x, y
-				//position: ['auto', '500px'], //x, y
+			if(sizeScreen > SIZE_MEDIUM){
+				$('#popup_zoom').bPopup({
+					closeClass:'popup_close',
+					//positionStyle: 'absolute',
+					//follow: [true, true], //x, y
+					//position: ['auto', '500px'], //x, y
 
-				//팝업이 열리기 전에 실행되는 콜백함수
-				onOpen: function(){
-					// 첫번째 썸네일이면 이전버튼 감추기
-					checkEdge(thumbIndex);
-					$('#popup_zoom figure > img').attr({'src':thumbImgSrc});
-					$('#popup_zoom figcaption').text($thumbCaption);
-					$('.photo_zoom .title').text($schoolName)
-				}
-			},
-			//팝업이 로드된 후에 실행되는 콜백함수
-			function(){
-				//이전, 다음버튼 클릭 시
-				clickArrow(thumbIndex);
-			});
+					//팝업이 열리기 전에 실행되는 콜백함수
+					onOpen: function(){
+						// 첫번째 썸네일이면 이전버튼 감추기
+						checkEdge(thumbIndex);
+						$('#popup_zoom figure > img').attr({'src':thumbImgSrc});
+						$('#popup_zoom figcaption').text($thumbCaption);
+						$('.photo_zoom .title').text($schoolName)
+					}
+				},
+				//팝업이 로드된 후에 실행되는 콜백함수
+				function(){
+					//이전, 다음버튼 클릭 시
+					clickArrow(thumbIndex);
+				});
+			} else {
+				$('#popup_zoom').bPopup({
+					closeClass:'popup_close',
+					positionStyle:'absolute',
+					follow: [false, false],
+					position: ['auto', '200px'], //x, y
+					modalClose: false,
+
+					//팝업이 열리기 전에 실행되는 콜백함수
+					onOpen: function(){
+						// 첫번째 썸네일이면 이전버튼 감추기
+						checkEdge(thumbIndex);
+						$('#popup_zoom figure > img').attr({'src':thumbImgSrc});
+						$('#popup_zoom figcaption').text($thumbCaption);
+						$('.photo_zoom .title').text($schoolName)
+					}
+				},
+				//팝업이 로드된 후에 실행되는 콜백함수
+				function(){
+					//이전, 다음버튼 클릭 시
+					clickArrow(thumbIndex);
+				});
+			}
 			return false;
 		});
 

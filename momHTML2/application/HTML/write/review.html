@@ -145,7 +145,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3"></textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -179,7 +179,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3"></textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -213,7 +213,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3"></textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -247,7 +247,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3"></textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -281,7 +281,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3"></textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -315,7 +315,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3"></textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -349,7 +349,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3">123</textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -383,7 +383,7 @@
 										</span>
 									</div>
 									<div class="placeholder_wrap">
-										<span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span>
+										<label for=""><span class="placeholder">잠깐! 초보맘의 결정에 도움이 되도록 별점 평가의 이유를 꼭 남겨주세요~</span></label>
 										<textarea cols="10" rows="3"></textarea>
 										<span class="byte"><span class="change">0</span> / 300</span>
 									</div>
@@ -413,7 +413,7 @@
 							<div class="one_line">
 								<strong class="label"><span class="name">아튼빌어린이집</span>을 한 줄로 평가한다면?</strong>
 								<div class="placeholder_wrap">
-									<span class="placeholder">한 줄로 평가한다면?</span>
+									<label for=""><span class="placeholder">한 줄로 평가한다면?</span></label>
 									<textarea cols="10" rows="3"></textarea>
 									<span class="byte"><span class="change">0</span> / 300</span>
 								</div>
@@ -476,6 +476,7 @@
 				// update 함수는 keyup, paste, input 이벤트에서 호출한다.
 				var update = function() {
 					var before = $count.text() * 1;
+					var nowValue = $input.val();
 					var now = $input.val().length;
 					// 사용자가 입력한 값이 제한 값을 초과하는지를 검사한다.
 					if (now >= MAXIMUMCOUNT) {
@@ -489,8 +490,10 @@
 						$count.text(now);
 					}
 					// value가 있을 때
-					if (now > 0){
-						$input.siblings('.placeholder').hide();
+					if (nowValue){
+						//$input.siblings('.placeholder').hide();
+						$input.siblings().find('.placeholder').hide();
+						console.log(nowValue)
 					}
 
 				};
