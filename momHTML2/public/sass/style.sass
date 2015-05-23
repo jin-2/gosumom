@@ -165,7 +165,7 @@ body
 		line-height: 26px
 
 	input[type="text"]
-		width: 250px
+		width: 200px
 		line-height: 40px
 
 	.button_search
@@ -465,6 +465,10 @@ body
 
 	.writing_search_text
 		padding-bottom: 265px !important
+
+	.detail_search_wrap input[type="text"]
+		width: 250px
+		line-height: 40px
 
 // 메인 리뷰 소팅
 .main_sorting_wrap
@@ -1051,13 +1055,14 @@ body
 
 	.canvas_wrap
 		float: left
-		margin-left: -20px 
+		//margin-left: -20px 
+		margin-top: 15px
 		padding-top: 10px
 		width: 154px
 	ul
 		float: left
 		margin:
-			left: 56px
+			left: 25px
 			top: 60px
 		li
 			margin-bottom: 11px
@@ -1478,7 +1483,10 @@ $consider: #FDB45C
 	.icon
 		float: left
 		display: inline-block
-		margin-right: 10px
+		margin:
+			right: 10px
+			bottom: 8px
+			top: 8px
 		+size(36px, 31px)
 		@extend %is
 		background-position: -500px -200px
@@ -3072,17 +3080,23 @@ $consider: #FDB45C
 		border: 2px solid #dcdcdc
 
 		.item_head
+			box-sizing: border-box
+			width: 100%
 			padding: 
 				top: 23px
 				left: 25px
 				right: 25px
 				bottom: 18px
-			border-bottom: 1px dotted #b2b2b2
+			
 			+font-size(20px)
 			color: $scarlet
+			background-color: #fff
 		
 		.item_body
+			border-top: 1px dotted #b2b2b2
 			.inner
+				box-sizing: border-box
+				width: 100%
 				padding:
 					left: 27px
 					//top: 19px
@@ -3154,7 +3168,7 @@ $consider: #FDB45C
 	.ex
 		margin-top: 7px
 		padding-left: 36px
-		text-indent: -20px
+		//text-indent: -20px
 
 	span.ex
 		display: block
@@ -3162,7 +3176,7 @@ $consider: #FDB45C
 	.list_bar li
 		.ex
 			padding-left: 20px
-			text-indent: -20px
+			//text-indent: -20px
 
 	.list_bar
 		.list_star
@@ -3440,3 +3454,7 @@ $consider: #FDB45C
 .loading_wrap
 	margin: 300px 0
 	text-align: center
+
+// 커뮤니티 글쓰기 에디터
+#editor2
+	width: 977px

@@ -174,7 +174,7 @@
 					<div class="box_graph">
 						<h3>상담 만족도</h3>
 						<div class="canvas_wrap">
-							<canvas id="chart_satisfaction" width="125" height="125"/>
+							<canvas id="chart-area1" width="154" height="154" />
 						</div>
 						<ul id="explain_satisfaction">
 							<li class="positive">
@@ -197,7 +197,7 @@
 					<div class="box_graph result">
 						<h3>상담 결과</h3>
 						<div class="canvas_wrap">
-							<canvas id="chart_result" width="154" height="154"/>
+							<canvas id="chart-area2" width="300" height="300" />
 						</div>
 						<ul id="explain_result">
 							<li class="decision">
@@ -395,137 +395,50 @@
 	<script src="../../../public/js/front/main.js"></script>
 	<script>
 		(function() {
-			console.log($('canvas'))
-
-			// if(screen.width < 800){
-			// 	var $canvas = $('canvas');
-			// 	$canvas.attr({
-			// 		'title' : 'title',
-			// 		'width' : '250',
-			// 		'height' : '250'
-			// 	});
-			// 	$canvas.css({
-			// 		'width':'125px',
-			// 		'height' : '125px',
-			// 		'margin-top' : '15px',
-			// 		'margin-left' : '22px'
-			// 	});
-			// }
-
-
-		}());
-		
-		
-		// 상담만족도 data
-		var pieData_satisfaction = [
-				{
-					value: 52.2,
-					color:"#3e85f7",
-					highlight: "#5a96f7",
-					label: "긍정적"
-				},
-				{
-					value: 30,
-					color: "#69db42",
-					highlight: "#7fda60",
-					label: "보통"
-				},
-				{
-					value: 18,
-					color: "#cc96fd",
-					highlight: "#dbb8fb",
-					label: "부정적"
-				}
-			];
-
-			// 상담 결과 data
-			var pieData_result = [
-				{
-					value: 15,
-					color: "#46bfbd",
-					highlight: "#68c5c3",
-					label: "입학 결정"
-				},
-				{
-					value: 60,
-					color:"#f7464a",
-					highlight: "#f67073",
-					label: "제외 (배제)"
-				},
-				{
-					value: 25,
-					color: "#fdb45c",
-					highlight: "#fbc584",
-					label: "고민중"
-				}
-			];
-
-
-			window.onload = function(){
-				var satisfaction = document.getElementById("chart_satisfaction").getContext("2d");
-				var result = document.getElementById("chart_result").getContext("2d");
-				// 상담만족도
-				window.myPie = new Chart(satisfaction).Pie(pieData_satisfaction, {
-					//Boolean - stroke show
-					segmentShowStroke : true,
-
-					//String - stroke color
-					segmentStrokeColor : "#fff",
-
-					//Number - stroke width
-					segmentStrokeWidth : 2,
-
-					//Number - 원 중심 여백
-					percentageInnerCutout : 50, // This is 0 for Pie charts
-
-					//Number - animation speed
-					animationSteps : 100,
-
-					//String - Animation easing effect
-					animationEasing : "easeOutBounce",
-
-					//Boolean - Doughnut animate the rotation
-					animateRotate : true,
-
-					//Boolean - animate scaling the Doughnut
-					animateScale : false
-				});
-				// 상담 결과
-				window.myPie = new Chart(result).Pie(pieData_result, {
-					segmentShowStroke : true,
-					segmentStrokeColor : "#fff",
-					segmentStrokeWidth : 2,
-					percentageInnerCutout : 0,
-					animationSteps : 100,
-					animationEasing : "easeOutBounce",
-					animateRotate : true,
-					animateScale : false
-				});
-				//console.log(pieData_satisfaction[0].value)
-				//pieData_satisfaction[0].value
-				$('#explain_satisfaction li').each(function(index){
-					//console.log($(this).children())
-					var _this = $(this);
-					var setVal = _this.children('.value').text();
-					var getVal = pieData_satisfaction[index].value
-					var satisfactionVal = getVal+'%'
-					//console.log('set: '+setVal, 'get: '+getVal)
-					_this.children('.value').text(satisfactionVal)
-				});
-
-				$('#explain_result li').each(function(index){
-					//console.log($(this).children())
-					var _this = $(this);
-					var setVal = _this.children('.value').text();
-					var getVal = pieData_result[index].value
-					var satisfactionVal = getVal+'%'
-					//console.log('set: '+setVal, 'get: '+getVal)
-					_this.children('.value').text(satisfactionVal)
-				});
+			chart_default2 = {
+				segmentShowStroke : true,
+				segmentStrokeColor : "#fff",
+				segmentStrokeWidth : 2,
+				percentageInnerCutout : 50,
+				animationSteps : 100,
+				//animationEasing : "easeOutBounce",
+				animateRotate : false,
+				animateScale : false
 			};
 
-	</script>
+			chart_defaults1 = {
+                            animateRotate:false,
+                            segmentShowStroke:false
+                        };
 
+
+
+        referral_ctx = $(".chart_area").get(0).getContext("2d");
+        pieData_satisfaction = [
+            {
+				value: 52.2,
+				color:"#3e85f7",
+				highlight: "#5a96f7",
+				label: "긍정적"
+			},
+			{
+				value: 30,
+				color: "#69db42",
+				highlight: "#7fda60",
+				label: "보통"
+			},
+			{
+				value: 18,
+				color: "#cc96fd",
+				highlight: "#dbb8fb",
+				label: "부정적"
+			}
+        ];
+        referral_chart = new Chart(referral_ctx).Doughnut(pieData_satisfaction, chart_default2);
+
+		}());
+	</script>
+	
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
 	// (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
