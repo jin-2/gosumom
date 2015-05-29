@@ -218,7 +218,7 @@
 						</ul>
 					</div>
 
-					<div class="sorting_counseling">
+					<!-- <div class="sorting_counseling">
 						<form action="#" class="">
 							<fieldset>
 								<legend>상담후기 리뷰 보기</legend>
@@ -244,6 +244,48 @@
 					<div class="sorting_counseling">
 						<a href="#" class="counseling_write"><img src="../../../public/img/btn_counseling_write.png" alt="상담후기 작성"></a>
 					</div>
+
+					<div class="review_write_link">
+						<p>상담후기는 어린이집 입학 전 여러 어린이집을 방문한 초보맘들이 작성한 방문후기입니다. </p>
+						<div>
+							<select name="" id="" title="상담 만족도 여부로 분류해서 보기">
+								<option value="" selected>상담 만족도 여부</option>
+								<option value="">긍정적</option>
+								<option value="">보통</option>
+								<option value="">부정적</option>
+							</select>
+
+							<select name="" id="" title="상담 결과 여부로 분류해서 보기">
+								<option value="" selected>상담 결과 여부</option>
+								<option value="">입학 결정</option>
+								<option value="">제외 (배제)</option>
+								<option value="">고민중</option>
+							</select>
+						</div>
+						<a href="#" class="counseling_write"><img src="../../../public/img/btn_counseling_write.png" alt="상담후기 작성"></a>
+					</div> -->
+
+					<form id="counseling_form" action="http://tendencydev.kr/gosumom2/childcare/counseling/11/1/" method="post" class="sorting_counseling">
+						<fieldset>
+							<legend>상담후기 리뷰 보기</legend>
+							<p>상담후기는 어린이집 입학 전 여러 어린이집을 방문한 초보맘들이 작성한 방문후기입니다. </p>
+							<select name="the_level" id="the_level" title="상담 만족도 여부로 분류해서 보기">
+								<option value="0" selected="">상담 만족도 여부</option>
+								<option value="1">긍정적</option>
+								<option value="2">보통</option>
+								<option value="3">부정적</option>
+							</select>
+
+							<select name="the_result" id="the_result" title="상담 결과 여부로 분류해서 보기">
+								<option value="0" selected="">상담 결과 여부</option>
+								<option value="1">입학 결정</option>
+								<option value="2">제외 (배제)</option>
+								<option value="3">고민중</option>
+							</select>
+
+							<a href="javascript:counseling_write('NONE_LOGIN');" class="counseling_write"><img src="http://tendencydev.kr/gosumom2/public/img/btn_counseling_write.png" alt="상담후기 작성"></a>
+						</fieldset>
+					</form>
 
 					<section>
 						<div class="nothing_wrap">
