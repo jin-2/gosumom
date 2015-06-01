@@ -93,7 +93,7 @@ td, th { padding: 0; }
 
 .personal_profile .name, .page_community .table_col .in_title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.ie8 .review_items.detail li, .review_items.detail .ie8 li, .ie8 .box_graph, .ie8 .counseling_items li, .counseling_items .ie8 li, .ie8 .button, .ie8 .button_large, .ie8 .button_line, .ie8 .button_line_large, .ie8 .button_line_xlarge, .ie8 .button_line_small, .ie8 .masonry .item, .masonry .ie8 .item, .ie8 .box_graph .color_thumb, .box_graph .ie8 .color_thumb, .ie8 .page_childcare .writing_search_text .icon, .page_childcare .writing_search_text .ie8 .icon, .ie8 .masonry_tip_list .list_round_big .num, .ie8 .shape_round, .ie8 .tip_main_list .head, .tip_main_list .ie8 .head, .ie8 .button_sns, .ie8 .masonry .item > a, .ie8 .masonry .item .photo > img, .top_bar .user_wrap .facebook, .header_search_wrap .form, .nano_scroll > .nano-pane, .nano_scroll > .nano-pane > .nano-slider, .ie8 .pill, .ie8 .review_total .review_items li, .personal_profile .photo, .ie8 .personal_profile .photo img, .ie8 .review_items .box_text, .ie8 .counseling_items .box_text, .ie8 .form_intro_box .placeholder_wrap input, .ie8 .form_intro_box .join, .comment_wrap .photo, .ie8 .comment_wrap .photo img, .ie8 .tip_main_list li { behavior: url(../js/front/vendor/PIE.htc); }
+.ie8 .review_items.detail li, .review_items.detail .ie8 li, .ie8 .box_graph, .ie8 .counseling_items li, .counseling_items .ie8 li, .ie8 .button, .ie8 .button_large, .ie8 .button_line, .ie8 .button_line_large, .ie8 .button_line_xlarge, .ie8 .button_line_small, .ie8 .masonry .item, .masonry .ie8 .item, .ie8 .box_graph .color_thumb, .box_graph .ie8 .color_thumb, .ie8 .page_childcare .writing_search_text .icon, .page_childcare .writing_search_text .ie8 .icon, .ie8 .masonry_tip_list .list_round_big .num, .ie8 .shape_round, .ie8 .tip_main_list .head, .tip_main_list .ie8 .head, .ie8 .button_sns, .ie8 .masonry .item > a, .ie8 .masonry .item .photo > img, .top_bar .user_wrap .facebook, .header_search_wrap .form, .nano_scroll > .nano-pane, .nano_scroll > .nano-pane > .nano-slider, .ie8 .pill, .ie8 .review_total .review_items li, .personal_profile .photo, .ie8 .personal_profile .photo img, .ie8 .review_items .box_text, .ie8 .counseling_items .box_text, .ie8 .form_intro_box .placeholder_wrap input, .ie8 .form_intro_box .join, .comment_wrap .photo, .ie8 .comment_wrap .photo img, .ie8 .tip_main_list li { behavior: url(/momHTML2/public/js/front/vendor/PIE.htc); }
 
 .button_large .icon, .button_line .icon, .button_line_xlarge .icon, .button_intro, .button_sns2, .paging .first, .paging .prev, .paging .next, .paging .last, table .icon_vital, .table .photo, .map_info .icon, .popup_wrap .close, .check_upload .done .icon, .box_caution .icon, .photo_zoom .control .prev, .photo_zoom .control .next, .writing_form li .icon, .star_five, .star_four, .star_three, .star_two, .star_one, .writing_search_text .icon, .page_member .title > .icon, .page_community .title > .icon, .popup_wrap .profile_photo .photo_wrap, .give_state .icon, .using_wrap .using_pager a, .tip_wrap .tip_paging a, .tip_etiquette_body .num_round, .tip_main_list li .more { background: url(../img/bg_collect.png) no-repeat 0 0; }
 
@@ -279,13 +279,17 @@ a.button, a.button_large, a.button_line, a.button_line_large, a.button_line_xlar
 .top_bar .text > span::before { content: "/"; display: inline-block; padding-left: 10px; padding-right: 9px; }
 .top_bar .text span { font-family: "Open Sans", sans-serif; font-weight: 700; }
 .top_bar .user_wrap { float: right; height: 26px; font-family: "돋움", "dotum"; }
-.top_bar .user_wrap .name { margin-right: 4px; }
-.top_bar .user_wrap a { display: inline-block; margin-top: 8px; padding-right: 5px; padding-left: 8px; border-left: 1px dotted #bababa; color: #BABABA; line-height: 1; }
+.top_bar .user_wrap .name { display: inline-block; margin-right: 4px; margin-top: 7px; }
+.top_bar .user_wrap a { display: inline-block; margin-top: 8px; padding-right: 5px; padding-left: 8px; border-left: 1px dotted #bababa; color: #BABABA; line-height: 1; vertical-align: top; }
 .main .top_bar .user_wrap a { color: #fefefe; border-left-color: #c92b39; }
 .top_bar .user_wrap a.first { border-left: 0; }
 .top_bar .user_wrap span { float: left; }
 .top_bar .user_wrap .facebook { position: relative; top: -5px; display: inline-block; padding: 0; width: 20px; height: 20px; background-color: #BBBBBB; border-radius: 50%; border-left: 0; vertical-align: top; }
 .main .top_bar .user_wrap .facebook { background-color: #C81021; }
+.top_bar .fb-like { margin-top: 3px; vertical-align: top; z-index: 100; }
+.top_bar .fb-like .fb_iframe_widget iframe { right: 0; }
+.top_bar .fb-like ._4xnc ._4xn8 { left: 385px; }
+.top_bar .fb-like ._51mz.pluginConnectButtonLayoutRoot { position: absolute; top: 0; right: 0; }
 
 .header { border-bottom: 1px solid #eb3b4b; background-color: #fff; }
 .main .header { border-color: #E5E5E5; }
@@ -842,6 +846,15 @@ body.main { background-color: #F7F7F7; }
 .check_upload .done .icon { display: inline-block; margin-bottom: 20px; width: 101px; height: 101px; background-position: -600px -580px; }
 .check_upload .notice { margin-top: 30px; line-height: 1.5; }
 .check_upload .btn_wrap { margin-top: 35px; padding-top: 20px; border-top: 1px dotted #b2b2b2; }
+
+.popup_wrap_like { display: none; padding-top: 50px; width: 500px; background-color: #bf1e2e; }
+.popup_wrap_like .inner { position: relative; padding-top: 45px; height: 370px; background-color: #f7f7f7; text-align: center; }
+.popup_wrap_like .close { display: inline-block; position: absolute; top: -38px; right: 15px; width: 28px; height: 28px; background: url(../img/bg_popup_like.png) no-repeat 5px -125px; text-indent: -9999px; }
+.popup_wrap_like .bg { display: inline-block; margin-bottom: 20px; width: 136px; height: 116px; background: url(../img/bg_popup_like.png) no-repeat 0 0; }
+.popup_wrap_like .text { margin-bottom: 32px; font-size: 16px; font-size: 1.6rem; color: #021A30; font-weight: 600; }
+.popup_wrap_like .text strong { display: inline-block; margin-bottom: 15px; font-size: 25px; font-size: 2.5rem; font-weight: 600; }
+.popup_wrap_like .like { color: #bf1e2e; }
+.popup_wrap_like .like_button_area { text-align: center; }
 
 .file_input_wrap { overflow: hidden; margin-top: 5px; }
 .file_input_wrap > input[type="text"] { width: 409px; background-color: #f4f4f4; }

@@ -37,7 +37,10 @@
 		font-family: $dotum
 
 		.name
-			margin-right: 4px
+			display: inline-block
+			margin:
+				right: 4px
+				top: 7px
 
 		a
 			display: inline-block
@@ -48,6 +51,7 @@
 			border-left: 1px dotted #bababa
 			color: #BABABA
 			line-height: 1
+			vertical-align: top
 
 			.main &
 				color: #fefefe
@@ -74,6 +78,23 @@
 
 			.main & 
 				background-color: #C81021
+
+	.fb-like
+		margin-top: 3px
+		vertical-align: top
+		z-index: 100
+
+		.fb_iframe_widget iframe
+			right: 0
+
+		._4xnc ._4xn8
+			left: 385px
+
+		._51mz.pluginConnectButtonLayoutRoot
+			position: absolute
+			top: 0
+			right: 0
+
 
 // header layout
 .header

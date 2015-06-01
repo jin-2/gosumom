@@ -1450,6 +1450,54 @@ $consider: #FDB45C
 		padding-top: 20px
 		border-top: 1px dotted #b2b2b2
 
+// 좋아요 팝업
+.popup_wrap_like
+	display: none
+	padding-top: 50px
+	width: 500px
+	background-color: #bf1e2e
+
+	.inner
+		position: relative
+		padding-top: 45px
+		height: 370px 
+		background-color: #f7f7f7
+		text-align: center
+
+	.close
+		display: inline-block
+		position: absolute
+		top: -38px
+		right: 15px
+		width: 28px
+		height: 28px
+		background: url(../img/bg_popup_like.png) no-repeat 5px -125px
+		text-indent: -9999px
+
+	.bg
+		display: inline-block
+		margin-bottom: 20px
+		width: 136px
+		height: 116px
+		background: url(../img/bg_popup_like.png) no-repeat 0 0
+
+	.text
+		margin-bottom: 32px
+		+font-size(16px)
+		color: #021A30
+		font-weight: 600
+
+		strong
+			display: inline-block
+			margin-bottom: 15px
+			+font-size(25px)
+			font-weight: 600
+
+	.like
+		color: #bf1e2e
+
+	.like_button_area
+		text-align: center
 
 //
  * --------------------------------
