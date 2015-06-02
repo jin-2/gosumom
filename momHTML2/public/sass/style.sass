@@ -1497,6 +1497,7 @@ $consider: #FDB45C
 		color: #bf1e2e
 
 	.like_button_area
+		padding-left: 82px
 		text-align: center
 
 //
@@ -2499,20 +2500,67 @@ $consider: #FDB45C
 			color: $scarlet
 
 .comment_wrap
-	border-top: 1px solid $scarlet
+	border:
+		top: 1px solid $scarlet
+		bottom: 1px solid #e2e2e2
 
 	li
+		border-top: 1px solid #e2e2e2
+
+		&.center
+			text-align: center
+			padding: 40px 0
+
+	> li:first-child
+		border-top: 0
+
+	.inner
 		position: relative
 		padding:
 			right: 30px
 			left: 105px
 			top: 23px
 			bottom: 20px
-		border-bottom: 1px solid #e2e2e2
+		//border-bottom: 1px solid #e2e2e2
 
-		&.center
-			text-align: center
-			padding: 40px 0
+	.inner.write
+		padding:
+			top: 34px
+			bottom: 10px
+		background-position: 105px 40px
+		background-color: #f4f4f4
+		.name, .date
+			display: none
+		textarea
+			height: 70px
+		.comment
+			margin-top: 0
+			button
+				height: 70px
+		.btn_wrap
+			margin-top: 0
+			top: 5px
+		.photo
+			top: 34px
+		
+	ul
+		li
+		.inner
+			//margin-left: -20px
+			padding:
+				right: 30px
+				left: 200px
+				top: 23px
+				bottom: 20px
+			border-bottom: 0
+			//border-top: 1px solid #e2e2e2
+			background: url(#{$path}/reply.png) no-repeat 105px 30px
+
+			.photo
+				left: 125px
+
+			.byteInfo
+				right: 138px
 
 	.photo
 		overflow: hidden
@@ -2550,6 +2598,7 @@ $consider: #FDB45C
 
 	.comment
 		overflow: hidden
+		position: relative
 		margin-top: 6px
 		+font-size(16px)
 		color: #7B7B7B
@@ -2558,13 +2607,13 @@ $consider: #FDB45C
 		textarea
 			overflow-y: scroll
 			float: left
-			width: 90%
+			width: 88%
 			height: 90px
 			vertical-align: top
 			+font-size(16px)
 		button
 			float: right
-			width: 10%
+			width: 12%
 			height: 90px
 			background-color: #4b4748
 			color: #fff
@@ -2573,8 +2622,8 @@ $consider: #FDB45C
 		.byteInfo
 			z-index: 2
 			position: absolute
-			bottom: 22px
-			right: 158px
+			bottom: 4px
+			right: 149px
 			+font-size(12px)
 
 	.btn_wrap
