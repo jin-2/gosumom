@@ -2519,15 +2519,15 @@ $consider: #FDB45C
 		padding:
 			right: 30px
 			left: 105px
-			top: 23px
-			bottom: 20px
+			top: 12px
+			bottom: 10px
 		//border-bottom: 1px solid #e2e2e2
 
 	.inner.write
 		padding:
-			top: 34px
+			top: 10px
 			bottom: 10px
-		background-position: 105px 40px
+		//background-position: 105px 20px
 		background-color: #f4f4f4
 		.name, .date
 			display: none
@@ -2541,7 +2541,7 @@ $consider: #FDB45C
 			margin-top: 0
 			top: 5px
 		.photo
-			top: 34px
+			//top: 10px
 		
 	ul
 		li
@@ -2550,14 +2550,14 @@ $consider: #FDB45C
 			padding:
 				right: 30px
 				left: 200px
-				top: 23px
-				bottom: 20px
+				// top: 23px
+				// bottom: 20px
 			border-bottom: 0
 			//border-top: 1px solid #e2e2e2
-			background: url(#{$path}/reply.png) no-repeat 105px 30px
+			background: url(#{$path}/reply.png) no-repeat 105px 16px
 
 			.photo
-				left: 125px
+				left: 130px
 
 			.byteInfo
 				right: 138px
@@ -2565,16 +2565,16 @@ $consider: #FDB45C
 	.photo
 		overflow: hidden
 		position: absolute
-		top: 20px
+		top: 11px
 		left: 30px 
 		display: inline-block
-		+size(55px, 55px)
+		+size(45px, 45px)
 		border-radius: 50%
-		background: #e6e6e6 $path-is no-repeat -259px -391px
+		background: #e6e6e6 $path-is no-repeat -264px -395px
 		@extend %pie
 		
 		img
-			+size(55px, 55px)
+			+size(45px, 45px)
 			.ie8 &
 				border-radius: 50%
 				position: relative
@@ -2600,7 +2600,7 @@ $consider: #FDB45C
 		overflow: hidden
 		position: relative
 		margin-top: 6px
-		+font-size(16px)
+		+font-size(13px)
 		color: #7B7B7B
 		line-height: 1.4
 		word-break: break-all
@@ -2610,7 +2610,7 @@ $consider: #FDB45C
 			width: 88%
 			height: 90px
 			vertical-align: top
-			+font-size(16px)
+			+font-size(13px)
 		button
 			float: right
 			width: 12%
@@ -2628,8 +2628,9 @@ $consider: #FDB45C
 
 	.btn_wrap
 		position: absolute
-		top: -1px
+		top: 7px
 		right: 30px
+		margin-top: 0
 
 .comment_input_wrap
 	position: relative

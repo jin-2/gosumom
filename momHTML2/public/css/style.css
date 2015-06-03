@@ -1121,27 +1121,26 @@ body.main { background-color: #F7F7F7; }
 .comment_wrap li { border-top: 1px solid #e2e2e2; }
 .comment_wrap li.center { text-align: center; padding: 40px 0; }
 .comment_wrap > li:first-child { border-top: 0; }
-.comment_wrap .inner { position: relative; padding-right: 30px; padding-left: 105px; padding-top: 23px; padding-bottom: 20px; }
-.comment_wrap .inner.write { padding-top: 34px; padding-bottom: 10px; background-position: 105px 40px; background-color: #f4f4f4; }
+.comment_wrap .inner { position: relative; padding-right: 30px; padding-left: 105px; padding-top: 12px; padding-bottom: 10px; }
+.comment_wrap .inner.write { padding-top: 10px; padding-bottom: 10px; background-color: #f4f4f4; }
 .comment_wrap .inner.write .name, .comment_wrap .inner.write .date { display: none; }
 .comment_wrap .inner.write textarea { height: 70px; }
 .comment_wrap .inner.write .comment { margin-top: 0; }
 .comment_wrap .inner.write .comment button { height: 70px; }
 .comment_wrap .inner.write .btn_wrap { margin-top: 0; top: 5px; }
-.comment_wrap .inner.write .photo { top: 34px; }
-.comment_wrap ul .inner { padding-right: 30px; padding-left: 200px; padding-top: 23px; padding-bottom: 20px; border-bottom: 0; background: url(../img/reply.png) no-repeat 105px 30px; }
-.comment_wrap ul .inner .photo { left: 125px; }
+.comment_wrap ul .inner { padding-right: 30px; padding-left: 200px; border-bottom: 0; background: url(../img/reply.png) no-repeat 105px 16px; }
+.comment_wrap ul .inner .photo { left: 130px; }
 .comment_wrap ul .inner .byteInfo { right: 138px; }
-.comment_wrap .photo { overflow: hidden; position: absolute; top: 20px; left: 30px; display: inline-block; width: 55px; height: 55px; border-radius: 50%; background: #e6e6e6 url(../img/bg_collect.png) no-repeat -259px -391px; }
-.comment_wrap .photo img { width: 55px; height: 55px; }
+.comment_wrap .photo { overflow: hidden; position: absolute; top: 11px; left: 30px; display: inline-block; width: 45px; height: 45px; border-radius: 50%; background: #e6e6e6 url(../img/bg_collect.png) no-repeat -264px -395px; }
+.comment_wrap .photo img { width: 45px; height: 45px; }
 .ie8 .comment_wrap .photo img { border-radius: 50%; position: relative; }
 .comment_wrap .name { margin-right: 5px; padding-right: 10px; background: url(../img/bg_button_bar.gif) no-repeat 100% 4px; font-family: "나눔고딕", "Nanum Gothic"; font-weight: 600; font-size: 16px; font-size: 1.6rem; color: #424242; }
 .comment_wrap .date { margin-right: 0; padding-right: 0; background: none; font-family: "Play", sans-serif; color: #7B7B7B; }
-.comment_wrap .comment { overflow: hidden; position: relative; margin-top: 6px; font-size: 16px; font-size: 1.6rem; color: #7B7B7B; line-height: 1.4; word-break: break-all; }
-.comment_wrap .comment textarea { overflow-y: scroll; float: left; width: 88%; height: 90px; vertical-align: top; font-size: 16px; font-size: 1.6rem; }
+.comment_wrap .comment { overflow: hidden; position: relative; margin-top: 6px; font-size: 13px; font-size: 1.3rem; color: #7B7B7B; line-height: 1.4; word-break: break-all; }
+.comment_wrap .comment textarea { overflow-y: scroll; float: left; width: 88%; height: 90px; vertical-align: top; font-size: 13px; font-size: 1.3rem; }
 .comment_wrap .comment button { float: right; width: 12%; height: 90px; background-color: #4b4748; color: #fff; font-size: 14px; font-size: 1.4rem; font-weight: 600; }
 .comment_wrap .comment .byteInfo { z-index: 2; position: absolute; bottom: 4px; right: 149px; font-size: 12px; font-size: 1.2rem; }
-.comment_wrap .btn_wrap { position: absolute; top: -1px; right: 30px; }
+.comment_wrap .btn_wrap { position: absolute; top: 7px; right: 30px; margin-top: 0; }
 
 .comment_input_wrap { position: relative; margin-top: 50px; padding: 10px 30px; height: 102px; border-top: 1px solid #eb3b4b; background-color: #f4f4f4; }
 .comment_input_wrap textarea { overflow-y: scroll; float: left; width: 1011px; height: 100px; font-size: 16px; font-size: 1.6rem; line-height: 1.4; }
