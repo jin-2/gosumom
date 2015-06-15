@@ -78,7 +78,10 @@
 			auto: true,
 			pagerCustom: '.main_visual_wrap .pager',
 			controls: false,
-			mode: 'fade'
+			mode: 'fade',
+			pause: 17000,
+			//autoDelay: 10000,
+			auto: true
 		});
 	}
 
