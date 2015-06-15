@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Gosumom</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+body,div,img,label,input,button,p{margin:0;padding:0;}
+img{vertical-align: top;}
+img,a{border:0;}
+a{}
+.popup_footer{
+	box-sizing: border-box;
+	overflow: hidden;
+	padding: 3px 10px;
+}
+.popup_footer, button{
+	font-family: '나눔고딕', '돋움', dotum;
+	font-size: 12px;
+}
+.popup_footer label{
+	display: inline-block;
+	padding-top: 3px;
+	vertical-align: top;
+	color: #333;
+}
+.popup_footer input[type="checkbox"]{
+	width:16px;
+	height:16px;
+	vertical-align: top;
+}
+.popup_footer button{
+	padding: 3px 10px;
+	border: 1px solid #4b4748;
+	color: #4b4748;
+	background-color: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+	float: right;
+}
+.popup_footer .one_day{
+	float: left;
+}
+</style>
+</head>
+<body>
+	<div>
+		<img src="../../../public/img/@temp/popup_dog.jpg" alt="눈감은 골든 리트리버" usemap="Map_same_name">
+		<map name="Map_same_name" id="Map_same_name">
+			<area shape="rect" coords="137,460,455,516" href="mailto:help@gosumom.co.kr" />
+		</map>
+	</div>
+	<div class="popup_footer">
+		<button type="button"><i class="fa fa-times"></i> 닫기</button>
+		<label for="one_day">
+			<input type="checkbox" name="" id="one_day">
+			오늘 하루 그만보기
+		</label>
+	</div>
+</body>
+</html>

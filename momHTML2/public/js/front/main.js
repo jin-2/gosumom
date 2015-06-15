@@ -1,7 +1,6 @@
 (function(window, document, undefined) {
 	// 어린이집 상세 상단 갤러리 이미지 사이즈 조정
 	$('#slider img').each(function(index, el) {
-		console.log('이미지야')
 		var maxWidth = 500;
 		var maxHeight = 350;
 		var ratio = 0;

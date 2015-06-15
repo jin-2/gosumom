@@ -42,6 +42,27 @@
 	</div>
 	<!-- // 팝업: 좋아요 -->
 
+	<!-- 팝업: 오픈 -->
+	<div id="popup_open" class="popup_notice">
+		<div class="inner">
+			<button type="button" class="popup_close close">닫기</button>
+			<div class="popup_open_content">
+				<img src="../../../public/img/popup_new.jpg" alt="고수맘이 새로워졌습니다! 어린이집 ‘방문후기’를 통해 상담후기를 공유할 수 있습니다. 고수맘들과 자유롭게 소통할 수 있는 ‘고수맘의 생생talk’를 오픈했습니다. 베타버전에서 ‘페이스북’으로 가입해주신 고수맘님의 신규가입이 필요합니다. 페이스북 아이디 연동프로그램이 리뉴얼 되어, 기존 페이스북 아이디의 회원정보로 등록, 수정, 삭제가 불가하게 되었습니다. 기존 ID로 재가입이 가능하오니, 간단한 절차를 통해 가입 부탁드릴게요. 불편 사항이 있으시면 help@gosumom.com으로 문의해주세요! 더 좋은 서비스를 위해 노력하는 고수맘이 되겠습니다. 기대해주세요!" usemap="#Map_popup_notice">
+				<map name="Map_popup_notice" id="Map_popup_notice">
+					<area shape="rect" coords="243,531,372,555" href="mailto:help@gosumom.com" alt="help@gosumom.com" />
+				</map>
+			</div>
+			<div class="popup_footer">
+				<label for="one_day">
+					<input type="checkbox" name="name1" id="one_day">
+					오늘 하루 그만보기
+				</label>
+				<button type="button" class="button popup_close">닫기</button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업: 오픈 -->
+
 	<!-- #container -->
 	<div id="container">
 
@@ -106,6 +127,13 @@
 			<!-- 메인 비쥬얼 - 고수맘 이야기  -->
 			<div class="main_visual_wrap">
 				<ul id="main_visual_slider" class="main_visual_slider">
+					<li class="slide" style="background:url(../../../public/img/mainbanner_4.jpg) no-repeat 50% 0">
+						<a href="#" class="wrapper">
+							<p class="hidden">
+								고수맘 Renewal 기념 이벤트 - 리뷰, 상담후기 작성하고 밀로앤개비 침낭세트와 베개 받자!
+							</p>
+						</a>
+					</li>
 					<li class="slide one" style="background:url(../../../public/img/mainbanner_1.jpg) no-repeat 50% 0">
 						<a href="#" class="wrapper">
 							<p class="hidden">
@@ -113,13 +141,13 @@
 							</p>
 						</a>
 					</li>
-					<li class="slide two" style="background:url(../../../public/img/mainbanner_2.jpg) no-repeat 50% 0">
+					<!-- <li class="slide two" style="background:url(../../../public/img/mainbanner_2.jpg) no-repeat 50% 0">
 						<a href="#" class="wrapper">
 							<p class="hidden">
 								고수맘의 생생 Talk - 우리 아이 잘 적응하고 있을까? 선배맘들에게 물어보고 공유하는 커뮤니티 공간입니다.
 							</p>
 						</a>
-					</li>
+					</li> -->
 					<li class="slide three" style="background:url(../../../public/img/mainbanner_3.jpg) no-repeat 50% 0">
 						<a href="#" class="wrapper">
 							<p class="hidden">
@@ -389,9 +417,17 @@
 	<script src="../../../public/js/front/plugin/jquery.nanoscroller.js"></script>
 	<script src="../../../public/js/front/main.js"></script>
 	<script>
-		$('#popup_facebook_like').bPopup({
-			closeClass:'popup_close'
+		$(document).ready(function(){
+			$('.popup_notice').bPopup({
+				closeClass:'popup_close',
+				modal: false,
+				follow: [false, false], //x, y
+				position: [30, 96] //x, y
+			});
 		});
+		// $('#popup_facebook_like').bPopup({
+		// 	closeClass:'popup_close'
+		// });
 		$('.sorting_tab a').click(function(){
 			$(document).scrollTop()
 		})

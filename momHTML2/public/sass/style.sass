@@ -1500,6 +1500,50 @@ $consider: #FDB45C
 		padding-left: 82px
 		text-align: center
 
+// 윈도우 오픈 팝업
+.popup_notice
+	position: absolute
+	display: none
+	.inner
+		width: 600px
+		position: relative
+	
+	.close
+		display: inline-block
+		position: absolute
+		top: 7px
+		right: 0
+		+size(40px, 40px)
+		@extend %is
+		background-position: -487px -569px
+		text-indent: -9999px
+	
+	.popup_footer
+		box-sizing: border-box
+		padding: 5px 27px 12px
+		height: 47px
+		background-color: #fff
+		+font-size(12px)
+		text-align: right
+
+		button.button
+			width: 77px
+			height: 30px
+			margin-left: 16px
+			padding: 0
+			line-height: 30px
+			+font-size(12px)
+			font-weight: 600
+
+		label
+			display: inline-block
+			margin-top: 8px
+
+		input[type="checkbox"]
+			width: 16px
+			height: 16px
+
+
 //
  * --------------------------------
  * input file
@@ -2544,7 +2588,8 @@ $consider: #FDB45C
 			//top: 10px
 		
 	ul
-		li
+		//li
+
 		.inner
 			//margin-left: -20px
 			padding:
