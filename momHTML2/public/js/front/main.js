@@ -1,4 +1,7 @@
 (function(window, document, undefined) {
+	// 메인 서칭 바 탭
+	tabMenu(".main_serching_bar li");
+
 	// 어린이집 상세 상단 갤러리 이미지 사이즈 조정
 	$('#slider img').each(function(index, el) {
 		var maxWidth = 500;
@@ -270,3 +273,11 @@ $.fn.designRadio.option = {
 	clickClass	: "click"
 };
 $(".set_radio").designRadio();
+
+function tabMenu(selector){
+	selector = $('button', selector);
+	$(selector).click(function(){
+		selector.removeClass('scarlet');
+		$(this).addClass('scarlet');
+	})
+}

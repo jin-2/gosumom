@@ -165,14 +165,32 @@
 			<!-- //메인 비쥬얼 - 고수맘 이야기  -->
 
 			<!-- 메인 검색바 -->
-			<form action="#" class="main_serching_bar">
-				<fieldset>
-					<legend>어린이집 검색</legend>
-					<label for="search_word"><span class="placeholder">어린이집명으로 검색하세요.</span></label>
-					<input type="text" name="" id="" class="search_word" placeholder="" value="5555" >
-					<input type="image" src="../../../public/img/btn_main_search.png" alt="검색">
-				</fieldset>
-			</form>
+			<div class="main_serching_bar">
+				<ul>
+					<li class="">
+						<button type="button" class="button_line scarlet fix70">어린이집</button>
+						<form action="#" class="searching_area">
+							<fieldset>
+								<legend>어린이집 검색</legend>
+								<label for="search_word"><span class="placeholder">어린이집명으로 검색하세요.</span></label>
+								<input type="text" name="" id="" class="search_word" placeholder="" value="" >
+								<input type="image" src="../../../public/img/btn_main_search.png" alt="검색">
+							</fieldset>
+						</form>
+					</li>
+					<li>
+						<button type="button" class="button_line fix70">유치원</button>
+						<form action="#" class="searching_area">
+							<fieldset>
+								<legend>유치원 검색</legend>
+								<label for="search_word"><span class="placeholder">유치원명으로 검색하세요.</span></label>
+								<input type="text" name="" id="" class="search_word" placeholder="" value="" >
+								<input type="image" src="../../../public/img/btn_main_search.png" alt="검색">
+							</fieldset>
+						</form>
+					</li>
+				</ul>
+			</div>
 			<!-- //메인 검색바 -->
 
 			<!-- 대쉬보드 이동 -->
@@ -182,7 +200,7 @@
 						<li><span class="icon mom"></span><span class="number"><em>9,501</em>명</span> 총 접속맘</li>
 						<li><span class="icon review"></span><span class="number"><em>38</em>건</span> 작성리뷰</li>
 						<li><span class="icon view"></span><span class="number"><em>572</em>회</span> 리뷰조회수</li>
-						<li class="last"><span class="icon center"></span><span class="number"><em>34,000</em>개</span> 등록어린이집수</li>
+						<li class="last"><span class="icon center"></span><span class="number"><em>34,000</em>개</span> 어린이집 &middot; 유치원 수</li>
 					</ul>
 				</div> 
 			</div>
@@ -257,7 +275,11 @@
 				<p class="desc">내게 힘이 되어 주는 고수맘들이 한곳에 모여있는, 고수맘을 소개합니다.</p>
 				<form action="#" class="detail_search_wrap">
 					<fieldset>
-						<legend>어린이집 검색</legend>
+						<legend>어린이집, 유치원 검색</legend>
+						<select name="" id="" title="어린이집 또는 유치원을 선택해주세요">
+							<option value="">어린이집</option>
+							<option value="">유치원</option>
+						</select>
 						<select name="" id="" title="시/도를 선택해주세요">
 							<option value="">시/도</option>
 						</select>
@@ -277,14 +299,14 @@
 							<span><a href="#" class="average active">평점순</a></span>
 							<span><a href="#" class="review">리뷰순</a></span>
 						</div>
-						<p class="search_result_text">총 <strong>00</strong>개의 어린이집이 검색되었습니다.</p>
+						<p class="search_result_text">총 <strong>5280</strong>건이 검색되었습니다.</p>
 					</div>
 				</div>
 				<!-- 검색결과없음 -->
 				<div class="writing_search_text">
 					<span class="icon no"></span>
 					<p>
-						조건에 맞는 어린이집을 찾을 수 없습니다. <br>
+						조건에 맞는 내용을 찾을 수 없습니다. <br>
 					</p>
 					<p class="small">
 						단어의 철자가 정확한지 확인해 보세요. <br>
@@ -385,7 +407,7 @@
 						<!-- //.item -->
 					</div>
 					<div id="loadmoreajaxloader"><img src="../../../public/img/loading.gif" /></div>
-					<p class="noti_scroll">"스크롤을 내리시면 아래 어린이집 내용을 더 많이 확인 할 수 있습니다." </p>
+					<p class="noti_scroll">"스크롤을 내리시면 아래 내용을 더 많이 확인 할 수 있습니다." </p>
 				</div>
 				<!-- //어린이집 리스트 -->
 
@@ -418,12 +440,13 @@
 	<script src="../../../public/js/front/main.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('.popup_notice').bPopup({
-				closeClass:'popup_close',
-				modal: false,
-				follow: [false, false], //x, y
-				position: [30, 96] //x, y
-			});
+			// $('.popup_notice').bPopup({
+			// 	closeClass:'popup_close',
+			// 	modal: false,
+			// 	follow: [false, false], //x, y
+			// 	position: [30, 96] //x, y
+			// });
+
 		});
 		// $('#popup_facebook_like').bPopup({
 		// 	closeClass:'popup_close'
