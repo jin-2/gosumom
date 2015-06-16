@@ -1016,6 +1016,8 @@ body.main { background-color: #F7F7F7; }
 .page_member .table input.phone { width: 100px; }
 .page_member .table select { width: 100px; }
 .page_member .table .bar { display: inline-block; margin: 0 2px; width: 8px; border-top: 2px solid #787878; vertical-align: middle; }
+.page_member .table .interest_info .dcheck { display: inline-block; margin-top: 0; }
+.page_member .table td.address select { width: 150px; }
 .page_member .btn_wrap { margin-top: 20px; text-align: right; }
 
 .password_modify { display: none; }
