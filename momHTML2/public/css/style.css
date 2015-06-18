@@ -1357,4 +1357,9 @@ body.main { background-color: #F7F7F7; }
 
 #editor2 { width: 977px; }
 
+.tab_board { overflow: hidden; padding: 20px 0; }
+.tab_board li { float: left; padding: 0 20px; }
+.tab_board a { font-size: 20px; font-size: 2rem; text-decoration: none; }
+.tab_board a.active, .tab_board a:hover { border-bottom: 2px solid #eb3b4b; }
+
 /*# sourceMappingURL=style.css.map */

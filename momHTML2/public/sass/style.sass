@@ -3645,3 +3645,18 @@ $consider: #FDB45C
 // 커뮤니티 글쓰기 에디터
 #editor2
 	width: 977px
+
+// 마이페이지 탭 추가
+.tab_board
+	overflow: hidden
+	padding: 20px 0
+	li
+		float: left
+		padding: 0 20px
+	a
+		+font-size(20px)
+		text-decoration: none
+
+		&.active, &:hover
+			border-bottom: 2px solid $scarlet
+		
